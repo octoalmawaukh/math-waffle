@@ -1,0 +1,27 @@
+\wcht{Wielomian Taylora} (khm-1) \prawo{14.1} dla $n$-różalnej funkcji $f$ z błędem $R_{n+1} = f - T_n f$, jeśli $f$ można jeszcze raz zróżniczkować, to khm-2.
+Khm-3 to \wcht{reszta Lagrange'a} dla $\xi$ między $a$ i $x$.
+\wcht{Szereg Taylora}: ,,$T_\infty f(x;a)$''.
+Składanie szeregów: jeśli $g(w) = \sum_{n=0}^\infty c_nw^n$ zbiega dla $|w| < R_g$, zaś $f(z) = \sum_{n=0}^\infty a_k z^k$ dla $|z| < R_f$ oraz $|a_0| < R_g$, to $g \circ f$ rozwija się w szereg potęgowy blisko zera (zbiega na dysku $K_r(0)$, że $\sum_{k=0}^\infty |a_k| r^k < R_g$).
+Szereg potęgowy z ,,$f(0) \neq 0$'' można odwrócić (i rozwinąć). %Szereg potęgowy o niezerowym promieniu zbieżności można odwrócić, jeśli nie zeruje się w zerze.
+Szereg w dużym kole można rozwinąć na nowo w każdym mniejszym. %Funkcję rozwiniętą w szereg na dużym kole można rozwinąć też na każdym mniejszym. Jeżeli funkcja rozwija się w szereg potęgowy w pewnym kole, to rozwija się też w każdym mniejszym.
+\[
+	T_nf(x;a) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} \cdot (x-a)^k \spk
+	R_{n+1}(x) = \int_a^x \frac{f^{(n+1)}(t)}{n!} \cdot  (x-t)^n\,\textrm{d}t \spk
+	R_{n+1}(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \cdot (x-a)^{n+1}
+\]
+
+Ważniejsze rozwinięcia \prawo{Wi}:
+$(1-x)^{-1} =_1 \sum_{n \ge 0} x^n$,
+$(1+x)^{1/2} =_1 \sum_{n \ge 0} [(-1/4)^n (2n)! x^n] / [(1-2n)(n!)^2]$ oraz pięć poniższych.
+Są one prawdziwe dla $|x| < 1$ (1), $|x| < 1$ lub $x = 1$ (2), $|2x| < \pi$ (3).
+\[
+	\log 1+x =_2 \sum_{n \ge 1} \frac{(-x)^n}{-n} \spk
+	\log \frac{1+x}{1-x} = \sum_{n \ge 0} \frac{2x^{2n+1}}{2n+1} \spk
+	\sin x = \sum_{n \ge 0} \frac{(-1)^n x^{2n+1}}{(2n+1)!} \spk
+	\cos x = \sum_{n \ge 0} \frac{(-x^2)^n}{(2n)!} \spk
+	\tan x =_3 \sum_{n \ge 1} \frac{B_{2n} (1-4^n)}{(2n)! (-1/4)^n} x^{2n-1}
+\]
+
+Napiszmy \prawo{14.3} $f(z) = z / (e^z -1) = \sum_{k=0}^\infty B_k z^k/k!$ (\wcht{liczby Bernoulliego}).
+Dla każdego $w \in \C$ funkcja $z \mapsto \exp(wz) f(z)$ rozwija się w szereg blisko $0$, $\sum_{k=0}^\infty B_k(w) z^k/k!$; $B_k(w) = \sum_{m=0}^k C^k_m B_m w^{k-m}$ (\wcht{wielomiany}).
+\hfill $\sum_{t=1}^n t^k = [B_{k+1}(n+1) - B_{k+1}]/(k+1)$.

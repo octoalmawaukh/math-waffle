@@ -1,0 +1,31 @@
+\wcht{Różniczkowalność} \prawo{9.1} (istnieje $f'(x_0) = \lim_{x\rightarrow x_0} [f(x)-f(x_0)]/(x-x_0)$) $\Ra$ ciągłość.
+Równanie \prawo{9.2} stycznej: $y=f'(x_0)(x-x_0)+f(x_0)$.  
+Warunek konieczny dla lokalnego ekstremum: $f'(x) = 0$ (jeśli istnieje).
+\wcht{Gładka}: pochodne wszystkich rzędów, \wcht{analityczna}: gładka i zgodna z rozwinięciem Taylora.
+\wcht{Tw. Rolle'a}: \prawo{9.3} Lagrange'a, $f(a) = f(b)$.
+\wcht{Tw. Lagrange'a}: Cauchy'ego, $g(x) = x$.
+\wcht{Tw. Cauchy'ego}: ciągłe $f, g \colon [a,b] \to \R$ mają pochodne w $(a,b)$ i $g'(x) \neq 0$ tamże.
+\wcht{Reguła szpitalna}: dla ,,nieoznaczoności'' $0/0$, $\infty/\infty$ mamy $\lim f(x)/g(x) = \lim f'(x) / g'(x)$, o ile prawa strona istnieje.
+Poniżej: twierdzenie Cauchy'ego, reguły różniczkowania.
+\[
+	\dfrac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b)-g(a)} \mbox{ dla pewnego } c \spk
+	(fg)' = fg' + f'g \spk
+	\left[\frac f g \right]' = \frac{f'g - g'f}{g^2} \spk
+	(f \circ g)' = (f' \circ g) g' \spk
+	(f^{-1})' = \frac 1 {f' \circ {f^{-1}}}
+\]
+
+\wcht{Różniczkowalność szeregu funkcyjnego}.
+\emph{Wersja 1}: \prawo{9.5} $f_n \colon I \to \C$ różalne, $\sum_n f_n$ zbiega punktowo, zaś $\sum_n f'_n$ normalnie: $f = \sum_ n f_n$ można różniczkować wyraz po wyrazie.
+\emph{Wersja 2}: $f_n$ różalne w $x_0$, $\sum_n f_n$ zbiega punktowo, $\sum_n f_n'(x_0)$ zbiega, $f_n$ są Lipschitza (ze stałymi $L_n$ tak, że szereg $\sum_n L_n$ też zbiega): ten sam wniosek w $x_0$.
+Zatem szeregi potęgowe można różniczkować do woli.
+Weierstraß \datum{1872}, Hardy \datum{1916}: dla $0 < a < 1$ i $ab \ge 1$ funkcja $\sum_{n \ge 0} a^n \cos b^n \pi x$ jest wszędzie ciągła, ale nigdzie nie ma pochodnej.
+Jeśli $f_n \colon I \to \C$ są różalne, zaś szeregi $\sum_n f_n$, $\sum_n f'_n$ zbiegają normalnie, to $f'/f = \sum_{n=1}^\infty f_n' / (1 + f_n)$ dla $f_n(x) \neq -1$ i $f = \prod_{n \ge 1} (1 + f_n)$.
+
+Funkcja \prawo{9.7} jest \wcht{wypukła} (wklęsła: $\le \to \ge$), jeśli dowolny łuk wykresu funkcji leży pod (nad) cięciwą wyznaczoną przez końce tego łuku.
+Jeżeli pochodna w przedziale $(a,b)$ istnieje, to musi rosnąć (jest tak np. gdy $f'' \ge 0$).
+Tam, gdzie zmienia się ,,wypukłość'', jest \wcht{punkt przegięcia}.
+Ogólnie: dla $0 \le \lambda \le 1$ jest $f(\lambda x+(1-\lambda)y) \le \lambda f(x) + (1-\lambda)f(y)$.
+Jensen i towarzysze.
+\wcht{Funkcja pierwotna} \prawo{9.10} dla $f \colon I \to \C$: ciągła $F \colon I \to \C$, której pochodna to prawie wszędzie $f$.
+Każdy szereg potęgowy ma pierwotną w kole zbieżności (,,całka'' wyraz po wyrazie).

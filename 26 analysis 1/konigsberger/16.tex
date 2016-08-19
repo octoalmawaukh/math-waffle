@@ -1,0 +1,57 @@
+\wcht{Wielomian trygonometryczny} \prawo{16.1} to skończona kombinacja funkcji $e_k \colon \R \to \C$, $e_k(x) = \exp (ikx)$ dla $k \in \Z$.
+\wcht{Jądro Dirichleta}, $D_n = \sum_{k=-n}^{n} e_k$ oraz \wcht{Fejera}, $\frac 1 n \sum_{k=0}^{n-1} D_k$.
+Lokalnie $I$ jest odcinkiem długości $2\pi$, zaś $\mathcal R$ przestrzenią wektorową $2\pi$-okresowych regałów.
+Wtedy $*$ jest \wcht{splotem}; splot z $e_k$ prowadzi do \wcht{współczynników Fouriera}.
+Splot z $F_n$ to wielomian Fejera $\sigma_n$, z $D_n$: Fouriera $S_n$.
+Dla ciągłego regału $2\pi$-okresowego $f$ na całym $\R$ mamy $\sigma_n f \rightrightarrows f$, bez ciągłości wiemy tylko, że $\sigma_n f(x) \to \frac 1 2 (f(x^-) + f(x^+))$, to jest \wcht{tw. Fejéra}.
+\hfill
+{\color{Red}$S_n f = \sum_{|k| \le n} \widehat f(k) e_n$}
+\[
+	D_n(x) = \frac{\sin (n+ 0.5) x }{\sin 0.5 x} \spk
+	F_n(x) = \frac 1 n \left(\frac {\sin 0.5 n x }{\sin 0.5 x} \right)^2 \spk
+	{(f * g)(x) = \int_{I} \frac{f(t) g(x-t)}{2 \pi}\, \text{d}t} \spk
+	\widehat f(k) = \frac {1}{2\pi} \int_I f(t) \exp ( - i k t) \, \textrm{d}t
+\]
+
+Tutaj funkcja $f$ jest $2\pi$-okresowa.
+\wcht{Szereg Fouriera} \prawo{16.2} $Sf$: punktowa \prawo{16.3} granica $S_nf$, jeśli \prawo{16.5} istnieje ($\frac 12 a_0 + \sum_{k=1}^\infty (a_k \cos kx + b_k \sin kx)$, opis $a_k$, $b_k$ niżej).
+\wcht{Tw. Dirichleta}: jeżeli $f$ ma obie pochodne jednostronne w $x$, to $Sf(x) = \frac 1 2 [f(x{-}) + f(x{+})]$.
+\wcht{Tw. Carlesona} (\datum{1964}): szereg Fouriera ciągłej funkcji $f$ zbiega do niej prawie wszędzie.
+\wcht{Lemat Riemanna-Lebesgue'a}: jeżeli $F \colon [a,b] \to \C$ jest regałem, to khm-3.
+\wcht{Iloczyn skalarny}, całka z $f \cdot \overline g : (2\pi)$ nad $[-\pi, \pi]$, daje normę $L^2$.
+Skoro $\|f - S_nf\|_2^2 = \|f\|_2^2 - \sum_{|k| \le n} |\widehat f (k)|^2 < \|f - T\|_2^2$ dla $T \neq S_nf$, to wielomiany Fouriera są najlepszym trygonometrycznym przybliżeniem.
+\wcht{Nierówność Bessela}: khm-4 dla $f \in \mathcal R$, poprawi się wkrótce do równości.
+\wcht{Tw. Hunta} (\datum{1968}) uogólnia wynik Carlesona: szereg Fouriera okresowej funkcji $f \in L^p$ zbiega do $f$ prawie wszędzie, gdy $p > 1$.
+%Przykład funkcji (ciągłej, $2\pi$-okresowej), której szereg rozbiega w zerze (od Fejéra): $\sum_{k \ge 1} 2 \sin (2^{k^2+1} x) \sum_{n=1}^{2^$, gdzie $K = 2^{k \cdot k}$.
+\[
+	a_k = \int_{-\pi}^\pi\frac{f(x)}{\pi} \cos kx  \,\textrm{d}x \spk
+	b_k = \int_{-\pi}^\pi \frac{f(x)}{\pi}\sin kx  \,\textrm{d}x \spk
+	\lim_{p \to \infty} \int_a^b F(x) \sin p x \, \textrm{d}x = 0 \spk
+	%\langle f, g \rangle = \int_{-\pi}^\pi \frac{f(t) \overline{g(t)}}{2\pi} \,\textrm{d}t \spk
+	\sum_{-\infty}^\infty | \widehat{f}(k)|^2 = \sum_{-\infty}^\infty |\langle f \mid e_k \rangle|^2 \le \|f\|_2^2
+\] 
+
+\wcht{Reguła pochodnej}: \prawo{16.6} jeśli $f \in \mathcal R$ jest pierwotną dla $\varphi \in \mathcal R$, to $\widehat \varphi(k) = ik \cdot \widehat f(k)$ (szereg Fouriera dla $f$ można różniczkować wyraz po wyrazie).
+Szereg Fouriera p.w. ciągle różniczkowalnej $f \in \mathcal R$ zbiega do niej normalnie na $\R$; zaś przedziałami ciągle różniczkowalnej -- jednostajnie, ale tylko na przedziałach $[a,b]$ bez punktów nieciągłości $f$.
+\wcht{Fenomen Gibbsa}: jeżeli $f \colon \R \to \R$ jest przedziałami ciągła i $f(x^+_0) - f(x_0^-) = a \neq 0$, to $\lim_{n \to \infty} S_n f(x_0 \pm \pi : n) = f(x_0^\pm) \pm a \cdot 0.0894898722360836351160144229	 \ldots$ (przy założeniu, że $f$ jest nadal $2\pi$ okresowa).
+
+Ciąg \prawo{16.7} regałów \prawo{16.8} $f_n$ na przedziale $[a,b]$ zbiega \wcht{w średniej kwadratowej} do regału $f$, jeśli $\|f_n - f\|_2 \to 0$.
+Nie pociąga zbieżności punktowej (przez układ Haara), ale jest pociągane przez jednostajną.
+Wielomiany Fouriera $S_nf$ zbiegają na $[-\pi, \pi]$ do $f$ w średniej kwadratowej, gdy $f \in \mathcal R$.
+Równoważna z tym jest \textbf{równość Parsevala} (khm-1), która uogólnia się do khm-2.
+,,Problem izoperymetryczny''.
+\[
+	\|f\|_2^2 = \sum_{n = -\infty}^\infty |\widehat f(n)|^2 \Lra \int_{-\pi}^\pi \frac{|f(x)|^2}{\pi} \,\textrm{d}x = \frac{|a_0|^2}{2} + \sum_{k=1}^\infty (|a_k|^2 + |b_k|^2) \spk
+	\langle f,g\rangle = \frac{1}{2\pi} \int_{\mathbb T} f(t) \overline{g(t)} \,\textrm{d}t = \sum_{n = -\infty}^\infty \widehat f (n) \overline{\widehat g(n)}
+\]
+
+Funkcja \prawo{16.9} $\vartheta(x, t) = 1 + 2 \sum_{n = 1}^\infty \exp (- \pi n^2 t) \cos (2 \pi n x)$ opisuje przewodnictwo cieplne: $u_{xx} = 4 \pi u_t$ i spełnia $t^{1/2} \vartheta(0, t) = \vartheta(0, t^{-1})$.
+
+Analogonem \prawo{16.10} ciągu współczynników Fouriera dla nieokresowej $f \colon \R \to \C$ jest \wcht{transformata Fouriera} (khm-1).
+\wcht{Sumacyjny wzór Poissona}: jeśli $f$ jest ciągła i spełnia razem ze swoją transformatą warunek ucichania (khm-2, $x \neq 0$, $\varepsilon > 0$), to dla $t > 0$, $t \widehat t = 2\pi$, mamy khm-3.
+Inaczej: jedyny unitarny ,,intertwiner'' dla symplektycznej i euklidesowej reprezentacji Schrödingera grupy Heisenberga to transformata Fouriera.
+\[
+	\widehat{f}(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(t) \exp(-ixt) \,\textrm{d}t \spk
+	|f(x)| \le \frac{c}{|x|^{1+\varepsilon}} \spk
+	t^{1/2} \sum_{n \in \Z} f(nt) = \hat{t}^{\,1/2} \sum_{k \in \Z} \hat f(k \hat t)
+\]

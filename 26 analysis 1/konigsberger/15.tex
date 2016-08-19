@@ -1,0 +1,22 @@
+Funkcje zespolone \prawo{15.1} $f_n$ o wspólnej dziedzinie zbiegają \wcht{jednostajnie} do funkcji $f$, gdy norma supremum $f_n - f$ dąży do zera.
+Szereg zbieżny normalnie $\Ra$ jednostajnie (jako ciąg), równoważności nie ma: $\log(1+ x) = - \sum_{k \ge 1} (-x)^k : k$ na $[0,1]$.
+Jednostajna granica funkcji ciągłych (albo regałów) jest ciągła (regałem)
+Jeżeli $f_n \colon I \to \C$ są cięgle różalne, zbiegają punktowo i mają jednostajnie zbieżne pochodne, to można ciągle zróżniczkować granicę: $f'(x) = \lim_n f_n' (x)$.
+
+\wcht{Cauchy}: \prawo{15.2} $f_n$ zbiega \prawo{15.3} jednostajnie $\Lra$ $(\forall \varepsilon > 0)(\exists N)$, $m, n \ge N$ $\Ra$ $\|f_n - f_m\| \le \varepsilon$.
+\wcht{Dirichlet}: $f_n \colon D \to \R$, $a_n \colon D \to \C$, $f_n(x)$ jest $n$-malejący, $f_n \rightrightarrows 0$ i $\|\sum_{k=1}^n a_k\|_D$ są ograniczone: $\sum_{n=1}^\infty a_nf_n$ zbiega jednostajnie.
+Szczególny przypadek: $a_n = (-1)^n$.
+\wcht{Abel}: $f_n, a_n$ te same, $f_n(x)$ jest $n$-malejący, $\|f_n\|$ wspólnie ograniczone, $\sum_{n=1}^\infty a_n$ zbiega jednostajnie na $D$: $\sum_{n=1}^\infty a_nf_n$ też.
+Potęgowy \wcht{wniosek Abela}: jeżeli szereg potęgowy $f(x)$ zbiega dla $x = R$, to na $[0, R]$ jest funkcją ciągłą i zbiega tamże jednostajnie.
+\wcht{Weierstraß}: $\sum_n c_n < \infty$, $|f_n(x)| \le c_n$: $\sum_n f_n$ jednozbiega.
+\wcht{Dini} (\datum{1878}?): monotoniczny ciąg funkcji ciągłych $X \to \R$ ($X$: zwarta) ma ciągłą granicę punktową $\Ra$ zbiega do niej jednostajnie.
+
+Ciąg \prawo{15.5} regałów $\delta_k \colon \R \to \R$ jest \wcht{ciągiem Diraca}, gdy $\delta_k \ge 0$ całkują się do $1$ oraz każde $\varepsilon> 0$ i $r > 0$ mają $N$, że $k \ge N$ pociąga khm-1+2.
+Taki jest $\delta_k = \frac k 2$ na $[-1/k, 1/k]$ albo ciąg \wcht{jąder Landaua}, $(1-t^2)^k : c_k$ na $[-1, 1]$, gdzie $c_k$ to całka z $(1-t^2)^k$ nad $[-1, 1]$.
+\wcht{Aproksymacyjne tw.}: jeśli $f \colon \R \to \C$ jest ciągła, ograniczona, zaś $\delta_k$ to ciąg Diraca i wszystkie $\delta_k$ lub $f$ są zwarcie niesione, to $f_k = f * \delta_k$ dąży punktowo do $f$ (jednostajnie, jeśli $f$ jest jednostajnie ciągła).
+\wcht{Tw. aproksymacyjne Weierstraßa}: każda ciągła funkcja na zwartym odcinku jest jednostajną granicą pewnych wielomianów.
+Stone znacznie je uogólnił (do zwartych przestrzeni, $\C$, kwaternionów albo $C^*$ algebr), patrz: topologia.
+\[
+	\int_{-r}^{r} \delta_k(t) \,\textrm{d}t > 1 - \varepsilon \spk
+	\left|\int_{-r}^r \delta _k(t)\,\textrm{d}t - 1 \right| < \varepsilon
+\]

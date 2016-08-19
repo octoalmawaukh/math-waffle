@@ -1,0 +1,13 @@
+Każdy ciąg zstępujących \prawo{2.X} przedziałów $[a_n, b_n]$ długości dążącej do zera (\wcht{gnieżdżący się}) wyznacza pewną liczbę rzeczywistą.
+Przykłady: pierwiastek z $a_0b_0$ i $a_{n+1} = H(a_n, b_n)$, $b_{n+1} = A(a_n, b_n)$; średnia arytmetyczno-geometryczna.
+\wcht{Ciąg liczbowy}: odwzorowanie $\N \to \C$.
+Jeśli $a_n > 0$ i $a_{n+1}/a_n \to a$, to $n$-ty pierwiastek z $a_n$ też dąży do $a$.
+\wcht{Dzielenie mnożeniem}: $x_{n+1} = x_n(2-ax_n)$ zbiega kwadratowo do $1/a$ dla $0 < a x_0 < 2$.
+Podobnie można szukać pierwiastka z $a$ ($x_n$ zbiega kwadratowo, $y_n$: sześciennie).
+\wcht{Tw. o kanapce}: jeśli $a_n\le x_n\le b_n$, a przy tym $a_n$ oraz $b_n$ mają wspólną granicę $s$, to również $x_n$ dąży do tej liczby.
+\[
+	x_{n+1} = \frac{1}{2}\left(x_n+\frac{a}{x_n}\right) \spk
+	y_{n+1} = \frac{y_n^3 + 3ay_n}{3y_n^2+a} \hfill
+	b_{n+1}-a_{n+1} \le_{\text{HA}} \frac{(b_n-a_n)^2}{4a} \spk
+	b_{n+1}-a_{n+1} \le_{\text{GA}} \frac{(b_n-a_n)^2}{8a}
+\]

@@ -1,0 +1,44 @@
+\input{main-fst}
+
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[LE,LO]{Analiza rzeczywista w $\R$ (MSC 26)}
+\fancyhead[RO,RE]{almawauch@yandex.com, lipiec 2016}
+\fancyfoot[RF]{Königsberger, lipiec 1990}
+
+\fancyfoot[LF]{strona \thepage { }z \pageref{LastPage}}
+\input{konigsberger/00}	
+
+\input{konigsberger/02}
+
+\input{konigsberger/05}
+
+\input{konigsberger/06}
+
+\input{konigsberger/07}
+
+\input{konigsberger/08}
+
+\input{konigsberger/09}
+
+\input{konigsberger/11}
+
+\input{konigsberger/14}
+
+\input{konigsberger/15}
+
+\input{konigsberger/16}
+
+\input{konigsberger/17}
+
+Malejący ciąg $\gamma_n = H_n- \ln n$ zbiega do \wcht{stałej Eulera-Mascheroniego}.
+Alternatywne definicje: $\lim_{z \to 0} 1/z - \Gamma(z)$ albo poniższe.
+Formuła khm-4 to specjalny przypadek wzoru Hadjicostasy.
+\[
+	\gamma = \sum_{m=2}^\infty \frac{\zeta(m)}{(-1)^m \cdot m} = 
+	\ln \frac 4 \pi + 2 \sum_{m = 2}^\infty \frac{\zeta(m)}{(-2)^m m} = 
+	-\int_0^\infty e^{-x} \ln x \, \textrm{d}{x} = 
+	\int_0^1\int_0^1 \frac{x-1}{(1 - xy) \log xy}\, \textrm{d}x\textrm{d}y
+\]
+\end{document}
+
+7.8: miejsce na asymptoty

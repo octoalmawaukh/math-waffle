@@ -1,0 +1,71 @@
+\wcht{Funkcja schodkowa}: \prawo{11.1} $\varphi \colon [a,b] \to \C$, ,,stała \prawo{11.2} na przedziałach''.
+Całka z takiej \prawo{11.3} to suma pól prostokątów; jest liniowa i monotoniczna.
+Funkcja \wcht{regałowa}: $f \colon [a,b] \to \C$, gdy ma wszędzie obustronne granice.
+Dla funkcji ze zwartego przedziału (równoważnie): dla każdej $\varepsilon > 0$ istnieje f. schodkowa $\varphi$, taka że $\|f - \varphi\| \le \varepsilon$.
+Monotoniczna $\Ra$ regałowa $\Ra$ p.w. ciągła.
+Regał o zwartej dziedzinie jest ograniczony.
+Jeśli $f \colon [a,b] \to \C$  jest regałem, to \wcht{całką} z niego jest granica całek z $\varphi_n$, jeśli $\|f - \varphi_n\| \to 0$.
+Zawsze istnieje i nie zależy od ciągu $\varphi_n$.
+Jeśli $f \colon [a,b] \to \R$ jest ciągła, zaś $p \colon [a,b] \to \R$ nieujemnym regałem, to wartość całki z $f(x) p (x)$ pokrywa się z $f(\xi)$-krotnością całki z $p(x)$ dla pewnego $a \le \xi \le b$ (\wcht{tw. o wartości średniej}); $p$ często nazywa się funkcją ciężaru.
+Nieujemny regał całkujący się do zera jest zerem tam, gdzie jest ciągły (p.w.).
+
+\wcht{Hauptsatz}: \prawo{11.4} dla regałowej $f \colon I \to \C$ z ustalonym $a \in I$, funkcja $F$ jest pierwotną: jednostronne pochodne $F$ pokrywają się z jednostronnymi granicami $f$.
+Całka z $f$ nad $[a,b]$ to $\Phi(b) - \Phi(a)$, ($\Phi$: dowolna pierwotna $f$).
+\wcht{Całkowanie czosnkowe}: jeśli $u,v \colon I \to \C$ są \wcht{p.w. ciągle różalne} (pierwotne jakiejś regałowej), to $uv$ też i $\int uv' = uv - \int u'v$.
+\wcht{Przez podstawienie}: jeśli $G$ jest pierwotną regałowej $g \colon I \to \C$, $t \colon [a,b]\to I$ ciągle różalna i rosnąca, to $G \circ t$ jest pierwotną dla $(g \circ t) \cdot t'$ i khm-2.
+Khm-3: $I_k \subseteq \mathbb R$ to przedziały, $f \colon I_1 \to I_2$ ciągła, odwracalna, z pierwotną $F$ (tw. Laisanta, \datum{1905}, bez założenia o różniczkowalności $f^{-1}$ czy $f$!).
+\[
+	F(x) = \int_a^x f(t)\,\textrm{d}t \spk
+	\int_a^b g(t(x)) \cdot t'(x) \,\textrm{d}x = \int_{t(a)}^{t(b)} g(t) \,\textrm{d}t \spk
+	\int f^{-1}(y) \,\textrm{d}y = y f^{-1}(y) - F(f^{-1}(y)) + C
+\]
+
+Do scałkowania elementów \prawo{11.6} $\R(x)$ wystarczą funkcje wymierne, logarytmy i arkus tangens.
+Zalecane podstawienia:
+\begin{enumx}
+\item dla $R(x, (ax+b)^{1/n})$ jest to $t = (ax+b)^{1/n}$;
+\item dla $R(\exp ax)$: $t = \exp ax$;
+\item dla $R(\cos \theta, \sin \theta)$: $t = \tan  (\theta :2)$, wtedy $\cos \theta = (1-t^2)(1+t^2)^{-1}$, $\sin \theta = 2t (1+t^2)^{-1}$, $\textrm{d}\theta = 2 (1+t^2)^{-1} \,\textrm{d}t$.
+\item całkę z $R(x, (ax^2 + 2bx + c)^{1/2})$, gdzie ($\Delta = 4(a^2 - bc) \neq 0$), można uprościć za Eulerem (po prostych przekształceniach):
+\begin{align*}
+(a, b, c) & = (1, 0, 1) & & x = \sinh u & & \sqrt{t^2 + 1} = \cosh u & & \textrm{d}t = \cosh u \, \textrm{d} u \\
+(a, b, c) & = (1, 0, -1) & & x = \pm \cosh u & & \sqrt{t^2 - 1} = \sinh u & & \textrm{d}t = \sinh u \, \textrm{d} u \\
+(a, b, c) & = (-1, 0, 1) & & x = \pm \cos u & & \sqrt{1 - t^2} = \sin u & & \textrm{d}t = \mp \sin u \, \textrm{d} u
+\end{align*}
+\end{enumx}
+
+\wcht{Całka eliptyczna}: z $R(x, y)$, gdzie $y$ to pierwiastek z $P$, $\R$-wielomianu stopnia 3 lub 4 bez wielokrotnych pierwiastków.
+\begin{enumx}
+\item Funkcję $R(x, y)$ doprowadzamy do postaci $(A + B y) : (C + Dy)$, a potem do $R_1 + R_2 : y$, gdzie $R_1, R_2 \in \R(x)$.
+\item Drugi składnik ($R_2$) rozbijamy na wielomian i część ułomną, to znaczy kombinację $I_n$ oraz $J_m$.
+\item (dla $P$ stopnia 3) $\frac {d}{dx} (x^ny) = (nx^{n-1} P + \frac 1 2 x^n P') : y$, w prawym nawiasie żyje $a_n x^{n+2} + b_n x^{n+1} + c_nx^n + d_nx^{n-1}$ ($a_n \neq 0$, $d_n = nP(0)$).
+\item Skoro tak, możemy podzielić przez $y$ i scałkować dla $n \ge 1$: $a_n I_{n+2} + b_n I_{n+1} + c_n I_n + d_n I_{n-1} = x^n y$, $a_0 I_2 + b_0 I_1 + c_0 I_0 = y$.
+\item Wynika stąd, że $I_k$ dla $k \ge 2$ jest kombinacją $I_0$, $I_1$ i $x^a y$ dla $a \ge 0$, podobnie: $J_k$ jest kombinacją $J_1$, $I_0$, $I_1$, $y : (x-c)^b$, $b \ge 1$.
+\item Jeżeli $P$ był czwartego stopnia, podstawowymi budulcami są $I_0$, $I_1$, $I_2$, $J_1$.
+\item Redukujemy $P$ do normalnej formy. Jeśli $\deg P = 3$, istnieje podstawienie $x = at + b$, że $Q(t) := P(at + b)$ ma postać $4t^3 - g_2 t - g_3$.
+\item Tak sprowadza się $I_0$, $I_1$, $J_1$ do \wcht{normalnej formy Weierstraßa}: całek z $\textrm{d}t : \sqrt{Q}$, $t \textrm{d}t : \sqrt{Q}$ i $\textrm{d}t : [(t-c)\sqrt{Q}]$
+\item Jeśli $\deg P = 4$ i jego współczynniki są dodatnie, istnieje wielomian $Q(t) = (1-t^2)(1 - k^2t^2)$ i podstawienie $x = (at+ b) : (ct + d$), że $\textrm{d}x : P(x)^{1/2} = \alpha \textrm{d}t : Q(t)^{1/2}$ dla pewnej stałej $\alpha$.
+Liczba $k$ to dwustosunek rosnących miejsc zerowych $P$ i zwie się \wcht{modułem} całki.
+\item Całkę z $t : Q^{1/2}$ można uprościć przez $u = t^2$, pozostałe trzy dają \wcht{normalną formę Legendre'a}.
+\item Kończymy żmudny proces przez $t = \sin \varphi$. Definiujemy trzy całki: $F$ (1. rodzaju), $E$ (2. rodzaju), $K(k) = F(\pi : 2, k)$ (1. zupełna).
+\item Każda spełnia swoje równanie różniczkowe i \wcht{relację Legendre'a}: $K(k) E(k') + E(k) K(k') - K(k) K(k') = \pi : 2$, gdzie $k' = (1 - k^2)^{1/2}$.
+\end{enumx}
+\[
+	I_n = \int \frac{x^n}{\sqrt{P}} \,\textrm{d}x \spk
+	J_m = \int \frac{\textrm{d}x}{(x-c)^m \sqrt{P}} \spk
+	F(\varphi, k) = \int_0^\varphi \frac{\textrm{d}\xi}{\sqrt{1-k^2 \sin^2 \xi}} \spk
+	E(\varphi, k) = \int_0^\varphi \sqrt{1-k^2 \sin^2 \xi} \,\textrm{d}\xi
+\]
+
+Normalnie \prawo{11.7} zbieżny szereg funkcyjny na zwartym odcinku (składniki: regały) sam jest regałem i można całkować go wyraz po wyrazie.
+\wcht{Suma riemannowska}: \prawo{11.8} $\sum_{k=1}^n f(\xi_k) (x_k - x_{k-1})$, gdzie $x_{k-1} \le \xi_k \le x_k$, $x_k$ to punkty \prawo{11.9} podziału $Z$ dla $[a,b]$ ($f \colon [a,b]\to \C$).
+Jeśli $f$ jest regałem, to każdy $\varepsilon > 0$ ma $\delta > 0$, że suma riemannowska dla podziału drobniejszego niż $\delta$ różni się od całki z $f$ nad $[a,b]$ o mniej niż $\varepsilon$.
+\wcht{Niewłaściwa całka}: całka z $f$ nad niezwartym przedziałem to stosowna granica nad coraz większymi zbiorami: $[a, \beta]$ dla $\beta \uparrow b$ zamiast $[a, b)$, $[c, b)$ i $(a, c]$ zamiast $(a,b)$ (jeżeli ma sens dla jednego $c$, to dla każdego).
+Gdy całka z regału $g$ nad $[a, b)$ istnieje i $|f| \le g$, to z (regału!) $f$ też.
+
+\wcht{Prosty wzór Eulera}, \prawo{11.10} $\sum_{j=1}^n f(j) = \int_1^n f(x) \,\textrm{d} x + [{f(1) + f(n)}]/{2} + \int_1^n (Hf')(x) \,\textrm{d} x$, działa dla ciągle różalnej $f \colon [1, n] \to \C$.
+Funkcja $H$ jest określona wzorem $x - [x] - 1/2$ dla $x \in \R \setminus \Z$, $H[\Z] = \{0\}$.
+Potrzebujemy całej rodziny $H_k \colon \R \to \R$: $H_1 = H$, zaś $H_k$ to pierwotna dla $H_{k-1}$ całkująca się do zera nad $[0,1]$ o okresie $1$, wystarczy przyjąć $H_k = \frac{1}{k!} B_k$ dla $x \in (0, 1)$: to daje \wcht{trudny} wzór Eulera ($k \ge 1$, $f \in \mathscr C^{2k+1}$).
+\[
+	\sum_{j=1}^n f(j) = \int_1^n f(x) \,\textrm{d} x + \frac{f(1) + f(n)}{2} + \left. \sum_{m=1}^k H_{2m}(0) f^{(2m-1)} \right|_1^n + \int_1^n H_{2k+1} f^{(2k+1)} \,\textrm{d} x
+\]

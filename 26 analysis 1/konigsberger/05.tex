@@ -1,0 +1,15 @@
+Ciąg \prawo{5.X} jest zbieżny (w dowolnie małym otoczeniu pewnego punktu znajdują się prawie wszystkie wyrazy) $\Lra$ jest \wcht{ciągem Cauchy'ego}: jego dalekie wyrazy leżą dowolnie blisko siebie, $(\forall \varepsilon > 0)(\exists M)(\forall n,m \ge M)(|a_n-a_m|<\varepsilon)$, gdyż $\R$ jest zupełną p. topologiczną.
+Ograniczony, monotoniczny $\Ra$ zbieżny $\Lra$ jeden punkt skupienia $\Ra$ ograniczony.
+\wcht{Tw. Bolzano-Weierstraßa}: ograniczone ciągi mają podciągi zbieżne, nie tylko w $\R$ czy $\C$, ale też $\R^n$.
+Najmniejszy punkt skupienia: \wcht{granica dolna} ($\liminf$), największy: \wcht{górna} ($\limsup$).
+Dla każdego ciągu: khm-1, dla dodatniego: khm-2, uogólnienie \wcht{tw. Stolza} (jeśli $b_n$ rośnie do nieskończoności, to $\lim_n (\Delta a_n / \Delta b_n) = \lim_n (a_n / b_n) $, o ile pierwsza granica istnieje)
+Mamy $\liminf_{n \to \infty} x_n := \lim_{n\to\infty} \inf_{m \ge n} x_m = \sup_{n \ge 0} \inf_{m \ge n} x_m$, analogicznie granica górna.
+Punkt skupienia: granica podciągu.
+\[
+	\inf a_n \le \liminf a_n\le \limsup a_n \le \sup a_n \spk
+	\liminf\limits_{n\rightarrow+\infty}\frac{a_{n+1}}{a_n} \le
+	\liminf\limits_{n\rightarrow+\infty} \sqrt[n]{a_n} \le
+	\limsup\limits_{n\rightarrow+\infty} \sqrt[n]{a_n} \le
+	\limsup\limits_{n\rightarrow+\infty}\frac{a_{n+1}}{a_n}
+\]
+

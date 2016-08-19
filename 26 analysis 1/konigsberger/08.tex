@@ -1,0 +1,28 @@
+Jeśli \prawo{8.1} $z_n \to z \in \C$, to \prawo{\ldots} mamy \prawo{8.10} khm-1, \wcht{eksponensę} $\C \to \C$.
+Rozwiązaniem układu $f(z + w) = f(z) f(w)$, $\lim_{z \to 0} \frac 1z [f(z) - 1] = c$ ($\C \to \C$) jest funkcja $\exp (cz)$.
+Eksponensa jest nieujemna i rosnąca na $\R$, rośnie szybciej od dowolnego wielomianu.
+\wcht{Logarytm} to funkcja odwrotna do eksponensy, rośnie wolniej od pierwiastków.
+Potęgowanie: $x^y = \exp (y \ln x)$.
+W $B_s$ i $L$, $x \in (-1, 1)$.
+Mamy: $\lim_{s \to 0} \frac 1s [B_s(z) - 1] = L(z)$ i $B_s B_t = B_{s+t}$.
+\wcht{Trygonometria}: $2i \sin z = \exp iz - \exp -iz$, $2 \cos x = \exp iz + \exp - iz$.
+Najmniejsze dodatnie miejsce zerowe dla $\cos \colon \R \to \R$ to $\pi / 2$.
+\wcht{Logarytm} $w = |w| \exp i \varphi$ to $\ln |w| + i \varphi$ (cięcie wzdłuż $(-\infty, 0]$).
+Jeśli $\Re w_1$, $\Re w_2 > 0$, to $\ln w_1 w_2 = \ln w_1 + \ln w_2$.
+\[
+	\exp z := \sum_{k=0}^\infty \frac {z^k}{k!} = \lim_{n \to \infty} \left(1 + \frac{z_n}n \right)^n \spk
+	B_s(x) = \sum_{n=0}^\infty {s \choose n} \cdot x^n = (1+x)^s \spk
+	L(x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n = \log ( 1 +x)
+\]
+
+\wcht{Hiperboliczne}: \prawo{8.12} wykresem $\cosh^2 x - \sinh^2 x = 1$ jest hiperbola.
+Krzywa łańcuchowa: $a \cosh (x/a)$, łańcuch wiszący na dwóch punktach.
+\wcht{Reguła Osborna}: wziąć tożsamość trygonometryczną dla całkowitych potęg $\sin x$, $\cos x$, zamienić je na funkcje hiperboliczne i odwrócić znak iloczynów $4k+2$ funkcji $\sinh$.
+Dla zespolonych $x$, trzeba się trochę namęczyć z odwrotnymi hiperbolicznymi.
+\[
+	\sinh x = \frac{e^x - e^{-x}}{2} \spk
+	\cosh x = \frac{e^x + e^{-x}}{2} \spk
+	\operatorname{asinh}\ x = \ln(x + \sqrt{x^2 + 1}) \spk
+	\operatorname{acosh}\ x = \ln(x + \sqrt{x^2 - 1}) \spk
+    \operatorname{atanh}\ x = \frac{1}{2} \ln\frac{1+x}{1-x}
+\]

@@ -1,0 +1,87 @@
+Dla \wcht{szeregów} \prawo{6.X} zbieżność absolutna ($\sum |a_n|$) $\Ra$ bezwarunkowa ($\sum_{\sigma} a_n$) [w $\R^n$ nawet $\Lra$]. %Kryteria: bezpośrednie, \wcht{porównawcze (normy)}, \wcht{porównawcze (ilorazy)}.
+Suma odwrotności liczb całkowitych, które nie zawierają ustalonego infiksu (długości $k$), jest zbieżna (szereg Kempnera, \datum{1914}), mniej więcej do $10^k \log 10$.
+Parz artykuł R. Bailliego. %Większość poniższych kryteriów działa także, gdy warunek jest spełniony tylko prawie wszędzie (od pewnego indeksu).
+
+\wcht{Cauchy}: $\sum_n a_n$ zbieżny $\Lra$ dla każdej $\varepsilon > 0$ oraz dużych $m, n$ jest $|a_{m} + \dots + a_n| < \varepsilon$, wtedy $a_n \to 0$ (\wcht{zerowe}).
+
+Tylko dla dodatnich ,,$a_n$''!
+\wcht{Haupt}: zbieżność $\Lra$ ograniczoność sum częściowych.
+\wcht{Leibniz}: $a_n$ maleje do $0$ $\Ra$ naprzemienny $\sum_n (-1)^n a_n$ zbiega.
+\wcht{Grenzwert}: $\lim_n a_n:b_n = c > 0$ sprawia, że $\sum_n a_n$ zbiega jak $\sum_n b_n$.
+\wcht{Wurzel}: jeśli $L < 1$, to $\sum_n a_n$ zbiega bezwzględnie, jeśli $L > 1$, to nie zbiega ($L=\limsup |a_n|^{1 : n}$)
+\wcht{d'Alembert}: to samo dla $q = \lim |a_{n+1}/a_n|$]. 
+\wcht{Raabe}: $r_n \ge r > 1 \Ra \sum_n a_n$ zbiega [$r_n = n(a_n : a_{n+1} - 1)$], dla $r_n \to 1$ brak informacji, $r_n < 1$: brak zbieżności.
+\wcht{Kummer}: ciąg $c_n \in \N$ jest taki, że $\sum_n 1 : c_n$ rozbiega, niech $k_n = c_n a_n : a_{n+1} - c_{n+1}$.
+Jeśli $k_n \ge \delta > 0$, to szereg zbiega, jeśli $k_n \le 0$, to nie.
+Dla $c_n = 1$ d'Alembert, dla $c_n = n$ Raabe, dla $c_n = n \log n$ \wcht{Bertrand}: dla $b_n = \log n(r_n - 1) \to b$ (być może $b = \infty$): jeśli $b > 1$, to szereg zbiega, jeśli $b < 1$, to nie.
+\wcht{Gauß}: $a_n$ spełniają równość dla $\lambda > 1$ i ograniczonych $\tau_n$ $\Ra$ $\sum a_n$ zbiega $\Lra$ $\alpha > 1$.
+\wcht{Integral}. [malejąca $f \ge 0$] $\sum_{n\ge p} f(n)$ sumowalny $\Lra f$ całkowalna nad $[p, \infty)$. 
+\wcht{Ermakow}: [malejąca $f \ge 0$] jeśli dla dużych $x$ prawdą jest $f(e^x) e^x : f(x) \le q < 1$, to $\sum_n f(n)$ zbiega, jeśli $\ldots \ge 1$, to szereg rozbiega.
+\wcht{Verdichtung}: $a_n$ maleje do $0 \Ra \sum_n a_n$ jest jak $\sum_n 2^na_{2^n}$.
+\[
+	\frac{a_n}{a_{n+1}} = 1 + \frac \alpha n + \frac{\tau_n}{n^\lambda} \spk
+	\sum_{n=p+1}^\infty f(n) \le \int_p^\infty f(x) \, dx \le \sum_{n=p}^\infty f(n) \hfill
+\]
+
+\wcht{Abel}: $\sum_n b_n$ zbieżny, $a_n$ monotoniczny i ograniczony $\Ra$ $\sum_n a_nb_n$ zbieżny. 
+\wcht{Dirichlet}: $a_n$ zbieżny do zera, sumy częściowe $b_n$ ograniczone $\Ra$ $\sum_n a_nb_n$ zbieżny.
+\wcht{Majorantowe} [$A = \sum_n a_n$, $B = \sum_n b_n$, $|a_n| \le b_n$]: $B$ zbieżny $\Ra A$ też (bezwzględnie).
+\wcht{Schlömilch}: szeregi $\sum_n x_n$ oraz $\sum_n (g_{n+1} - g_n) x (g_n)$ są tak samo zbieżne, gdy $g_n$ jest ściśle rosnący, z temperowanym wzrostem ($g_{n+1} -g_n \le M (g_n-g_{n-1})$), zaś $x_n$ ściśle malejący, dodatni.
+Schlömilch $\Ra$ zagęszczanie, Raabe.
+Kummer $\Ra$ Gauß, Bertand $\Ra$ Raabe $\Ra$ d'Alembert.
+
+Specjalne twierdzenia.
+\wcht{Landau} (\datum{1906}): szereg $\sum_{n \ge 1} a_n : n^x$ (Dirichleta) zbiega dla $x \not \in - \N$ dokładnie wtedy, gdy $\sum_{n \ge 1} n! a_n : [x \cdot \ldots \cdot (x+n)]$ zbiega.
+\wcht{Knopp}: jeśli szereg $\sum_n a_n$ zbiega, to $\sum_n a_n x^n : (1 - x^n)$ też, dla wszystkich $x$ o module różnym od $1$.
+Jeżeli nie, to dokładnie tam, gdzie $\sum_n a_nx^n$ zbiega i $|x| \neq 1$ (sam szereg jest Lamberta).
+Produkt $\prod_{n \ge 1} a_n$ zbiega, gdy ciąg iloczynów częściowych ma niezerową granicę.
+Dla $a_n = 1 + p_n$ (i być może zespolonych $p_n$) jest to równoważne zbieżności $\sum_n p_n$, o ile $\sum_n |p_n|^2 < \infty$.
+
+\wcht{Przyspieszanie zbieżności}: \prawo{Wi} ciąg $s_n$ zbieżny do $s$ zastępujemy przez $s_n'$ (o tej samej granicy), tak że khm-1.
+\wcht{Przekształcenie Eulera}: khm-2, gdzie operator różnicy do przodu zadany jest wzorem khm-3.
+\wcht{Przekształcenie Kummera}: jeśli mamy zbieżny szereg $\sum_{k \ge 0} a_k$ i zbieżny szereg $c = \sum_{k \ge 0} c_k$, że $\lim_k a_k : c_k = \lambda \neq 0$, to khm-4. 
+\wcht{Proces $\Delta^2$-Aitkena:} zamiast $x_n$ patrzymy na $(Ax)_n = x_n - (\Delta x_n)^2 : \Delta^2 x_n$, czasem działa. % https://en.wikipedia.org/wiki/Aitken's_delta-squared_process
+\[
+	\lim_{n \to \infty} \frac{s_n' - s}{s_n - s} = 0 \spk
+	\sum_{n=0}^\infty (-1)^n a_n = \sum_{n=0}^\infty (-1)^n \frac{\Delta^n a_0}{2^{n+1}} \spk
+	\Delta^n a_0 = \sum_{k=0}^n (-1)^k {n \choose k} a_{n-k} \spk
+	\sum_{k=0}^\infty a_k = \lambda c + \sum_{k = 0} ^\infty \left(1 - \lambda \frac {c_k}{a_k}\right) a_k
+\]
+
+Tutaj \prawo{6.3} $I$ jest niepustym zbiorem z funkcją $a \colon I \to C$ (rodzina l. zespolonych $a$ jest indeksowana przez $I$) i $E(I)$, rodziną jego skończonych podzbiorów.
+Kładziemy $a_J := \sum_{i \in J} a_i$ (suma częściowa), $|a|_J := \sum_{i \in J} |a_i|$.
+Rodzina $(a_i)_{i \in I}$ jest \wcht{sumowalna}, gdy istnieje liczba $s \in \C$ (\wcht{suma}), że każdemu $\varepsilon > 0$ odpowiada skończony $I_\varepsilon$, dla którego $I_\varepsilon \subseteq J \in E(I)$ pociąga $|s - a_J| \le \varepsilon$.
+Sumowalność $(a_i)_{i \in I}$ $\Lra$ $\{|a|_J : J \in E(I)\}$ jest ograniczony w $\R$.
+Permutacje nie zmieniają sumowalności, a przy tym sumowalność dla $I = \N$ to bezwzględna zbieżność (wniosek: pierwsza linijka w 6.X, ,,Umordnungsatz'').
+\wcht{Wielkie prawo przestawień}: rodzina $(a_i)_I$ sumowalna, $I_k$ dla $k \in K$ stanowią rozbicie $I$ $\Ra$ khm-1. %, to $(a_i)_{I(k)}$ oraz $(\sum_{i \in I_k} a_i)_K$ są sumowalne (do jednej sumy).
+\wcht{Prawo podwójnych szeregów}: khm-2 dla bezwzględnie sumowalnej $(a_{ik})_{I \times K}$.
+\wcht{Iloczyn Cauchy'ego} (dyskretny splot) absolutnie zbieżnych szeregów też taki jest.
+\wcht{Tw. Mertensa}: wystarczy jeden absolutnie zbieżny czynnik, ale wtedy produkt jest tylko zbieżny.
+\[
+	\sum_{i \in I} a_i = \sum_{k\in K} s_k = \sum_{k\in K} \sum_{i \in I_k} a_i \spk
+	\sum_{\langle i, k\rangle \in I \times K} a_{ik} = \sum_{i \in I} \sum_{k \in K} a_{ik} = \sum_{k \in K} \sum_{i \in I} a_{ik} \spk
+	\left(\sum_{n=0}^\infty a_n\right) \cdot \left(\sum_{n=0}^\infty b_n \right) = \sum_{n=0}^\infty \sum_{k=0}^n a_kb_{n-k}
+\]
+
+\wcht{Tw. Riemanna}: \prawo{Wi} wyrazy szeregu zbieżnego warunkowo można przestawić tak, by nowy szereg miał inną granicę lub był rozbieżny.
+\wcht{Tw. Steinitza}: uogólnienie powyższego z $\R$ do $\R^n$, zbiór możliwych granic jest podprzestrzenią afiniczną w $\R^n$.
+W przypadku $\infty$-wymiarowych p. Banacha przestaje to być prawdą, zawsze żyje w nich szereg o dwóch (możliwych) granicach (Kadets, \datum{1989}?).
+
+\wcht{Szereg potęgowy}: \prawo{6.4} jest ciągły w kole zbieżności.
+Dla $|z| < r$: zbieżny bezwzględnie, dla $|z| > r$: rozbieżny.
+$r = 1/\left(\limsup \sqrt[n]{a_n}\right)$ (Cauchy, Hadamard); $r = 1/\left(\lim \left| {a_{n+1}}/{a_n}\right|\right)$, o ile granica istnieje (Euler).
+\wcht{Tw. Abela}: jeśli $f(x) = \sum a_nx^n$ jest zbieżny na końcu przedziału zbieżności, to $f(x)$ jest tam jednostronnie ciągła.
+Jeśli nie wszystkie $a_n = 0$, to istnieje otoczenie zera bez zer szeregu potęgowego.
+
+\wcht{Szeregi rozbieżne} $\sum_{n \ge 0} a_n$ można wysumować alternatywnymi metodami, jeżeli te są liniowe oraz nie zmieniają wartości już zbieżnych szeregów. % http://en.wikipedia.org/wiki/Ramanujan_summation
+Niech $A_n = \sum_{k \le n} a_k$.
+Średnie (khm-3), ,,pociągają'' Abela-Poissona (khm-2, granica i szereg dla $|x| < 1$ istnieją, ,,prawdziwych'' dla khm-1 (\wcht{Tauber})) z tą samą granicą.
+Woronoj: khm-4, regularny $\Lra p_n : P_n \to 0$.
+Borel: khm-5.
+\[
+	\sum_{k \le n} \frac k n a_k \to 0 \spk
+	\lim_{x \to 1} \sum_n a_n x^n \spk
+	\lim_{n \to \infty} \frac 1 n \sum_{k \le n} A_k \spk
+	\lim_{n \to \infty} \sum_{k \le n} A_k p_{n - k} : P_n \spk % woronoj
+	\lim_{x \to \infty} e^{-x} \sum_{n \ge 0} \frac{A_n}{n!} x^n % borel
+\]
