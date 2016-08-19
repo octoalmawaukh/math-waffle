@@ -1,0 +1,44 @@
+Harmoniczne \prawo{10.1} są $\infty$-r--lne.
+\wcht{Tw. o wartości średniej (MVT)}: jeśli harmoniczna $u \colon G \to \R$ i $B_\ge(a, R) \subset G$, to khm-1.
+Ciągła funkcja spełnia khm-1: ma \wcht{własność średniej wartości}.
+\wcht{Reguła maksimum, I}: $G$ obszarem, $u \colon G \to \R$ ma wła-śre-war, istnieje $a \in G$, że $u(a) \ge u(z)$: $u$ jest stała.
+\wcht{Reguła maksimum, II}: $G$ obszarem, $u, v$ ograniczone i ciągłe $G \to \R$ z wła-śre-war, gdy khm-2, to $u(z) < v(z)$ lub $u = v$.
+\[
+	u(a) = \int_{0}^{2\pi} \frac{u(a+re^{i\theta})}{2\pi} \,\D \theta \spk
+	(\forall a \in \partial_\infty G)(\limsup_{z \to a} u(z) \le \liminf_{z \to a} v(z))
+\]
+
+\wcht{Jądro Poissona}: \prawo{10.2} parzysta $P_r > 0$ dla $0 \le r < 1$, $\theta \in \R$; okres: $2\pi$.
+$0 < \delta < |\theta| \le \pi$ $\Ra$ $P_r(\theta) < P_r(\delta)$; dla każdego $\delta >0$, $\lim_{r \to 1^-} P_r(\theta) = 0$ jednostajnie w $\theta$ dla $\pi \ge |\theta| \ge \delta$.
+Fakt: ciągła $f \colon \partial D \to \R$ przedłuża się do $\operatorname{cl} D$, harmo- na $D$, jednoznacznie (khm-2, $0 \le r < 1$, $0 \le \theta \le 2\pi$): $D = \{z : |z| < 1\}$.
+Ciągła $G \to \R$ z wła-śre-war jest harmoniczna.
+\wcht{$\le$-Harnacka}: $u \colon B_\ge (a, R) \to \R$ jest ciągła, harmoniczna w $B(a, R)$ i $u \ge 0$ $\Ra$ dla $0 \le r < R$ i wszytkich $\theta$ khm-3.
+$\textrm{Har}(G \subseteq_o \C)$ to przestrzeń harmo- na $G$, z metryką z $C(G, \R)$.
+\wcht{Tw. Harnacka}: $G$ obszar $\Ra$ metryczna $\textrm{Har}(G)$ jest zupełna; jeśli $\{u_n\}$ jest ciągiem w $\textrm{Har}(G)$, że $u_1 \le u_2 \le \dots$, to albo $u_n(z) \to \infty$ jednostajnie na zwartych $K \subseteq G$ albo $\{u_n\}$ zbiega do harmonicznej.
+\[
+	P_r (\theta) = \sum_{n = -\infty}^\infty r^{|n|} \exp(in \theta) \Ra \int_{-\pi}^\pi \frac{P_r(\theta)}{2\pi} \,\D \theta = 1 \spk
+	u(re^{i\theta}) = \int_{-\pi}^\pi \frac{P_r(\theta - t) f(e^{it})}{2\pi} \,\D t \spk
+	\frac{R-r}{R+r} u(a) \le u(a + re^{i \theta}) \le \frac{R+r}{R-r} u(a)
+\]
+
+
+Tu \prawo{10.3} $G$ obszarem.
+Ciągła $\varphi \colon G \to \R$ jest \wcht{subharmoniczna}: jeśli tylko $B_\ge (a,r) \subseteq G$, to khm-1 (super dla $\ge$ miast $\le$).
+\wcht{Reguła maksimum, III}: subharmo- $\varphi \colon G \to \R$ ma $a \in G$, że $\varphi(a) \ge \varphi(z)$ $\Ra$ $\varphi$ jest stała.
+\wcht{Reguła maksimum, IV}: $\varphi, \psi$ ograniczone $G \to \R$, że $\varphi$ jest subharmo-, zaś $\psi$ superharmo-; jeśli dla każdego $a \in \partial_\infty G$ jest khm-2, to $\varphi(z) < \psi(z)$ dla $z \in G$ lub $\varphi = \psi$ są harmo-.
+Ciągła $\varphi \colon G \to \R$ jest subharmo- $\Lra$ dla każdej harmo- $u_1$ na obszarze $G_1 \subseteq G$, $\varphi - u_1$ spełnia RM-III na $G_1$.
+Ciągła $f \colon \partial_\infty G \to \R$; \wcht{rodzina Perrona}, $\mathscr P(f, G)$: wszystkie subharmo- $\varphi \colon G \to \R$, że $\limsup_{z \to a} \varphi(z) \le f(a)$ dla wszystkich $a \in \partial_\infty G$; wtedy $u(z) = \sup\{\varphi(z) : \varphi \in \mathscr P(f, G)\}$ jest harmo- na $G$ (\wcht{funkcja Perrona}).
+\[
+	\varphi(a) \le \int_0^{2\pi} \frac{\varphi(a+re^{i \theta})}{2\pi} \,\D \theta \spk
+	\limsup_{z \to a} \varphi(z) \le \liminf_{z \to a} \psi(z)
+\]
+
+\wcht{Bariera} \prawo{10.4} dla obszaru $G$ w $a \in \partial_\infty G$: $\{\psi_r : r > 0\}$, że $\psi_r$ jest superharmo- w $G(a, r)$ z $0 \le \psi_r(z) \le 1$, $\lim_{z \to a} \psi_r(z) = 0$ i $\lim_{z \to w} \psi_r(z) = 1$ dla $w \in G \cap \{w: |w-a| = r\}$.
+Wtedy: $f \colon \partial_\infty G \to \R$ jest ciągła, zaś stowarzyszona z nią $u$ to funkcja Perrona $\Ra$ $\lim_{z \to a} u(z) = f(a)$.
+Wniosek: obszar $G$ jest Dirichleta (każda ciągła $f \colon \partial_\infty G \to \R$ przedłuża się do ciągłej $u \colon G^- \to \R$ harmonicznej w $G$) $\Lra$ istnieje bariera dla $G$ w każdym $a \in \partial_\infty G$.
+Jeżeli $G \subset \C$ to obszar, $a \in \partial_\infty G$ i składowa $\C_\infty \setminus G$ zawierająca $a$ nie jest samym $\{a\}$, to $G$ ma barierę w $a$.
+Wniosek: jeśli obszar $G$ jest taki, że żadna składowa $\C_\infty \setminus G$ nie redukuje się do punktu, to jest Dirichleta; jednospójny obszar jest Dirichleta.
+
+\wcht{Funkcja Greena} \prawo{10.5} dla obszaru $G$ z osobliwością w $a \in G$: $g_a \colon G \to \R$, że jest harmoniczna w $G \setminus \{a\}$, $G(z) = g_a(z) + \log|z-a|$ jest harmoniczna w dysku wokół $a$, $\lim_{z \to w} g_a(z) = 0$ dla wszystkich $w \in \partial_\infty G$.
+Jeśli $G$ jest ograniczonym obszarem Dirichleta, to dla każdego $a \in G$ istnieje funkcja Greena z osobliwością w $a$.
+Fakt: $G, \Omega$ obszarami, że istnieje a--a bijekcja $f \colon G \to \Omega$, $a \in G$ i $\alpha = f(a)$; jeżeli $g_a$ i $\gamma_\alpha$ są funkcjami Greena dla $G$ i $\Omega$ z osobliwościami w $a$ i $\alpha$, to $g_a(z) = \gamma_\alpha(f(z))$.

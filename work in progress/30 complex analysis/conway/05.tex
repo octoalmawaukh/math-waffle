@@ -1,0 +1,29 @@
+\wcht{Izolowaną osobliwość} \prawo{5.1} $f$ w $a$: dla pewnego $R >0$, $f$ jest holo- w $B(a, R) \setminus \{a\}$, ale nie w $B(a,R)$.
+\wcht{Usuwalna}: $f=g$ poza $a$ dla pewnej holo- $g \colon B(a,R) \to \C$ ($\lim_{z \to a} (z-a) f(z) = 0$). 
+\wcht{Biegun}: $\lim_{z \to a} |f(z)| = \infty$ (wtedy $g(z) = f(z) (z-a)^m$ jest holo- dla $m$, \wcht{rzędu}). 
+\wcht{Istotna}: żadna z tych dwóch.
+Jeśli $f$ jest holo w pierścieniu $\operatorname{ann}(a,R_1, R_2)$, to khm-2 (\wcht{szereg Laurenta}: zbieżność jest bezwzględna i jednostajna w domkniętych podpierścieniach); $\gamma$: okrąg $|z-a| = r$ leży w pierścieniu.
+Jeśli $n < 0 \Ra a_n = 0$, to pozorna; jeśli $n < m < 0 \Ra a_n = 0$, to biegun; jeśli $n < 0, a_n \neq 0$ $\infty$-często, to istotna (\wcht{tw. Casorati-Weierstraßa}: obrazy wypunktowanych otoczeń $a$ leżą wtedy gęsto w $\C$).
+\[
+	f(z) = \sum_{n= -\infty}^\infty a_n(z-a)^n \spk
+	a_n = \frac{1}{2\pi i} \int_\gamma \frac{f(z)} {(z-a)^{n+1}} \,\D z
+\]
+
+
+Jeśli $f$ \prawo{5.2} ma osobliwość w $a$, to $a_{-1}$ (z szeregu Larenta) to \wcht{residuum}.
+\wcht{Tw. o residuach}: jeśli $f$ jest holo- w obszarze $G$ poza osobliwościami $a_1, \dots, a_m$; $\gamma$ jest ,,zapr'' w $G$, nie przechodzi przez $a_k$ i $\gamma \approx 0$ w $G$; to khm-1.
+Jeśli $f$ ma biegun rzędu $m$ w $a$, to khm-2.
+\[
+	\frac{1}{2\pi i}\int_\gamma f = \sum_{k=1}^m \operatorname{Ind}_\gamma (a_k) \operatorname{Res}_f( a_k) \spk
+	\operatorname{Res}_f(a)= \frac{\D{}}{\D{}^{m-1} z} \frac{(z-a)^m f(z)}{(m-1)!}
+\]
+
+\wcht{Meromorficzna}: \prawo{5.3} (holo- poza biegunami) w otwartym.
+\wcht{Principio del argumento}: mero- $f$ w $G$ z biegunami $p_1, \dots, p_m$ i zerami $z_1, \dots, z_n$ (z krotnościami!), $\gamma$ ,,zapr'' w $G$ i $\gamma \approx 0$ nie przechodzi przez $p_j, z_k$: khm, ogólniej khm-2 ($g$ holo- w $G$).
+%Fakt: $f$ a--a w otwartym nadzbiorze $B_\ge (a, R)$, $f$ jest ,,1-1'' na $B(a,R)$, $\Omega = f[B(a,R)]$ i $\gamma$ to krąg $|z-a| = R$: $f^{-1}(\omega)$ jest określona dla $\omega \in \Omega$ khm-wzorem.
+\wcht{Tw. Rouche'a}: $f, g$ mero- w otoczeniu $B_\ge (a, R)$ bez zer, biegunów na okręgu $\gamma = \{z : |z-a| = R\}$; na $\gamma$ jest $|f+ g| < |f| + |g|$: wtedy $Z_f - P_f = Z_g-P_g$ ($Z$ liczbą zer wewnątrz $\gamma$, $P$ biegunów -- z krotnościami).
+\[
+	\frac{1}{2\pi i} \int_\gamma \frac{f'(z)}{f(z)} \,\D z = \sum_{k=1}^n \operatorname{Ind}_\gamma (z_k)- \sum_{j=1}^m \operatorname{Ind}_\gamma(p_j) \spk
+	\frac{1}{2\pi i} \int_\gamma  \frac{gf'}{f}  = \sum_{k=1}^n g(z_k) \operatorname{Ind}_\gamma(z_k) - \sum_{j=1}^m g(p_j) \operatorname{Ind}_\gamma(p_j)  \spk
+%	f^{-1} (\omega) = \frac{1}{2\pi i} \int_\gamma \frac{z f'(z)}{f(z) - \omega} \,\D z
+\]

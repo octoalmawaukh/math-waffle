@@ -1,0 +1,49 @@
+Rodzina \prawo{7.1} ciągłych $(G \subseteq_o \C) \to \Omega$ (w zupełną p. metryczną z $d$): $\mathcal C(G, \Omega)$ (niepusta: dla $\Omega =\C$ zawiera holo-, dla $\C_\infty$: mero-); razem z $\rho$ sama jest zupełna, metryczna.
+Jeśli $G \subseteq_o \C$, to istnieje ciąg $K_n \subset^k G$, że $G = \bigcup_{n=1}^\infty K_n$, $K_n \subseteq \operatorname{int} K_{n+1}$, $K\subseteq^k G$ pociąga ,,$K\subseteq K_n$'', składowe $\C_\infty \setminus K_n$ zawierają składowe $C_\infty \setminus G$.
+Rodzina $\mathcal F \subseteq \mathcal C(G, \Omega)$, \wcht{normalna}: każdy ciąg w $\mathcal F$ ma podciąg zbieżny do $f$ w $\mathcal C(G, \Omega)$; \wcht{równociągła w $z_0 \in G$}: każdy $\varepsilon > 0$ ma $\delta > 0$, że $|z - z_0| < \delta$ pociąga $d(f(z), f(z_0)) < \varepsilon$ dla $f$ w $\mathcal F$.
+\wcht{Tw. Arzela-Ascoli}: rodzina $F \subseteq \mathcal C(G, \Omega)$ jest normalna $\Lra$ dla każdego $z \in G$ [zbiór $\{f(z) : f \in \mathcal F\}$ ma zwarte domknięcie w $\Omega$ oraz $\mathcal F$ jest równociągła w $z$].
+\[
+	G = \bigcup_{n=1}^\infty K_n \spk
+	K_n \text { są zwarte } \spk
+	K_n \subseteq \interior K_{n+1} \spk
+	\rho_n(f,g) = \sup\{d(f(z), g(z)) : z \in K_n\} \spk
+	\rho(f, g) = \sum_{n=1}^\infty \frac{1}{2^n} \frac{\rho_n(f,g)}{1+\rho_n(f,g)}
+\]
+
+Tu \prawo{7.2} $\mathcal H(G \subseteq_o \C)$: rodzina holo- na $G$ (,,niby'' podzbiór $\mathcal C(G, \C_\infty)$).
+Jeśli $(f_n \in \mathcal H(G)) \to (f \in \mathcal C(G, \C))$, to $f$ jest holo- i pochodne też tak zbiegają; zatem $\mathcal H(G)$ jest zupełna.
+\wcht{Tw. Hurwitza}: $G$ obszar, $f_n$ w $\mathcal H(G)$ zbiegają do $0 \not\equiv f \in \mathcal C(G, \C)$, $\overline{B}(a, R) \subseteq G$, $f(z) \neq 0$ dla $|z-a| = R$: ,,$n \ge n_0$'' pociąga ,,$f$, $f_n$ mają tyle samo zer w $B(a,R)$.
+\wcht{Tw. Montela}: rodzina $\mathcal F$ w $H(G)$ jest normalna $\Lra$ $\mathcal F$ jest lokalnie ograniczona (każdy $a \in G$ ma $M, r > 0$, że dla $f \in \mathcal F$, $\sup\{|f(z)| : |z-a| < r, f \in \mathcal F\} < \infty$)
+
+Mero- \prawo{7.3} na obszarze, równa $\infty$ w biegunach, jest ciągła jako $G \to \infty$.
+Rodzinę $\mathcal M(G)$ wszystkich mero- na $G$ zanurza się w $\mathcal C(G, \C_\infty)$ z jej metryką.
+Jeśli $f_n$ jest ciągiem w $\mathcal M(G)$ i $f_n \to f$ w $\mathcal C(G, \C_\infty)$, to $f$ jest mero- lub $f \equiv \infty$; $f_n$ są holo- $\Ra$ $f$ też (lub ,,$\infty$'').
+Wtedy $\mathcal M(G) \cup \{\infty\}$ jest zupełną p. metryczną, $[\mathcal H(G) \cup \{\infty\}] \subseteq^a \mathcal C(G, \C_\infty)$.
+Dla mero- $f$ na obszarze $G$ mamy $\mu(f) \colon G \to \R$.
+Rodzina $\mathcal F \subseteq \mathcal M(G)$ jest normalna w $\mathcal C(G, \C_\infty)$ $\Lra$ $\{\mu(f) : f \in \mathcal F \}$ jest lokalnie ograniczona.
+\[
+	\mu(f)(z) = \frac{2|f'(z)|}{1+|f(z)|^2}, \text { gdy } z \text{ nie jest biegunem} \spk
+	\mu(f)(a) = \lim_{z\to a}\frac{2|f'(z)|}{1+|f(z)|^2}, \text { gdy jest}
+\]
+
+Obszary \prawo{7.4} $G, G'$ są \wcht{konforemnie równoważne}: istnieje holo- bijekcja $G \to G'$.
+\wcht{Tw. Riemanna}: dla 1-spójnego obszaru $G \neq \C$ z $a \in G$ istnieje jedyna ,,1-1'' holo- $f \colon G \to \C$ na $\{z : |z| <1\}$, że $f(a) = 0$, $f'(a) > 0$.
+Wśród jednospójnych są tylko dwie klasy abstrakcji: $\C$ i pozostałe.
+
+
+
+%Khm: $\prod z_n$ dla $\Re z_n > 0$ zbiega bezwzględnie $\Lra$ $\sum (z_n-1)$ też.
+%Tu  $G\subset \C$ obszar, $\{f_n \not \equiv 0\}$ ciąg w $\mathcal H(G)$: [$\sum_n [f_n(z) - 1]$ zbiega bezwzględnie i jednostajnie na $K\subset^k G$] $\Ra$ [$\prod_n f_n(z)$ zbiega w $\mathcal H(G)$ do holo- $f(z)$, jej zera są zerami $\mydelta$-wielu $f_n$].
+\wcht{Czynniki elementarne}: \prawo{7.5} $E_p(z)$.
+\wcht{Tw. Weierstraßa o produkcie}: dla całkowitej $f$ (że $0$ jest jej zerem rzędu $m \ge 0$) i jej niezerowych zer $\{a_n\}$ (powtarzanych z krotnościami) istnieje całkowita $g$ i ciąg $p_n \in \Z$, że khm.
+Na obszarze $G$ i ciągu $a_j \in G$ bez punktu skupienia w $G$ istnieje holo- na $G$ z zerami w $a_j$ o krotnościach $m_j$.
+Każda mero-- $f$ na otwartym $G$ jest ilorazem pewnych holo- $g, h $ na $G$: $f = g/h$.
+\[
+	E_p(z) = (1-z)\exp\left(\sum_{k=1}^p \frac{z^k}{k} \right) \spk
+	f(z) = z^m e^{g(z)} \prod_{n=1}^\infty E_{p_n} \left(\frac{z}{a_n} \right) 
+\]
+
+Mamy \prawo{7.X} $\sin \pi z = \pi z \prod_{n=1}^\infty (1-[z/n]^2)$, zbieżność jest jednostajna nad $K \subset^k \C$.
+\wcht{Funkcja $\Gamma$}: mero- na $\C$ z biegunami w $0, -1, \dots$, zadana przez $\Gamma(z) = \exp(-\gamma z) [\prod_{n=1}^\infty (1+z/n)^{-1} \exp(z/n)]/z$.
+\wcht{Funkcja zeta Riemanna}: $\zeta(z) = \sum_{n=1}^\infty n^{-z}$ dla $\Re z > 1$, dla takich $z$ spełnia zależność $\zeta (z) \Gamma(z) = \int_0^\infty (e^t - 1)^{-1} t^{z-1} \, \textrm{d}t$.
+Zeta przedłuża się do mero- na $\C$ z biegunem w $z = 1$, $\operatorname{Res}_\zeta (1) = 1$.

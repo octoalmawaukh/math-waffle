@@ -1,0 +1,34 @@
+Dla obszaru \prawo{9.1} $G$ z $G^* = \{ z : \overline z \in G\}$, gdy $f$ jest holo- na $G$, to sprzężenie $f(\overline z)$ jest holo- na $G^*$.
+\wcht{Zasada odbicia Schwarza}: jeśli $G = G^*$ i $f$ jest ciągłą $G_+ \cup G_0 \to \C$, holo na $G_+$, $f(G_0) \subseteq \R$, to istnieje holo $g \colon G \to \C$, że $g = f$ na $G_+ \cup G_0$ ($G_{\pm0}$: część $G$ leżąca nad/pod/w $\Im z  =0$).
+
+\wcht{Kiełek} \prawo{9.2} $[f]_a$ w $a$ dla $(f,G$): rodzina \wcht{elementów funkcji} $(g,D)$ ($g$ holo- na obszarze $D$), że $a \in D$ i $f(z) = g(z)$ dla $z$ w otoczeniu $a$.
+Jeśli $\gamma \colon [0,1] \to \C$ jest drogą, dla $0 \le t \le 1$ mamy element funkcji $(f_t, D_t)$, że $\gamma(t) \in D_t$ i każdy $t$ ma $\delta > 0$, że $|s-t| < \delta$ pociąga $\gamma(s) \in D_t$ oraz $[f_s]_{\gamma(s)} = [f_t]_{\gamma(s)}$, to $(f_1, D_1)$ jest \wcht{analitycznym przedłużeniem} $(f_0, D_0)$ wzdłuż $\gamma$.
+Jeśli $\gamma$ jest ,,z $a$ do $b$'', to: dla dwóch mamy $[f_0]_a = [g_0]_a$ $\Ra$ $[f_1]_b = [g_1]_b$.
+\wcht{Zupełny holo-} z elementu funkcji $(f,G)$: rodzina $\mathcal F$ kiełków $[g]_b$, które są przedłużeniem $[f]_a$ wzdłuż jakiejś ,,z $a$ do $b$''.
+
+Tu \prawo{9.3} $(f,D)$ elementem funkcji, $G$ nadobszarem dla $D$, że $(f,D)$ ma \wcht{niezagrodzone æ-przedłużenie} w $G$ (istnieje przedłużenie wzdłuż dróg w $G$ o początku w $D$), $a \in D$, $b \in G$; $\gamma_0$, $\gamma_1$: drogi w $G$ z $a$ do $b$.
+Dla dwóch æ-przedłużeń $\{(f_t, D_t) : 0 \le t \le 1\}$, $\{(g_t, D_t) : 0 \le t \le 1\}$ (wzdłuż $\gamma_0$, $\gamma_1$), i homotopijnych $\gamma_0, \gamma_1$ (z trzymanymi końcami) w $G$: $[f_1]_b = [g_1]_b$ (\wcht{tw. o monodromii}).
+
+Dla \prawo{9.5} $G \subseteq \C$ niech $\mathscr{S}(G) = \{(z, [f]_z) : z \in G, f \textrm{ jest holo- w } z\}$.
+Określamy $\rho \colon \mathscr S (G) \to \C$, $\rho(z, [f]_z) = z$ (,,mapa''-projekcja); wtedy para $(\mathscr S(G), \rho)$ jest \wcht{snopem kiełków holomorfów na $G$}; dla $z \in G$, $\rho^{-1}(\{z\})$ to \wcht{łodyga} (włókno) nad $z$.
+Topologia na $\mathscr S(G)$: przez otoczenia, dla otwartego $D$ w $G$ i holo- $f \colon D \to \C$, $N(f,D) = \{(z, [f]_z) : z \in D\}$.
+Dla $(a, [f]_a)$ w $\mathscr S(G)$, $\mathcal N(a, [f]_a) = \{N(g,B) : a \in B, [g]_a = [f]_a\}$; jest to układ otoczeń, który daje $\mathcal T_2$-topologię, z którą ,,mapa''-projekcja jest ciągła.
+Dla $G \subseteq_o \C$ i spójnego $U \subseteq_o G$ z $f$ holo- na $U$, $N(f,U)$ jest łukowo spójny w $\mathscr S(G)$.
+Istnieje droga w $\mathscr S(G)$ z $(a, [f]_a)$ do $(b, [g]_b)$ $\Lra$ istnieje droga w $G$ z $a$ do $b$,wzdłuż której $[g]_b$ jest analitycznym przedłużeniem $[f]_a$.
+% 5.11
+\wcht{Powierzchnia Riemanna} dla $\mathcal F$, zupełnego holo-: para $(\mathscr R, \rho)$, gdzie $\mathscr R = \{(z, [g]_z) : [g]_z \in \mathcal F\}$ jest składową $\mathscr S(G)$, zaś $\rho$ to projekcja snopa $\mathscr S(G)$ \dots
+
+%14
+Jeśli $\mathcal F$ jest zupełnym holo-
+%15
+Jeśli $\mathcal F$ jest zupełnym holo- z p. bazową $G$ o powierzchni Riemanna $(\mathscr R, \rho)$, to $\rho \colon \mathscr R \to G$ jest otwarta, ciągła.
+Dodatkowo punkt $(a, [f]_a)$ w $\mathscr R$ ma otoczenie $N(f,D)$, które $\rho$ przerzuca na otwarty dysk w $\C$.
+
+
+
+
+\wcht{Covering space} \prawo{9.X} $(X,\rho)$ dla topologicznej $\Omega$: $X$ spójna, $\rho$ ciągła, ,,na'' $X \to \Omega$, że każdy $\omega \in \Omega$ ma otoczenie $\Delta$, że składowe $\rho^{-1}(\Delta)$ są otwarte i $\rho$ jest homeo- z nich na $\Delta$.
+Wtedy $\rho$ jest otwarte, $\Omega$ lokalnie łukowo spójne $\Ra$ $X$ też.
+Jeśli $\gamma$ jest drogą w $\Omega$, to $\overline \gamma$ w $X$ jest \wcht{liftingiem}, $\rho \circ \overline \gamma = \gamma$.
+To umożliwia określenie \emph{abstrakcyjnego twierdzenia o monodromii...}
+Są jeszcze analityczne manifoldy (9.6).

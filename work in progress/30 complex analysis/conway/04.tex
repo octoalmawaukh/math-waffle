@@ -1,0 +1,68 @@
+\wcht{Ograniczona wariacja} \prawo{4.1} $\gamma \colon [a,b] \to \C$:  $v(\gamma, P) = \sum_{k=1}^m |\gamma(t_k) - \gamma(t_{k-1})| \le M$ dla każdej partycji $P = \{t_k\}$ odcinka $[a,b]$ (prostowalność).
+\wcht{Całkowita wariacja}: $V(\gamma) = \sup \{v(\gamma, P) : P \text { partycją } [a,b]\}$.
+Drogi $\gamma$ jest prostowalna i khm-1.
+Dla prostowalnej $\gamma$ i ciągłej $f$ istnieje $I \in \C$ (\wcht{całka z $f$ względem $\gamma$ nad $[a,b]$}), że ,,każdy $\varepsilon$ ma $\delta$'': jeśli $P = \{t_0 < \dots < t_m\}$ jest partycją drobniejszą niż $\delta$, to khm-2 dla $t_{k-1} \le \tau_k \le t_k$.
+%Dla drogi $\gamma$ i ciągłej $f$: $\int_a^b f \, \D \gamma = \int_a^b f(t) \gamma'(t) \,\D t$.
+Gdy $\gamma$ jest prostowalna, zaś $f$ ciągła na $\gamma^*$: \wcht{całka krzywoliniowa} (khm-3) $f$ wzdłuż $\gamma$.
+\wcht{Równoważność} prostowalnych $\sigma \colon [c,d] \to \C$, $\gamma \colon [a,b] \to \C$: istnieje $\varphi \colon [c,d] \to [a,b]$, ,,na'', że $\sigma = \gamma \circ \varphi$.
+Zbiór $G \subseteq_o C$, $\gamma$ prostowalna krzywa od $\alpha$ do $\beta$, $f \colon G \to \C$ ciągła z pierwotną $F$ ($F' = f$): khm.
+\[
+	V(\gamma) =  \int_a^b |y'(t)| \,\D t \spk
+	\left| I - \sum_{k=1}^m f(\tau_k) [\gamma(t_k) - \gamma(t_{k-1})]\right| < \varepsilon \spk
+	\int_a^b (f \circ \gamma)(t) \cdot {\gamma'(t)} \,\D t \spk
+	\int_\gamma f = F(\beta) - F(\alpha)
+\]
+
+Jeśli \prawo{4.2} $\varphi \colon [a,b] \times [c,d] \to \C$ jest ciągła, to $g \colon [c, d] \to \C$ jest ciągła; jeśli $\partial \varphi / \partial t$ istnieje i jest ciągła, to $g$ jest ciągle r-lna i khm.
+Gdy $f \colon G \to \C$ jest holo-, $B_\ge(a, r) \subset G$ dla $r>0$; $\gamma(t) = a + r e^{it}$ dla $ 0 \le t \le 2\pi$, to khm-3 dla $|z-a| < r$.
+Jeśli $f$ jest holo- w $B(a, R)$, to $f(z) = \sum_{n=0}^\infty a_n(z-a)^n$ dla $|z-a| < R$ i $a_n = f^{(n)}(a) / n!$; szereg ma promień zbieżności $\ge R$.
+Wnioski: jeśli $f \colon G \to \C$ jest holo-, to $\infty$-r--lna.
+\wcht{Szacowanko Cauchy'ego}: $f$ a--a na $B(a, R)$, $|f(z)| \le M$ tamże. Wtedy khm-4.
+\[
+	g(t) = \int_a^b \varphi(s, t) \,\D s \spk
+	g'(t) = \int_a^b \partial_t \varphi (s,t) \,\D s \spk
+	f(z)  =\frac{1}{2\pi i} \int_\gamma \frac{f(w)}{w-z} \,\D w \spk
+	\left|f^{(n)}(a)\right| \le \frac{M \cdot n!}{R^n}
+\]
+
+
+Jeśli \prawo{4.3} $f \colon G \to C$ jest holo- i $f(a) = 0$, to $a$ jest \wcht{$m$-krotnym} zerem, gdy $f(z) = (z-a)^m g(z)$ dla $g(a) \neq 0$ ($g$ holo-).
+\wcht{Entiére}: holo- na $\C$; jako szereg potęgowy zbiega na $\C$.
+\wcht{Tw. Liouville'a}: ograniczona entiére $\Ra$ stała.
+Dla holo- $f \colon G \to \C$ na obszarze NWSR: $f = 0$; gdzieś $f^{(n)} (a) = 0$ dla $n \ge 0$; $\{z \in G : f(z) = 0\}$ ma punkt skupienia w $G$.
+\wcht{Reguła maksimum}: jeśli holo- na obszarze osiąga maksimum, to jest stała.
+
+
+Jeśli \prawo{4.4} $\gamma \colon [0,1] \to \C$ jest \prawo{4.5} ,,zapr'' i $a \not\in \{\gamma\}$, to $\operatorname{Ind}_\gamma(a) \in \Z$ (\wcht{,,liczba zawirowań''}); stała na składowych $\C \setminus \{\gamma\}$; $0$ dla nieograniczonej.
+\wcht{Całkowzór Cauchy'ego I}: $f \colon (G \subset_o \C) \to \C$ holo-, ,,zapr'' $\gamma$ w $G$, że $\operatorname{Ind}_\gamma(w) = 0$ dla $w \in \C \setminus G$; wtedy dla $a \in G \setminus \{\gamma\}$ khm-1.
+\wcht{Tw. Morery}: jeśli całka z (ciągłej na obszarze) po trójkątach jest zerem, to funkcja jest holo-.
+\[
+	\operatorname{Ind}_\gamma(a)= \frac{1}{2\pi i} \int_\gamma \frac{\D z}{z-a} \spk
+	f(a) \operatorname{Ind}_\gamma(a) = \frac{1}{2\pi i} \int_{\gamma_k} \frac{f(z)}{z-a} \,\D z \textrm{ (można uogólnić na więcej dróg)} % \spk
+	%f^{(k)} (a) \sum_{j=1}^m n(\gamma_j, a) = k! \sum_{j=1}^m \frac{1}{2\pi i} \int_{\gamma_k} \frac{f(z)}{(z-a)^{k+1}} \,\D z 
+\]
+
+,,Zapr'' \prawo{4.6} $\gamma_0, \gamma_1 \colon [0,1] \to G$ w obszarze $G$ są \wcht{homotopijne}: istnieje ciągła $\Gamma \colon [0,1]^2 \to G$, że $\Gamma(s,0 ) = \gamma_0(s)$, $\Gamma(s,1)=  \gamma_1 (s)$ ($0 \le s \le 1$) i $\Gamma(0, t) = \Gamma(1,t)$ dla $0 \le t \le 1$ ($\gamma_0 \sim \gamma_1$).
+\wcht{Cauchy II}: całka z $f \colon G\to \C$ po ,,zapr'' $\gamma \sim 0$ to zero.
+\wcht{Cauchy III}: całki z tej $f$ po $\gamma_0 \sim \gamma_1$ są równe.
+%Tu: $\gamma_0, \gamma_1 \colon [0,1] \to G$ prostowalne, że khm-3 są {FEP homotopic}, gdy dla pewnej ciągłej $\Gamma \colon [0,1]^2 \to G$ jest $\Gamma(s, 0) = \Gamma_0(s)$, $\Gamma(s, 1) = \Gamma_1(s)$, $\Gamma(0,t) = a$ i $\Gamma(1, t) = b$.
+\wcht{Niezależność ścieżki}: całki po homotopijnych $\gamma_0, \gamma_1$ (prostowalnych, może nie zamkniętych!) z holo- są równe.
+\wcht{Cauchy IV}: jeśli $G$ jednospójny, to całki z holo- $f$ po prostowalnych krzywych są równe; $f$ ma pierwotną w $G$.
+Jeśli jeszcze $f(z) \neq 0$ w $G$, to $f(z) = \exp g(z)$ dla pewnej holo- $g \colon G \to \C$.
+$G$ otwarty, $\gamma$ jest \emph{homologous} do zera, $\gamma \approx 0$, gdy $n(\gamma, w) = 0$ dla $w \in \C \setminus G$.
+$\gamma \sim 0 \Ra \gamma \approx 0$.s
+\[
+	%\int_\gamma f = 0 \spk
+	%\int_{\gamma_0} f = \int_{\gamma_1} f \spk
+	\gamma_0 (0) = \gamma_1 (0) = a \spk
+	\gamma_0(1) = \gamma_1(1) = b
+	\hfill
+	(*): \frac{1}{2\pi i} \int_\gamma \frac{f'(z)}{f(z)} \,\D z = \sum_{k=1}^m \operatorname{Ind}_\gamma (a_k)
+\]
+
+
+Dla \prawo{4.7} holo- $f \colon G \to \C$ z obszaru, z zerami (z krotnościami!) $a_1, \dots, a_m$ i ,,zapr'' $\gamma$ w $G \setminus\{a_i\}$, że $\gamma \approx 0$ mamy $(*)$.
+Holo- $f$ w $B(a, R)$, $f(z) - f(a)$ ma zero rzędu $m$ w $z = a$ $\Ra$ istnieją $\varepsilon > 0$, $\delta > 0$, że gdy $|\zeta - f(a)| < \delta$, to $f(z) = \zeta$ ma w $B(a, \varepsilon)$ dokładnie $m$ pierwiastków jednokrotnych.
+\wcht{,,Zespolony Banach-Schauder''}: niestała $f$ holo- na obszarze $G$ $\Ra$ $f(U \subseteq_o G) \subseteq_o \C$.
+Wniosek: jeśli ,,1-1'' holo- $f \colon G \to \C$ jest ,,na'' $\Omega$, to odwrotna $g \colon \Omega \to \C$ jest holo- i $g'(f(z)) = 1/f'(z)$.
+\wcht{Tw. Goursata}: $f \colon (G \subseteq_o \C) \to \C$ jest holo- $\Ra$ jest ciągle r--lna.

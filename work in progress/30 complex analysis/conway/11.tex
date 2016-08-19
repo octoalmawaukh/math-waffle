@@ -1,0 +1,28 @@
+\wcht{Wzór Poissona-Jensena}: \prawo{11.1} holo- $f$ na nadobszarze $B_\ge (0, r)$; zera w $B(0,r)$ z krotnościami: $a_i$; $f(z) \neq 0$, $|z| < r$ $\Ra$ khm.
+\wcht{Jensena}: $z = 0$.
+\[
+	\log |f(z)| = \frac{1}{2\pi} \int_0^{2 \pi} \Re \left(\frac{re^{i \theta} + z}{re^{i \theta}-z}\right) \log|f(re^{i \theta})| \,\D \theta - \sum_{k=1}^n \log \left| \frac{r^2 - \overline{a}_k z}{r(z-a_k)} \right|
+	%\log |f(0)| = \frac{1}{2\pi} \int_0^{2\pi} \log |f(re^{i \theta})| \,\D \theta- \sum_{k=1}^n \log \frac{r}{|a_k|} 
+\]
+
+Entiére \prawo{11.2} $f$ z zerami $a_k$ (z krotnościami), że $|a_1| \le |a_2| \le \dots$ {skończonej rangi}: istnieje $p \in \Z$, że $\sum_{n=1}^\infty {|a_n|^{-p-1}}$ zbiega.
+\wcht{Standardowa forma} dla $f$ {rangi} $p$: $P(z) = \prod_{n=1}^\infty E_p(z/a_n)$.
+\wcht{Skończony genus}: $\mu = \max(p,q)$, gdy ranga $< \infty$ i $f(z) = z^m e^{g(z)} P(z)$, ($g$: wielomian, $\deg = q$); wtedy khm-1.
+\wcht{Skończony rząd}: istnieją $a, r_0 > 0$, że $|f(z)| < \exp(|z|^a)$ dla $|z| > r_0$; jej rząd: $\lambda$, $\inf\{a : |f(z)| < \exp(|z|^a) \text{ dla dużych } x\}$.
+Funkcja $f$ rzędu $\lambda$: khm-2, $M(r) = \max \{|f(z)| : |z| = r\}$.
+Jeśli $f$ ma genus $\mu < \infty$, to $\lambda \le \mu +1$.
+\emph{Wszystkie $f$ powyżej są entiére!}
+\[
+	(\forall \alpha > 0)(\exists r_0)(\forall |z| > r_0)(|f(z)| < \exp(\alpha |z|^{\mu + 1})) \spk
+	\lambda = \limsup_{r \to \infty} \frac{\log \log M(r)}{\log r}
+\]
+
+Niestała \prawo{11.3} entiére $f$ rzędu $\lambda$ z $f(0) = 1$; $a_k$ zerami (z krotnościami, uporządkowanymi $|a_1| \le |a_2| \le \dots$) i całkowita $p > \lambda - 1$: khm-1 dla $z \neq a_k$.
+\wcht{Tw. Hadamarda o faktoryzacji}: entiére $f$ rzędu $\lambda < \infty$ ma {genus} $\mu \le \lambda$.
+Entiére $f$ skończonego rzędu może nie przyjąć tylko jednej wartości.
+Każda entiére skończonego rzędu $\lambda \not\in \Z$ ma $\infty$-wiele zer.
+\[
+	\frac{\D{}^p}{\D{z}^p} \left [\frac{f'(z)}{f(z)} \right] = \sum_{n=1}^\infty \frac{-p!}{(a_n-z)^{p+1}}
+\]
+
+

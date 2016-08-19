@@ -1,0 +1,25 @@
+%\wcht{Reguła maksimum (I)}: jeśli a--a $f$ na obszarze $G$, $a \in G$ i $|f(a)| \ge |f(z)|$ dla $z \in G$, to $f$ jest stała.
+\wcht{Reguła maksimum (II)}:  \prawo{6.1} jeśli $f$ holo- na $G \subseteq_o \C$ (ograniczonym) i ciągła na domknięciu $G$, to $\max |f(z)|$ na $\operatorname{cl} G$ i $\partial G$ są równe.
+\wcht{Nowy limes superior} (inferior), gdy $a \in \operatorname{cl} G$ lub $a = \infty$, zaś $f \colon G \to \R$.  %Gdy $f \colon G 
+\wcht{Rozszerzony brzeg} $G \subseteq \C$, $\partial_\infty$: brzeg $G$ w $\C_\infty$.
+\wcht{Reguła maksimum (III)}: gdy holo- $f$ na obszarze $G$ ma stałą $M$ ograniczającą $\limsup_{z\to a} |f(z)|$ z góry dla $a \in \partial_\infty G$, to $|f(z)| \le M$ na $G$.
+\[
+	\limsup_{z \to a} f(z) = \lim_{r \to 0^+} \left(\sup \{ f(z) : z \in G \cap B(a,r)\} \right) \spk
+	\liminf_{z \to a} f(z) = \lim_{r \to 0^+} \left(\inf \{ f(z) : z \in G \cap B(a,r)\} \right) 
+\]
+
+\wcht{Lemat Schwarza}: \prawo{6.2} holo- $f$ na dysku $D$, $\{|z| <1\}$, spełnia $|f(z)| \le 1$, $f(0) = 0$ $\Ra$ $|f'(0)| \le 1$ i $|f(z)| \le |z|$.
+Gdy $|f'(0)| = 1$ lub $|f(z_0)| = |z_0|$, to $f(w) = cw$ ($|c| = 1$).
+Niech $\varphi_a(z) = (z-a)/(1-\overline{a}z)$ dla $|a| <1$; jako ,,$D\to D$'' jest ,,1-1'', odwrotna to $\varphi_{-a}$; $\varphi_a(\partial D) \subseteq \partial D$, $\varphi_a(a) = 0$.
+Jeśli $f \colon D \to D$ jest ,,1-1'' holo- na $D$ i $f(a) = 0$, to $f = c \varphi_a$ dla pewnej $|c| = 1$.
+\wcht{Nierówność Caratheodory'ego}: $f$ holo- na $B_{\ge}(0, R)$.
+\[
+	0 < r < R \text { oraz } A(r) = \max \{\Re f(z) : |z| = r\}\ge 0 \Ra 	M(r) = \max\{|f(z)| : |z| = r\} \le \frac{R+r}{R-r} [A(r) + |f(0)|]
+\]
+
+\wcht{Tw. Hadamarda o trzech okręgach}: \prawo{6.3} $f$ jest holo- na $\text{ann} (0, R_1, R_2)$.
+$M(r) = \max \{|f(re^{i \theta})| : \theta \in [0, 2 \pi]\}$ dla $R_1 < r < R_2$; wtedy dla $R_1 < r_1 \le r \le r_2 < R_2$ jest khm.
+\wcht{Tw. Phragmena-Lindelöfa}: [$G$ jednospójny obszar, holo- $f, \varphi \colon G \to \C$, ($\varphi$ ograniczona, nigdzie nie znika)] jeśli $M$ jest stałą i $\partial_\infty G = A \cup B$, że $a \in A \Ra \limsup_{z \to a} |f(z)| \le M$, zaś $b \in B, \eta > 0 \Ra \limsup_{z \to b} |f(z)| \cdot |\varphi(z)|^\eta \le M$, to $|f(z)| \le M$.
+\[
+	\log M(r) \le \frac{\log r_2 - \log r}{\log r_2 - \log r_1} \log M(r_2) + \frac{\log r - \log r_1}{\log r_2 - \log r_1} \log M(r_2) 
+\]
