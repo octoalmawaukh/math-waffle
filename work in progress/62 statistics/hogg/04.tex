@@ -1,0 +1,40 @@
+\wcht{Statystyka} \prawo{4.1} $T$: funkcja próbki.
+\wcht{Nieobciążony} estymator $\theta$: $\expected T = \theta$ (średnia, wariancja (dzielona przez $n-1$!)). 
+Statystyka \prawo{5.1} \wcht{zgodna}: $T_n \wgpstwa \theta$.
+\wcht{Funkcja wiarogodności}: $L(\theta, x) = \prod_{i \le n} f(x_i, \theta)$.
+Estymator największej wiarogodności (mle): $\widehat \theta$, który maksymalizuje $L$.
+
+Jeśli $X_1, \ldots, X_n$ jest próbką z gęstości $f(x, \theta)$, $L, U$ są statystykami, zaś $0 < \alpha < 1$, to $(L, U)$ jest $(1-\alpha) \cdot 100 \%$ \wcht{przedziałem ufności} dla $\theta$, jeśli $1 - \alpha = \pstwo_\theta[\theta\in (L, U)]$
+4.2: Confidence intervals
+
+4.3: Confidence intervals
+
+Łączny \prawo{4.4} rozkład \wcht{statystyk porządkowych} $Y_1 < \ldots < Y_n$ to $n! \prod_i f(y_i)$ dla $a < y_1 < \ldots < y_n < b$.
+Gęstość: khm-1 dla $a < y_k < b$.
+\wcht{Kwantyl}: $\xi_p = F^{-1}(p)$.
+\wcht{Kwantyl próbkowy}: $Y_k$ dla $p = k : [n+1]$.
+\emph{442 Confidence intervals for quantiles}
+\[
+	g_k(y_k) = {n \choose k} \cdot k \cdot [F(y_k)]^{k-1} \cdot [1 - F(y_k)]^{n-k} f(y_k)
+\]
+
+Załóżmy, że \prawo{4.5} $\Omega = w_0 \cup w_1$ (unia rozłączna) to p. parametrów $\omega$ dla gęstości $f(x, \theta)$.
+\wcht{Hipoteza zerowa}: $\theta \in \omega_0$, \wcht{alternatywna}: $\theta \in \omega_1$.
+\wcht{Błąd I}: odrzucenie $H_0$, \wcht{II}: $H_1$.
+\wcht{Test} $H_0$ przeciw $H_1$ oparty jest na \wcht{obszarze krytycznym} $C \subseteq D$ (przestrzeń próbek) rozmiaru $\alpha$ (khm-1).
+Chcemy maksymalizować
+\[
+	\alpha = \max_{\theta \in \omega_0} \pstwo_\theta[(X_1, \ldots, X_n)\in C]
+\]
+
+% 4.5: Hypothesis testing
+% 4.6: kontynuacja.
+% 4.7: test chi kwadrat
+% 4.8: metoda monte carlo
+% 4.9: bootstrap
+% 4.0: tolerance limits
+
+Niech \prawo{4.X} $X$ będzie z-losową z gęstością $f(x, \theta)$ dla $\theta \in U \subseteq \R^n$, $X_1, \ldots, X_n$ losową próbką z dystrybucji $X$.
+Statystyka $T$ jest \wcht{nieobciążonym} estymatorem $\theta$, gdy $\expected T = \theta$, przykład: średnia $\overline x = \sum_{i \le n} x_i / n$ oraz wariancja: $\sum_{i \le n} (x_i - \overline x)^2 / (n-1)$.
+Być może mediana.
+
