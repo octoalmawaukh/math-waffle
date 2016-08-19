@@ -1,0 +1,30 @@
+\wcht{Radykał} \prawo{1.1} ideału $I$: przecięcie nadideałów pierwszych, $\{x \in R: \exists_n x^n \in I \}$.
+\wcht{Nilradykał}: radykał ideału $\{0\}$.
+Przekrój ideałów maksymalnych: $\operatorname{rad} R$, \wcht{radykał Jacobsona}; $x \in \operatorname{rad} R$ $\Lra$ $1 + xR$ składa się z jedności.
+Pierścień \wcht{zredukowany}: $\operatorname{nil} R = 0$; przyjmujemy $R_{\textrm{red}} = R {/} \operatorname{nil} R$.
+\wcht{Pierścień lokalny} (\wcht{semilokalny}): jeden (skończenie wiele) ideał maksymalny.
+Jeżeli $\{I_i \trk R\}_{i=1}^n$ są parami \wcht{względnie pierwsze} ($I + J = (1)$), to $\prod_{i=1}^n I_i$ i $\bigcap_{i=1}^n I_i$ są tym samym, zaś $R / \prod_i I_i \cong \prod_i (R/I_i)$.
+Jeśli $\mathfrak K$ jest ciałem, to $(\mathfrak K [[X_1, \ldots, X_n]], (X_1, \ldots, X_n))$ jest lokalny.
+Weźmy $R$ będący IB.
+Element $a \in R$ jest \wcht{nierozkładalny}, jeśli $a \not\in R^\times$ i $a = bc$ pociąga $b \in R^\times$ lub $c \in R^\times$, równoważnie: $(a) \trk R$ jest maksymalny pośród głównych.
+
+Niech \prawo{1.2} $A$ będzie pierścieniem, $M$ zaś $A$-modułem.
+Zbiór $\{a \in A : a N' \subseteq N\}$ jest ideałem $A$ dla podmodułów $N$, $N'$, $N : N'$.
+Jeśli $I \trk A$ to ideał, to $\{x \in M : xI \subseteq N\}$ jest podmodułem $M$, $N : I$.
+Ideał $0 : M$ to \wcht{anihilator}, $\operatorname{ann} M$.
+$M$ jest modułem nad $A / \operatorname{ann} M$.
+Jeśli $\operatorname{ann} M = 0$, to $M$ jest \wcht{wiernym} $A$-modułem; dla $x \in M$: $\operatorname{ann} x = \{a \in A : ax = 0\}$.
+$A$-moduł to grupa abelowa, w której określono skalarne mnożenie, czyli $A \times M \to M$, że $a(x+y) = ax + ay$, $(ab)x = a(bx)$, $(a+b)x = ax + bx$ oraz $1 x = x$.
+
+Zbioczup \prawo{1.3} $(\Gamma, <)$ spełnia ACC, gdy każdy łańcuch $\gamma_1 < \gamma_2 < \ldots$ zatrzymuje się.
+\wcht{Pierścień Noether} (ACC dla ideałów) $\Lra$ każdy (wg Cohena: wystarczy pierwszy) ideał skończenie generowany.
+\wcht{Pierścień Artina}: to samo, ale DCC.
+Oba dziedziczą się na ilorazy, ale nie podpierścienie.
+Podobne definicje dla (pod)modułów.
+Skończony podmoduł nad pierścieniem Noether (Artina) jest Noether (Artina).
+Podmoduły $\Z$-modułu $\Z$ są postaci $n\Z$, czyli $\Z$ jest tylko Noether.
+Jeśli $W$ to $\Z$-moduł $\{a/p^k : a,b, k \in \Z\}$, to $\Z$-moduł $W/\Z$ jest tylko Artina.
+\wcht{Tw. Akizuki}: pierścień Artina jest Noether (\datum{1935}).
+Jeśli $A$ jest Noether, to $A[X]$, $A[[X]]$ też (\wcht{tw. Hilberta o bazie}).
+\wcht{Tw. Formanka} (\datum{1973}): gdy skończenie generowany $A$-moduł $B$ wierny nad pierścieniem  $A$ jest taki, że zbiór podmodułów $IB$ ($I \trk A$) w $B$ spełnia ACC, to $A$ jest Noether.
+\wcht{Tw. Eakina-Nagaty}: jeśli podpierścień $A$ pierścienia Noether $B$ jest taki, że $B$ nad $A$ jest skończony, to $A$ jest Noether.

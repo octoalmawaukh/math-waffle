@@ -1,0 +1,43 @@
+\documentclass[a4paper, fleqn, 9pt]{extarticle}
+\usepackage{etoolbox}
+\usepackage{Alegreya}
+\usepackage[euler-digits,euler-hat-accent]{eulervm}
+
+\usepackage{amssymb, mathrsfs}
+\usepackage[left=1.5cm,top=2.5cm,right=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{MnSymbol}
+
+\usepackage{fancyhdr}
+\makeatletter
+\fancypagestyle{mypagestyle}
+{\newpage \fancyfoot[C]{} \renewcommand{\footrulewidth}{0pt}}
+\makeatother
+\pagestyle{mypagestyle}
+\headsep 5pt                 %% put this outside
+\usepackage{lastpage}
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+
+\input{mathe-cuty}
+
+\usepackage{graphicx}
+\relpenalty=10000
+\binoppenalty=10000
+\interlinepenalty=10000
+
+\newenvironment{enumx}{\begin{enumerate} \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt} \setlength{\parsep}{0pt}}{\end{enumerate}}
+\newenvironment{itemx}{\begin{itemize} \setlength{\itemsep}{0pt} \setlength{\parskip}{0pt} \setlength{\parsep}{0pt}}{\end{itemize}}
+
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\selectlanguage{polish}
+
+\begin{document}
+\setlength{\belowdisplayskip}{2pt}
+\setlength{\belowdisplayshortskip}{2pt}
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\abovedisplayshortskip}{2pt}
