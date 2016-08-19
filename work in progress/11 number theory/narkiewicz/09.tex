@@ -1,0 +1,18 @@
+% \wcht{Funkcja silnie addytywna}: \prawo{9.1} dla $p \in \mathbb P$ jest $f(p^k) = f(p)$.
+% Z pewnych względów $f(n)$ zachowuje się podobnie jak $\sum_{p \le n}f(p)/p$, gdy $f$ na potęgach $p$ jest wspólnie ograniczona.
+% \wcht{Nierówność Turána-Kubilusa}: istnieje absolutna stała $C$, że dla addytywnej $f$ i naturalnego $n$ jest khm-1, jeśli $f$ jest silnie addytywna, to khm-2 (można przyjąć $C = 32$, zaś $2$ nie da się poprawić poniżej $1.47$).
+% Jeśli $f$ jest addytywna i $0 \le f(p) \le B$ dla pierwszych $p$ oraz $D_n = o(A_n)$, to $A_n$ niemalejącą aproksymantą dla $f$.
+% \[
+% 	\sum_{m \le n} |f(m)-A_n|^2 \le CnD_n^2 \spk
+% 	\sum_{m \le n} |f(m)-A_n|^2 \le 2 Cn B_n^2 \hfill
+% 	A_n = \sum_{p \le n} \frac{f(p)}{p} \spk
+% 	B_n^2 = \sum_{p \le n} \frac{|f(p)|^2}{p} \ge 0 \spk
+% 	D_n^2 = \sum_{p^k \le n} \frac{|f(p^k)|^2}{p^k} \ge 0
+% \]
+
+% \wcht{Tw. Erdösa-Kaca w wersji Billingsleya}: \prawo{9.2} niech $N(x, a,b)$ będzie liczbą naturalnych $m$ z przedziału $[3,x]$, dla których zachodzi nierówność khm, gdzie $a<b$ i być może $a = -\infty$, $b = \infty$. Wówczas khm-2.
+% Funkcję $\omega$ można zastąpić przez $\Omega$.
+% \[
+% 	a \le \frac{\omega(m) - \log \log m}{\sqrt{\log \log m}} \le b \spk
+% 	\lim_{x \to \infty} \frac{N(x, a, b)}{x} = \frac{1}{\sqrt{2\pi}} \int_a^b \exp \left(- \frac{t^2}{2}\right) \, \textrm{d}t
+% \]

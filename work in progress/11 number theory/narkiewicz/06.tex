@@ -1,0 +1,32 @@
+\wcht{Sito Eratostenesa}: \prawo{6.1} wykreślamy z $(x^{1/2}, x]$ wielokrotności pierwszych z $[2, x^{1/2}]$. 
+%Określamy $F \colon \mathfrak P(A) \to \C$ przez $C \mapsto \sum_{x \in C} f(x)$ dla $f \colon A \to \C$, a dla $j \le r$ i zbiorów $A_1, \ldots, A_r \subseteq A$ jeszcze $T_j$ (khm-1).
+%Jeśli $B = A \setminus \bigcup_{i=1}^r A_i$, to $F(B) = T_r(f)$.
+%Jeśli zaś $f \ge 0$ i $2 \mid l$, $2 \nmid k$, to $T_k(f) \le F(B) \le T_l(f)$.
+\wcht{Sito Eratostenesa-Bruna}: niech $\Pi = \{p_1, \ldots, p_n\} \subseteq \mathbb P$, $D = \prod_{i=1}^n p_i$.
+Dla skończonego $A$ niech $S$ będzie liczbą jego elementów niepodzielnych przez żadną z $p_i$, zaś $S_d$ podzielnych przez $d$.
+Wtedy $S = \sum_{d \mid D} \mu(d) S_d$, zaś dla $1 \le r \le \lfloor n : 2 \rfloor$ jeszcze $\sum_{\omega(d) \le 2r-1} S_d \le S \le \sum_{\omega(d) \le 2r} S_d$.
+Liczb $n \le x$ bez dzielników pierwszych $p \le \log (x)$ jest $O(x : \log \log x)$. 
+\wcht{Tw. Bruna}: liczb bliźniaczych $p \le x$ jest $O[x (\log \log x : \log x)(\log \log x : \log x)]$.
+Szereg odwrotności liczb bliźniaczych zbiega.
+Jaki jest kres dolny dla $r$, żeby dla dużych $x$ w $[x, x + x^r]$ była pierwsza? Góra $21:40$ (Baker, Harman, Pintz).
+Hipoteza Craméra: ten kres to zero, a dokładniej: dla pewnej stałej $C$ w $[x, x + C \log ^2 x]$ zawsze jest jakaś pierwsza.
+
+% % Niech \prawo{6.2} $M \ge 0$ i $N \ge 1$ będą całkowite, $a_j \in \C$: khm-1 dla $Q \ge 2$ (Bombieri, Montgomery, Vaughan).
+% % \wcht{Zasadnicze tw. o sicie}: niech skończony $A \subset \Z$ ma średnicę $\le N$, zaś $Q \in \N$.
+% % Jeśli dla pierwszych $p \le Q$ jest $f(p)$ klas reszt modulo $p$ (rozłącznych z $A$!), to $|A| \le (Q^2 + \pi N)/L$.
+% % Wielkie sito ma pierwowzór, \wcht{tw. Linnika}: jeśli $N \in \N$ i dla pierwszych $p \le \sqrt N$ jest $f(p)$ różnych klas reszt modulo $p$, zaś $W = \sum_{p \le \sqrt N} f(p) / [p - f(p)]$, przedział $I$ ma długość $N$, to leży w nim co najwyżej $(1+\pi)N/W$ liczb spoza zadanych klas.
+% % Pożyteczne \wcht{tw. Bruna-Titchmarsha}: istnieje stała $B$, że dla $k \perp l$ i $x \ge k$ jest $\pi(x, k, l) \le Bx / [\varphi(k) \log(x/k)]$ (M-V: $B = 2$).
+% % \[
+% % 	S(t) = \sum_{M+1}^{M+N} a_n \exp(2 \pi i nt) \Ra
+% % 	\sum_{q \le Q} \sum_{a = 1}^q [a \perp q] \left|S(a/q)^2\right| \le (Q^2+N)\sum_{M+1}^{M+N} |a_n|^2 \spk
+% % 	L = \sum_{q \le Q} \mu^2(q) \prod_{p \mid q} \frac{f(p)}{p - f(p)}
+% % \]
+
+% % Hooley: GRH pociąga \wcht{hipotezę Artina} (każda $(a \in \Z) \neq \pm 1$, nie kwadrat, jest pierwiastkiem pierwotnym dla $\infty$ wielu l. pierwszych).
+% % Grupt, Ram Murty: prawdziwa dla $\infty$ wielu.
+% % Heath-Brown: okej dla $a$ pierwszych z (może) dwoma wyjątkami i bezkwadratowych $a$ (może z trzema), spk dla jednej z: 2, 3, 5.
+% % \wcht{Tw. Gallaghera}: liczb naturalnych z przedziału długości $N$, które nie są pierwiastkami pierwotnymi dla żadnej pierwszej $p \le \sqrt N$ jest $O(\sqrt N \log N)$.
+% % Wnioski: bliźniaczych $B_2(x)$ w $[2, x]$ jest $O(x \log^{-2} x)$, zaś każda $n$ jest sumą dwóch pierwszych na khm-wiele sposobów.
+% % \[
+% % 	O \left(\frac{n}{\log^2 n}\prod_{p \mid n} \frac{p+2}{p} \right)
+% % \]

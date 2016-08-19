@@ -1,0 +1,78 @@
+Zbiór \wcht{funkcji arytmetycznych} \prawo{4.1} ($\N \to \C$) %($\varphi$, $\omega$, $\sigma_k$, $\Omega$, $\mu$).
+z dodawaniem i \wcht{splotem Dirichleta} $f*g \colon n \mapsto \sum_{d \mid n} f(d) g(n : d)$ jest przemiennym pierścieniem bez dzielników zera, $n \mapsto [n=1]$ jest jedynką.
+Funkcja $f$ odwraca się $\Lra f(1) \neq 0$.
+Zbieżność absolutna khm-1-a dla $f, g \in \mathbb A$ oraz pewnego $z \in \C$ pociąga to samo dla khm-1-b.
+\wcht{Splot Abela}: $f \times g \colon n \mapsto \sum_{k=0}^n f(k)g(n-k)$, określony na $\mathbb A_0$ ($\N_0 \to \C$).
+Ma jedynkę $n \mapsto [n = 0]$; $f$ się odwraca $\Lra f(0) \neq 0$.
+\wcht{Splot unitarny}: $f \circ g \colon n \mapsto \sum_* f(d) g(n/d)$, sumowanie po $d \mid n$, że $(d, n/d) = 1$.
+\wcht{Sumowanie Abela}: gdy $a_i, b_i \in \C$, $A(m) = a_1 + \ldots + a_m$ i $c_m = b_{m+1} - b_m$, to $\sum_{i=1}^n a_i b_i = A(n) b_n - \sum_{m=1}^{n-1} A(m) c_m$.
+\wcht{Wzór Eulera-MacLaurina}: \emph{Analiza 1}.
+Dla $x \ge 2$ i $c > -1$, $\{f(n)\}$ jest skrótem $\sum_{n \le x} f(n)$ (tylko tu!): $\{n^c\} = x^{1+c}/(1+c) + O(x^c)$, $\{1/n\} = \log x + \gamma + O(1/x)$, wzór Stirlinga (\emph{Kombinatoryka}).
+\wcht{Tw. Césaro}: jeśli $g = 1 * f$ i szeregi $\sum_{n=1}^\infty g(n) x^n$, $\sum_{n=1}^\infty f(n) x^n / (1-x)$ są absolutnie zbieżne w $x$, to mają równe sumy.
+Pierścień arytmetycznych funkcji ze splotem Cauchy'ego jest izo- z ,,formalnym'' $\C[X]$, ze splotem Dirichleta: $\C[X_1, X_2, \ldots]$.
+\[
+	\left[\sum_{n=1}^\infty \frac{f(n)}{n^z} \right] \cdot \left[\sum_{n=1}^\infty \frac{g(n)}{n^z} \right] = \sum_{n=1}^\infty \frac{(f*g)(n)}{n^z} \spk
+	\left\{\frac{1}{n \log n}\right\} = \log \log x + C_1 + O \left( \frac{1}{x \log x}\right) \spk
+	\left\{\frac{\log n}{n}\right\} = \frac{\log^2 x}{2} + O \left(\frac{\log x}{x}\right)
+\]
+
+Funkcja \wcht{addytywna} \prawo{4.2} spełnia $f(mn) = f(m) + f(n)$ dla $(m,n) = 1$, \wcht{w pełni}: dla wszystkich; \wcht{multiplikatywna}: $f(mn) = f(m) f(n)$; te ostatnie ze splotem Dirichleta są grupą.
+Wniosek Bella: splot multi- z niemulti- nie jest multi-.
+Przykłady: $d$, $\sigma$, $\sigma_k$.
+\wcht{Wzór Möbiusa}: $f$, $g$ są arytmetyczne, $\sum_{d \mid n} f(d) = g(n) \Lra \sum_{d\mid n} \mu (d) g(n/d) = f(n)$ (Dedekind, Liouville \datum{1857}).
+Khm-3: Walfisz (\datum{1963}).
+Jeśli funkcja $f$ spełnia ,,$\lim_n f(2n+1) - f(n)$ istnieje'' lub ,,$f(n+1) - f(n) \to 0$, $f$ addytywna'', to $f(n) = c \log n$ (Mauclaire, Erdös).
+
+Dla każdego $\delta > 0$ prawdą jest $d(n) = o(n^\delta)$.
+Dla $x \ge 2$, $\sum_{n \le x} d(n) = x \log x + (2\gamma - 1) x + O(x^{1:2})$.
+Jeżeli funkcja $f$ jest multiplikatywna, $S = \sum_{n \ge 1} f8n)$ zbiega absolutnie, to $\prod_p \sum_{k \ge 0} f(p^k)$ też, do tego samego.
+\wcht{Tw. von Sternecka}: $(1 * (f \circ g)) = (1 * f)(1 * g)$, przy czym $(f \circ g)(n) = \sum f(r)g(s)$, $[r, s] = n$.
+\[
+	\limsup_n \frac{\varphi(n)}{n} = 1 \spk
+	\liminf_n \frac{\varphi(n)}{n} = 0 \spk
+	\sum_{n \le N} \varphi(n) = 3 \frac{N^2}{\pi^2} + O(N [\log N]^{2:3} [\log \log N]^{4:3}) \spk
+	\sum_{n=1}^\infty \frac{\mu(n)}{n} = 0
+\]
+
+
+% % \wcht{Gęstość górna, dolna}: \prawo{4.3} $d^* = \limsup_{x \to \infty} |A \cap [1,x]| / x$ ($d_* = \liminf \dots$).
+% % Gęstość unii rozłącznej dwóch jest sumą gęstości, ale nie jest miarą.
+% % Jeśli $a_k$ jest ciągiem naturalnych parami względnie pierwszych, zaś $A$ zbiorem naturalnych niepodzielnych przez żadną z $a_k$, to $A$ ma gęstość: gdy $\sum_{i=1}^\infty 1/a_i$ rozbiega, to $d(A) = 0$, jesli nie, to $d(A) = \prod_{i=1}^\infty (1-1/a_i)$.
+% % Wniosek: $\mathbb P$ ma gęstość zero.
+
+
+% % \wcht{Górna/dolna wartość średnia}: $M^*(f) = \limsup_{x \to \infty} \sum_{n \le x} f(n) /x$ (inferior).
+% % \wcht{Tw. van der Corputa}: jeśli $g$ ma wartość średnią, zaś $H = \sum_{n=1}^\infty h(n) / n$ abso-zbiega, to $g*h$ też ma wartość średnią, $M(g) \cdot H$.
+% % \wcht{Aproksymanta} $g$ dla $f$: dla każdego $\varepsilon > 0$ $\{n \colon |f(n) - g(n)| > \varepsilon g(n)\}$ jest gęstości zero.
+% % \wcht{Tw. Bircha}: jeśli $f$ jest multiplikatywna, dodatnia i nieograniczona, ma aproksymantę niemalejącą $\Ra$ $f(n) = n^c$.
+% % \wcht{Wniosek Erdösa}: jeśli $f$ jest multiplikatywna, dodatnia i monotoniczna, to $f(n) = n^c$; jeśli jest addytywna i monotoniczna, to $g(n) = c \log n$.
+
+% \wcht{Charakter} \prawo{4.4} grupy $G$ (skończonej, abelowej): homo- $G \to \{z \in \C^\times : |z| = 1\}$, tworzą \wcht{grupą dualną}, $\widehat G$.
+% Jeżeli $g$ generuje $\Z_n$, to $\widehat G \cong G$, zaś jej elementy to $\varphi_j(g^r) = \exp(2 \pi i r j / n)$ dla $0 \le j, r \le n-1$.
+% Gdy $H = G_1 \oplus G_2$, to $\widehat H \cong \widehat G_1 \oplus \widehat G_2$.
+% Jeśli $g \in \Z_n$, dla każdego $\phi \in \widehat \Z_n$ jest $\phi(g) = 1$, to $g$ jest jednością, zaś $|\widehat G| = \varphi(n)$.
+% \wcht{Charakter Dirichleta}: $\chi(n) = \psi(n \textrm{ mod } k)$, gdy $(n, k) = 1$ i $0$ w.p.p. ($\psi$ to charakter $\Z/k\Z$). 
+% Własności: $\chi(n+k) = \chi(n)$, $\chi(n) = 0 \Lra (n, k) \neq 1$ oraz $\chi(mn) = \chi(m)\chi(n)$.
+% Funkcja arytmetyczna z tymi własnościami jest charakterem mod $k$.
+% Charakter pochodzący od $\psi = 1$: $\chi_0$, \wcht{główny}.
+% Symbol Legendre'a, Jacobiego ($(\frac{x}{k}) = \prod_{j=1}^r (\frac{x}{p_j})^{\alpha_j}$ dla $x \in \N$, gdy $2 \nmid k = \prod_{j=1}^r p_i^{\alpha_i}$).
+
+% Jeśli $m \mid n$ i $\chi$ jest charakterem mod $m$, to wzór $\chi_1(x) = \chi(x \textrm{ mod } m)$ (gdy $(x, n) = 1$) lub $0$ (w.p.p) określa charakter mod $n$.
+% Mówi się, że $\chi_1$ jest indukowany przez $\chi$.
+% \wcht{Przewodnik} charakteru $\chi$ mod $k$: minimalne $d$, że istnieje charakter $\chi_1$ mod $d$ indukujący $\chi$.
+% \wcht{Pierwotny} charakter: $d = k$.
+% Charakter $\chi$ mod $k$ jest pierwotny $\Lra$ dla każdego $d \mid k$, $d < k$, istnieje $n \in 1 + d\Z$, że $(n, k) = 1$ i $\chi(n) \neq 1$.
+
+% Jeśli $a \in \Z$, $\zeta_k$ to pierwotny $k$-ty pierwiastek jedności, to $\tau_a (\chi) = \sum_{n=1}^k \chi(n) \zeta_k^{an}$ (gdzie $\chi$ jest charakterem mod $k$) jest \wcht{sumą Gaußa}.
+% \wcht{Tw. Polyi-Winogradowa}: jeśli $k \ge 3$, zaś $\chi$ pierwotnym charakterem modulo $k$, to dla $x \ge 1$ jest: $\left|\sum_{n \le x} \chi (n) \right| \le \sqrt{k} \log k$.
+
+% \newpage
+
+
+
+
+
+
+
+
+% Wniosek: jeśli $p > 2$ jest pierwsza, zaś $n_2(p)$ najmniejszą dodatnią nieresztą kwadratową modulo $p$, to $n_2(p) \le 1 + \sqrt{p} \log p$.

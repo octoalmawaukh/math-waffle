@@ -1,0 +1,58 @@
+Definicje: \prawo{5.1} $\vartheta(x) = \sum_{p \le x} \log p$, \wcht{funkcja von Mangoldta}: $\Lambda(n) = \log p$ ($n = p^k$, $p \in \mathbb P, k \in \N$) lub $0$ (pozostałe przypadki); $\psi(x) = \sum_{n \le x} \Lambda(n)$.
+Dla $\varepsilon > 0$ i $x \ge 2$ jest khm-(1,2).
+\wcht{Tw. Czebyszewa}: istnieją $A, B, C > 0$, że dla $x \ge 2$ jest $Ax \le \vartheta (x) \le 2 \log 4 \cdot x$ oraz $B x \le \pi(x)\log x \le C x$ ($0.92129 \le B \le C \le 1.1055$); pociąga \wcht{postulat Bertrandta} (,,dla $n \ge 2$ istnieje $p$, że $n < p \le 2n$'').
+\wcht{Wnioski Mertensa}: khm-3; $\sum_{p \le x} 1/p$ jest $\log \log x + M_1 + O(1/\log x)$ oraz khm-4 dla $x \ge 2$, $k \ge 2$ i stałych $M_1, M_2$.
+\[
+	\frac{\vartheta(x)}{\log x} \le \pi (x) \le \frac{1}{1-\varepsilon} \frac{\vartheta (x)}{\log x} + O(x^{1- \varepsilon}) \spk
+	\psi (x) - \vartheta(x) \le \pi(\sqrt{x}) \log x \spk
+	\sum_{p \le x} \frac{\log p} p = \log (x) + O(1) \spk
+	\sum_{p^k \le x} \frac 1 {p^k} = M_2 + O(\log^{-1} x)
+\]
+
+\wcht{Wniosek Hardy'ego-Ramanujana}:  $\sum_{n \le x} \omega(n) = x \log \log x + M_1 x + O(x / \log x)$, $\sum_{n \le x} \Omega(n) = x \log \log x + (M_1+M_2)x + O(x / \log x)$, wreszcie $\sum_{n \le x}\omega^2(n) = x  (\log \log x)^2 + O(x \log \log x)$.
+\wcht{Wniosek Winogradowa}: reszt i niereszt kwadratowych modulo $p > 2$ mniejszych od $x < p$ jest $x/2 + O(p^{1/2} \log p)$; najmniejsza dodatnia niereszta modulo $p$ jest $O(p^c)$, $c > e^{1/2} / 2$.
+\wcht{Tw. Hardy'ego-Ramanujana}: $\log \log n$ jest aproksymantą dla $\omega(n)$ i $\Omega(n)$.
+Jeśli $z \in \C$ spełnia $|z| < 2$, to $\prod_{p \le x} (1+z/p) = A(z)\log^z x(1 + O(1/\log x))$;  $A(z) \neq 0$ nie zależy od $x$; gdy $z = \pm 1$, to coś.
+Istnieje $c > 0$, że dla $n > 1$ mamy $\varphi(n) \log \log n \ge c n$ (Landau?).
+
+
+% % \wcht{Szereg Dirichleta}: \prawo{5.2} jeśli zbiega dla $s_0$, to dla $\Re s > \Re s_0$ też (holomorf i khm), a dla $T, \varepsilon > 0$ na $\Omega = \{s : \Re s \ge \Re s_0 + \varepsilon, |\Im s| \le T\}$ zbieżność jest jednostajna.
+% % Jeśli w $s_0$ zbieżność jest absolutna, to dla $\Re s > \Re s_0$ też (i jednostajna!).
+% % Dwa szeregi Dirichleta o różnych współczynnikach nie mogą zbiegać do tego samego holomorfa na $\Re s > t$.
+% % \wcht{Tw. Landaua}: holomorf $f(s)$ o odciętej zbieżności $t$ i $a_n \ge 0$ nie może miećw $s = t$ punktu regularnego.
+% % \wcht{Funkcja L Dirichleta}: khm, $\chi$ to charakter Dirichleta.
+% % Jest niezerowym holomorfem dla $\Re s > 1$.
+% % Jeśli charakter nie jest główny, to zbieżność jest nawet na $\Re s > 0$ (też do holomorfa), jeśli jest, to gorzej.
+% % \[
+% % 	f(s) = \sum_{n=1}^\infty \frac{a_n}{n^s} \spk
+% % 	f^{(k)}(s) = (-1)^k \sum_{n=1}^\infty \frac{a_n \log^k n}{n^s} \spk
+% % 	L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s} = \prod_p \left(1 - \frac{\chi(p)}{p^s}\right)
+% % \]
+
+% % %\wcht{Tw. Ikehary}: jeśli $f(s) = \sum_{n=1}^\infty a_n / n^s$ zbiega dla $\Re s > 1$, $a_n \ge 0$ i istnieje $g(s)$ regularna w $\Re s \ge 1$, która dla pewnej $C \ge 0$ spełnia $f(s) = g(s) + C/(s-1)$ przy $\Re s > 1$, to $\lim_{x \to \infty} \sum_{n \le x} a_n = C$.
+% % %\marginpar{\rotatebox[origin=l]{90}{$\uparrow$ 5-3}}
+% % %Twierdzenie pozostaje w mocy nawet, gdy $a_n \ge -B$ dla pewnego $B > 0$.
+% % % Twierdzenie Delange'a
+% % %Fakt: jeśli $f(s) = \sum_{n=1}^\infty a_n / n^s$ dla $a_n \ge 0$ zbiega przy $\Re s > a$, to
+
+% % %\wcht{Twierdzenie} (Hadamard, Vallée-Poussin): dla
+
+% % \wcht{Tw. Ikehary}: \prawo{5.3} jeśli $f(s) = \sum_{n=1}^\infty a_n / n^s$ zbiega dla $\Re s > 1$, $a_n \ge 0$ i istnieje regularna $g(s)$ w $\Re s \ge 1$, że $f(s) = c / (s-1) + g(s)$ przy $\Re s > 1$, to $\lim_{x \to \infty} \sum_{n \le x} a_n / x = c$.
+% % \wcht{Tw. Delange'a}.
+% % Hadamard, Vallée-Poussin:  $x \ge 2$ jest $\pi(x) = (1+o(1)) x / \log x$, $\vartheta (x) = (1+o(1))x$.
+% % Dla $s = \sigma + it$, że $1- A \log ^{-1/9} t \le \sigma \le 2$, $|t| \ge 10$, $\zeta(s)$ nie znika i $\zeta'(s) / \zeta(s) $ jest $O (\log ^N t)$.
+% % \emph{Dużo analizy, dużo brakuje...}
+
+% {
+% Nam \prawo{5.2} dui \color{gray} ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis
+% vitae,ultricieset,tellus. Donecaliquet,tortorsedaccumsanbibendum,eratligulaaliquetmagna,vitaeornareodiometusami. Morbiacorci
+% et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient
+% montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+% }
+
+% {
+% Nam \prawo{5.3} dui \color{gray} ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis
+% vitae,ultricieset,tellus. Donecaliquet,tortorsedaccumsanbibendum,eratligulaaliquetmagna,vitaeornareodiometusami. Morbiacorci
+% et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient
+% montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+% }

@@ -1,0 +1,24 @@
+% \wcht{Krata}: \prawo{7.1} $\Lambda \subset \R^n$, w którym są lnz $P_1, \dots, P_n$ (\wcht{bazowe}), że $\Lambda$ to zbiór $\Z$-liniowych kombinacji $P_i$.
+% Jeśli liniowe $T \colon \R^n \to \R^n$ ma $\det T \neq 0$, to $T(\Lambda)$ też jest kratą; jeśli jego macierz w bazie $P_i$ ma $\Z$-współczynniki i wyznacznik $\pm 1$, to $T$ jest auto- kraty (każdy auto- kraty jest tej postaci).
+% Dokładnie jeden auto- kraty zmienia bazę ($T(P_i) = Q_i$).
+% \wcht{Wyróżnik}: objętość równoległotopu rozpiętego bazą.
+% Podgrupa kraty $M$ o indeksie $k < \infty$ też jest kratą, jej wyróżnik to $k d (M)$.
+
+% \wcht{Tw. Minkowskiego}: jeśli $X \subseteq \R^n$ jest wypukły, zero-symetryczny i ma miarę $\lambda_n(X)$, zaś krata $\Lambda \subset \R^n$ spełnia $\lambda(X) > 2^n d(\Lambda)$, to istnieje niezerowy $x \in X \cap \Lambda$ (zwartość $X$: zamiast $>$ wystarczy $\ge$).
+% Dla $n$ form ,,$\R$-liniowych'' ($L_i$: $\sum_{j=1}^n a_{ij}X_i$), kraty $\Lambda \subset \R^n$ i $D$, wyróżniku $[a_{ij}]$: jeśli $D \neq 0$ i $c_i$ są takie, że $\prod_{i=1}^n c_i \ge |D| d(\Lambda)$, to istnieje niezerowy $P \in \Lambda$, że $|L_1(P)| \le c_1$, dla $i > 1$ zaś $|L_i(P)| < c_i$.
+% (?): jeśli dodatnio określona ,,$\R$-forma'' kwadratowa $F(x, y)$ ma wyróżnik $D \neq 0$, to istnieją niezerowe $x , y\in \Z$, że $|F(x,y) | \le 2 \sqrt{D/3}$.
+% Niech $G$ będzie dodatnio określona, wtedy $\lim m_n/n$ może istnieć, ale wiadomo tylko, że $\liminf \le 1/(2\pi e)$ i $\limsup \le 1/(\pi e)$.
+
+% \wcht{\color{red}Twierdzenie Rédei, Aubry'ego-Thue, Brauera/Reynoldsa}.
+% \[
+% 	G(X_1, \dots, X_n) = \sum_{i=1}^n \sum_{j=1}^n a_{ij} X_i X_j \spk
+% 	a_{ij} \in \R \spk
+% 	D = \det [a_{ij}] \neq 0 \spk
+% 	m_F = \min (G \mid_{\Z^n}) \spk
+% 	m_n = \max \frac{m_F}{D^{1/n}}
+% \]
+
+% Jeśli \prawo{7.2} obszar $A$ ma pole $S$ i prostowalny brzeg długości $L$, zawiera $N$ punktów kratowych, to $|N-S| \le \sqrt{2}\pi L + 2 \pi$.
+% Niech $M, t \in \Z$, $f \colon [M, M+t-1] \to \R$ będzie $\mathscr C^2$ i $1 \le A |f''(x)| \le k$ dla $A > 2$, $k \ge 1$.
+% Wtedy $\sum_{x = M}^{M+t-1} \{f(x)\}$ jest $t/2 + O([k^2 t \log A + kA]/A^{1/3})$.
+% Dla $x \ge 2$, $\sum_{n \le x} d(n)$ jest $x \log x + 2\gamma -  1 + O (x^{1/3} \log ^2 x)$.

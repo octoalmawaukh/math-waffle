@@ -1,0 +1,50 @@
+% \wcht{Kongruencja}: \prawo{2.1} ,,$a \equiv b \pmod N$'', wielomiany: $A, B \in \Z[X]$ i $N$ dzieli współczynniki $A(X) - B(X)$.
+% Jeśli $ab_1 = ab_2$ mod $N$ i $(a,N) = 1$, to $b_1 = b_2$ mod $N$; jeśli $ab_1 = ab_2$ mod $aN$, to $b_1 = b_2$ mod $N$.
+% %Wniosek: Istnieje wielomian 26 zmiennych stopnia 25, że $W(\N^{26}) = \mathbb P$.
+% Dla każdego $N$ istnieje $a$, że $X^2 + a$ przedstawia ponad $N$ liczb pierwszych.
+
+% Tutaj $\lambda_F(N)$ to liczba rozwiązań $F(X) \equiv 0$ mod $N$, gdzie $F(X) \in \Z[X]$.
+% Jeśli $N = p$ jest pierwsza, $F(X)$ ma stopień $n$, nie wszystkie współczynniki dzielą się przez $p$, to $\lambda_F(p) \le n$.
+% Jeśli $N = \prod_{i=1}^r p_i^{\alpha_i}$ oraz dla $1 \le i \le r$ mamy $F(x_i) \equiv 0$ mod $p_i^{\alpha_i}$, to $x \equiv x_i$ mod ${p_i^{\alpha_i}}$ (rozwiązania kongruencji odpowiadają tym zredukowanym -- dla dobrze dobranych $x_i$), dodatkowo $\lambda_F(N) = \prod_{i=1}^r \lambda_F(p_i^{\alpha_i})$.
+
+% \wcht{Wyróżnik} dla $F(x) = \sum_{i=0}^n a_n x^n = a_n \prod_{j=1}^n(x-z_j)$ to $a_n^{2n-2} \prod_{i < j} (z_i-z_j)^2$.
+% Jeśli pierwsza $p$ nie dzieli wyróżnika $F$, to $\lambda_F(p^k) = \lambda_F(p)$.
+% Wielomian $F(X) \in \Z[X]$ ma dodatni stopień, to dla $\infty$-wielu pierwszych jest $\lambda_F(p) > 0$.
+% \wcht{Tw. Wilsona}: $(p-1)! \equiv_p -1$ $\Lra$ $p$ pierwsza.
+% Fakt (Sándor): jeśli $F$ nie ma pierwiastków wielokrotnych, to dla każdej $p \nmid a_n$ jest $\lambda_F(p^k) \le np^\delta$ (???).
+
+
+% %Carmichael, tocjent?
+% \wcht{Pierwiastek pierwotny} \prawo{2.2} dla $n$: takie $g$, że ,,$\langle g \rangle$'' to $(\Z/n\Z)^*$; jest ich $\varphi(\varphi(n))$.
+% Dla pierwszej $p > 2$ liczby $2,4,p^k,2p^k$ mają pierwiastek pierwotny.
+% Najmniejszy, $r(p)$, jest $O(p^{1/4+\varepsilon})$ [Burgess] i $\infty$-często $\le 5$.
+
+
+% Niech \prawo{2.3} $p \ge 3$ będzie pierwsza, $a = p^rA$ ($r \ge 0$, $p\nmid A$) i $G(x) = x^2-a$; $m = n - \lceil n/2 \rceil$.
+% Jeśli $r = 0$, to $G(x) \equiv 0$ mod $p^n$ ma rozwiązanie $\Lra$ $G(x) \equiv 0$ mod $p$ też ma; wtedy $\lambda_G(p^n) = 2$.
+% Jeśli $p \mid a$ i $n \le r$, to $\lambda_G(p^n) = p^{m}$; jeśli zaś $n > r$, to rozwiązanie istnieje $\Lra$ $2 \mid r$ i $x^2 = A \pmod p$ ma rozwiązanie, wtedy $\lambda_G(p^n) = 2p^r$.
+% Niech $b = 2^tB$ ($t \ge 0$, $2 \nmid B$), ile jest rozwiązań $G(x) = x^2-b \equiv 0$ mod $2^n$?
+% Przypadki: $n = 1$: jedno; $n = 2$: zero ($2\mid\mid b$), jedno ($4 \mid b$) lub dwa ($2 \nmid b$); $n = 3$: zero lub cztery ($8 \mid b-1$ lub $4 \mid b$); $n \ge 4$ i $r = 0$: zero lub cztery ($8 \mid b-1$); $n \ge 4$ i $r \ge 1$: $2^{m}$ ($ r \ge n$); jeśli $r < n$, to rozwiązania istnieją $\Lra$ $r = 2s$, $y^2 = B$ mod $2^{n-r}$ ma rozwiązania [wtedy $\lambda_G(2^n)$ to $2^s$ ($n-r = 1$), $2^{s+1}$ ($n-r = 2$) lub $2^{s+2}$ ($n - r \ge 3$)].
+
+% \wcht{Reszta kwadratowa} $a$: $x^2 \equiv a \mod p$ ma rozwiązanie.
+% \wcht{Symbol Legendre'a}: $+1$ ($a$ jest resztą), $-1$ ($a$ jest nieresztą) lub $0$ ($p \mid a$).
+% \wcht{Kryterium Eulera}: $p \ge 3$ pierwsza.
+% \wcht{Prawo reszt kwadratowych}: $p \neq q$ są pierwsze i $ \ge 3$.
+% \[
+% 	\left(\frac ap\right) \spk
+% 	\left(\frac ap \right) = a^{(p-1)/2} \pmod p \spk
+% 	\left(\frac pq \right)\left(\frac qp \right) = (-1)^{(p-1)(q-1)/4}
+% \]
+
+
+% Tu $f$ \prawo{2.4} ma okres $N$ ze względu na każdą zmienną.
+% Ile rozwiązań ma $f(x_1, \dots, x_n) = 0$, gwiazdka?
+% Niech $W(x) = \sum_{i=0}^n a_ix^i \in \Z[x]$ i dla $N \in \N$, $S_N(W) = \sum_{x \textrm{ mod } N} \exp(2 \pi i W(x) / N)$.
+% \wcht{Tw. Mordella}: jeśli $p$ nie dzieli choć jednej $a_i$, to $|S_p(W)| \le np^{1-1/n}$.
+% Weil geometrią algebraiczną: $\dots \le (n-1) p^{1/2}$.
+% Gdy $F_1, \dots, F_s \in \Z[x]$ mają stopnie $n_1, \dots, n_s > 0$ i $\eta$ to $\sum_{i=1}^w 1/n_i - 1 > 0$, $p^\eta > \prod_{i=1}^s n_i$, $p$ nie dzieli najwyższego współczynnika $\prod_i F_i$, to gwiazdka ma rozwiązanie dla $N = p$.
+% Ich ilość, $\lambda_p$, to $p^{s-1} + R_p$, gdzie $|R_p| \le (1-1/p) p^{s-1 - \eta} \prod_{i=1}^s n_i$.
+
+% \wcht{Tw. Chevalleya-Warninga}: jeśli $F(X_1, \dots, X_n) \in \Z[\dots]$ jest jednorodny (stopnia $d < n$), to $F = 0$ mod $p$ ma nietrywialne rozwiązanie.
+% \wcht{Hipoteza Artina}: jeśli nawet $d^2 < n$, to $\forall p \forall k$, $F = 0$ mod $p^k$ ma rozwiązanie.
+% Fałszywa ($p=2$, $d=4$, $n= 18$: Terjanian, każda $p$: Bronkin), ale nie zawsze (Ax, Kochen: słuszna, gdy $p$ dużo większa od $d$, Hasse: $d = 2$, Lenis: $d = 3$, Laxton: $d = 5, 7, 11$).
