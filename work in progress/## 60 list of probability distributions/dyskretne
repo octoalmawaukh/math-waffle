@@ -1,0 +1,68 @@
+\section*{Rozkłady dyskretne}
+\begin{enumx}
+	\item \textbf{Borela}: liczność potomstwa w ,,jednoosobwej'' kolonii wątrobowców, gdzie dzieci mają rozkład $\lambda$-Poissona (\datum{1942}).
+	$\variance = \lambda \expected^3$, $\expected = [1-\lambda]^{-1}$.
+	\begin{align*}
+		\mathbb P(X = k) & = (\lambda n)^{n-1} : (n! \exp \lambda n)
+	\end{align*}
+
+	\item \textbf{dwumianowy}: $k$ sukcesów (z p-stwem $p$) w $n$ próbach.
+	$\variance = q \expected= npq$.
+	\begin{align*}
+		\mathbb P(X = k) & = C_k^n p^k q^{n-k} \\
+		M(t) & = (q + pe^t)^n
+	\end{align*}
+
+	\item \textbf{geometryczny} dla $0 < p \le 1$ i $q = 1 - p$.
+	$\expected = 1 : p$, $\variance = 1:p^2 - 1:p$.
+	\emph{Pierwszy sukces Bernoulliego w $k$-tej próbie.}
+	\begin{align*}
+		\mathbb P(X = k) & = q^{k-1} p \\
+		\mathbb P(X \le k) & = 1 - q^k \\
+		M(t) & = pe^t : [1 - q e^t], \mbox{ gdy } t < - \ln q
+	\end{align*}
+
+	\item \textbf{hipergeometryczny} dla $0 \le K, n \le N$.
+	\emph{Wyciągamy $n$ spośród $N$ kul, gdzie $K$ jest dobrych, a reszta jest zła. Jakie są szanse wyciągnięcia $k$ dobrych?}
+	\begin{align*}
+		\mathbb P(X = k) & = C^K_k C_{n-k}^{N-k} : C_n^N \\
+		\expected & = nK N^{-1} \\
+		\variance & = [n K (N-K) (N-n)] : [N^3 - N^2] 
+	\end{align*}
+
+	\item \textbf{jednostajny} na $[a,b] \cap \Z$, $n = b + 1 - a$.
+	$\expected = \frac {a + b}2$, $\variance = \frac{n^2-1}{12}$.
+	\begin{align*}
+		M(t) & = [\exp at - \exp (b+1)t] : [n (1 - e^t)]
+	\end{align*}
+
+	\item \textbf{logarytmiczny} dla $0 < p < 1$. ,,Bezużyteczny''.
+	\begin{align*}
+		\mathbb P(X = k) & = -p^k : [k \ln q] \\
+		\expected & = -p : [q \ln q] \\
+		\variance & = [-p^2 + p \ln q]:[q^2 \ln^2 q] \\
+		M(t) &  = \ln_q (1 - p e^t), \mbox{ gdy } t < - \ln p
+	\end{align*}
+
+	\item \textbf{Poissona} dla $\lambda = \expected = \variance > 0$.
+	\emph{W ustalonym przedziale zajdzie $k$ wypadków (średnio zachodzi ich $\lambda$, są nz)}.
+	Dobrze przybliża dwumianowy dla $n \ge 20$, $p \le 1 : 20$, znakomicie dla $n \ge 100$ i $np \le 10$.
+	\begin{align*}
+		\mathbb P(X = k) & = \lambda^k \exp (-\lambda) : k! \\
+		M(t) & = \exp [\lambda (\exp t - 1)]
+	\end{align*}
+
+	\item \textbf{Skellama}: różnica nz zmiennych z rozkładu Poissona (ze średnią $\lambda_1$ i $\lambda_2$).
+	$\expected = \lambda_1 - \lambda_2$, $\variance = \lambda_1 + \lambda_2$.
+	\begin{align*}
+		\mathbb P(X = k) & = \frac{\mu_1^k}{\exp(\lambda_1 + \lambda_2)} \sum_{m = 0}^\infty \frac{\mu_1^m \mu_2^m}{m! (m + k)!} \\
+		M(t) & = \exp(\mu_1 e^{it} + \mu_2 e^{-i t} - \mu_1 - \mu_2)
+	\end{align*}
+
+	\item \textbf{ujemny dwumianowy}: \emph{liczba sukcesów przed $r$-tą porażką podczas procesu Bernoulliego.}
+	$\expected = pr:q$, $\variance = pr:q^2$.
+	\begin{align*}
+		\mathbb P(X = k) & =  C_k^{k+r-1} p^k q^r\\
+		M(t) & = q^r : [1 - pe^t]^r, \mbox{ gdy } t < - \log p\\
+	\end{align*}
+\end{enumx}

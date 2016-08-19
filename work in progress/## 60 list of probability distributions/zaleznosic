@@ -1,0 +1,15 @@
+Zależności.
+\begin{enumx}
+\item Dla $X$ z rozkładu t-Studenta ($n$), $X^2 \sim F(v_1 = 1, v_2 = n)$.
+\item Laplace'a ($\mu = 0$, $b = 1$) jest tym samym, co $\log(x/y)$ (obie z $U(0,1)$) albo $\lambda \operatorname{Exp}(\lambda) - \eta \operatorname{Exp}(\eta)$ (kopie niezależne od siebie).
+Ogólniej ($\mu, b$): $\mu + b [2 \operatorname{Exp}(1)]^{1/2} \operatorname{N}(0,1)$.
+\item Iloraz nz $X, Y \sim \operatorname{N}(0,1)$ ma rozkład Cauchy'ego, $x_0 = 0$, $\gamma = 1$.
+\item Gdy $X \sim \operatorname{Beta}(a, b)$, to $bX : (a - aX) \sim \operatorname{F}(2a, 2b)$
+\item $2 \lambda \operatorname{Exp}(\lambda) = \chi^2_2$
+\item $\min(\operatorname{Exp}(\lambda), \operatorname{Exp}(\nu)) = \operatorname{Exp}(\lambda + \nu)$
+\item $n \operatorname{Beta}(1, n)$ zbiegają do $\operatorname{Exp} (1)$
+\item $\sum_{i=1}^n \operatorname{Exp} (\lambda) = \operatorname{Gamma} (n, \lambda^{-1})$.
+\item Gdy $X \sim \operatorname{Exp}(\lambda) = \operatorname{Weibull}(\lambda^{-1},1)$, to $k \exp X \sim \operatorname{Pareto}(k, \lambda)$.
+\item Jeśli $X \sim \operatorname{Exp}(\lambda - 1)$, $Y \mid X \sim \operatorname{Poisson}(X)$, to $Y \sim \operatorname{Geo}(1 : (1 + \lambda))$.
+%   If Y|X ~ Poisson(X) where X ~ Exp(λ−1) then Y \sim \mathrm{Geometric}(\tfrac{1}{1+\lambda}) (geometric distribution)
+\end{enumx}
