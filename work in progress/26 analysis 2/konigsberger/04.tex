@@ -1,0 +1,39 @@
+Tu $\Omega \subseteq_o \R^n$.
+\wcht{Pole wektorów}: \prawo{4.1} odwzorowanie $v \colon \Omega \to \R^n$, na przykład \wcht{gradientowe} $x \mapsto \grad f(x)$.
+\wcht{Baza pól wektorów} układ $\eta_i \colon \Omega \to \R^n$, że $\eta_i (x)$ są bazami $\R^n$.
+\wcht{Ablatyw wektorpolowy} (wzdłuż) w $x$: khm-1.
+\wcht{$\mathscr C^1$-układ/transformacja współrzędnych}: $\mathscr C^1$-dyfeo $\Phi \colon \Omega \to \widetilde{\Omega} \subseteq_o \R^n$.
+Jeśli mamy $\Psi = \Phi^{-1} \colon \widetilde{\Omega} \to \Omega $, dyfeo- odwrotny, to mówimy o \wcht{parametryzacji} $\Omega$; obrazy $\Psi \circ \epsilon_i$ są ,,liniami współrzędnych'' ($\epsilon_i(t) = \xi + te_i$, $\xi \in \widetilde \Omega$, $|t|$ małe).
+\wcht{Ortogonalny} $\mathscr C^1$-układ współrzędnych $\Phi \colon \Omega \to \widetilde{\Omega}$: kolumny $\eta_i(x) = \partial_i \Psi(\xi)$ macierzy $\Psi'(\xi)$ są parami prostopadłe w każdym punkcie $\xi = \Phi(x) \in \widetilde{\Omega}$.
+W pewnym sensie $\widetilde f = f \circ \psi \colon \widetilde \Omega \to \R^n$.
+\[
+	\partial_v f(x) = \lim_{t \to 0} \frac{f(x + tv(x)) - f(x)}{t} = f'(x)v(x) = \sum_{k=1}^n \frac{\partial f}{\partial x_i} (x) v_i(x) \spk
+	\grad f(x) = \sum_{k=1}^n \frac{\partial_k \widetilde{f}(\xi)}{\|\partial_k \Psi(\xi)\|_2} \eta_k(x)
+\]
+
+% 4.2 Integralkurven in Vektorfeldern. Gewöhnliche Differentialgleichungen
+% 4.3 Lineare Differentialgleichungen
+% 4.4 Erste Integrale
+% 4.5 Attraktoren und stabile Punkte
+% 4.6 Flüsse in Vektorfeldern und Divergenz
+
+Niech \prawo{4.7} $v \colon \Omega \to \R^n$ będzie różalnym polem wektorów, $\Psi \colon \widetilde \Omega \to \Omega$ takim dyfeo-, że kolumny $\Psi'(\xi)$ są stale prostopadłe, $L_i(\xi) = \|\Psi'(\xi)e_i\|_2$.
+Jeżeli $\Psi$ jest dwukrotnie ciągle różalny, zaś $L = L_1 \ldots L_n$, to khm-1 opisuje dywergencję pola $v$ w $x = \Psi(\xi)$, a khm-2: laplasjan.
+\[
+	\dvrg v(x) = \frac{1}{L(\xi)} \sum_{i=1}^n \frac{\partial}{\partial \xi_i} \left(\frac{L \widetilde{v}_i}{L_i} \right) (\xi) \spk
+	\Delta f(x) = \frac{1}{L(\xi)} \sum_{i = 1}^n \frac{\partial}{\partial \xi_i} \left(\frac{L}{L_i^2} \frac{\partial \widetilde f}{\partial \xi_i}\right) (\xi)
+\]
+
+% % %\wcht{Krzywa całkowa} \prawo{4.2} w polu wektorów $v \colon \Omega \to \R^n$: r--lna $\varphi \colon I \to \Omega$ z $\dot \varphi(t) = v(\varphi(t))$ dla $t \in I$.
+% % %\wcht{Układ dynamiczny}: pole wektorów zależne od czasu.
+
+% % %\wcht{Pierwsza całka} \prawo{4.4} dla $\mathscr C^1$-pola wektorów $v$ na $\Omega \subseteq \R^n$: $\mathscr C^1$-funkcja $E \colon \Omega \to \R$, stała na śladach krzywych całkowych.
+% % %$\mathscr C^1$-funkcja $E \colon \Omega \to \R$ jest pierwszą całką dla $v$ $\Lra$ pochodna $\partial_v E$ w kierunku $v$ znika: $E'(x)v(x) = \sum_{i=1}^n \partial_i E(x) v_i(x) = 0$.
+
+% % %\wcht{Atraktory}, \prawo{4.5} % krytyczny punkt $x_0$ pola wektorów $v \colon \Omega \to \R^n$, każde otoczenie $K \subseteq \Omega$ zawiera otoczenie $V$, że maksymalne krzywe całkowe $\varphi$ z $\varphi(0) \in V$ istnieją dla $t \ge 0$ i $\varphi(t) \to x_0$ dla $t \to \infty$.
+% % %\wcht{tw. Poincarégo-Ljapunowa}, %: jeżeli $x_0$ jest krytycznym punktem $\mathscr C^1$-pola wektorów $v \colon \Omega \to \R^n$ i pochodna $v'(x_0)$ nie ma w-wartości z ,,nieujemną $\Re$'', to $x_0$ jest atraktorem.
+% % %\wcht{funkcja Ljapunowa}, % dla krytycznego punktu $x_0$ pola wektorów $v \colon \Omega \to \R^n$: $\mathscr C^1$-funkcja $L \colon \Omega \to \R$, że $L$ ma w $x_0$ izolowane minimum z $L(x_0) = 0$, pochodna $\partial_v L$ wzdłuż pola nie przyjmuje wartości różnych znaków.
+% % %\wcht{punkt stabilny}, %: krytyczny $x_0$, każde otoczenie $K \subseteq \Omega$ zawiera otoczenie $V$, że maksymalne krzywe całkowe $\varphi$ z $\varphi(0) \in V$ istnieją dla $ t\ge0 $ i pozostają w $K$ na zawsze.
+% % %\wcht{tw. Ljapunowa}, %: krytyczny punkt $x_0$ lokalnie Lipschitza wektorpola $v \colon \Omega \to \R^n$, istnieje funkcja Ljapunowa $L$: [$\partial_v L \le 0$ na $\Omega$ $\Ra$ $x_0$ jest stabilny], [$\partial_v L < 0$ na $\Omega \setminus \{x_0\}$ $\Ra$ $x_0$ atraktorem], [$\partial_v L > 0$ na $\Omega \setminus \{x_0\}$ $\Ra$ $x_0$ nie jest stabilny].
+% % %\zutun{Einzugsbereich}.
+% % %\emph{Szerszy opis równań różniczkowych w książce Aulbacha ,,Gewöhnliche Differenzialgleichungen''.}

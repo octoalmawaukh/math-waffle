@@ -1,0 +1,40 @@
+\wcht{Enefe} \prawo{12.1} na regularnym hiperstworze $M \subset \R^n$ to unormowane ciągłe pole wektorów $\nu \colon M \to \R^n$, które w każdym $x \in M$ jest prostopadłe do przestrzeni stycznej $T_xM$.
+Enefe na poziomicy to unormowany gradient, na śladzie włożenia $\gamma \colon (\Omega \subseteq_o \R^{n-1}) \to \R^n$ w $\gamma (u)$ to zewnętrzny produkt $\partial_1 \gamma(u) \wedge \ldots \wedge \partial_{n-1} \gamma(u)$ (+ unormowanie).
+Dla spójnych $M$, enefe są dwa lub wcale: na wstędze Möbiusa ich nie ma.
+Pole wektorów $F \colon M \to \R^n$ jest \wcht{całkowalne} nad orientowalną $M$, gdy $x \mapsto \langle F(x) \mid \nu(x) \rangle$ jest, a to daje nowy rodzaj całki.
+
+\wcht{Regularny brzegopunkt} \prawo{12.2} ($G \subseteq \R^n$): $a \in \partial G$, gdy ma otoczenie $U$ i $\mathscr C^1$-funkcję $q \colon U \to \R$, że $q'(x) \neq 0$ na $U$ i $G \cap U = \{x \in U : q(x) \le 0\}$.
+\wcht{Singularny}: nieregularny.
+\wcht{Regularny} (gładki) \wcht{brzeg}: $\partial_r G$; singularny: $\partial_s G = \partial G \setminus \partial_r G$.
+\wcht{$\mathscr C^1$-wielościan}: $G \subseteq^k \R^n$ o $n$-zerowym singularnym brzegu.
+%\wcht{Lokalna normalność brzegu}: każdy regularny brzegopunkt $a$ dla $\mathscr C^1$-wielościanu $G$ posiada kostkowe otoczenie $Q$, że: (po przenumerowaniu współrzędnych) $Q$ to produkt otwartej kostki $Q'$ w $\R^{n-1}$ i otwartego odcinka $I$, poza tym istnieje $\mathscr C^1$-funkcja $h \colon Q' \to I$, że albo (i) $G \cap Q =  \{(x', x_n) \in Q' \times I : x_n \ge h(x')\}$ albo (ii) $G \cap Q  = \{(x', x_n) \in Q' \times I : x_n \le h(x')\}$, przy czym $\partial G \cap Q = \Gamma$, wykres $h$.
+Na regularnym brzegu $\mathscr C^1$-wielościanu $G$ istnieje dokładnie jedno ciągłe enefe $\nu$ (\wcht{zewnętrzne}), że dla każdego $x \in \partial_r G$ i małych $t > 0$ jest $x + t \nu(x) \in \R^n\setminus G$ i $x - t \nu(x) \in G$.
+%Gdy dla $a \in \partial_r G$ wybierze się $U$ i $q$, to $\nu(x)$ dla $x \in \partial_r G \cap U$ zadane jest przez $\grad q(x) / \|\grad q(x) \|$.
+Pole wektorów $F \colon \partial_r G \to \R^n$ jest \wcht{całkowalne nad $\partial G$} ($G \subseteq \R^n$: $\mathscr C^1$-wielościan z zewnętrznym enefe $\nu$): $\langle F \mid \nu \rangle$ jest całkowalna nad gładkim brzegiem $\partial_r G$ (khm).
+\[
+	\int_{\partial G} F \, \overrightarrow{\D S} = \int_{\partial_r G} \langle F, \nu \rangle \,\D S
+\]
+
+\wcht{Tw. całkowe Gaußa} (\datum{1840}): \prawo{12.4} jeżeli ciągłe pole wektorów na $G$ ($\mathscr C^1$-wielościanie w $\R^n$ o brzegu, który jest mierzalnym hiperstworem) jest ciągle różalne w jego wnętrzu i ma całkowalną dywergencję w tym wnętrzu, to khm-1.
+%\emph{Jeśli $F$ to pole prędkości płynącej cieczy nieściśliwej, to lewa strona opisuje wydajność w $G$ zawartych źródeł i depresji (?), zaś prawa: łączny strumień płynący przez brzeg $G$}.
+Wniosek: dla $\mathscr C^1$-wielościanu $G \subseteq \R^2$ ze skończonym $P \subseteq \partial G$ i parami rozłącznymi, mierzalnymi podrozmaitościami $M_1, \ldots, M_q \subseteq \partial_r G$ wymiaru $1$, że $(\partial G) \setminus P \subseteq \bigcup_k M_k$, a przy tym każdy $M_k$ to ślad włożenia $\gamma_k \colon (0,1) \to \R^2$ z taką orientacją, że $v(\gamma_k(t)) = -D(\dot \gamma_k(t) : \|\dot \gamma_k(t)\|)$ ($D$: obrót $(x, y) \mapsto (-y, x)$, $\gamma_k$: zewnętrzne enefe).
+Dla ciągłej 1-formy $u \D x + v \D y$ na $G$ z ciągłą pochodną we wnętrzu $G$, nad którym $v_x - u_y$ jest całkowalne, mamy khm-2.
+%Mamy $\mathscr C^1$-wielościan $G \subseteq \R^2$ oraz skończony $P \subseteq \partial G$ i parami rozłączne, mierzalne podrozmaitości  wymiaru jeden, że $(\partial G) \setminus P \subseteq \bigcup_k M_k$, przy czym $M_k$ musi być śladem włożenia $\gamma_k \colon (0,1) \to \R^2$ zorientowanego tak, że dla zewnętrznej ,,ene'' w zachodzi: $\nu(\gamma_i(t)) = - D (\dot \gamma_i(t) : \|\dot \gamma_i(t)\|)$ (uwaga: $D$ jest operatorem obrotu, $(x,y) \mapsto (-y, x)$). 
+\wcht{Powierzchniowzór Leibniza}: pole powierzchni takiego $G$ zadane jest ,,brzegową całką'' khm-3.
+\[
+ 	\int_G \operatorname{div} F \,\D x = \int_{\partial G} F \,\overrightarrow{\D S} \spk
+ 	%\nu(\gamma_k(t)) = -\textrm{D}\left(\frac{\dot{\gamma}_k(t)}{\|\dot{\gamma}_k(t)\|}\right) \spk
+ 	\int_G(v_x - u_y) \,\D (x,y) = \sum_{k=1}^q \int_{\gamma_k} u \,\D x + v \,\D y =: \int_{\partial G} u \D x + v \D y \spk
+ 	v_2(G) = \int_{\partial G} \frac{x \, \D y -y \,\D x}{2}
+\]
+
+\wcht{Wzory Greena} (\datum{1828}): \prawo{12.6} jeśli $G \subseteq \R^n$ jest $\mathscr C^1$-wielościanem, o brzegu: mierzalnym hiperstworze, to dla $f$, $g$ z $\mathscr C^2(G)$ zachodzi khm-1 oraz 2, gdzie $\partial_\nu h := \langle \nu, \grad h\rangle$ jest ablatywem $h$ w kierunku zewnętrznego enefe na $G$.
+\wcht{,,Średniość'' harmofunkcji}: jeśli $h \colon (U \subseteq_o \R^n) \to \R$ jest harmofunkcją, to dla każdej w $U$ zawartej kuli $K_{\le r}(a)$ khm-3, przy czym $\omega_n$ to powierzchnia jednostkowej sfery wymiaru $n-1$.
+%Ciągła $h \colon U \to \R$ na otwartym $U$ jest harmofunkcją dokładnie wtedy, gdy khm-3 zachodzi dla każdej $K_{\le r}(a) \subset U$.
+Warunek ten charakteryzuje harmofunkcje.
+Wynika stąd \wcht{reguła maksimum}: harmofunkcja $h \colon (U \subseteq_o \R^n) \to \R$ osiągająca swoje maksimum jest stała.
+\[
+	\int_G \langle \grad f, \grad g \rangle \,\D x = \int_{\partial G} f \partial_\nu g \,\D S - \int_G f \Delta g \,\D x \spk
+	\int_G (f \Delta g - g \Delta f) \,\D x = \int_{\partial G} (f \partial_\nu g - g \partial_\nu f) \,\D S \spk
+	h(a) = \int_{\partial K_r(a)}  \frac{h \,\D S}{\omega_n r^{n-1}} 
+\]

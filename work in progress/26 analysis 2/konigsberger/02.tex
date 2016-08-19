@@ -1,0 +1,70 @@
+Funkcja \prawo{2.1} $f \colon (U \subseteq_o \R^n) \to \C$ jest \wcht{różniczkowalna} w $a$: istnieje liniowe $\lambda \colon \R^n \to \C$, że khm-1 (jednoznaczne, \wcht{dyferencjał} $\textrm{d}f_a$).
+Dzięki bazie $e_i$ mamy $f'(a) = (\textrm{d}f_ae_1, \dots, \textrm{d}f_ae_n)$ (\wcht{ablatyw}); wtedy $\textrm{d}f(a)h= f'(a)h$.
+%Afiniczne $f(a) + f'(a) + (x-a)$, $Tf(x;a)$, jest liniowym przybliżeniem $f$ w $a$, jego wykres to hiperpłaszczyzna styczna.
+Pociąga ciągłość.
+Wśród \wcht{ablatywów kierunkowych} (khm-2) są czosnkowe (dla $e_i$).
+Czosnkowe istnieją w otoczeniu, ciągłe w punkcie $\Ra$ ,,pełna'' pochodna istnieje $\Ra$ kierunkowe istnieją.
+Skoro $\lambda h$ to forma liniowa, pochodzi od iloczynu: $\lambda h = \langle g \mid h \rangle$, gdzie $g$ to \wcht{gradient}.
+Dla zwykłego iloczynu, $\grad f(a) = \nabla f(a)$ (wektor kolumnowy czosnków).
+Kąt $\varphi$ między $\grad f(a)$ i $h$ spełnia $\partial_h f(a) = \|\grad f(a)\| \cdot \| h \| \cdot \cos \varphi$, więc gradient wskazuje ,,maksymalne tempo wzrostu''.
+\wcht{Kettenregel I}: jeśli $\gamma = (\gamma_1, \dots, \gamma_n) \colon I \to U$ jest różalna w $t_0$, zaś $f \colon U \to \C$ w $a = \gamma(t_0)$, to $f \circ \gamma$ też (w $t_0$) i khm-4 $=\langle \grad f(a), \dot{\gamma}(t_0) \rangle$.
+\[
+	\lim_{h \to 0} \frac{f(a+h) - f(a) - \lambda h}{\| h \|} = 0 \spk
+	\partial_vf(x) = \lim_{t \to 0} \frac{f(x+tv) - f(x)}{t} \spk
+	Lh = \sum_{k=1}^n \partial_k f(a) \cdot h_k \spk
+	\frac{\D(f \circ \gamma)}{\D t} (t_0) = \sum_{i=1}^n \partial_i f(a) \cdot \dot{\gamma}(t_0)
+\]
+
+\wcht{Tw. o wartości średniej}: \prawo{2.2} różalna $f \colon (U \subseteq_o \R^n) \to \R$ spełnia $f(b) - f(a) = f'(\xi) (b-a)$ dla pewnego $\xi \in [a,b] \subseteq U$. 
+Zerowa pochodna na obszarze pociąga stałość.
+\wcht{Twierdzenie o szrankach}: dla $f \colon U \to \C$ klasy $\mathscr C^1$ mamy $|f(x) - f(y)| \le \|x-y\|_\infty \max_{\xi \in K} \sum_i \partial_i f(\xi)$ po obcięciu do $K \subseteq^k U$ (lipschitzowskość).
+Jeśli $f \colon (U \subseteq_o \R^n) \to \C$ jest $\mathscr C^1$, zaś $\gamma \colon [\alpha, \beta] \to U$ to $\mathscr C^1$- krzywa przenosząca $\alpha$ na $a \in U$ i $\beta$ na $b \in U$, to:
+\[
+	f(b) - f(a) = \int_\alpha^\beta \D{f(\gamma(t))} \dot{\gamma}(t) \,\D{t} = \int_\alpha^\beta f'(\gamma(t)) \dot{\gamma}(t) \,\D{t}
+\]
+
+\wcht{Tw. Schwarza}: \prawo{2.3} jeśli $\partial_i$, $\partial_j$, $\partial_{ij}$ istnieją blisko $a$, zaś $\partial_{ij} f$ jest ciągła w $a$, to $\partial_{ij} f(a) = \partial_{ji}f(a)$.
+\wcht{Wyższe pochodne}: $\D^{(p)} f(a) \colon (\R^n)^p \to \C$, na przykład $\D^{(2)} f(a)(u,v) = \partial_u \partial_v f (a) = u^t f''(a) v$, gdzie \wcht{macierz Hessego} $f''$ składa się z $\partial_{ij} f(a)$.
+Różniczkowy \wcht{operator Laplace'a}: $\Delta$, $\partial_i^2 + \ldots + \partial_n^2$ (ślad $H_f$), nie zależy od ortonormalnej bazy $\R^n$.
+Jeżeli $F \colon I \subseteq (0, \infty) \to \R$ jest klasy $\mathscr C^2$ i $f(x) = F(\|x\|_2)$ na skorupie, to mamy $\Delta f(x) = F''(r) + (n-1) F'(r) : r$, o ile $I$ to przedział.
+Funkcja \wcht{harmoniczna}: zeruje laplasjan.
+%Przykład: $\psi(x ; t) = \exp(-\|x\|^2/4kt) / t^{n/2}$ spełnia $\Delta \psi = \psi_t / k$ (równanie przewodnictwa cieplnego, Dirac-Schur).
+
+Jeśli \prawo{2.4} $f \colon (U \subseteq_o \R^n) \to \R$ jest $\mathscr C^{p+1}$, zaś odcinek $[a, x]$ leży w $U$, to $f(x) = T_pf(x; a) + R_{p+1}(x;a)$ dla $\xi \in [a, x]$, przy tym $d^{(k)} f(a) x^k$ to khm-3 (\wcht{wzór krawiecki z resztą}).
+Współczynniki w szeregu Taylora ($\infty$ zamiast $p$) są ,,najlepsze z możliwych''.
+\[
+	T_pf(x, a) = \sum_{k=0}^p \frac{\D{}^{(k)} f(a) (x-a)^k}{k!} \spk
+	{R_{p+1} (x;a) = \frac{\text{d}^{(p+1)} f(\xi) (x-a)^{p+1}}{(p+1)!}} \spk
+	\sum_{i_1 = 1}^n \cdots \sum_{i_k=1}^n \partial_{i_1} \ldots \partial_{i_k} f(a) x_{i_1} \ldots x_{i_k} =: \D^{(k)} f(a) x^k
+\]
+
+Funkcja $f$ klasy $\mathscr C^2$ w otoczeniu \prawo{2.5} $a \in \R^n$ w $\R$.
+Jeśli $f''(a) \neq 0$, to $x_{n+1} = f(a) + f'(a)(x-a) + (x-a)^\top f''(a)(x-a)$ jest \wcht{kwadryką lgnącą} w $\R^{n+1}$.
+Wykres $f$ w punkcie $(a, f(a))$ jest \wcht{eliptyczny} ($f''(a)$ określona), \wcht{hiperboliczny} ($f''(a)$ nieosobliwa oraz nieokreślona), \wcht{paraboliczny} ($f''(a) \neq 0$ osobliwa) lub \wcht{płaski} ($f''(a) = 0$).
+Jeśli $f\colon (U \subseteq_o \R^n) \to \R$ ma w $a$ ekstremum lokalne i czosnkowe ablatywy, to są one zerami.
+Gdy $f$ jest $\mathscr C^2$, $f'(a) = 0$ i $f''(a) > 0$, to $f$ ma tam minimum, gdy $f''(a) < 0$, to maksimum.
+W minimum: $f''(a) \ge 0$, w maksimum: $\le$.
+Funkcja \wcht{wypukła}: $f \colon (U \subseteq_o \R^n) \to \R$, że  $f((1-t)a + tb) \le (1-t) f(a) + t f(b)$ dla wypukłego $U$.
+Jeżeli $f$ jest $\mathscr C^2$: $f''(x) \ge 0$ na $U$.
+
+Niech \prawo{2.6} $f \colon (U \subseteq_o \R^n) \times [a,b] \to \C$ będzie taka, że ,,wszystkie'' $t \mapsto f(x,t)$ są ciągłe.
+\wcht{Tw. dyferencjałowe}: jeśli wszystkie $x \to f(x,t)$ są $x_k$ czosnkowo różalne, zaś $(x,t) \mapsto \partial_{x_k} f(x,t)$ ciągła na $U \times [a,b]$, to $F$ jest $x_k$ czosnkowo różalna i coś.
+\[
+	F(x) := \int_a^b f(x,t) \,\D{t} \spk
+	\frac{\partial F}{\partial x_k} (x) = \int_a^b \frac{\partial f}{\partial x_k} (x,t) \,\D{t}
+\]
+
+Dana \prawo{2.7} jest $\mathscr C^2$-funkcja (Lagrange'a) $L \colon [a,b] \times \R \times \R \to \R$, $(x,y,p) \mapsto L(x,y,p)$ i $\alpha, \beta \in \R$.
+\wcht{Konkurrenzschar}: $\mathcal K$, a na nim $J \colon \mathcal K \to \R$: dla którego $\varphi \in \mathcal K$ funkcja $J$ przyjmuje ekstremum?
+Niech $F_h(t) := J(\varphi + th)$, wtedy $F'_h(t)$ to całka z $(L_y(\dots)h(x) + L_p(\dots)h'(x))$ ,,po $x$ nad $[a,b]$''. 
+Ablatyw $\delta_h J (\varphi) := F_h'(0)$ to \wcht{pierwsza wariacja} $J$ w kierunku $h$.
+Gdy wariacja jest zerem dla każdego $h \in \mathcal K_0$, to $J$ jest \wcht{stacjonarna} w $\varphi$, tylko wtedy $J$ ma ekstremum w $\varphi \in \mathcal K$.
+\wcht{Różniczkowe równanie Eulera} dla rachunku wariacyjnego: $J$ jest w $\varphi \in \mathcal K$ stacjonarna $\Lra$ $\varphi$ na $[a,b]$ spełnia $({\D{}}/{\D{} x}) L_p(x, \varphi(x), \varphi'(x)) = L_y(x, \varphi(x), \varphi'(x))$.
+\wcht{Test-zero}: gdy $f \colon [a,b] \to \R$ jest ciągła i dla każdej funkcji testu (dwukrotnie ciągle różalnej) $h \colon [a,b] \to \R$ z $h(a) = h(b) = 0$ mamy zerową całkę z $fh$ nad $[a,b]$, to $f = 0$.
+\hfill
+.
+\[
+ 	\mathcal K := \{y \in \mathscr C_\R^2 [a,b] : y(a) = \alpha, y (b) = \beta\} \spk
+ 	\mathcal K_0 := \{h \in \mathscr C_\R^2[a,b] : h(a) = h(b) = 0 \} \spk
+	J(y) := \int_a^b L(x, y(x), y'(x)) \, \D x
+\]

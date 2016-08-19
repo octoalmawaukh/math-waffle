@@ -1,0 +1,38 @@
+\wcht{Forma Pfaffa} \prawo{5.1} (1-forma) odwzorowanie $\omega \colon (U \subseteq_o \R^n) \to \textrm{L}(\R^n, \C)$; \wcht{rzeczywista}: zawsze $\omega(x)[\R^n] \subseteq \R$.
+Dyferencjały różalnych $f \colon U \to \C$, $\sum_{i=1}^n \partial_i f(x)h_i = \D f (x) h$, to przykłady 1-form.
+Rzeczywiste 1-formy odpowiadają polom wektorów, polu $v \colon U \to \R^n$ przypisujemy formę $\omega_v$, $\omega_v(x) h = \langle v(x) \mid h \rangle$.
+Każda forma liniowa $\omega(x)$ ,,pochodzi'' od $v_\omega(x)$: $\omega(x)h = \langle v_\omega(x) \mid h \rangle$, $x \mapsto v_w(x)$ jest szukanym polem.
+Dyferencjał dostanie gradient: $v = \grad f$ gdy $\omega_v = \textrm{d}f$.
+Niech $a_i(\xi) = \omega(\xi) e_i$, wtedy $\omega(\xi) h = \sum_{i=1}^n a_i(\xi) \textrm{d}x_i (\xi)h$, w skrócie $\omega = \sum_i a_i \textrm{d}x_i$.
+Funkcje $a_i$ to \wcht{współczynniki} względem $\D x_i$.
+
+Forma \prawo{5.2} $\omega$ na $U$ jest \wcht{całkowalna wzdłuż $\gamma$}, gdy istnieje $I$, że każdy $\varepsilon > 0$ ma $\delta > 0$, że rozkład $Z$ odcinka $[a, b]$ drobniejszy niż $\delta$ pociąga dla każdego $Z'$ nierówność $|S(Z, Z') - I| < \varepsilon$; rozkład $Z$: $a = t_0 < \dots < t_r = b$; wtedy $Z' = \{t_k' \in [t_{k-1}, t_k] : 1 \le k \le r\}$.
+Nie można całkować wzdłuż każdej drogi, $\gamma = (\gamma_1, \ldots, \gamma_n) \colon [a, b] \to \R^n$ jest \wcht{całkodrogą}, gdy istnieją ,,Regel-'' $\dot \gamma_i$, których $\gamma_i$ to pierwotne.
+Wzdłuż całkodrogi $\gamma$ każda ciągła 1-forma $\omega = \sum_{i=1}^n a_i \D x_i$, $\omega$ jest całkowalna i khm-3.
+\[
+	S(Z, Z') = \sum_{k=1}^r \omega(\gamma(t_k'))(\gamma(t_k) - \gamma(t_{k-1})) \spk
+	I = \int_\gamma \omega \spk
+	\int_\gamma \omega = \int_a^b \omega(\gamma(t)) \dot \gamma (t) \,\D t = \int_a^b \sum_{i=1}^n a_i(\gamma(t)) \cdot \dot{\gamma}_i (t) \,\D t
+\]
+
+Forma \prawo{5.3} Pfaffa $\omega = \sum_{i = 1}^n f_i \D x_i$, która ma na $U \subseteq_o \R^n$ \wcht{potencjał} (\wcht{f. pierwotną}: różalną $f \colon U \to \C$, że $\omega = \D f$, tzn. $f_k = \partial_k f$) jest \wcht{dokładna}.
+Jeśli $f$ to potencjał na $U$ ciągłej 1-formy $\omega$, to całka z $\omega$ wzdłuż każdej całkodrogi $\gamma$ w $U$ od $A$ do $B$ wynosi $f(B) - f(A)$.
+Ciągła 1-forma $\omega$ na obszarze $U \subseteq_o \R^n$, którą można całkować niezależnie od drogi, ma pierwotną: $f(x) = \int_a^x \omega$ dla $x \in U$.
+
+Ciągła \prawo{5.4} 1-forma $\omega$ na $U \subseteq_o \R^n$ jest \wcht{lokalnie dokładna} (\wcht{zamknięta}): każdy $x$ ma $U_x$, gdzie istnieje pierwotna $f$ dla $\omega$: $\omega \mid_{U_x} = \D f$.
+Dla formy $\omega = \sum_{i=1}^n f_i \D x_i$ (ciągle różalnej) tw. Schwarza daje \wcht{warunek całkowalności} (konieczny dla zamkniętości): $\partial_i f_k = \partial_k f_i$ dla $i, k \le n$.
+\wcht{Gwiezdny zbiór}: $X \subseteq \R^n$, o ile istnieje $a \in X$, że wszystkie odcinki $[a,x]$ leżą w $X$.
+\wcht{Lemat Poincarégo}: ciągle różalna 1-forma na gwiezdnym zbiorze spełniająca warunek całkowalności
+ ma pierwotną.
+Niech $n = 3$.
+Warunek całkowalności zmienia się w \wcht{bezrotacyjność}: $\rot v = (\partial_2 v_3 - \partial_3 v_2,$ $\partial_3 v_1 - \partial_1 v_3, \partial_1 v_2 - \partial_2 v_1)$, symbolicznie $\nabla \times u$, ma się zerować (dla różalnych pól).
+Na gwiezdnych zbiorach jest też wystarczający.
+
+\wcht{Homotopia} \prawo{5.5} dwóch krzywych $\gamma_i \colon [a,b] \to X$ o wspólnych końcach $A, B$: ciągłe $H \colon [a,b] \times [0,1] \to X$, że $H(\cdot, i) = \gamma_i$ dla $i \in \{0, 1\}$ oraz $H(a, s) = A$, $H(b,s) = B$.
+Całka z lokalnie dokładnej 1-formy $\omega$ w $U \subseteq_o \R^n$ po homotopijnych drogach o tych samych końcach ma tę samą wartość.
+\wcht{Wolna homotopia} zamkniętych krzywych: nie musi trzymać końców.
+Indeks zaczepienia nie zależy wolnohomotopijnie od krzywej.
+%\wcht{Tw. Brouwera o punkcie stałym}: każda ciągła z $B_\ge(0,1)$ w siebie ma punkt stały.
+\wcht{Jednospójność}: łukowo spójny $X \subseteq \R^n$, gdzie każda zamknięta krzywa ściąŋa się do punktu.
+Zamknięta 1-forma na jednospójnym obszarze $U \subseteq_o \R^n$ ma tam całki niezależne od drogi oraz pierwotną.
+Dla $n = 3$: ciągle różalne pole wektorów bez rotacji jest gradientowe.

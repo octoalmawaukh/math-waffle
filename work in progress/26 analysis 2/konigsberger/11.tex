@@ -1,0 +1,49 @@
+\wcht{Immersja} \prawo{11.1} (regularna parametryzacja): $\mathscr C^1$-odwzorowanie $\gamma \colon (\Omega \subseteq_o \R^d) \to \R^n$, gdy dyferencjał $\D\gamma(u) \colon \R^d \to \R^n$ jest injekcją dla $u \in \Omega$ $\Lra$ macierz $\gamma'(u)$ ma rząd $d$.
+\wcht{P. styczna}: $T_u \gamma$ jest rozpinana przez $d$ wektorów $\partial_i \gamma(u)$.
+Dwie immersje są \wcht{równoważne}, gdy jedna jest złożeniem drugiej z pewnym dyfeo-.
+\wcht{Lemat o lokalnej normalformie}: gdy $\gamma \colon (\Omega \subseteq_o \R^d) \to \R^n$ jest immersją, każdy $u \in \Omega$ ma otoczenie $U$ oraz pewną permutację współrzędnych $P \colon \R^n \to \R^n$, że $P \circ \gamma$ jest równoważna z $\gamma^* \colon (V \subseteq_o \R^d) \to \R^n$: $\gamma^* \colon x \mapsto (x, \gamma^*_{d+1} (x), \ldots, \gamma_n^*(x))$. 
+\wcht{Włożenie} to taka immersja $\gamma \colon \Omega \to \R^n$, która jest homeo- na swój obraz; to czyni jego obraz $d$-podrozmaitością.
+
+\wcht{Równoległotop} \prawo{11.2} w $\R^n$: $P(\{a_i\}_{i=1}^{d \le n})$.
+Tylko jedna $v_d \colon [\R^n]^d \to \R$ spełnia: $v_d(\dots, \lambda a_i, \dots) = |\lambda| v_d(\dots, a_i, \dots)$; $v_d(a_1, \dots, a_i + a_j, \dots, a_d)$ równe $v_d(\dots)$ i $v_d(\ldots) = 1$ dla ortonormalnych $a_i$: $(\det A^\top A)^{1/2}$, gdzie kolumny $A$ to $a_i$.
+Dla $d = n-1$ zdefiniujmy $A_k$ jako macierz $A$ bez $k$-tego wiersza; mamy \wcht{produkt zewnętrzny}: $a_1 \wedge \dots \wedge a_{n-1} = (\alpha_1, \dots, \alpha_n)^\top$ -- jego iloczyn (skalarny) z $b \in \R^n$ jest równy $\det(b, a_1, \ldots, a_{n-1})$; jest prostopadły do $a_i$ i ma długość równą objętości równoległotopu: $v_{n-1} (a_1,\dots, a_{n-1})$.
+Jeżeli $\alpha \colon \R^d \to \R^n$ jest liniowe i ma macierz $A$, zaś $Q \subseteq \R^d$ to osiościan, to $v_d(\alpha(Q)) = (g^\alpha)^{1/2} \cdot v(Q)$, gdzie $g^\alpha = \det A^t A$ to \wcht{wyznacznik Grama} (\wcht{tensora miary} $A^tA$).
+\[
+	P(\{a_i\}_{i=1}^{d \le n}) = \left\{\sum_{i=1}^d t_ia_i : 0 \le t_i \le 1\right\} \spk
+	\alpha_k = (-1)^{k-1} \det A_k \spk
+	\| a_1 \wedge \dots \wedge a_{n-1}\| = v_{n-1} (a_1,\dots, a_{n-1})
+\]
+
+\wcht{Obszar mapowy}: \prawo{11.3} $U \subseteq_o M$ (rozmaitość w $\R^n$), gdy istnieje mapa $\varphi \colon (U' \subseteq_o \R^n) \to V$, że $U = U' \cap M$.
+Obszar mapowy w $d$-wymiarowej podrozmaitości $M \subseteq \R^n$ jest śladem włożenia $(\Omega \subseteq_o \R^d) \to \R^n$ (wszystkie są równoważne).
+Jak całkować nad obszarem mapowym $U \subseteq M$?
+Weźmy immersję $\gamma \colon \Omega \to U$ i napiszmy \wcht{tensor miary} $g^\gamma(u) = \det (\gamma'(u)^\top \cdot \gamma'(u))$ (macierz $d\times d$ jest dodatnio określona, symetryczna; jej elementy to $g_{ij} = \langle \partial_i \gamma, \partial_j \gamma \rangle \mid_u$.
+Funkcja $f \colon U \to \C \cup \{\infty\}$ jest \wcht{całkowalna względem włożenia $\gamma \colon \Omega \to \R^n$} ze śladem $U$, gdy $(f \circ \gamma) \cdot (g^\gamma)^{1/2}$ jest całkowalna nad $\Omega$; wtedy khm-1 (niezależnie od wyboru włożenia $\gamma$, zatem $f$ jest po prostu \wcht{całkowalna}).
+\[
+	\int^\gamma f := \int_\Omega f(\gamma(u)) \cdot \sqrt{g^\gamma(u)} \,\D u
+\]
+
+Podrozmaitość $M$ w \prawo{11.4} $\R^n$ jest Lindelöfa, bo ma \wcht{zwarte wyczerpanie}, pokrycie zbiorami $K_i \subseteq^k M$, że $K_i \subseteq \interior K_{i+1}$.
+\wcht{Rozkład jedności} na $M$: przeliczalna rodzina 
+ciągłych $f_i \colon M \to [0,1]$, że każdy $x \in M$ ma otoczenie, gdzie prawie wszystkie $f_i$ to zera oraz $\sum_i f_i(x) = 1$.
+W każde  pokrycie $U$ dla $M$ można \wcht{wpisać} (nośniki $f_i$ to podzbiory którychś z $U_i \in U$) taki rozkład; $f_i$ są ciągle różalne i zwarcie niesione.
+
+Tu \prawo{11.5} $M$ jest $\mathscr C^1$-podrozmaitością $\R^n$.
+Funkcja \wcht{całkowalna}: $f \colon M \to \C \cup \{\infty\}$, gdy istnieje rozkład jedności $\{\varepsilon_i\}$ wpisany w atlas, że $f \varepsilon_i$ są całkowalne na $M$ i $\sum_{i=1}^\infty \int_M |f| \varepsilon_i \,\D S < \infty$ (to właśnie całka, niezależna od rozkładu, khm-1).
+Całkowalność $f \colon (A \subseteq M) \to \C \cup \{\infty\}$: to samo, ale dla jej oczywistego przedłużenia (,,$f[M \setminus A] = 0$'').
+Zbiór mierzalny: o całkowalnym indykatorze.
+Ciągłe funkcje ze zwartych zbiorów są całkowalne, zatem same zbiory mierzalne.
+\wcht{Tw. Lebesgue'a}: jeśli ciąg $f_k$ całkowalnych na $M$ zbiega punktowo do $f$ i $|f_k| \le F$ dla całkowalnej $F$, to $f$ jest całkowalna (khm-2). 
+$\int_M f\,\D S := \sum_{k=1}^\infty \int_M f \varepsilon_i \,\D S \spk \int_M f\,\D S = \lim_{k \to \infty} \int_M f_k \,\D S$.
+
+Zbiór \prawo{11.6} $A \subseteq \R^n$ jest Hf-zerowy wymiaru $d$, gdy dla każdego $\varepsilon > 0$ istnieje przeliczalnie wiele kostek $W_k \subset \R^n$ o krawędziach $r_k$, że $A \subseteq \bigcup W_k$ i $\sum r_k^d < \varepsilon$.
+Klasa tych zbiorów jest zamknięta na branie obrazów f. lipschitzowskich.
+Każda $(d-1)$-wymiarowa podrozmaitość $M$ w $\R^n$ jest zbiorem Hf-$d$-zerowym.
+Podzbiór $A$ $d$-wymiarowej podrozmaitości w $\R^n$ jest Hf-$d$-zerowy $\Lra$ dla każdego ,,mapowego'' $U$ w $M$ i włożenia $\gamma \colon \Omega \to \R^n$ z $U = \text{Spur } \gamma$ zbiór $\gamma^{-1}(A \cap U)$ jest Le-$\R^n$-zerowy.
+\wcht{Tw. o modyfikacji}: gdy dwie funkcje na $d$-wymiarowej podrozmaitości $M \subseteq \R^n$ są ze sobą zgodne poza Hf-$d$-zerowym $A \subseteq M$ i jedna jest całkowalna nad $M$, to druga też; całki są równe.
+
+Zbiór \prawo{11.7} $X \subseteq \R^n$ to \wcht{$\mathscr C^1$-przestwór} (wymiaru $d$), gdy zawiera $M^d$, niepustą $\mathscr C^1$-podrozmaitość leżącą w nim gęsto i otwarcie, że $X \setminus M$ jest $d$-zerowy.
+Unia wszystkich $M$ to \wcht{gładź}, jej dopełnienie: \wcht{część osobliwa}.
+Całkowalność nad przestworem to dokładnie całkowalność nad jego gładzią (lub nawet jakimkolwiek $M$!).
+Przestwór \wcht{mierzalny}: z mierzalną gładzią, $v_d(M(X))$ jego \wcht{$d$-wymiarową objętością}.
+Ograniczona i ciągła funkcja $f$ na mierzalnym (zwarty nie wystarcza!) $\mathscr C^1$-przestworze $X$ jest nad nim całkowalna.

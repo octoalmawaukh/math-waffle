@@ -1,0 +1,99 @@
+Patrzymy \prawo{3.1.1} na $X, Y$ (unormowane, skończonego wymiaru nad $\R$ lub $\C$), przestrzeń $\textrm L(X, Y)$ ma normę operatorową i składa się z samych ciągłych odwzorowań; jest ona zupełna.
+Funkcja $f \colon (U \subseteq_o X) \to Y$ jest \wcht{różalna} w $a$: $f(a+h) = f(a) + Lh + R(h)$ oraz $R(h) : \|h\| \to 0$ dla pewnego $\K$-liniowego $L \colon X \to Y$ (\wcht{dyferencjał}).
+Wybór baz $X, Y$ czyni $\D{f}(a)$ \wcht{macierzą Jacobiego}, \wcht{ablatywem} $f'(a)$.
+Gdy $X = \K^n$, $Y = \K^m$, to $f \colon U \to Y$ jest różalne $\Lra$ składowe $f_1, \ldots, f_m$ są; wtedy dla $h \in \K^n$ jest $\D f(a) h = f'(a) h$ (khm-1).
+Dla $X = \R$: $f$ jest różalne, gdy wszystkie $mn$ czosnkowych istnieje i są ciągłe w punkcie.
+Tu też są \wcht{ablatywy kierunkowe}; standardowo: $\partial_k f(a) = f'(a) e_k$.
+Ciągłość $\D f$ sprawdza się przyjemnie następującym testem: $\D f \colon U \to \textrm L(X, Y)$ jest ciągłe $\Lra$ dla każdego $h \in X$ odwzorowanie $U \to Y$, $x \mapsto \D f(x)h$ jest ciągłe.
+\[
+	f'(a) = \begin{pmatrix} f_1'(a) \\ \vdots \\ f_m'(a) \\ \end{pmatrix}
+	= \begin{pmatrix}
+	\partial_1 f_1(a) & \cdots & \partial_n f_1(a) \\
+	\vdots  &  \ddots & \vdots  \\
+	\partial_1 f_m(a) &  \cdots & \partial_n f_m(a)
+	\end{pmatrix} \spk
+	\partial_hf(a) = \lim_{t \to 0} \frac{f(a+th) - f(a)}{t} = \D{f(a)}h
+	%\det P_n'(r, \varphi_1, \dots, \varphi_{n-1}) = r^{n-1} \prod_{k=2}^{n-1} \cos^{k-1} \varphi_k
+\]
+
+\wcht{Reguła łańcucha}: \prawo{3.1.2} złożenie różalnych $g$ oraz $f$, $(V \subseteq_o X) \to (U \subseteq_o Y) \to Z$ jest różalne, $\D(f \circ g)(a) = \D f(g(a)) \circ \D g(a)$ (dla ablatywów podobnie).
+\wcht{Krzywa obrazowa} $f \circ \gamma \colon I \to \K^m$ (dla różalnej krzywej $\gamma \colon I \to U$ i różalnego $f \colon (U \subseteq_o \K^n) \to \K^m$) ma wektor styczny w punkcie $t_0$: $(\D/\D t)(f \circ \gamma)(t_0) = f'(\gamma(t_0)) \dot \gamma(t_0)$.
+Dane są $f_i \colon (U \subseteq_o X) \to Y_i$ razem z dwuliniowym $\beta \colon Y_1 \times Y_2 \to Z$.
+\wcht{Reguła produktu}: jeśli $f_1$, $f_2$ są różalne w $a$, to ,,produkt'' $f_1 \times_\beta f_2 \colon U \to Z$ przenoszący $u$ na $\beta(f_1(u), f_2(u))$ też oraz khm-1 (khm-2) dla $h \in X$.
+\[
+	\D{(f_1 \times_\beta f_2)}(a)h = \beta(\textrm{d}{f_1}(a)h,f_2(a)) + \beta(f_1(a), \D{f_2}(a)h) \spk
+	(f_1 \times_\beta f_2)'(a)h = \beta(f_1'(a)h,f_2(a))+\beta(f_1(a), f_2'(a)h)
+\]
+
+Jeśli \prawo{3.1.3} $\C$-szereg potęgowy $P(z) = \sum_{k \ge 0} \alpha_k z^k$ ma współczynniki z $\K$ i promień zbieżności $R$, to odwzorowanie $P_{\mathscr A} \colon K_R^{\mathscr A} (0) \to \mathscr A$ zadane dla $x \in \mathscr A$ o normie mniejszej niż $R$ jest ciągle różalne; $\mathscr A$ to unormowana algebra nad $\K$ z jedynką skończonego wymiaru (khm-1).
+Przypadek przemiennej $\mathscr A$ (np. $\C$): $P'_{\mathscr A}(x) = \sum_{k \ge 1} k \alpha_k x^{k-1}$.
+Odwrotność $\mathscr A^* \to \mathscr A^*$ jest ciągle różalna, $\D \operatorname Inv (a) h = -a^{-1} h a^{-1}$; $\D\,{\exp}(0)h = h$.
+\[
+	\D{P_{\mathscr A}}(x)h = \sum_{k=1}^\infty \sum_{l = 0}^{k - 1} \alpha_k x^l h x^{k-l-1} \spk
+	\textrm{Oczywiście } P_{\mathscr A}(x) = \sum_{k \ge 0} \alpha_k x^k.
+\]
+
+Liniowe \prawo{3.1.4} $L \colon \R^k \to \R^n$ ($k \le n$) jest \wcht{konforemne}, gdy jest \wcht{kątowierne}.
+Równoważnie: macierz $A$ opisująca $L$ spełnia równość $A^tA = p^2 E$ dla pewnego $p \neq 0$.
+Jeżeli $k = n$, to $A$ jest macierzą podobieństwa ($A:p$ ortogonalna).
+Różalne jest konforemne, gdy ma taki dyferencjał, np. inwersja $\R^n \setminus \{p\} \to \R^n \setminus \{p\}$.
+Różalne $(u, v) \colon (U \subseteq_o \R^2) \to \R^2$ jest konforemne w punkcie $z$, gdy para $(u, v)$ lub $(v, u)$ spełnia równania Cauchy'ego-Riemanna (khm-1, gdzie $\Re f = u$, $\Im f = v$) oraz $u_x^2 + v_x^2$ nie zeruje się w $z$.
+\[
+	f_x(a) = -i f_y(a) \spk
+	\frac{\langle Lv, Lw \rangle}{\|Lv\|_2 \cdot \|Lw\|_2} = \frac{\langle v,w\rangle}{\|v\|_2 \cdot \|w\|_2}
+\]
+
+Tu: \prawo{3.2} $K$ zwarta, $V$ liniowa unormowana, $\varphi \colon K \to V$ ciągła.
+\wcht{Norma supremum} na $\mathscr C(K, V)$: $\| \varphi \|_K = \sup_{x \in K} \|\varphi(x)\|$.
+$X, Y$ są skończonego wymiaru, unormowane, $\K$-liniowe.
+\wcht{Tw. o szrankach}: $\mathscr C^1$-funkcja $f\colon (U \subseteq_o X) \to Y$ jest Lipschitza na wypukłych $K \subseteq^k U$, dla $x$, $y \in K$ zachodzi $\|f(x) - f(y)\| \le \|\D f\|_K \cdot \|x-y\|$, przy czym $L(X,Y)$ jest z normą operatorową (bo $\D f \colon K \to \textrm L(X, Y)$).
+Jawny wzór na $\|\D f\|_K$ dla funkcji $f \colon (U \subseteq \K^n) \to \K^m$ (przy czym $\K^m$, $\K^n$ są z normą maksimum): $\|\D f\|_K = \sup_{\xi \in K} (\max_\mu \sum_{k=1}^n |\partial_k f_\mu(\xi)|)$.
+
+$X, Y$: \prawo{3.3} unormowane p. $\K$-liniowe skończonego wymiaru.
+\wcht{Dyfeomorfizm}: $\rightleftarrows$-(różalna) bijekcja $\Phi \colon (U \subseteq_o X) \to (V \subseteq_o Y)$.
+Wtedy $\dim X$ to $\dim Y$ i (dla $y = \Phi(x)$) mamy (*) $\D\Psi(y) = (\D\Phi(x))^{-1}$ ($\Psi := \Phi^{-1}$).
+Jeśli ciągle różalny homeo- $\Phi$ z $U \subseteq_o X$ ,,na'' $V \subseteq_o Y$ jest taki, że każdy dyferencjał $\D \Phi(x)$ jest izo-, to funkcja odwrotna $\Psi \colon V \to U$ jest ciągle różalna i nadal khm-(*).
+Jeśli $\Phi \colon (U \subseteq_o X) \to Y$ jest $\mathscr C^1$ i ma w $a$ izo- dyferencjał $X \to Y$, to obcięcie $\Phi$ do pewnego otoczenia $a$ jest dyfeo- (\wcht{tw. o lokalnym odwracaniu}).
+% \wcht{Lokalny dyfeo-} w $a \in U$: $\mathscr C^1$-funkcja $\Phi \colon U \to Y$, gdy po obcięciu do otoczenia $a$ jest dyfeo- na otwarty obraz.
+\wcht{Tw. o otwartości}: obraz $\mathscr C^1$-funkcji $\Phi \colon (U \subseteq_o X) \to Y$ o odwracalnych dyferencjałach $\D\Phi(x)$ jest otwarty; \wcht{tw. o dyfeomorfji}: jeśli $\Phi$ jest ,,1-1'', to dyfeomorfizmem.
+%Fakt: $(\forall x \in U)$ pochodna $\D\Phi(x)$ oraz $\D\Psi(y)$, $y = \Phi(x)$, są odwrotnymi do siebie izomorfizmami*: $(\D\Phi(x))^{-1} = \D\Psi(y)$, zaś $\dim X = \dim Y$. %* (dla m. Jacobiego: $\Psi'(y) = (\Phi'(x))^{-1}$*)
+%\wcht{Tw. Banacha o punkcie stałym}: kontrakcja $\varphi \colon M \to M$ zupełnej p. metrycznej $M$ ma dokładnie jeden punkt stały, każdy ciąg $x_{n+1} = \varphi(x_n)$ jest do niego zbieżny.
+
+Tu: \prawo{3.4} $X, Y, Z$ skończonego wymiaru, unormowane p. $\K$-liniowe, $\dim Y = \dim Z$; $f \colon (U \subseteq_o X \times Y) \to Z$ jest $\mathscr C^1$, jak rozwiązać $f(x,y) = 0$ w otoczeniu $f(a,b)=0$?
+\wcht{Czosnkowe specjały}: $\D_{A}f(x,y) \colon A \to Z$, wg khm-1, khm-2.
+\wcht{Tw. o funkcji uwikłanej}: jeśli $\D_Yf(a,b)$ odwraca się, to istnieją otoczenia: $U' \subseteq X$ dla $a$ oraz $U'' \subseteq Y$ dla $b$ oraz $\mathscr C^1$-odwzorowanie $g \colon U' \to U''$, że $f(x,y) = 0$, $(x,y) \in U' \times U''$ $\Lra$ $y = g(x)$, $x \in U'$.
+Dodatkowo zróżniczkowanie $f(x, g(x)) = 0$ prowadzi do $\D g(a) = -(\D{}_Yf(a,b))^{-1} \circ \D{}_Xf(a,b)$.
+\[
+	\D{}_Xf(x,y) h = \D f(x,y)(h,0) \spk
+	\D{}_Yf(x,y) k = \D f(x,y)(0,k) \spk
+	\D f(x,y)(h,k) = \D{}_Xf(x,y) h + \D{}_Yf(x,y) k
+\]
+
+\emph{$X$, $Y$ unormowane \prawo{3.5.1} $\R$-liniowe, $\dim X,Y < \infty$, $\R_0^d = \R^d \times \{0\}^{n-d}$.} %$\R_0^d = \{x \in \R^n : x_{d+1} = \dots = x_n = 0\}$}.
+\wcht{Podrozmaitość różalna} $X$: niepusty $M^d \subset X$, że każdy punkt ma dyfeo- $\varphi$ (\wcht{mapa}) z otoczenia $U$ ,,na'' $V \subseteq_o \R^n$, że $\varphi(M \cap U) = \R_0^d \cap V$ ($M \cap U$: mapowy).
+\wcht{Atlas}: rodzina map kryjących $M$.
+Niepusty $M \subseteq X$ jest podrozmaitością wymiaru $d \le \dim X = n$ $\Lra$ każdy $a \in M$ ma otoczenie $U \subseteq X$ oraz $n-d$ funkcji klasy $\mathscr C^1$, $f_1, \ldots, f_{n-d} \colon U \to \R$, których to dyferencjały w $a$ są lnz, zaś $\{x \in U : f_1(x) = \ldots = f_{n-d}(x) = 0\} = M \cap U$.
+\wcht{Punkt regularny}: $x \in U$ dla różalnej $f \colon (U \subseteq X) \to Y$, w którym dyferencjał jest surjekcją, inne są \wcht{singularne}.
+\wcht{Regularna wartość}: $y \in Y$, że $f^{-1}(y)$ składa się z punktów regularnych.
+Le-prawie wszystkie wartości $\mathscr C^1$-funkcji są regularne (\wcht{tw. Sarda}).
+Jeżeli $f \colon (U \subseteq_o X) \to Y$ jest klasy $\mathscr C^1$, to niepusta poziomica dla regularnej wartości stanowi podrozmaitość w $X$ wymiaru $\dim X -  \dim Y$ (\wcht{tw. o regularnej wartości}).
+%\emph{Przykłady}: niepusta kwadryka $Q = \{x : x^TAx = 1\}$ w $\R^n$ dla symetrycznej macierzy $A \in \R^{n \times n}$ jest podrozmaitością wymiaru $n-1$, ortogonalna grupa $O(n)$ jest podrozmaitością $\R^{n \times n}$ wymiaru $n(n-1)/2$.
+
+\wcht{Wektor styczny} \prawo{3.5.2} do niepustego $M \subseteq X$ w $a \in M$: pochodna pewnej ciągle różalnej krzywej $\alpha \colon (-1, 1) \to M$ w zerze z $\alpha(0) = a$.
+Tworzą \wcht{p. styczną} $T_aM$.
+Jest to $\R$-liniowa p. liniowa wymiaru $d$, gdy $M$ jest $d$-wymiarową podrozmaitością $X$.
+Dla $M$, poziomic $\mathscr C^1$-odwzorowań $f \colon (U \subseteq_o X) \to Y$ dla regularnej wartości $c \in Y$, $T_aM$ to jądro dyferencjału $\D f(a)$ ($\R^n \to \R^m$: $\{v \in \R^n : f'(a) v = 0\}$).
+	
+Tutaj \prawo{3.5.3} $\R^n$ ma kanoniczny iloczyn skalarny.
+\wcht{Wektor normalny} dla $M \subset \R^n$ w $a \in M$: każdy wektor z $\R^n$ prostopadły do $T_aM$, \wcht{p. normalna}: $N_aM = (T_aM)^\perp$.
+Jeśli $M = f^{-1}(c)$ jest poziomicą ciągle różalnego $f = (f_1, \dots, f_{n-d}) \colon U \to \R^{n-d}$ dla regularnej wartości $c \in \R^{n-d}$, to gradienty $\grad f_1(a)$, \dots, $\grad f_{n-d}(a)$ są bazą $N_aM$.
+Dwie podrozmaitości $M_1, M_2$ są \wcht{prostopadłe}, gdy $N_aM_1 \perp N_aM_2$.
+Zbiory miejsc zerowych $\mathscr C^1$ funkcji $f_1$, $f_2$ z $0$ jako wartością regularną są prostopadłe w $a \Lra$ gradienty $f_1$ i $f_2$ w $a$ są prostopadłe.
+\emph{Przykład kwadrykowy}!
+%$0 < a < b < c$, $q_t(x,y,z) = x^2/(a-t) + y^2/(b-t)+z^2/(c-t)$, $p = (x_0, y_0, z_0)$, że $x_0y_0z_0 \neq 0$. Wtedy $Q(t) = q_t^{-1}(1)$ jest kwadryką, $t<a$: elipsoidą, $a < t < b$: hiperboloida jednopowłokowa, $b < t < c$: dwupowłokowa. Równanie $q_t(p) = 1$ ma po jednym rozwiązaniu $t_1 < a$, $a < t_1 < b$, $b < t_3 < c$, zaś $Q(t_1)$, $Q(t_2)$ i $Q(t_3)$ są parami prostopadłe w $p$.
+
+Dane \prawo{3.6} są $f, \varphi_1, \ldots, \varphi_k \colon (U \subset \R^n) \to \R$ i $M = \varphi^{-1}(0)$.
+\wcht{Ekstrema warunkowe}: $x_0 \in M$, że $f(x) \le f(x_0)$ dla $x \in M$.
+\wcht{Mnożniki Lagrange'a} (warunek konieczny): jeśli $f, \varphi$ są ciągle różalne na $U \subseteq_o \R^n$, $\varphi'$ ma rząd $k$ na $M$, i $x_0 \in M$ jest ekstremalny, to $f'(x_0) = \sum_{i=1}^k \lambda_i \varphi_i'(x_0)$ (w $\R^n$: $\grad f(x_0) = \sum_i \lambda_i \grad \varphi_i(x_0)$). 
+Przykład: maksimum $v$ dla $f(x) = x^t A x$ i symetrycznej $A \in M_n(\R)$ jest wektorem własnym $A$, $f(v)$ to wartość własna.
+Ogólniej: symetryczna $A$ ma parami ortogonalne wektory własne $\{v_i\}_{i=1}^n$ z wartościami własnymi $\lambda_i$, które maksymalizują $f$ obcięte do $S^{n-1} \cap H_{k-1}$, gdzie $H_0 = \R^n$, $H_k = [v_1, \ldots, v_k]^\perp$ (\wcht{tw. o transformacjach głównych osi}).

@@ -1,0 +1,73 @@
+\wcht{Alternująca $k$-forma} \prawo{13.1} na rzeczywistej, liniowej $V$: wieloliniowe odwzorowanie $\omega \colon V^k \to \C$ zmienające znak przy zamianie miejscami pary argumentów (przykład: $n$-forma na $\R^n$ to prawie wyznacznik).
+Tworzą zespoloną przestrzeń liniową $\textrm{Alt}^k(V)$.
+\wcht{Iloczyn ,,dachowy''} $r$-formy $\omega$ z $s$-formą $\eta$ to $r+s$-forma dana khm-1 wzorem; jest łączny, rozdzielny i antyprzemienny: $\eta \wedge \omega = (-1)^{rs} \omega \wedge \eta$.
+Gdy bazą dla $V$ jest $\{e_i\}_{i=1}^n$, to baza dualna składa się $\{\delta^i\}_{i=1}^n \in \textrm{Alt}^1(V)$, $\delta^i(e_j) = \delta_{ij}$.
+Przestrzeń $\textrm{Alt}^k(V)$ rozpinają lnz $k$-formy $\delta^{i_1} \wedge \ldots \wedge \delta^{i_k}$ dla rosnącego ciągu $i_?$.
+Wynika stąd, że $\dim_\C \textrm{Alt}^k(V)$ to $n$ nad $k$.
+\[
+	(\omega \wedge \eta)(v_1, \dots, v_{r+s}) = \frac{1}{r!s!} \sum_{r \in S_{r+s}} {\textrm{sign } \tau} \cdot \omega(v_{\tau(t)}, \dots, v_{\tau(r)}) \cdot \eta(v_{\tau(r+1)}, \dots, v_{\tau(r+s)}) \spk
+\]
+
+\wcht{Ściągnięciem} liniowego $T \colon V \to W$ jest inne liniowe, $T^* \colon \textrm{Alt}^k(W) \to  \textrm{Alt}^k(V)$: $T^*\omega(v_1, \dots, v_k) = \omega(Tv_1, \dots, Tv_k)$.
+Łatwo sprawdza się, że $T^*(\omega \wedge \eta) = T^* \omega \wedge T^* \eta$ oraz $(T \circ S)^* = S^* \circ T^*$.
+\wcht{Transformacja $n$-formy}: dla liniowej $V$ wymiaru $n$ nad $\R$ oraz liniowego $T \colon V \to V$ istnieje stała $c \in \C$, że $T^* \omega = c \omega$ dla alternujących $n$-form $\omega$; jeżeli $T$ ma w jakiejś bazie macierz $A$, to $c = \det A$.
+
+\wcht{Forma różniczkowa} \prawo{13.2} stopnia $k$ (zewnętrzna $k$-forma) na $U \subseteq_o \R^n$: odwzorowanie $\omega \colon U \to \textrm{Alt}^k(\R^n)$, oznaczane czasem $\omega_x = \omega(x)$. 
+Skoro dyferencjały $\D x_i$ rzutów $x_i \colon \R^n \to \R$ są w każdym punkcie $u \in \R^n$ bazą dualną do standardowej, każdą zew-$k$-forma $\omega$ na $U$ w $u \in U$ można zapisać jednoznacznie jako $\omega(u) = \sum a_{i_1\ldots i_k} (u) \,\D x_1 \wedge \ldots \wedge \D x_k$: sumujemy po $i_1 < \ldots < i_k$, zaś współczynnik $a$ wynosi $\omega(u)(e_{i_1}, \ldots, e_{i_k})$.
+Jeśli $\Phi \colon (\Omega \subseteq_o \R^m) \to U$ jest ciągle różalne, to $k$-formę $\omega$ na $U$ można \wcht{ściągnąć} przez $\Phi$ do $\Omega$: $(\Phi^* \omega)(x) := (\D \Phi(x))^* \omega (\Phi(x))$.
+Dzięki temu wyższe formy różniczkowe idealnie pasują do całkowania nad rozmaitościami.
+
+Istnieje dokładnie jeden sposób, by każdej różalnej $k$-formie $\omega$ w $U \subseteq_o \R^n$ przypisać $k+1$-formę $\D \omega$, $k \ge 0$, że spełnione są cztery warunki: $\D$ jest liniowe; dla różalnych $f \colon U \to \C$ napis $\D f$ nie zmienia znaczenia względem rozdziału 2; $\D (\omega \wedge \eta) = \D \omega \wedge \eta + (-1)^k \omega \wedge \D \eta$ oraz $\D^2 \omega = 0$ dla dwukrotnie ciągle różalnych form różniczkowych $\omega$.
+\wcht{Zew-ablatyw} (dyferencjał): $\D \omega$.
+Khm: $\D(\sum_{i=1}^n a_i \D x_i) = \sum_{i < k} (\partial_i a_k - \partial_k a_i) \, \D x_i \wedge \D x_k$.
+
+Podrozmaitość \prawo{13.3} $M$ klasy $\mathscr C^1$ wymiaru $n$ w $\R^N$ pokrywa się $U_\alpha$, śladami włożeń $\gamma_\alpha \colon (\Omega_\alpha \subseteq \R^n)$.
+Niech $U_{\alpha\beta} = U_\alpha \cap U_\beta$, $\Omega_{\alpha \beta} = \gamma_\alpha^{-1} [U_{\alpha \beta}]$.
+Istnieją \wcht{dyfeo- przejścia} $T_{\alpha \beta} \colon \Omega_{\alpha \beta} \to \Omega_{\beta \alpha}$, że $\gamma_\alpha(u) = \gamma_\beta \circ T_{\alpha \beta} (u)$; wtedy $\{\gamma_\alpha\}$ to \wcht{atlas włożeniowy}. 
+\wcht{Forma różniczkowa} stopnia $k$ to $\omega \colon x \mapsto (\omega_x \colon (T_xM)^k \to \C)$
+Każda $k$-forma $\omega$ na $M$ indukuje przez ściągnięcie przez $\gamma_\alpha \colon \Omega_\alpha \to U_\alpha$ inną $k$-formę $\omega_\alpha := \gamma_\alpha^* \omega$ na $\Omega_\alpha$.
+Gdy $U_{\alpha \beta}$ niepusty, spełniony jest \wcht{warunek strawności}: $\omega_\alpha = T_{\alpha \beta}^* \omega_\beta$.
+\wcht{Lemat krawiecki}: dla $k$-form $\omega_\alpha$ na przestrzeni parametrów $\Omega_\alpha$ atlasu $\{\gamma_\alpha\}$ ze ,,strawnych'' włożeń istnieje dokładnie jedna $k$-forma $\omega$ na $M$, że $\gamma^*_\alpha \omega = \omega_\alpha$ dla wszstkich $\alpha \in A$.
+\wcht{Ablatywem} różalnej $k$-formy $\omega$ na $M$ jest $k+1$-forma $\D \omega$, że dla wszystkich włożeń atlasu $\{\gamma_\alpha\}$ jest $\omega_\alpha^* \D \omega = \D \omega_\alpha$, $\omega_\alpha := \gamma_\alpha^* \omega$.
+
+Zbiór uporządkowanych baz $\R$-wektorowej $V \neq 0$ rozpada się na dwie klasy abstrakcji (dwie bazy są równoważne, gdy jedną można ciągle zmienić w drugą), \wcht{orientacje} (dodatnia, $\det B > 0$, oraz ujemna).
+Podrozmaitość $M^n \subseteq \R^N$ jest \wcht{orientowalna}: istnieje $\alpha$, niezdegenerowana, gładka $n$-forma.
+Równoważnie: istnieje atlas $A$ dla $M$, że dla map $\varphi$, $\psi$ o niepustym przekroju $U^\varphi \cap U^\psi$ i każdego $x$ (dla którego to ma sens) wyznacznik macierzy Jacobiego dla $\varphi \circ \psi^{-1}$ jest dodatni.
+
+\wcht{Całkowalna} \prawo{13.5} $n$-forma $\omega = a \,\D x_1 \wedge \ldots \wedge \D x_n$ w $\Omega \subseteq \R^n$: współczynniki są Le-całkowalne nad $\Omega$, khm-1. ($\bigwedge_k x_k$ to \wcht{forma objętościowa}).
+O $n$-formie $\omega$ na śladzie włożenia $\gamma \colon \Omega \to M$ mówi się, że jest \wcht{całkowalna} względem włożenia, gdy ściągnięta $n$-forma $\gamma^* \omega$ jest całkowalna nad przestrzenią parametrów $\Omega$, khm-2.
+\emph{Na śladzie włożenia jest półnorma $L^1$ dla $n$-formy.}
+Analogicznie do 11.5 definiuje się całkowalność $n$-form.
+\[
+	\int_\Omega \omega := \int_\Omega a(x) \,\D x \spk
+	\int_\gamma \omega := \int_\Omega \gamma^* \omega = \int_\Omega a \,\D u
+\]
+
+% Cienki lód #2
+Niech \prawo{13.6} $M$ będzie zorientowaną podrozmaitością $\R^N$ wymiaru $n$, co najmniej klasy $\mathscr C^2$.
+Podzbiór $G \subseteq M$ jest \wcht{gładko obrzeżony}, gdy każdy $a \in \partial G$ ma otoczenie $U \subseteq M$ oraz $\mathscr C^1$ funkcję $q \colon U \to \R$, że $\D q[U] \neq 0$ oraz $G \cap U = \{x \in U : q(x) \le 0\}$.
+\emph{Coś jeszcze...}
+
+\wcht{Tw. Stokesa}: \prawo{13.7} khm-1 dla zorientowanej podrozmaitości $M \subseteq \R^n$ wymiaru $n$ i klasy $\mathscr C^2$, przy czym $G \subseteq^k M$ ma gładki brzeg ($\partial G$ dziedziczy orientację z $M$), zaś $\omega$ to ciągle różalna $(n-1)$-forma na $M$.
+Twierdzenie pozostaje prawdziwe dla odpowiedników $\mathscr C^1$-wielościanów: $G \subseteq M$ zwartych, z brzegiem gładkim z dokładnością do zbioru Hf-zerowego (Hf-miara dla wymiaru $n-1$).
+\[
+	\int_G \D \omega = \int_{\partial G} \omega
+\]
+
+% cienki lód 3
+Tw. \prawo{13.8} Stokesa uogólnia klasyczne.
+Niech $M^n$ będzie zorientowaną $\mathscr C^2$-podrozmaitością w $\R^n$.
+Istnieje dokładnie jedna $n$-forma na $M$, $\D S$, że dla każdego włożenia $\gamma \colon \Omega \to U$ trzymającego orientację forma ściągnięta ma postać khm-1.
+\wcht{Tw. o formach objętościowych i enefe}: jeżeli $M$ to regularna hiperpowierzchnia w $\R^{n+1}$ z orientacją od enefe $\nu \colon M \to \R^{n+1}$, to zachodzi $(\D S)_x(v_1, \ldots, v_n) = \det (\nu(x), v_1, \ldots, v_n)$ dla $v_i \in T_xM$.
+Jeśli $\nu_k$ to $k$-ta składowa, to khm-2 na $M$.
+\wcht{Klasyczne tw. Stokesa}: $\mathscr C^1$-pole wektorów $F$ w $V \subseteq_o \R^3$, $M^2 \subseteq V$ zorientowana przez enefe $\nu$ oraz $G \subseteq^k M$ o gładkim brzegu.
+Na $\partial G$ jest orientacja od $M$, $\tau$ (pole stycznych jednostkowych), wtedy khm-3.
+\[
+	(\gamma^* \D S)_u = \sqrt{g^\gamma (u)} \D u_1 \wedge \ldots \wedge \D u_n \spk
+	\D{S} = \sum_{k=1}^{n+1} (-1)^{k-1} \nu_k \,\D{x_1} \wedge \dots \widehat{\D{x_k}} \dots \wedge \D{x_{n+1}} \spk
+	\int_G \langle \rot F \mid \nu \rangle \,\D S = \int_{\partial G} \langle F \mid \tau \rangle \,\D s
+\]
+
+\wcht{Tw. o retrakcji}: dla \prawo{13.9} gładko obrzeżonej  $G \subseteq^k \R^n$ nie istnieje $\mathscr C^2$-odwzorowanie $\Phi \colon G \to \R^n$, że $\Phi(G) \subseteq \partial G$ i $\Phi |_{\partial G} = \text{id}$.
+\wcht{Tw. Brouwera o punkcie stałym}: każde ciągłe $f  \colon E \to E$ ma punkt stały, gdzie $E$: zwarta, metryczna, homeo- z $B_\le$ w $\R^n$,
+Wniosek: \wcht{tw. Perrona-Frobeniusa}, jeśli $A$ to $(n \times n)$-macierz o dodatnich współczynikach, to ma ona w-wartość $\lambda > 0$ dla w-wektora o nieujemnych współrzędnych.
