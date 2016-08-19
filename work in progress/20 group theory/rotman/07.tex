@@ -1,0 +1,98 @@
+{\color{Red}\wcht{Rozszerzenie} \prawo{7.1} $K$ przez $Q$ to grupa $G$, która ma dzielnik normalny $K_1 \cong K$, że $G / K_1 \cong Q$.
+Jeśli $K$ i $Q$ są skończone, to $G$ też, podobnie $p$-, okresowość (elementy skończonych rzędów), rozwiązalność, beztorsyjność.
+Cykliczność, abelowość, nilpotentność nie przenoszą się.}
+
+\wcht{Grupa automorfizmów}: \prawo{7.2} $\autgrp G \le S_G$, \wcht{wewnętrznych}: postaci $g \mapsto g^x$.
+\wcht{Lemat NC}: jeśli $H \le G$, to ,,$\mathcal C \trk \mathcal N$'' i iloraz $\mathcal N_G(H)/\mathcal C_G(H)$ zanurza się w $\autgrp H$.
+Zawsze $G / \mathcal Z(G) \cong \inngrp G \trk \autgrp G$.
+Przykłady $\autgrp G$.
+$(\Z/p\Z)^n$: $GL(n, p)$.
+$\Z$: $S_2$.
+$\Z / p^n \Z$: $S_2 \times (\Z / 2^{n-2} \Z)$ dla $p = 2$, cykliczna rzędu $p^m - p^{m-1}$ dla $p > 2$.
+Grupy symetrii poza $S_2$ i $S_6$ są \wcht{zupełne} (bezcentrowe, bez zewnętznych automorfizmów) -- dla $S_6$, Hölder w \datum{1895}.
+Jeśli prosta $G$ jest nieabelowa, to $\autgrp G$ jest zupełna.
+\wcht{Wieża auto-} ($G \le \autgrp G \le \autgrp \autgrp G \le \ldots$) bezśrodkowej jest od pewnego miejsca stała (\datum{1939} Wielandt dla skończonych, \datum{1985} Thomas dla każdej).
+Jeśli $K \trk G$ jest zupełna, to istnieje $Q \trk G$, że $G = K \times Q$.
+Grupa będąca czynnikiem prostym zawsze, gdy jest dzielnikiem normalnym, musi być zupełna.
+Grupy $A_n$ nigdy nie są zupełne.
+
+Dla skończonych grup: $p^2$ dzieli rząd $\autgrp G$ dla nieprzemiennej $p$-grupy $G$.
+Spośród przemiennych dokładnie cykliczne mają przemienne $\autgrp$.
+Jeśli $H, K$ mają względnie pierwsze rzędy, to $\autgrp H \times K \cong \autgrp H \times \autgrp K$.
+
+\wcht{Holomorf}: $\holmrf K = \langle K^l, \autgrp K\rangle \le S_K$, gdzie $K^l = \{L_a : x \mapsto ax\}_{a \in K}$.
+Wtedy $K^r \le \holmrf K$.
+Jeśli $G$ jest zupełna, to $\holmrf G = G^l \times G^r$.
+Wynika stąd, że $\holmrf S_n \cong S_n^2$ dla $n \ne 2, 6$.
+
+%Niech $G = G_0 \ge G_1 \ge \ldots \ge G_r = 1$ będzie serią normalnych podgrup $G$.
+%Automorfizm $\alpha \in \autgrp G$ \wcht{stabilizuje} serię, gdy $\alpha(G_i x) = G_ix$ dla $x \in G_{i-1}$.
+%\wcht{Stabilizator} serii to zbiór wszystkich takich $\alpha$, jest nilpotentną (klasy $\le r -1$) podgrupą $\autgrp G$.
+
+Podgrupa \prawo{7.3} $Q \le G$ jest \wcht{dopełnieniem} $K \le G$ w $G$, gdy $K \cap Q = 1$ i $KQ = G$.
+Grupa $G$ jest \wcht{produktem półprostym} $K$ przez $Q$, $G = K \rtimes Q$, gdy $K \trk G$ ma dopełnienie $Q_1 \cong Q$.
+$G$ \wcht{rozdziela się} nad $K$.
+Przykłady: $S_n = A_n \rtimes \Z_2$, $D_{2n} = \Z_n \rtimes \Z_2$.
+Produkt półprosty $G$ dla grupy $K$ przez $Q$ \wcht{realizuje} homo- $\theta \colon Q \to \autgrp K$, gdy $\theta_x (a) = xax^{-1}$ dla $x \in Q$ i $a \in K$.
+Zbiór par $(a, x) \in K \times Q$ z działaniem $(a,x) \circ (b,y) = (a \theta_xb, xy)$ realizuje homo- $\theta$.
+Uogólnione kwaterniony $Q_n$ nie są produktem półprostym.
+$\textrm{GL}(n, \mathfrak K) = \textrm{SL}(n, \mathfrak K) \rtimes \mathfrak K^*$.
+
+Niech \prawo{7.4} $D, Q$ będą grupami, $\Omega$ skończonym $Q$-zbiorem, $K = \prod_{\omega \in \Omega} D_\omega$, gdzie $D_\omega \cong D$.
+\wcht{Produkt wieńcowy} $D$ przez $Q$: $D \wr Q$, produkt półprosty $K$ przez $Q$, gdzie $Q$ działa na $K$ przez $q(d_\omega) = (d_{q \omega})$.
+Grupa $K \trk D \wr Q$ to \wcht{nośnik}.
+Jeśli $D$ jest skończona, to $|K| = |D|$ do potęgi ${|\Omega|}$.
+Jeśli $\Lambda$ jest $D$-zbiorem, to dla $d \in D$, $\omega \in \Omega$ mamy permutację $d_\omega^*$ dla $\Lambda \times \Omega$: $(\lambda, \omega') \mapsto (d \lambda, w')$ (jeśli $\omega' = \omega$), $(\lambda, \omega')$ (w przeciwnym przypadku).
+Niech $D_\omega^* = \{d_\omega^* : d \in D\} \le S_{\Lambda \times \Omega}$.
+Dla $q \in Q$ mamy inną permutację, $q^*(\lambda, \omega') = (\lambda, q \omega')$ i $Q^* = \{q^* : q \in Q\}$.
+Mając $D, Q$, skończony $Q$-zbiór $\Omega$ i $D$-zbiór $\Lambda$, $D \wr Q \cong W = \langle Q^*, D_\omega^* : \omega \in \Omega \rangle \le S_{\Lambda \times \Omega}$, zatem $\Lambda \times \Omega$ to $(D \wr Q)$-zbiór.
+Wieniec jest łączny.
+
+Specjalny przypadek: $\Omega = Q$ jako $Q$-zbiór działający na siebie przez lewe mnożenie.
+Wtedy $W = D \wr_r Q$ jest \wcht{regularnym wieńcem}.
+Nie jest łączny.
+\wcht{Tw. Kaloujnine} (\datum{1948}): $p$-podgrupa Sylowa w $S_q$, $q = p^n$, to iterowany wieniec regularny $W_n = (\Z_p \wr_r \ldots) \wr_r \Z_p$ ($\Z_p$ jest $n$ sztuk).
+Jeżeli $q = a_0 + \ldots + a_tp^t$ ($p$-adycznie), to $S_q$ ma $p$-podgrupę Sylowa: $W_0^{a_0} \times \ldots \times W_t^{a_t}$.
+
+\wcht{Prawa transwesala} \prawo{7.5} $K \le G$: taki $T \subseteq G$, który kroi prawe warstwy $K$ jednoelementowo.
+\wcht{Podniesienie} $x \in Q$ (dla surjekcji $\pi \colon G \to Q$) to taki $l(x) \in G$, że $\pi \circ l = \textrm{id}_Q$.
+Funkcję $l \colon Q \to G$ też nazywa się prawą transwersalą (choć to $l(Q)$ jest nią dla $\ker \pi$).
+Niech $G$ rozszerza abelową $K$ przez $Q$ z transwersalą $l \colon Q \to G$.
+Istnieje homo- $\theta \colon Q \to \autgrp K$ z $\theta_x(a) = l(x) + a - l(x)$ i nie zależy on od wyboru $l$.
+Rozszerzenie $G$ grupy $K$ przez $Q$ \wcht{realizuje dane} $(Q, K, \theta \colon Q \to \autgrp K)$, gdy $xa = \theta_x(a)$ dla wszystkich $x \in Q$, $a \in K$ i transwersal $l$.
+\wcht{Kocykl} (,,factor set'') surjekcji $\pi \colon G \to Q$ z jądrem $K$, transwersalą $l \colon Q \to G$ i $l(1) = 0$: funkcja $f \colon Q \times Q \to K$, taka że $f(x, y) = l(x) + l(y) - l(xy)$.
+Dla wszystkich $x, y, z \in Q$ mamy tożsamość kocyklu, $f(x, y) + f(xy, z) = xf(y,z) + f(x, yz)$ i $f(1, y) = f(x, 1) = 0$.
+Dla danych $(Q, K, \theta)$, funkcja o tych własnościach jest kocyklem: istnieje rozszerzenie $G_f$ i transwersala $l$, że wszystko gra.
+\wcht{Kobrzeg}: funkcja $g \colon Q^2 \to K$ postaci $g(x,y) = xh(y) - h(xy) + h(x)$ dla $h \colon Q \to K$, że $h(1) = 0$.
+\wcht{Druga grupa kohomologii} danych to iloraz (przemiennej grupy kocykli z punktowym dodawaniem, $Z^2$) przez podgrupę kobrzegów $B^2$.
+\wcht{Tw. Schreiera} (\datum{1926}): między $H^2$ i zbiorem klas abstrakcji rozszerzeń realizujących dane istnieje bijekcja, przenosi $0$ na klasę produktu półprostego (,,$G_0$''): $f + B^2 \mapsto [G_f]$.
+Rozszerzenia $G$ i $G'$ są równoważne: istnieją kocykle $f$ i $f'$, że $f' - f \in B^2$.
+Klasa skończonych grup zamknięta na podgrupy i półproste produkty jest zamknięta także na rozszerzenia.
+\wcht{Tw. Kaloujnine-Krasnera} (\datum{1951}): $D \wr_r Q$, wieniec regularny, zawiera izo-kopię każdego rozszerzenia $D$ przez skończoną $Q$.
+
+
+\wcht{Lemat Schura-Zassenhausa} \prawo{7.6} (\datum{1937}): podgrupa Halla $K \trk G$ ($G$ skończona) ma dopełnienie, zatem $G \cong K \rtimes G/K$.
+Jeśli jedna z $K$, $G/K$ jest rozwiązalna, to wszystkie dopełnienia $K$ w $G$ są sprzężone ze sobą.
+\wcht{Tw. Gaschütza} (\datum{1952}): $K$, normalna abelowa $p$-podgrupa w skończonej $G$ ma dopełnienie $\Lra$ ma dopełnienie w $p$-podgrupie Sylowa $G$.
+
+Jeśli \prawo{7.7} $Q \le G$ ma skończony indeks $n$, \wcht{transfer} to funkcja $V \colon G \to Q / Q'$ dana przez $V(g) = \prod_{i \le n} x_i Q'$, gdzie $\{l_1, \ldots, l_n\}$ jest transwersalą (lewą) $Q$ w $G$ i $gl_i = l_jx_i$ (Verlagerung), niezależna od wyboru $l_i$.
+Jeśli $Q \le \mathcal Z(G)$ jest przemienna, to $V(g) = g^n$.
+\wcht{Tw. Burnside'a} (\datum{1900}): jeśli skończona $G$ ma abelową podgrupę Sylowa $Q \le \mathcal Z(\mathcal N_G(Q))$, to z dopełnieniem $K \trk G$.
+\wcht{Tw. Höldera} (\datum{1895}): bezkwadratowy rząd $\Ra$ każda podgrupa Sylowa w skończonej $G$ cykliczna $\Ra$ $G$ rozwiązalna. 
+Nieabelowa, prosta grupa $G$ nie ma cyklicznej $2$-podgrupy Sylowa, jeśli $p$ jest ,,najmniejszym'' dzielnikiem $|G|$, to $|G|$ dzieli się przez 12 lub $p^3$.
+\wcht{Tw. Schura}: jeśli $\mathcal Z(G) \le G$ ma skończony indeks, to $G'$ jest skończona.
+\wcht{Tw. Tate'a} (\datum{1964}): jeśli $P \le G$ jest podgrupą Sylowa w skończonej $G$, zaś $N \trk G$ i $N \cap P \le \Phi(P)$, to $N$ jest $p$-nilpotentna.
+Podgrupa $p$-Sylowa jest \wcht{$p$-nilpotentna}, jeśli ma normalne $p$-dopełnienie.
+
+Każde \prawo{7.8} rozszerzenie realizujące dane jest \wcht{centralne} ($G$ dla $K$ przez $Q$: $K \le \mathcal Z(G)$) $\Lra$ $\theta$ jest trywialny.
+\wcht{Mnożnik Schura} skończonej grupy $Q$ jest skończony i abelowy (multiplikator, $M(Q) = H^2(Q, \C^\times)$).
+\wcht{Tw. Alperina-Kuo} (\datum{1967}): jeśli grupa $Q$ jest skończona, to $\exp M (Q)\exp Q$ dzieli $|Q|$ ($\exp$: minimalny wykładnik).
+Wszystkie podgrupy Sylowa skończonej $Q$ są cykliczne $\Ra M(Q) = 1$.
+\wcht{Reprezentacja rzutowa}: homo- $\tau \colon Q \to \textrm{PGL}(n, \C)$, w grupę automorfizmów przestrzeni rzutowej.
+
+\wcht{Derywacja} \prawo{7.9} (homo- krzyżowy) dla $(Q, K, \theta)$: $d \colon Q \to K$, że $d(xy) = xd(y) + d(x)$.
+Zbiór wszystkich (,,Der'') z punktowym dodawaniem to abelowa grupa, izo- ze stabilizatorem rozszerzenia realizującego dane.
+\wcht{Pierwsza grupa kohomologii} $H^1$: iloraz przez podgrupę \wcht{derywacji głównych} ($d_\alpha (x) = a - xa$).
+Jeśli $G = K \rtimes_\theta Q$, to $H^1$ jest podgrupą automorfizmów zewnętrznych $G$.
+Jeśli $K$ jest abelowa, a $H^1$ trywialna, to dopełnienia $K$ w $G$ są sprzężone.
+,,$H^0$ odpowiada punktom stałym, $H^3$: \emph{obstructions}''.

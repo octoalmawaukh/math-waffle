@@ -1,0 +1,61 @@
+\wcht{Ciąg normalny}: \prawo{5.1} $G_0 \ge \ldots \ge G_n = 1$, gdzie $G_{i+1} \trk G_i$.
+\wcht{Faktor}: $G_i / G_{i+1}$.
+\wcht{Zagęszczenie} \prawo{5.2} ciągu normalnego: podciąg.
+\wcht{Ciąg kompozycyjny}: normalny, w którym $G_{i+1}$ jest maksymalnym dzielnikiem normalnym $G_i$ lub $G_{i+1} = G_i$.
+\wcht{Równoważne} ciągi normalne: między ich faktorami istnieje bijekcja.
+\wcht{Lemat Zassenhausa} (\datum{1934}): jeśli $A \trk A^*$ i $B \trk B^*$ są podgrupami $G$, to $A(A^* \cap B) \trk A(A^* \cap B^*)$ i $B(B^* \cap A) \trk B(B^* \cap A^*)$, a do tego istnieje izo- khm-1.
+\wcht{Tw. Schreiera} (\datum{1928}): każde dwa ciągi normalne dla $G$ mają równoważne zagęszczenia.
+\wcht{Tw. Jordana-Höldera}: każde dwa ciągi kompozycyjne dla $G$ są równoważne.
+Grupa $S_n$ dla $n \ge 5$ nie jest rozwiązalna; $D_{2n}$ są.
+\[
+	\frac{A(A^* \cap B^*)}{A(A^* \cap B)} \cong \frac{B(B^* \cap A^*)}{B(B^* \cap A)} 
+\]
+
+Grupa \wcht{rozwiązalna}: \prawo{5.3} z rozwiązalnym ciągiem (normalnym o przemiennych faktorach).
+Klasa rozwiązalnych jest zamknięta na podgrupy, ilorazy i produkty.
+Jeśli $H \trk G$ i $G/H$ są rozwiązalne, to $G$ też.
+Skończona $p$-grupa jest rozwiązalna, jak wszystkie nilpotentne.
+\wcht{Komutanty wyższych stopni}: $G^{(0)} = G$, $G^{(i+1)}$ to komutant $G^{(i)}$.
+\wcht{Ciąg derywatów}: $G^{(0)} \ge G^{(1)} \ge \ldots$.
+% Podgrupa \wcht{charakterystyczna}: trzymana przez wszystkie auto- nadgrupy; $H \textrm{ char } G$, pociąga $H \trk G$.
+Wyższe komutanty są \wcht{charakterystyczne} (dla wszystkich auto- $\varphi \colon G \to G$, $\varphi(H) = H$: ,,$H \textrm{ char } G$'').
+Grupa jest rozwiązalna $\Lra$ któryś komutant trywialny.
+W skończonej i rozwiązalnej minimalny dzielnik normalny jest elementarnie abelowy.
+Każda \wcht{charakterystycznie prosta} grupa (dwie charakterystyczne podgrupy, $1$ i $G$) jest albo prosta, albo prostym produktem prostych grup.
+Grupa rzędu $p^mq^n$ (Burnside) lub nieparzystego (Feit-Thompson) jest rozwiązalna. % supersolvable
+
+\wcht{Tw. Halla} (\datum{1928}) \prawo{5.4}: w rozwiązalnej grupie rzędu $ab$ dla $(a,b) = 1$ istnieją podgrupy rzędu $a$, wszystkie sprzężone.
+\wcht{Podgrupa Halla} $H \le G$: względnie pierwszego rzędu i indeksu.
+\wcht{$\pi$-grupa}: rzędy jej elemntów to \wcht{$\pi$-liczby} (jej pierwsze dzielniki leżą w $\pi \subseteq \mathbb P$, $\pi'$ dopełnieniem $\pi$).
+Gdy $G$ (skończonego rzędu) ma \wcht{$p$-dopełnienia} (podgrupa rzędu $a$, gdy $|G| = ap^n$ i $p \nmid a$) dla każdej $p$, jest rozwiązalna.
+
+Podgrupa \prawo{5.5} $K$ \wcht{normalizuje} $H$, gdy $K \le \mathcal N_G(H)$ $\Lra$ $[H, K] \le H$.
+%\wcht{Centralizator} $H \le G$: zbiór $x \in G$ komutujących z każdym $h \in H$.
+\wcht{Dolny ciąg centralny} (może nie normalny): $G = \gamma_1(G) \ge \gamma_2 (G) \ge \ldots$ (każdy wyraz to komutant poprzedniego i $G$).
+\wcht{Górny ciąg centralny}: $1 = \zeta^0(G) \le \zeta^1(G) \le \ldots$, gdzie \wcht{wyższe środki} $\zeta^i$ definiujemy przez indukcję: $\zeta^0 = 1$, $\zeta^{i+1}(G) / \zeta^i(G) = \mathcal Z(G / \zeta^i(G))$ (wszystkie charakterystyczne w $G$!)
+Jest $\zeta^c(G) = G \Lra \gamma_{c+1} (G) = 1 \Ra \gamma_{i+1}(G) \le \zeta^{c-i}(G)$.
+
+\wcht{Tw. Schura}: $G / \mathcal Z(G)$ skończona $\Ra$ $G'$ też.
+Skończona $p$-grupa $\Ra$ \wcht{nilpotentna} (skończony d/g ciąg  centralny). %$\Ra$ rozwiązalna.
+Jeśli $H \trk G$ i $\zeta^c(G) = G$, to $\zeta^c(G/H) = G/H$.
+Produkt nilpo- jest nilpo-.
+W nilpo- mamy: ,,jeśli $H \le G$, to $H \le \mathcal N_G(H)$''.
+Skończona jest produktem prostych swoich podgrup Sylowa $\Lra$ jest nilpo-.
+Maksymalna podgrupa w nilpo- jest normalna i pierwszego indeksu.
+Ciąg normalny $G = G_1 \ge \ldots \ge G_n = 1$, gdzie $G_i \trk G$ i $G_i / G_{i+1} \le \mathcal Z(G/ G_{i+1})$, jest \wcht{centralny}.
+W nilpo-, d/g centralne są centralne.
+Każda skończona grupa ma  maksymalny (oraz jedyny) nilpotentny dzielnik normalny, \wcht{podgrupę Fittinga} $\mathscr F$ (jest charakterystyczna).
+\wcht{Tożsamość Jacobiego}: $[x,1/y,z]^y [y,1/z,x]^z [z, 1/x, y]^x= 1$.
+\wcht{Lemat o trójce podgrup}: jeśli $[H,K,L][K,L,H] \le N$ i $N \trk G$, to $[L,H,K] \le N$ dla $H, K, L \le G$.
+
+Jedyna \prawo{5.6} $p$-grupa o jedynej podgrupie rzędu $p$ i więcej niż jednej cyklicznej podgrupie indeksu $p$ to kwaterniony $Q$.
+Jeżeli $U(\Z/2^m\Z)$ jest grupą jedności, to $U = \langle -1, 5 \rangle \cong (\Z/2\Z) \times (\Z/2^{m-2}\Z)$.
+Jeżeli $G$ zawiera $x, y$, że $x$ ma rząd $2^m \ge 8$, $y^2 = x^s$ ($s = 2^r$) i $yx = x^ty$, to $t = \pm 1$ lub $t = 2^{m-1} \pm 1$ (w drugim przypadku $G$ ma co najmniej dwie inwolucje).
+Skończona $p$-grupa o jedynej podgrupie rzędu $p$ jest cykliczna lub uogólnionymi kwaternionami.
+\wcht{Podgrupa Frattiniego} $\Phi(G)$: przekrój maksymalnych podgrup.
+\wcht{Niegenerator}: taki $x \in G$, że jeśli $G = \langle x, Y\rangle$, to $G = \langle Y \rangle$; są to dokładnie elementy $\Phi(G)$.
+\wcht{Tw. Frattiniego} (\datum{1885}): $\Phi(G)$ jest nilpotentna.
+Jeśli $G$ to skończona $p$-grupa, to $\Phi(G) = G'G^p$, zaś $G/\Phi(G)$ to p. wektorowa nad $\Z_p$.
+\wcht{Tw. Gaschütza} (\datum{1953}): $G' \cap \mathcal Z(G) \le \Phi(G)$.
+\wcht{Tw. Burnside'a o bazie} (\datum{1912}): w skończonej $p$-grupie $G$ wszystkie minimalne zbiory generatorów mają tę samą moc, $\operatorname{dim} G / \Phi(G)$.
+\wcht{Tw. Wielandta}: skończona $G$ jest nilpotentna $\Lra G' \le \Phi(G)$.

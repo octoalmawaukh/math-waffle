@@ -1,0 +1,31 @@
+Relacja \prawo{3.1} równoważności ,,być sprzężonym'' ($yg = gx$ dla pewnego $g$) rozbija $G$ na klasy sprzężoności, $a^G$.
+\wcht{Centrum} $\mathcal Z(G) \trk G$: zbiór tych $a \in G$, które komutują ze wszystkim.
+\wcht{Centralizator}: $\mathcal C_G(a) = \{x \in G : ax = xa\}$, podgrupa indeksu $|a^G|$.
+\wcht{Normalizator} $H \le G$: największa podgrpa $G$, w której $H$ jest normalna, $\mathcal N_G(H) = \{a \in G : H^a := aHa^{-1} = H\}$.
+Jej indeks zlicza sprzężenia $H$ w $G$, $H^a = H^b \Lra b^{-1}a \in \mathcal N_G(H)$.
+Grupy $S_n$ ($n \ge 3$) i $A_4$ są \wcht{bezcentrowe} (trywialne centrum).
+$G$ nieabelowa $\Ra G/\mathcal Z(G)$ niecykliczna.
+$\mathcal C_G(x^a) = \mathcal C_G(x)^a$, $\mathcal N_G(H^a) = \mathcal N_G(H)^a$.
+
+Dwie \prawo{3.23} permutacje z $S_n$ są sprzężone $\Lra$ mają tę samą strukturę cykli, więc $H \le S_n$ jest normalna $\Lra$ jeśli $\alpha \in H$, to $H$ zawiera wszystkie $\beta$ o strukturze cykli $\alpha$.
+W $A_4$ nie ma podgrupy rzędu sześć.
+Grupy $A_n$ ($n \ge 5$) oraz $A_\infty \le S_\N$ (generowana przez 3-cykle) są proste.
+
+\wcht{Tw. Cayleya} (\datum{1878}): \prawo{3.4} każda grupa $G$ zanurza się jako podgrupa w $S_G$ (\wcht{lewa reprezentacja regularna}: homo- $L \colon G \to S_G$, $a \mapsto (x \mapsto ax)$), a jeśli ma podgrupę $H$ indeksu $n$, to ma też \wcht{reprezentację na warstwach} ($\rho \colon  G \to S_n$ z $\ker \rho \le H$, $a \mapsto (gH \mapsto agH)$).
+Niech $X_H = \{H^g : g \in G\}$ dla $H \le G$.
+\wcht{Reprezentacja na sprzężeniach} to homo- $\psi \colon G \to S_X$ z $\ker \psi \le \mathcal N_G(H)$, $a \mapsto (H^g \mapsto H^{ag})$.
+Jeśli $[G:H] < \infty$, to $\bigcap X_H \trk G$ też ma skończony indeks.
+Poincaré: $[G : H \cap K] \le [G : H][G : K]$ z równością m.in. dla względnie pierwszych prawych czynników.
+
+Zbiór $X$ \prawo{3.5} jest $G$-zbiorem ($G$: grupa), gdy istnieje akcja $\alpha G \times X \to X$ ($ex = x$ oraz $g(hx) = (gh)x$), ,,$G$ działa na $X$''.
+Wtedy $g \mapsto (x \mapsto \alpha(g,x))$ jest homo- $G \to S_X$; inaczej: każdy homo- $\varphi \colon G \to S_X$ daje akcję $gx = \varphi(g)x$.
+\wcht{Orbita}: $Gx = \{gx : g \in G\}$, \wcht{stabilizator}: $G_x = \{g \in G : gx = x\}$.
+Przykłady: centralizator/normalizator, kiedy $G$ działa przez sprzężenia na sobie/swoich podgrupach.
+\wcht{Twierdzenie} (o nich): $|Gx| = [G : G_x]$.
+
+\wcht{Lemat Burnside'a}, skończony \prawo{3.6} $G$-zbiór $X$ ma $|X/G| = \sum_{g \in G} |X^g| / |G|$ orbit, gdzie $X^g = \{x \in X : gx = x\}$, pomaga zliczać kolorowania.
+Niech $G \le S_X$, $X = \{1, \ldots, n\}$, zaś $C$ będzie zbiorem $q$ kolorów.
+Grupa $G$ działa na $C^n$ permutując indeksy, orbity $C^n$ to \wcht{$(q, G)$-kolorowania} $X$.
+Jest ich $P_G(q, \ldots, q)$, gdzie $P_G(x_1, \ldots, x_n) = (1 / |G|) \sum_{g \in G} \operatorname{ind} g$ (indeks cyklowy).
+Tutaj $\operatorname{ind} g$ to produkt $e_i$ sztuk $x_i$ (po wszystkich $i$), jeśli $i$-cykli w $g$ jest $e_i \ge 0$ .
+Polyá poprawił ten wynik w \datum{1937}, ale jednocześnie zabił czytelność.

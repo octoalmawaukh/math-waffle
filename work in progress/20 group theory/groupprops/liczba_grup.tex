@@ -1,0 +1,20 @@
+Ile jest grup rzędu $n$?
+Relacja pomiędzy pierwszymi $p$ i $q$: $p \mid q - 1$ lub ,,odwrotnie''.
+\begin{itemx}
+	\item {\color{Blue} Jedna}, dokładnie gdy $n = 1, p$ lub $\prod_i p_i$ ($p_i$ parami różne), że między $p_i$ nie ma relacji.
+	\item {\color{Blue} Dwie}, dokładnie gdy $n = p_1 p_2 \cdot \ldots \cdot p_t q^2$ (bez żadnych relacji) i $p_i \nmid q + 1$ albo $n = p_1\cdot \ldots \cdot p_t$ (z jedną relacją).
+	\item {\color{Blue} Trzy}, gdy $n = pq^2$ (brak relacji między $p$, $q$ i $p \mid q + 1$).
+	\item {\color{Blue} Cztery/pięć}, gdy $n = 4p > 12$ (piąta pojawia się tylko dla $p = 4k+1$).
+	\item {\color{Blue} Pięć}, gdy $n = p^3$:
+	\begin{itemx}
+	\item $D_8$ (symetrie kwadratu) i $Q$ (kwaterniony) dla $p = 2$.
+	\item $UT(3, p)$ (macierze $3 \times 3$ nad $\mathbb F_p$, zera pod przekątną, jedynka na niej) i $(\Z/p^2\Z) \rtimes (\Z/p\Z)$ dla $p \ge 3$.
+	\end{itemx} 
+	\item {\color{Blue} Piętnaście}, gdy $n = p^4$ i $p \neq 2$ (czternaście dla $p = 2$).
+	\begin{itemx}
+	\item $\langle a,b,c \mid a^4 = b^2 = c^2 = [a,b] = [b,c] = e, ca = abc\rangle$, $\langle a, x \mid a^8 = x^2 = e, xa = a^5x\rangle$, $\Z_4 \rtimes \Z_4$, $D_8 \times \Z_2$, $Q_8 \times \Z_2$, centralny produkt $D_8$ i $\Z_4$ (klasy dwa).
+	\item $D_{16}$, półdiedralna $SD_{16}$, $Q_{16}$ (klasy trzy).
+	\end{itemx}
+	\item {\color{Blue} $2p + 61 + 2(p - 1, 3) + (p-1, 4)$} dla $p \ge 5$, $51$ dla $p = 2$ i $67$ dla $p = 3$.
+	\item {\color{Blue} $3p^2 + 39p + 344 + 24(p-1,3) + 11(p-1, 4) + 2(p-1, 5)$} dla $p \ge 5$, $267$ dla $p = 2$ i $504$ dla $p = 3$.
+\end{itemx}

@@ -1,0 +1,61 @@
+Wszystko \prawo{10.1} abelowe w 10.X!
+\wcht{Ciąg dokładny}: ciąg homo-, gdy obraz każdego to dokładnie jądro następnego.
+\wcht{Krótki}: $0 \to A \to B \to C \to 0$.
+\wcht{Podgrupa tosyjna}: $tG = \{x \in G : \exists_{n \neq 0} nx = 0\}$.
+Podgrupa torsyjna $\prod_p \Z/p\Z$ nie jest jej składnikiem prostym.
+Grupa torsyjna: $tG = G$.
+Iloraz $H = G/tG$ jest beztorsyjny ($tH = 0$).
+\wcht{Suma prosta}: $\bigoplus_k A_k \le \prod_k A_k$, złożona z tego, czego tylko skończenie wiele współrzędnych nie jest zerem.
+Torsyjna $G$ jest sumą prostą $p$-grup: $G \cong \bigoplus_p G_p$, gdzie $G_p = \{x \in G : \exists_{n \ge 0} p^n x = 0\}$.
+Jeśli $G, H$ są torsyjne, to $G \cong H \Lra G_p \cong H_p$ dla wszystkich $p$.
+Zbiór $x_1, \ldots, x_n \neq 0$ jest \wcht{niezależny}: $\sum_i m_i x_i = 0 \Ra m_i x_i = 0$.
+%Jeśli $n \neq 0$, to $x$ jest \wcht{podzielne przez $n$} w $G$, gdy istnieje $g$, że $ng = x$.
+
+Abelowa $F$ \prawo{10.2} jest \wcht{wolną abelową}, gdy jest sumą prostą $\Z$: istnieje $X \subseteq F$ złożony z elementów rzędu $\infty$ (\wcht{baza}), że $F = \bigoplus_{x \in X} \langle x \rangle$.
+Wtedy każdą funkcję $X \to G$ (w grupę abelową) można przedłużyć do homo- (jednoznacznie).
+Każda abelowa jest ilorazem wolnej abelowej.
+Abelowa $G$ ma generatory $X$ i relacje $\Delta$, gdy $G \cong F/R$, gdzie $F$ to wolna abelowa z bazą $X$, $\Delta$ to zbiór $\Z$-liniowych kombinacji z $X$, zaś $R = \langle \Delta \rangle \le F$.
+Jeśli można wybrać skończony $X$, to $G$ jest \wcht{skończenie generowana}.
+Istnieje nieskończona $p$--prymarna, $\Z(p^\infty)$, której właściwe podgrupy są cykliczne, skończone; izo- z $p^\N$-tymi pierwiastkami jedności.
+Wolne abelowe $\bigoplus_{x \in X} \langle x \rangle$, $\bigoplus_{y \in Y} \langle y \rangle$ są izo- $\Lra |X| = |Y|$.
+\wcht{Ranga}: moc bazy.
+Podgrupa wolnej abelowej też jest taka, ale może mieć mniejszą rangę.
+
+Skończenie \prawo{10.3} generowana, beztorsyjna, abelowa $\Ra$ wolna abelowa.
+Skończenie generowana, abelowa grupa jest sumą prostą prymarnych i cyklicznych nieskończonych, liczba składników zależy tylko od grupy.
+
+Grupa \prawo{10.4} \wcht{podzielna}: każdy $x \in G$ i $n \ge 2$ mają $g_n \in G$, że $n g_n = x$ (np. $\Q$, $\R$, $\C$, $S^1$, $\Z(p^\infty)$, iloraz podzielnej, suma i produkt takich).
+Grupa beztorsyjna i podzielna jest p. wektorową nad $\Q$.
+\wcht{Strzykawkowa własność Baera} (\datum{1940}): każdy homo- $(A \le B) \to D$ w podzielną przedłuża się do całego $B$.
+Niech $dG \le G$ będzie generowana przez podzielne podgrupy, wtedy $G = dG \oplus R$ ($R$: \wcht{zredukowana}, czyli $dR = 0$).
+Podzielna grupa jest sumą prostą $\Q$ i $\Z(p^\infty)$ dla różnych $p$.
+Każda grupa zanurza się w podzielnej.
+
+Podgrupa \prawo{10.5} \wcht{czysta}: $S \le G$, gdy $S \cap nG = nS$ dla $n \in \Z$.
+Jeśli mamy $G = S \oplus H$ lub $G/S$ jest beztorsyjna, to $S$ jest czysta.
+\wcht{Tw. Kulikova} (\datum{1945}): torsyjna $G$ ma \wcht{grupę podstawową}, czyli czystą $B \le G$, która jest sumą prostą cyklicznych, że $G/B$ jest podzielna.
+\wcht{Tw. Prüfera-Baera} (\datum{1923} dla przeliczalnych; \datum{1934} dla pozostałych): $G$ ograniczonego rzędu ($nG = 0$ dla pewnego $n > 0$) jest sumą prostą cyklicznych.
+Czysta podgrupa o skończonym wykładniku jest składnikiem prostym.
+Nierozkładalna $\Ra$ torsyjna lub beztorsyjna.
+Torsyjna jest izo- z podgrupą $\Z(p^\infty) \Lra$ jest nierozkładalna.
+Nieskończona, izo- z każdym ilorazem lub bez nieskończonych podgrup to $\Z(p^\infty)$, zaś nieskończona, izo- z każdą podgrupą lub o skończonych ilorazach $\Z$ (wszędzie brakuje słowa ,,właściwy'').
+$\prod_p \Z/p\Z$ nie jest sumą prostą nierozkładalnych.
+
+Prüfer: przeliczalna $p$-prymarna jest sumą prostą cyklicznych $\Lra \bigcap_{n \ge 1} p^n G = 0$.
+Wniosek Kulikova: podgrupa sumy prostej cyklicznych też jest taka.
+Dla $G$, $p$-prymarnej grupy, i $n \ge 0$, niech $U\{n, G\}$ będzie wymiarem ilorazu $p^nG \cap G[p]$ przez $p^{n+1} G  \cap G[p]$ nad $\Z/p\Z$.
+Dwie proste sumy  $p$-prymarnych cyklicznych, $G$ i $H$, są izo- $\Lra$ mają te same współczynniki $U\{n, \cdot\}$ dla $n \ge 0$.
+Podobne twierdzenie jest prawdziwe dla przeliczalnych grup torsyjnych (Ulm, \datum{1933}).
+
+Każde \prawo{10.6} maksymalne zbiory niezależne w beztorsyjnej są równoliczne (\wcht{ranga}: $r = \rho(G)$), jest ona podgrupą $\Q^r$.
+Ranga dowolnej: $\rho(G/tG)$.
+Tu: $G$ beztorsyjna, $x \in G$; $h_p(x)$ to \wcht{$p$-wysokość} $x$: najwyższa $n$, że $p^nh = x$ ma rozwiązanie.
+\wcht{Ciąg wysokościowy}: $(h_2(x), h_3(x), \ldots)$.
+Dwie \wcht{charakterystyki} (ciągi z $\N \cup \{\infty\}$) są \wcht{równoważne}, jeśli mają $\infty$ w tych samych miejscach i różnią się w skończenie wielu innych miejscach.
+Klasa abstrakcji to \wcht{typ}.
+Beztorsyjne $G, H$ rangi $1$ są izo- $\Lra$ pewne (wszystkie) niezerowe ich elementy mają jeden typ.
+Każdy typ $\tau$ może być typem beztorsyjnej rangi $1$.
+Beztorsyjne rangi $\ge 2$ są trudne w klasyfikacji.
+Shelah (\datum{1974}): istnieją nierozkładalne dowolnej rangi.
+\wcht{Tw. Cornera} (\datum{1963}): każdy przeliczalny pierścień z beztorsyjną, zredukowaną grupą addytywną jest pierścieniem endomorfizmów (składanie mnożeniem, dodawanie punktowe) pewnej przeliczalnej grupy (też beztorsyjnej, zredukowanej).
+%\emph{10.7: teoria charakterów, algebra homologiczna}.

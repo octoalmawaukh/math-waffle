@@ -1,0 +1,36 @@
+\wcht{Wolna grupa} \prawo{11.1} $F$ z \wcht{bazą} $X \subseteq F$: każda funkcja $X \to G$ (w grupę) przedłuża się do homo-.
+\wcht{Słowo} na $X$: ciąg $w = (a_1, a_2, \ldots)$, gdzie $a_i$ należy do $X \cup X^{-1} \cup \{1\}$, że od pewnego miejsca $a_i = 1$.
+Słowo \wcht{zredukowane}: $x_1^{e_1} x_2^{e_2} \ldots x_n^{e_n}$, że $e_i = \pm 1$, zaś $x$ i $x^{-1}$ nigdy nie sąsiadują.
+Każdy zbiór $X$ może być bazą; każda grupa jest ilorazem wolnej.
+\wcht{Prezentacja} grupy $G$ o generatorach $X$ i relacjach $\Delta$ (ze słów): $G \cong F / R$, gdzie $F$ jest wolna z bazą $X$, zaś $R = \langle \Delta \rangle \trk F$, a właściwie: $(X \mid \Delta)$.
+Grupa diedralna: $D_{2n} = (x, y \mid x^n, y^2, yxyx)$.
+Poliedralne: $P(l,m,n) = (s,t \mid s^l, t^m, (st)^n)$.
+Mamy $P(n,2,2) = D_{2n}$, $P(2,3,3) \cong A_4$, $P(2,3,4) \cong S_4$, $P(2,3,5) \cong A_5$, pozostałe są nieskończone.
+Wolne grupy są izo- $\Lra$ ich bazy są równoliczne (\wcht{ranga}: moc bazy).
+Wolna rangi $\ge 2$ jest bezśrodkowa i beztorsyjna.
+
+\wcht{Wzór Hopfa} \prawo{11.4} \prawo{11.?} (Schur \datum{1907}): jeśli $Q \cong F/R$ jest skończona, $F$ wolna, to $M(Q) \cong (R \cap F') / [F, R]$.
+\wcht{Grupa doskonała}: $G = G'$.
+Niech $A$, grupa skończenie generowana, abelowa, ma rangę $\rho(A)$ i będzie generowana przez $d(A)$, ale nie $d(A) - 1$ elementów.
+Wtedy $\rho \le d$ z równością dla $A$: wolnej abelowej; $\rho = 0 \Lra |A| < \infty$.
+Mamy $\rho(A \oplus B) = \rho(A) + \rho(B)$, podobnie dla $d$ (ale jeśli $B$ jest wolna abelowa!).
+Gdy grupa $Q$ ma prezentację $(x_1, \ldots, x_n | y_1, \ldots, y_r)$, to $M(Q)$ jest skończenie generowana, $d(M(Q)) \le r$, $n - r \le \rho(Q/Q') - d(M(Q))$.
+\wcht{Tw. Greena}: jeśli $Q$ ma rząd $p^n$, to $|M(Q)| \le p^q$, gdzie $q = n(n-1) : 2$ (z równością dla $Q$ cyklicznej).
+
+\wcht{Tw. Nielsena-Schreiera} (\datum{1921} skończenie generowane, \datum{1927} pozostałe): podgrupa wolnej jest wolna.
+Jeżeli $H \le F_n$ ma indeks $j$, to rangę $j(n-1) + 1$.
+Komutator $F_2$ jest wolny, rangi $\infty$.
+Wolne grupy (poza $\Z$) nie są rozwiązalne.
+Jeśli $F$ jest wolna, $R \trk F$, to $F/R'$ beztorsyjna.
+
+\wcht{Produkt wolny} grup $A_i$: grupa $P$ z homo- $j_i \colon A_i \to P$, że dla każdej grupy $G$ z homo- $f_i \colon A_i \to G$ istnieje jeden homo- $\varphi \colon P \to G$ z $\varphi j_i = f_i$.
+Zawsze istnieje, jednoznaczny.
+Jeśli $A_i$ mają prezentacje $(X_i \mid \Delta_i)$, to $\ast_i A_i$ też, $(\bigcup_i X_i \mid \bigcup_i \Delta_i)$, sumy są rozłączne!
+Produkt prosty $(\Z/2\Z)$ przez siebie jest izo- z $D_\infty = (s,t \mid t^2, sts = t)$, zaś $(\Z/2\Z) * (\Z/3\Z) \cong PSL(2, \Z)$ (grupa modularna).
+\wcht{Tw. Baera-Leviego}: żadna grupa nie jest jednocześnie produktem wolnym i prostym (nietrywialnie $A \times B = C * D$).
+
+\wcht{Tw. Kurosha} (\datum{1934}): jeśli $H \le *_i A_i$, to $H = F * (*_\lambda H_\lambda)$ dla $\lambda \in \Lambda$, gdzie $F$ jest wolna, zaś $H_\lambda$ sprzężeniem podgrupy pewnego $A_i$.
+Jeśli $\mu(G)$ oznacza skończoną (!) minimalną liczbę generatorów $G$, to $\mu(A * B) = \mu(A) + \mu(B)$ (\wcht{tw. Grushko}).
+\wcht{Tw. Higmana-Neumanna-Neumanna} (\datum{1949}): każda przeliczalna wkłada się w grupę o dwóch generatorach (dzięki \wcht{amalgamotom}).
+Jeśli $\varphi \colon A \to B$ jest izo- między podgrupami $G$, to istnieje nadgrupa $H \ge G$ i $t \in H$, że $t \varphi(a) = at$ dla $a \in A$.
+Istnieje nieprzeliczalnie wiele nieizo- skończenie generowanych grup.

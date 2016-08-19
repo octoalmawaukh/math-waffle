@@ -1,0 +1,50 @@
+\wcht{Podgrupa}: \prawo{2.1} niepusty podzbiór zamknięty na $(x, y) \mapsto xy^{-1}$ (przykłady: jądra oraz obrazy morfizmów).
+\wcht{Cykliczna}: $\langle g \rangle := \{g^n : n \in \Z\}$, jej rząd to \wcht{rząd} $a$.
+Uwaga: $H \vee K := \langle H \cup K \rangle$.
+Grupę $S_n$ można włożyć w $A_{n+2} \le S_{n+2}$ (permutacji parzystych), ale nie w $A_{n+1}$, jeśli $n \ge 2$.
+Dla $n > 2$, grupa $A_n$ jest generowana przez 3-cykle, zaś $S_n$ przez 2-cykle $(1, i)$ (dla $2 \le i \le n$) albo 2-cykl $(1, 2)$ i pełny cykl $(1, 2, \ldots, n)$.
+
+Jeżeli \prawo{2.2} $H \le G$, to \prawo{2.3} relacja $a \simeq b \Lra ab^{-1} \in H$ rozbija $G$ na warstwy, $Hg = \{hg : h \in H\}$, których jest $[G:H]$ (\wcht{indeks}).
+\wcht{Hall} (\datum{1935}): podgrupa skończonej ma wspólny układ reprezentantów (dla lewych i prawych warstw).
+\wcht{Lagrange} (\datum{1770}?): $[G:H] = |G|/|H|$ dla skończonych $G$; jeśli $K \le H \le G$, to $[G:K] = [G:H][H:K]$.
+Grupa $G$ rzędu $n$ jest cykliczna $\Lra$ w $G$ nie ma dwóch cyklicznych podgrup tego samego rzędu $d \mid n$.
+Skończona podgrupa $F^*$ ($F$: ciało) jest cykliczna.
+Grupa rzędu $p^n$ cykliczna $\Lra$ abelowa, tylko jedna podgrupa rzędu $p$.
+
+Jeśli $\varnothing \neq S,T \subseteq G$, \prawo{2.4} to $ST = \{st : s \in S, t \in T\}$; dla $S, T \le G$ ($G$ skończona) mamy $|ST| \cdot |S \cap T| = |S| \cap |T|$.
+\wcht{Podgrupa normalna}: $K \trk G$, gdy $g K = Kg$ dla $g \in G$; wtedy $G/K$ (zbiór warstw) jest grupą.
+\wcht{Mann}: jeśli $G$ jest skończona, zaś $S, T \subseteq G$ niepuste, to $G=ST$ lub $|G| \ge |S| + |T|$.
+Każdy element skończonego ciała jest sumą dwóch kwadratów.
+Wszystkie podgrupy $G$ są normalne, gdy $G$ jest abelowa (ale nie odwrotnie).
+Podgrupy indeksu dwa są normalne.
+Jeśli $K \le H \le G$ i $K \trk G$, to $K \trk H$.
+Jeśli $H \le G$, to $H \trk G \Lra$ dla $x, y \in G$, $xy \in H \Lra yx \in H$.
+
+\wcht{Komutant}: \prawo{2.5} $G' \trk G$, normalna podgrupa generowana przez \wcht{komutatory}, $[a,b] := aba^{-1}b^{-1}$.
+Jeśli $H \trk G$, to: $G/H$ abelowa $\Lra$ $G' \le H$.
+Komutant składa się z długich komutatorów, elementów postaci $a_1a_2\ldots a_na_1^{-1}a_2^{-1}\ldots  a_n^{-1}$.
+Istnieją dwie grupy rzędu 96, w których $G'$ nie składa się z samych komutatorów (w niższych rzędach takie zjawisko nie występuje).
+
+Trzy \prawo{2.6} twierdzenia o izomorfizmach: $G / \ker f \cong \im f$ dla homo- $f \colon G \to H$.
+Jeśli $N \trk G$, $T \le G$, to $T/(N \cap T) \cong NT/N$.
+Jeśli $K \le K, H \trk G$, to $(G/K) / (H/K) \cong G/H$.
+Gdy $A,B,C \le G$, $A \le B$, to $AC \cap B = A(C \cap B)$ (\wcht{prawo Dedekinda}).
+Jeśli $A \cap C = B \cap C$ i $AC = BC$, to $A = B$ (\wcht{prawo modularne}).
+\wcht{Zassenhaus}: \prawo{2.7} jeśli dla skończonej $G$ istnieje $n > 1$, że $(xy)^n = x^ny^n$, to $G[n] = \{z \in G : z^n = 1\}$ i $G^n = \{x^n : x\in G\}$ są dzielnikami normalnymi $G$ i $|G^n| \cdot |G[n]| = |G|$.
+Grupa \wcht{prosta} ma tylko dwa dzielniki normalne; jedyne abelowe to $\Z/p\Z$.
+Grupa $H \le G$ jest maksymalnie normalna $\Lra$ $G/H$ jest prosta.
+\wcht{Schur}: jeśli homo- $f \colon G \to H$ nie posyła prostej $G$ w $1$, to jest mono-.
+
+%,,\wcht{Czwarte}'': $K \trk G$, $v \colon G \to G/K$ naturalne.
+%Funkcja $S \mapsto S/K$ jest bijekcją z rodziny podgrup $S \le G$ zawierających $K$ w rodzinę podgrup $G/K$.
+%Gdy $S^* := S/K$, to $T \le S \Lra T^* \le S^* \Ra [S:T] = [S^*: T^*]$.
+%Inny fakt:
+%$T \trk S \Lra T^* \trk S^* \Ra S/T \cong S^*/T^*$.
+
+\wcht{Produkt prosty} $H \times K$: produkt \prawo{2.8} kartezjański z $(h, k) \cdot (h', k') = (hh', kk')$; abelowy $\Lra$ $H, K$ abelowe.
+Jeżeli $H, K \trk G$, $HK = G$ oraz $H \cap K = \{1\}$, to $G \cong H \times K$.
+Jeśli $A \trk H$ i $B \trk K$, to $A \times B \trk H \times K$ oraz $(H \times K) / (A\times B) \cong (H / A) \times (K/B)$.
+Każdy $N \trk X \times Y$ jest przemienny lub kroi jeden z czynników nietrywialnie.
+\wcht{Elementarna abelowa $p$-grupa}: $(\Z/p\Z)^n$.
+Abelowa $G$ o pierwszym wykładniku $p$ jest taka; każdy endomorfizm $G$ jest liniowy (bo $G$ jest przestrzenią wektorową nad $\Z_p$).
+Wykładnik grupy: nww rzędów jej elementów.
