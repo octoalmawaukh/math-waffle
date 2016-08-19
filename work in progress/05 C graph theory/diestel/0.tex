@@ -1,0 +1,31 @@
+Graf \wcht{spójny}: \prawo{0.4} niepusty, każde dwa wierzchołki łączy droga.
+\wcht{Rusztowanie}: minimalny podgraf rozpinający, który spójnie kroi komponenty.
+Jeśli $X \subseteq V \cup E$ kroi każdą drogę między $A, B \subseteq V$, to jest \wcht{rozdzielaczem}.
+\wcht{Most}: krawędź rozdzielająca swoje końce.
+\wcht{Artykulacja}: wierzchołek rozdzielający dwie krawędzie komponenty.
+Graf \wcht{$k$-spójny}: $|G| > k$, żadne dwa wierzchołki $G$ nie rozdzielają się po usunięciu mniej niż $k$ innych.
+Największe takie $k$: \wcht{spójność} $\kappa$.
+Podobnie spójność krawędziowa ($\lambda$).
+Zachodzi $\kappa \le \lambda \le \delta$.
+\wcht{Tw. Madera} (\datum{1972}): w każdym grafie, gdzie średni stopień to conajmniej $4k$, istnieje $k$-spójny podgraf.
+
+\wcht{Drzewo}: \prawo{0.5} spójny \wcht{las} (graf bez cykli), liście: wierzchołki stopnia jeden.
+NWSR: bycie drzewem, każde dwa wierzchołki łączy dokładnie jedna droga, usunięcie dowolnej krawędzi rozspójnia, dodanie nowej krawędzi tworzy cykl.
+Każdy graf $G$, taki że $\delta (G) \ge |T| - 1$ ($T$: drzewo) posiada izo-kopię $T$ jako podgraf.
+\wcht{Drzewo rozpinające}: $V(T) = V(G)$.
+\wcht{Porządek drzewiasty}: $x \le y$, gdy $x$ leży na drodze z $y$ do \wcht{korzenia}.
+Drzewo $T$, które ma korzeń, w grafie $G$ jest \wcht{normalne} w $G$: końce krawędzi $G$ leżące w $T$ są porównywalne.
+Każdy spójny graf ma rozpinające go drzewo normalne.
+
+Graf $G = (V, E)$ jest \wcht{$r$-dzielny} ($r \ge 2$), gdy istnieje rozbicie $V$ na $r$ części, w którym wierzchołki z żadnej z nich nie są połączone.
+\wcht{Zupełna} $r$-dzielność: wierzchołki z różnych części są połączone, np. w $K_s^r$ ($r$-dzielny, każda część z $s$ wierzchołków).
+\wcht{Gwiazda}: $K^1 * K^n$.
+Dwudzielność $\Lra$ brak cyklu nieparzystej długości.
+
+0.6
+
+%Jeśli \prawo{0.7} $e = xy$ jest krawędzią w $G$, to $G/e$ powstaje z $G$ przez \wcht{kontrakcję} $e$ do punktu.
+%Formalnie,  graf z wierzchołkami $V \setminus \{x,y\} \cup \{v_e\}$ oraz krawędziami $\{vw \in E : \{v, w\} \cap \{x ,y\} = \varnothing\} \cup \{v_ew : xw \in E \setminus \{e\} \vee yw \in E \setminus \{e\}\}$	
+
+\wcht{Graf eulerowski}: posiadający cykl przechodzący przez wszystkie krawędzie po jednym razie.
+\wcht{Tw. Eulera} (\datum{1736}): spójny jest eulerowski $\Lra$ każdy wierzchołek ma parzysty stopień.
