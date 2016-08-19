@@ -1,0 +1,82 @@
+\input{main-fst}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[LE,LO]{Zwyczajne równania różniczkowe (MSC 34)}
+\fancyhead[RO,RE]{leon.aragones@gmail.com, listopad 2015}
+\fancyfoot[RF]{Aulbach, czerwiec 1997}
+
+\input{aulbach/01}
+
+\fancyfoot[LF]{strona \thepage { }z \pageref{LastPage} [od 1 do 212]}
+
+\input{aulbach/02}
+
+\input{aulbach/03}
+
+\input{aulbach/04}
+
+\input{aulbach/05}
+
+\input{aulbach/06}
+
+\fancyfoot[LF]{strona \thepage { }z \pageref{LastPage} [od 213 do 355]}
+
+\input{aulbach/07}
+
+\fancyfoot[LF]{strona \thepage { }z \pageref{LastPage} [od 356 do 417]}
+
+\newpage
+
+\input{aragones/sturm-liouville}
+
+\input{aragones/floquet}
+
+\input{aragones/laplace}
+
+Dane \prawo{??} jest zwyczajne $p(x) y''(x) + q(x) y'(x) + r(x) y(x) = 0$. % czyżby Braun?
+Rozwiązań szukamy szeregami $y(x) = \sum_{k=0}^\infty a_k(x-x_0)^k$.
+Jeśli $p(x_0)\neq 0$, to $x_0$ jest \wcht{ordynarny}, jeśli nie, to \wcht{singularny}.
+Singularny jest \wcht{regularny}, jeśli $\lim_{x \to x_0} (x-x_0)q(x) / p(x)$ oraz $\lim_{x \to x_0} (x-x_0)^2 r(x) / p(x)$ są skończone.
+\wcht{Metoda Frobeniusa}: jeśli $x = 0$ jest regularny singularny, to przynajmniej jedno rozwiązanie równania jest postaci $x^r \sum_{k=0}^\infty a_k x^k$.
+R--e indeksowe ma pierwiastki $r_1, r_2$.
+$y_1 = x^{r_1} \sum_{k=0}^\infty a_k x^k$.
+Jeśli $r_1 = r_2$, to $y_2 = x^r \sum_{k=0}^\infty b_kx^k y_1 \ln x$.
+Jeśli $r_1 - r_2 \in \Z$, to rozwiązaniami są $y_1 = x^{r_1} \sum_{k=0}^\infty a_kx^k$ oraz $y_2 = x^{r_2} \sum_{k=0}^\infty b_k x^k + C y_1 \ln x$.
+Wreszcie dla zespolonych: wziąć $\Re$, $\Im$ z $x^{r_1} \sum_{k=0}^\infty a_k x^k$.
+
+\emph{Uzmiennianie} \prawo{m} $a_n y^{(n)} + \ldots + a_1 y' + a_0 y = f(x)$.
+Jeśli $C_1 y_1 + \ldots + C_n y_n$ rozwiązuje jednorodne, to traktujemy $C_i$ jako funkcji $C_i(x)$, które wyznacza się z gargantuicznej macierzy (Wrońskiego).
+\[
+\begin{pmatrix} y_1 & \ldots & y_n \\ y_1^\prime & \ldots & y_n^\prime \\ \vdots & \ddots & \vdots \\ y_1^{(n-1)} & \ldots & y_n^{(n-1)} \end{pmatrix} \begin{pmatrix} C_1^\prime \\ C_2^\prime \\ \vdots \\ C_n^\prime \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ \frac{f(x)}{a_n} \end{pmatrix}
+\]
+
+Jeśli jedno rozwiązanie dla $\ddot y + P(x) \dot y + Q(x) y = 0$ jest znane, $y_1$, to drugie można znaleźć przez redukcję rzędu.
+Mamy bowiem $(dW)/W = -P(x)dx$, gdzie $W = y_1y'_2 - y_1'y_2$ jest wrońskianem.
+Scałkowanie daje $\int_a^x dW/W = -\int_a^x P(x') dx'$, czyli $$\ln |W(x) / W(a)| = - \int_a^x P(x') dx'$$.
+Wynika stąd, że $W(x) = W(a) \exp |-\int_a^x P(x') dx'$.
+Ale $W = y_1^2 d/dx \, (y_2 / y_1)$, więc $$y_2 = y_1(x) W(a) \int_b^x \exp[-\int_a^{x'} P(x'')dx''] / [y_1(x')]^2 \,dx'$$.
+
+Jak rozwiązać $\dot x = Ax + p$ dla wektora $x$?
+Jeśli $p=0$, to rozwiązaniem jest $x(t) = \exp(At)$.
+Znajdź wartości własne $\lambda_i$ oraz wektory własne $u_i$.
+Policz $x_i = \exp(\lambda_i t) u_i$.
+Rzeczywiste wektory są rozwiązaniem jednorodnego równania.
+Jeśli $A$ jest $2 \times 2$, to rozwiązaniem jest $\Re [x_i]$ oraz $\Im [x_i]$.
+Jeśli równanie nie jest jednorodne, to znajdź rozwiązanie szczególne przez $x^*(t) = X(t) \int X^{-1}(t)p(t) dt$, gdzie kolumny $X$ to $x_i$.
+Jeśli jest jednorodne, popatrz na rozwiązania postaci $x = \xi \exp(\lambda t)$.
+Ogólnie: $x(t) =x^*(t) + \sum_{i=1}^n c_i x_i$
+
+\emph{Uzmiennianie stałej}. \prawo{Br}
+Dla operatora $L = D^2 + p(x)D + q(x)$ chcemy rozwiązać $Lu(x) = f(x)$, dla danej $f$.
+Niech $u_1$, $u_2$ będą rozwiązaniami jednorodnego.
+Podejrzewamy, że $u_g(x)$ załatwi sprawę.
+Umówmy się, że $A' u_1 + B' u_2 = 0$, wtedy można odtworzyć $A$, $B$.
+Tutaj $W$ jest wrońskianem, $u_1u_2' - u_2u_1'$ (całość nazywa się \wcht{uzmiennianiem stałej}).
+\[
+	u_g(x)  = A(x) u_1(x) + B(x) u_2(x) \spk
+	A(x) = - \int \frac{u_2(x) f(x) }{W}\,\textrm{d}x \spk
+	B(x) = \int \frac{u_1(x) f(x) }{W}\,\textrm{d}x \spk
+\]
+\end{document}
+
+http://eqworld.ipmnet.ru/en/solutions/ode.htm
+Prüfer transformation

@@ -1,0 +1,32 @@
+AWP $\dot x = f(t,x)$, $x(t_0) = x_0$ \prawo{2.1} można \prawo{2.2} przekształcić \prawo{2.3} do postaci całkowej.
+Ciąg \wcht{iteracji Picarda} może zbiegać jednostajnie, jeśli to robi, to $\lambda_\infty$ jest szukaną $\lambda$.
+\wcht{Ilościowy Peano}: dla tego AWP ($f \colon Z_a^b \to \R^N$ ciągła) istnieją  rozwiązania na $[t_0 - \alpha, t_0+\alpha]$ (\wcht{ilościowy Picard-Lindelöf}: jeśli $f$ jest Lipschitza względem $x$, to rozwiązanie jest tylko jedno i z oszacowaniem $\|\lambda_k(t) - \lambda_\infty(t)\| \le {ML^k \alpha^{k+1}}/{(k+1)!}$).
+\wcht{Jakościowy Peano} dla $f \colon (D \subseteq_o \R^{N+1}) \to \R^N$ ciągłej: AWP ma rozwiązania, ale lokalnie (Picard, Lindelöf: $f$ Lipschitza względem $x$ $\Ra$ dokładnie jedno rozwiązanie).
+Khm: $Z_a^b = [t_0 - a, t_0 + a] \times \{x \in \R^N : \|x-x_0\| \le b\}$, $M = \max \{\|f(t,x)\| : (t,x) \in Z_a^b\}$.
+\[
+	\lambda(t) = x_0 + \int_{t_0}^t f(s, \lambda(s)) \,\textrm{d}s \spk
+	\lambda_0(x) \equiv x_0 \spk
+	\lambda_{k+1}(t) = x_0 + \int_{t_0}^t f(s, \lambda_k(s)) \,\textrm{d}s \spk
+	\alpha = \min \left\{a, \frac b M \right\}% \spk
+\]
+
+Standardowo: \prawo{2.4} $\dot x = f(t, x)$, prawa strona na $D \subseteq_o \R^{N+1}$ ciągła, względem $x$ Lipschitza.
+Dla $(t_0, x_0) \in D$ istnieje $I_{\max} = (I^-, I^+) \subseteq \R$, który zawiera $t_0$, na którym AWP $\dot x = f(t,x)$, $x(t_0) = x_0$ ma dokładnie jedno rozwiązanie $\lambda_{\max}$; każde inne jest obcięciem do $J \subseteq I_{\max}$.
+Drobne mambo-dżambo: $\|g(s, x) - g(s,y)\| \le L\|x-y\|$ (warunek Lipschitza) pociąga (lokalną) ciągłość Lipschitza, ale nie odwrotnie!
+
+Niech $f \colon (D \subseteq_o \R^{N+1}) \to \R^N$ będzie \prawo{2.5} ciągła, Lipschitza względem $x$, zaś $\lambda_{\max} \colon (I^-, I^+) \to \R^N$ maksymalnym rozwiązaniem AWP $\dot x = f(t,x)$, $x(t_0) = x_0$.
+Jeśli $(t_0, x_0) \in K \subseteq^k D$, to $(t, \lambda_{\max}) \not \in K$ dla $t \in I_{\max}$ spoza pewnego domkniętego podprzedziału.
+Jeżeli $I^+ < \infty$, to $\lambda_{\max}$ na $[t_0, I^+)$ jest nieograniczona lub $\partial D \neq \varnothing$ i $d((t, \lambda_{\max}(t)), \partial D) \to 0$ dla $t \uparrow I^+$; analogicznie $I^-$.
+Gdy $f$ ma dziedzinę postaci $(a,b) \times \R^N$, zaś sama jest \wcht{liniowo ograniczona} ($\|f(t,x)\| \le p(t) \|x\| + s(t)$; $p, s$ ciągłe), to każdy AWP $\dot x = f(t,x)$, $x(t_0) = x_0$ ma maksymalne rozwiązanie na $(a,b)$.
+Dla liniowego układu $\dot x = A(t)x+ g(t)$ z ciągłą macierzą $A$, wektorem $g$ i poczwary $(t_0,x_0$) istnieje maksymalne rozwiązanie na $(a,b)$.
+
+Mamy $\dot x = f(t,x)$ dla ciągłej $f \colon (D \subseteq_o \R^{N+1}) \to \R^N$, Lipschitza względem $x$.
+\wcht{Rozwiązanie ogólne} to funkcja $\lambda_{\max}(t, \tau, \xi)$ określona na zbiorze $\Omega = \{(t, \tau, \xi) \in \R^{2+N} : (\tau, \xi) \in D, t \in I_{\max}(\tau, \xi)\}$.
+Ustalmy $(\tau, \xi) \in D$ oraz $\sigma \in I_{\max}(\tau, \xi)$.
+Wtedy zachodzi khm-1, khm-2 (\wcht{własność kocyklu}).
+Relacja $(\tau, \xi) \sim (\sigma, \eta) \Lra \lambda(\sigma, \tau, \xi) = \eta$ na $D$ jest równoważności; klasy abstrakcji to \wcht{maksymalne rozwiąkrzywe} (khm-3).
+\[
+	I_{\max}(\sigma, \lambda(\sigma, \tau, \xi)) = I_{\max} (\tau, \xi) \spk
+	(\forall t \in I_{\max}(\tau, \xi))(\lambda(t, \sigma, \lambda(\sigma, \tau, \xi)) = \lambda(t, \tau, \xi)) \spk
+	L(\tau, \xi) = \{(t, \lambda(t, \tau, \xi)) : t \in I_{\max}(\tau, \xi)\}
+\]

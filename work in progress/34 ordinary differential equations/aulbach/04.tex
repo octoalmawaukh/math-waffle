@@ -1,0 +1,16 @@
+Równanie $\dot x g(t, x) + h(t, x) = 0$ dla $g, h \colon (U \subseteq_o) \to \R$ ciągłych, względem $x$ Lipschitza jest \wcht{dokładne}: isnieje \wcht{pierwona}, funkcja klasy $\mathscr C^1$ z $U$ w $\R$, która spełnia $\partial_t S (t, x) = h(t, x)$ oraz $\partial_x S(t, x) = g(t, x)$.
+Niech $D = \{(t, x) \in U: g(t, x) \neq 0\}$.
+Wtedy $S(t, \lambda(t, \tau, \xi)) = S(\tau, \xi)$ dla $(\tau, \xi) \in D$, $t \in I_{\max}(\tau, \xi)$ i rozwiązania ogólnego $\lambda$.
+Poziomica $S^{-1} (\tau, \xi) \subseteq D$ zawiera krzywe rozwiązań, w szczególności taką przez $(\tau, \xi)$.
+Gdy dziedzina to prostokąt $(a,b) \times (c,d)$, zaś $\partial_tg$, $\partial_xh$ są ciągłe, to równanie jest dokładne $\Lra$ \wcht{warunek całkowalności}: $\partial_t g = \partial_x h$.
+Wtedy dla każdego $(t_0, x_0)$ z prostokąta, gdzie $S_0(t,x)$ znika, mamy dwa wzory:
+\[
+	S_0(x,t)= \int_{t_0}^t h(s,x) \,\textrm{d}s + \int_{x_0}^x g(t_0, w) \,\textrm{d}w
+	= \int_{t_0}^t h(s,x_0)\,\textrm{d}s + \int_{x_0}^x g(t, w) \,\textrm{d}w
+\]
+
+Dla równania \prawo{4.2} $\dot x g(t,x) + h(t,x) = 0$ z ciągłymi  $g, h \colon (D \subseteq_o \R^2) \to \R$ (względem $x$ Lipschitza), \wcht{czynnik całkujący} to ciągła i względem $x$ Lipschitza $m \colon D \to \R \setminus\{0\}$, o ile $\dot x g m + h m = 0$ jest dokładne.
+\emph{Przepis}: jeżeli nie ma kryterium całkowalności, zaś $[\partial_x h - \partial_t g] / g = P(t)$ nie zależy od $x$, to $\exp P(t)$ jest czynnikiem całkującym. 
+Podobnie dla $[\partial_t g - \partial_x h] / h$.
+
+% 4.3: transformacje, podstawienia -- moim zdaniem zbyt rozwlekłe na teraz.

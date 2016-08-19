@@ -1,0 +1,24 @@
+\emph{W sekcji \prawo{3.1} trzeciej mamy autonomiczny układ $\dot x = f(x)$, dla $f \colon (D \subseteq_o \R^N) \to \R^N$ Lipschitza.}
+\wcht{Suw-odporność i rozwiązanie ogólne}: dla ustalonej poczwary $x_0 \in D$ i dowolnych dwóch początkowych czasów $\tau, \sigma \in \R$ oraz AWP $x(\tau) = x_0$ (względnie $x(\sigma) = x_0$) zachodzi zależność khm-1, a dla rozwiązania ogólnego: $\lambda(t, \tau, x_0) = \lambda(t+ \sigma- \tau, \sigma, x_0)$ (tu $t \in I_{\max}(\tau, x_0)$ dowolne); przypadek $\sigma = 0$ jest ciekawy.
+Dla autonomicznego układu można określić ($\xi \in D$): $J_{\max}(\xi) = I_{\max}(0, \xi)$ (\wcht{maksymalny przedział istnienia}), $J^\pm(\xi) = I^\pm(0,\xi)$ oraz \wcht{potok}, czyli rozwiązanie ogólne $\varphi(t, \xi) = \lambda(t; 0, \xi)$ dla $t \in J_{\max}(\xi)$ (,,niezależne od czasu'', w przeciwieństwie do \wcht{kocyklu} $\lambda(t, \tau, \xi)$).
+Własności ($\xi \in D$): $J^-(\xi) < 0 < J^+(\xi)$, $\varphi(t, \varphi(s, \xi)) = \varphi(t+s, \xi)$ dla tych $s, t$, że $s, t+s \in J_{\max}(\xi)$ (w szczególności: $s = -t$) oraz khm-2.
+\wcht{Zachowanie potoku na brzegu} dla $\xi \in D$:
+jeśli $\varphi(t, \xi)$ dla każdego $t\in [0, J^+(\xi))$ (lub $(J^-(\xi), 0]$) zawiera się w $K \subset^k D$, to ,,$J^\pm=\pm \infty$'' (lub!).
+Jeśli $J^+(\xi)$ jest skończone, to $\varphi(t, \xi)$ na $[0, J^+(\xi))$ jest nieograniczone lub $\partial D \neq \varnothing$ i $d(\varphi(t, \xi), \partial D) \to 0$ przy $t \uparrow J^+(\xi)$ (analogicznie dla minusa).
+\[
+	(I^-(\tau, x_0), I^+(\tau, x_0)) = (I^-(\sigma, x_0) - \sigma+\tau, I^+(\sigma, x_0)-  \sigma + \tau) \spk
+	J_{\max}(\varphi(\tau, \xi)) = (J^-(\xi) - \tau, J^+(\xi) - \tau) \textrm{ dla każdego } \tau \in J_{\max}(\xi)
+\]
+
+\wcht{Trajektoria} (orbita): \prawo{3.2} $T \subseteq D$, który jest obrazem $I$ przez rozwiązanie maksymalne $\mu$.
+Trajektoria przez $\xi \in D$ to $\{\varphi(t, \xi) : t \in J_{\max} (\xi)\} = O$, do tego są półorbity: $O^+$ ($t \ge 0$) i $O^-$ ($t \le 0$).
+Dla maksymalnego rozwiązania $\varphi(\cdot, \xi) \colon J_{\max}(\xi) \to \R^N$ z trajektorią $O(\xi)$ zachodzi dokładnie jeden z przypadków: $J_{\max} = \R$, $\varphi$ stała, trajektoria jednopunktowa; $J_{\max} = \R$, $\varphi$ niestała, trajektoria okresowa; trajektoria bez samoprzecięć i końców.
+W skalarnych równaniach drugi przypadek nie jest możliwy.
+
+\wcht{Portret fazowy}:  \prawo{3.3} zbiór trajektorii.
+Przy standardowym założeniu krzywe rozwiązań nie tną się (w $(t,x)$-przestrzeni), podobnie trajektorie (w $x$-przestrzeni).
+Patrzymy na $\dot x = f(x)$.
+Miejsca zerowe $f$ to \wcht{punkty singularne} (równowagi); inne: \wcht{regularne}.
+\emph{Izokliny, pola wektorów}.
+
+%3.4 Wielokąty Eulera -- uznałem za niepotrzebne.

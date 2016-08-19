@@ -1,0 +1,122 @@
+Standardowe \prawo{7.1} założenie dla $\dot x = f(t, x, \alpha)$: $f \colon (D \subseteq_o \R^{1+N+M}) \to \R^N$ jest ciągła i Lipschitza względem $x$.
+Mamy \wcht{maksymalny przedział istnienia} $I_{\max}(\tau, \xi, \alpha)$ dla $x(\tau) = \xi$ oraz \wcht{ogólne rozwiązanie} $\lambda(t, \tau, \xi, \alpha)$ o dziedzinie: $(\tau, \xi, \alpha) \in D$, $t \in I_{\max} (\tau, \xi, \alpha)$.
+Własność kocyklu da nam: $I_{\max}(\sigma, \lambda(\sigma, \tau, \xi, \alpha), \alpha) = I_{\max}(\tau, \xi, \alpha)$ oraz $\lambda(t, \sigma, \lambda(\sigma, \tau, \xi, \alpha), \alpha) = \lambda(t, \tau, \xi, \alpha)$, co jest ciekawe dla $t = \tau$ ($t \in I_{\max}(\tau, \xi, \alpha)$).
+
+Jeśli \prawo{7.2} $D \subseteq_o \R^{1+N+M}$, zaś prawa strona $f \colon D \to \R^N$ jest ciągła, Lipschitza względem $x$, to dziedzina $\Omega$ (z paragrafu wyżej) jest otwarta w $\R^{2 + N + M}$, zaś samo rozwiązanie: ciągłe.
+\wcht{Wariacja poczwarty}: przy ustalonym $(t_0, x_0, \alpha_0)\in D$ i $t_0 \in [a,b] \subseteq^k I_{\max}(t_0, x_0, \alpha_0)$ każdy $\varepsilon > 0$ ma $\delta > 0$, że $\|\xi - x_0\| < \delta$ pociąga istnienie $\lambda(t, t_0, \xi, \alpha_0)$ dla $t \in [a,b]$ oraz $\|\lambda(t, t_0, \xi, \alpha_0) - \lambda(t, t_0, x_0, \alpha_0)\| < \varepsilon$.
+
+Jeśli \prawo{7.3} $f \colon (D \subseteq_o \R^{M+N+1}) \to \R^N$ jest $\mathscr C^1$-funkcją, to ogólne rozwiązanie $\lambda(t; \tau, \xi, \alpha)$ dla $\dot x = f(t,x,\alpha)$ też.
+Czosnkowe pochodne $\Omega \to \R^N$: $\lambda_{t\tau}$, $\lambda_{t\xi_i}$, $\lambda_{t\alpha_j}$ ($i \le N$, $j \le M$) istnieją oraz są ciągłe.
+Skrót: $A \colon \Omega \to \R^{N \times N}$, $A(t, \tau, \xi, \alpha) =$ $\partial_xf(t, \lambda(t, \tau, \xi, \alpha), \alpha)$.
+Ustalenie $(\tau, \xi, \alpha) \in D$ da trzy rodzaje funkcji na $I_{\max}(\tau, \xi, \alpha)$.
+Pierwszy: $\lambda_\tau (t, \tau, \xi, \alpha)$ to maksymalne rozwiązanie khm-1.
+Drugi: $\lambda_{\xi_i} (t, \tau, \xi, \alpha)$ to maksymalne dla khm-2. 
+Trzeci: $\lambda_{\alpha_j} (t, \tau, \xi, \alpha)$ to maksymalne dla khm-3. 
+\wcht{Równanie szaleństwa}: $\dot y = \partial_x f(t, \sigma$ lub $\lambda, \alpha) \cdot y$ (?).
+\[
+	\dot y = A(t; \tau, \xi, \alpha) y, \,\, y(\tau) = - f(\tau, \xi, \alpha) \spk
+	\dot y = A(t; \tau, \xi, \alpha) y, \,\, y(\tau) = e_i \spk
+	\dot y = A(t; \tau, \xi, \alpha) y + \partial_{\alpha_j} f(t, \lambda(t; \tau, \xi, \alpha),\alpha), \,\, y(\tau) = 0
+\]
+
+Znowu \prawo{7.4} $\lambda(t, \tau, \xi)$ jest ogólnym rozwiązaniem dla $\dot x = f(t, x)$ ze standardowymi założeniami.
+Rozwiązanie $\mu$ na $(t^-, \infty) \subseteq \R$ jest \wcht{stabilne} (Lapunow): każde $\varepsilon > 0$, $t_0 > t^-$ mają $\delta > 0$, że $\|\xi - \mu(t_0)\|  < \delta$ pociąga dla $t \ge t_0$ ,,istnienie'' oraz $\|\lambda(t; t_0, \xi) - \mu(t)\| \le \varepsilon$; jeśli nie: \wcht{niestabilne}. 
+\wcht{Atraktywne}: podobnie, ale teraz $\lim_{t\to \infty} \|\lambda(t, t_0, \xi) - \mu(t)\|= 0$ (\wcht{asymptotycznie stabilne}: atraktywne i stabilne).
+\wcht{Dorzecze}: zbiór dobrych par $(\tau, \xi)$, czyli $\tau > t^-$ oraz $\xi \in \R^N$.
+Dla skalarnego $\dot x = f(t,x)$ i standardowych założeń, atraktywne $\Ra$ stabilne. %Zawsze istnieje \wcht{zaburzenie} (bo $y = x - \mu(t)$): $\dot y = f(t, y+ \mu(t)) - f(t, \mu(t))$; stabilności pierwotnego przenoszą się na nowe.
+
+Zbadajmy $\dot x = A(t) x + g(t)$ dla ciągłych $A$ (macierzy), $g$ (wektora).
+Wszystkie rozwiązania są asymptotycznie-, stabilne, przyciagające $\Lra$ trywialne jest takie dla $\dot x = A(t) x$.
+Przyciągające $\Ra$ stabilne.
+Wszystkie rowiązania jednorodnego są stabilne $\Lra$ każdy $t_0 > T$ ma $\beta$, że $t \ge t_0$ pociąga $\|\Lambda(t, t_0)\| \le \beta$.
+Asymptotycznie $\Lra$ zawsze $\lim_{t \to \infty} \Lambda (t, t_0) = 0$.
+W obu przypadkach wystarcza jedno $t_0$!
+
+Załóżmy, że $A$ jest stałe.
+Wszystkie rozwiązania $\dot x = Ax$ są stabilne $\Lra$ $A$ ma wartości własne z niedodatnią $\Re$, a te z zerową są półproste.
+Wtedy istnieje $M \ge 1$, że $\|\exp At\| \le M$ dla $t \ge 0$.
+Asymptotycznie stabilne $\Lra$ wartości własne z ujemną $\Re$.
+Jeżeli $\rho = \max \Re \lambda_i$, to każdemu $\rho < - \alpha < 0$ odpowiada $K \ge 1$, że $\| \exp At \| \le K \exp -\alpha t$ dla $t \ge 0$.
+Poniżej: rozwiązanie ogólne dla $\dot x = A(t) x + g(t)$.
+\[
+	\lambda(t, \tau, \xi) =\Lambda(t, \tau) \xi + \int_\tau^t \Lambda(t,s) g(s) \,\D s
+\]
+
+\wcht{Lemat Gronwalla}: \prawo{7.6} ciągła $u \colon [a,b) \to \R$, z  $b \le \infty$, $c, d \ge 0$ spełnia khm-1.
+Jeżeli autonomiczny układ $\dot x = Ax + r(x)$ spełnia: $r(0), r'(0) = 0$, zaś $A$ jest stała, to ujemność rzeczywistych części wartości własnych $A$ pociąga asymptotyczną stabilność trywialnego rozwiązania.
+\[
+	0 \le u(t) \le c + d\int_a^t u(s) \,\textrm{d}s \implies u(t) \le c e^{d(t-a)} \hfill \mbox{Linearyzacja fajna rzecz.}
+\]
+
+Równanie $\dot x = f(x)$ \prawo{7.7} z dziedziną $D \subseteq_o \R^N$, $f$ jest Lipschitza.
+\wcht{Dodatnio niezmienniczy} zbiór $M \subseteq D$: dla $\xi \in M$ dodatnia półtrajektoria $O^+(\xi)$ leży w $M$, analogicznie \wcht{ujemnie}; niezmienniczy: dodatnio i ujemnie.
+Punkt $x \in D$ jest \wcht{$\omega$-granicznym} dla $\xi \in D$: istnieje ciąg $t_k \to \infty$ w $[0, \infty)$, że $x = \lim_k \varphi(t_k; \xi)$; analogicznie $\alpha$ zamiast $\omega$ ($\infty \mapsto -\infty$).
+\wcht{Zbiór graniczny} $M \subseteq D$: jest $\alpha$ lub $\omega$-graniczny dla punktu z $M \setminus D$, \wcht{cykl graniczny}: dodatkowo zamknięta trajektoria.
+Jeśli rozwiązanie $\varphi(t, \xi)$ istnieje dla $t \ge 0$, a domknięcie $O^+(\xi)$ leży w $D$, to stałość $\varphi$ pociąga $\omega(\xi) = \{\xi\}$, okresowość: $\omega(\xi) = O(\xi)$.
+W każdym razie, khm-1.
+Jeśli $\xi \in D$ ma tę własność, że półtrajektoria $O^+(\xi)$ jest ograniczona i ma domknięcie w $D$, to $\omega$-graniczny zbiór $\omega(\xi)$ jest niepusty, zwarty, spójny, niezmienniczy i $\operatorname{dist}(\varphi(t; \xi), \omega(\xi)) \to 0$, z analogami dla ,,$\alpha$''.
+\[
+	\omega(\xi) = \bigcap_{\tau \ge 0} \cl O^+(\varphi(\tau, \xi))
+\]
+
+Ciągle \prawo{7.8} różniczkowalna $V \colon (D \subseteq_o \R^N) \to \R$ to \wcht{funkcja Lapunowa} dla $\dot x = f(x)$ (porządnego), gdy $\grad V(x) \cdot f(x) \le 0$.
+\wcht{Pierwsza całka}: gdy $\dot V \equiv 0$.
+Każda podpoziomica $N_c^+ = \{x \in D : V(x) \le c\}$ jest dodatnio niezmiennicza względem wyjściowego układu.
+\wcht{Niezmienniczości reguła}: dla $\xi \in D$, zbiór $\omega$-graniczny $\omega(\xi)$ zawiera się w $\{x \in D : \dot V(x) = 0\}$.
+
+Niech \prawo{7.9} $f \colon (D \subseteq_o \R^N) \to \R^N$ będzie Lipschitza.
+Dla trywialnego punktu równowagi i funkcji Lapunowa $V$, że $V(0) = 0$ oraz $V[D \setminus \{0\}] > 0$, punkt ten jest stabilny.
+Gdy dodatkowo $\dot V (0)=0$, $\dot V[D \setminus \{0\}] < 0$, to stabilność jest asymptotyczna, zaś zwarte podpoziomice $N_c^+$ leżą w dorzeczu.
+Jeżeli $V(0), \dot V(0) = 0$ i $\dot V[D \setminus \{0\}] < 0$ i każde otoczenie zera zawiera $x$, że $V(x) < 0$, to $x = 0$ jest niestabilne.
+
+Mamy \prawo{7.10} skalarne $\dot x = f(x, \alpha)$ ($\alpha \in \R$) z prawą stroną $(D \subseteq_o \R^2) \to \R$ klasy $\mathscr C^{k \ge 1}$.
+Dla parametru $\alpha_0$ w $x_0$ jest punkt równowagi.
+\emph{Jak bardzo można zaburzyć $\alpha_0$?}
+\wcht{Diagram rozwidlenia}: portret fazowy w $(x, \alpha)$-przestrzeni.
+Jeżeli $\partial_x f(x_0, \alpha_0) \neq 0$, to istnieje otoczenie $U \times V$ dla $(x_0, \alpha_0)$
+ oraz $\mathscr C^k$-funkcja $g \colon V \to U$, że $g (\alpha_0) = x_0$ i $f(g(\alpha), \alpha) = 0$, innych punktów stacjonarnych nie ma.
+\wcht{Rozwidlenie}: punkt, w otoczeniu którego zmienia się liczba punktów równowagi.
+
+Niech \prawo{7.10 I} $x_0, \alpha_0, f(0,0), f_x(0,0) = 0$.
+\wcht{,,Rozwidlenie siodło-węzeł''}: dla równań klasy $\mathscr C^2$ oraz dodatkowo: $f_\alpha(0, 0), f_{xx}(0,0) \neq 0$, to istnieje otoczenie $U \times V$ dla $(0,0)$ oraz $\mathscr C^2$-funkcja $h \colon U \to V$, $h(0) = 0$, że $f(x, h(x)) = 0$.
+Innych punktów równowagi nie ma, $h$ ma ekstremum w $(0,0)$.
+Jeśli $\alpha = 0$, to trywialna równowaga jest półstabilna.
+Jeśli $\alpha \in V \setminus h(U)$, to w $U$ nie ma równowagi, jeśli $\alpha \in h(U) \setminus \{0\}$, to równowagi są dwie: $x^- < 0 < x^+$.
+Gdy $f_{xx}(0,0) > 0$, to pierwsza jest asymptotycznie stabilna, druga niestabilna; gdy nie, to na odwrót.
+
+Załóżmy, \prawo{7.10 II} że równowaga $(x_0, \alpha_0)$ jest zanurzona w ,,pęk'' innych: istnieje $\varepsilon > 0$ i funkcja $g \colon (\alpha_0 - \varepsilon, \alpha_0 + \varepsilon) \to \R$, że $f(g(\alpha), \alpha) = 0$ oraz $g(\alpha_0) = x_0$.
+Załóżmy też, że $f_x(g(\alpha), \alpha)$ zmienia znak w $\alpha_0$ (zmiana stabilności).
+BSO, $x_0$, $\alpha_0 = 0$, czyli $f_x(0,0) = 0$, $f(0, \alpha) = 0$ dla $|\alpha| < \varepsilon$ i \wcht{warunek transwersalności}, $f_{\alpha x} (0, 0) \neq 0$.
+Gdy $f_{xx}(0, 0) \neq 0$, zaś $f$ jest $\mathscr C^2$, to istnieje otoczenie $U \times V$ dla $(0, 0)$ oraz $h \colon U \to V$ ($\mathscr C^1$) taka, że $h(0) = 0$ i $f(x, h(x)) = 0$.
+Innych równowag nie ma, wykres $h$ jest ściśle monotoniczny.
+Jeżeli $\alpha = 0$, to trywialna równowaga jest półstabilna.
+Jeżel nie, to równowagi są dwie: trywialna asymptotycznie- ($\alpha < 0$) lub niestabilna ($\alpha > 0$), a gdy $f_{\alpha x}(0, 0) < 0$, to odwrotnie.
+
+Weźmy \prawo{7.10 III} $\dot x = f(x, \alpha)$ klasy $\mathscr C^3$ określone na $D\subseteq_o \R^2$, że $f(0, \alpha) = 0$ dla $|\alpha| < \varepsilon$, $f_x(0, 0) = 0$, $f_{\alpha x} (0, 0) \neq 0$.
+Jeśli $f_{xx}(0, 0) = 0$, $f_{xxx} \neq 0$, to istnieje otoczenie $U \times V$ dla $(0, 0)$ z funkcją $h \colon U \to V$, że $h(0) = 0$, $f(x, h(x)) = 0$.
+Innych równowag nie ma, zaś $h$ ma ekstremum lokalne w $(0, 0)$.
+Dla $\alpha = 0$ trywialna równowaga jest niestabilna ($f_{xxx}(0,0) > 0$) lub asymptotycznie- ($\ldots < 0$).
+Dla $\alpha \in V \setminus h(U)$ równanie ma tylko trywialne równowagi, dla $\alpha \in h(U) \setminus \{0\}$ jeszcze dwie: $x^- < 0 < x^+$.
+Są one niestabilne, gdy trywialna jest asymptotycznie-, ,,i odwrotnie''.
+Trywialna jest niestabilna dla $\alpha > 0$, o ile $f_{\alpha x}(0, 0) > 0$ i odwrotnie, jeśli nie.
+(\wcht{rozwidlenia widlaste})
+
+Weźmy \prawo{7.11} płaski, autonomiczny układ z różalną prawą stroną na $D \subseteq_o \R^3$.
+Niech $f(0,0,\alpha)$, $f_x (0,0,\alpha)$ i $f_y(0,0,\alpha) = 0$ (to samo dla $g$), gdy $|\alpha| < \varepsilon$.
+Zakładamy, że $\mu(0) = 0$, $\nu(0) \neq 0$ i \wcht{warunek transwersalności}: $\mu'(0) \neq 0$.
+Skrót: $f_{ij}$ to $\partial {x^i} \partial {y^j} f (0,0,0)$, podobnie dla $g$.
+Zamknięta trajektoria $T$ jest \wcht{przyciągająca}, jeśli jest $\omega$-granicznym zbiorem punktów z własnego otoczenia i \wcht{odpychająca} (dla $\alpha$-granicznego\dots).
+\wcht{Tw. o rozwidleniu} (Poincaré, Andronow \datum{1929}, Hopf \datum{1942}): jeśli układ jest klasy $\mathscr C^4$ i spełnia założenia ($\uparrow$), $\kappa = A_2 / \nu(0) + A_3 \neq 0$, to istnieją: $\varepsilon_0 > 0$ i  otoczenie zera $U \subseteq \R^2$, że: układ w $U \times [-\varepsilon_0, \varepsilon_0]$ ma tylko trypuagi, $(0,0,\alpha)$.
+Gdy $\mu'(0)>0$, to trypuagi dla $\alpha \in [-\varepsilon_0, 0)$ są asymptotycznie stabilne, dla $a \in (0, \varepsilon_0]$ niestabilne (odwrotnie dla $\mu'(0)<0$).
+Dla $\alpha = 0$ trypuag jest nie- (asymptotycznie-) $\Lra$ $\kappa > 0$ ($\kappa < 0$).
+Gdy $\kappa \mu'(0) > 0$ i $0 \le \alpha \le \varepsilon_0$, w $U$ nie ma zamkniętych trajektorii, gdy $- \varepsilon_0 \le \alpha < 0$, jest dokładnie jedna (ma we wnętrzu trypuagi).
+Przyciągająca dla $\mu'(0) < 0$, odpychająca dla $\mu'(0) > 0$.
+Gdy $\kappa \mu'(0) < 0$, wszystkie nierówności się odwracają.
+\[
+	\begin{bmatrix}	\dot x \\ \dot y \end{bmatrix}
+	= \begin{bmatrix} \mu(\alpha) & -\nu(\alpha) \\ \nu(\alpha) & \mu(\alpha) \end{bmatrix}
+	\begin{bmatrix}	x  \\	y \end{bmatrix} + 
+	\begin{bmatrix}	f(x,y,\alpha)   \\	g(x,y,\alpha) \end{bmatrix} \spk
+	A_3 = f_{30} + f_{12} + g_{21} + g_{03} \spk
+	A_2 = f_{02}g_{02} - f_{20}g_{20} + f_{11}(f_{20} + f_{02}) - g_{11}(g_{20} + g_{02})
+\]

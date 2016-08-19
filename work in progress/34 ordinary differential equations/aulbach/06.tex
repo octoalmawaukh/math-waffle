@@ -1,0 +1,52 @@
+Tutaj \prawo{6.1} patrzymy na równanie $\dot x = A(t) x + g(t)$ z ciągłą macierzą $A$ i wektorem $g$.
+Po ustaleniu $A(t)$ mamy ogólne rozwiązanie $\lambda_g(t, \tau, \xi)$, a poza tym $L(g) = \{\mu \in \mathscr C^1(I, \R^N : \dot \mu \equiv A \mu + g \}$.
+Dla każdego $\tau \in I$ funkcja $\xi \mapsto \lambda_0(\cdot, \tau, \xi)$ to izomorfizm p. wektorowych, $\R^n \to L(0)$.
+Jest prawdą, że przestrzeń $L(g)$ ma magiczną postać dla szczególnego rozwiązania $\mu_g^*(t)$.
+Liniowa niezależność dziedziczymy z algebry liniowej.
+Dla $m \le N$ rozwiązań $\mu_i$ układu $\dot x = A(t) x$, $\mu_i$ są lnz w $L(0)$ $\Lra$ dla każdego (pewnego) $\tau \in I$ wektory $\mu_i(\tau) \in \R^n$ są lnz.
+\wcht{Macierz Wrońskiego}: $W$, $N \times N$, jej kolumny to $\mu_i(t)$, \wcht{wrońskian}: $\omega (t) = \det W(t)$.
+Zeruje się wszędzie lub nigdzie (patrz: lz/lnz) i spełnia $\dot \omega = \omega \operatorname{tr} A(t)$.
+\[
+	L(g) = \left\{ \mu^*_g + \mu_0 \in \mathscr C^1 (I, \R^n) : \mu_0 \in L(0)\right\} \spk
+	\omega(t) = \omega(\tau) \cdot \exp \left[ \int_\tau^t \textrm{tr } A(s) \,\D s\right]
+\]
+
+Kolumny \prawo{6.2} $\Phi(t)$, \wcht{macierzy fundamentalnej}, to lnz rozwiązania $\dot x = A(t) x$.
+Rozwiązania tego układu są postaci $\lambda_0(t, \tau, \xi) = \Phi(t) \Phi^{-1} (\tau) \xi$, $t, \tau \in I$, $\xi \in \R^N$.
+Inne macierze fundamentalne to $\Gamma(t) = \Phi(t) C$ dla nieosobliwej $C$.
+Kolumny \wcht{macierzy przejścia}, $\Lambda(t, \tau)$, to rozwiązania $\lambda_0(t, \tau, e_i)$, które startują z wektorów $e_i$.
+Mamy $\Lambda(\tau, \rho) \Lambda(\rho, \sigma) = \Lambda(\tau, \sigma)$, $\Lambda(\tau, \tau) = E_n$, wreszcie $\Lambda^{-1}(\tau, \rho) = \Lambda(\rho, \tau)$.
+\wcht{Szaleństwo stałych} pozwala rozprawić się z $\dot x = A(t) x + g(t)$, patrz khm-1/2.
+\[
+	\lambda_g (t, \tau, \xi) = \Phi(t) \left[\Phi^{-1}(\tau) \xi + \int_\tau^t \Phi^{-1}(s) g(s) \,\textrm{d}s \right] = \Lambda(t, \tau) \xi + \int_\tau^t \Lambda (t,s) g(s) \,\textrm{d}s
+\]
+
+Funkcja \prawo{6.3} $\exp(A(t - \tau))$ jest macierzą przejścia, zaś $\exp(At)\xi$ to potok układu $\dot x = Ax$.
+\wcht{Półprosta} wartość własna: krotność pierwiastka $=$ wymiar podprzestrzeni własnej.
+Jeśli wartości własne $\lambda_1, \dots, \lambda_p$ są parami różne, to mamy $p$ podprzestrzeni $L_{\lambda_i}$ sumujących się prosto do $L(0)$.
+Podprzestrzeń dla $\lambda \in \R$ algebraicznej krotności $k$ ma taki sam wymiar i bazę $\exp(\lambda t) p_i(t)$, $0 \le i < k$ (współrzędne funkcji $p_i \colon \R \to \R^N$ to wielomiany stopnia $\le i$).
+Jeśli $\lambda$ jest półprosta, to wielomiany stałe.
+Dla $\rho \pm i \sigma$, $\sigma \neq 0$, mamy problem (240). %: $q_j, \tilde q_j, r_j, \tilde r_j \colon \R \to \R^N$ mają współrzędne z wielomianów od $t$ stopnia $\le j$, $0 \le j < m$; $L_{\dots}$ ma wymiar $2k$.
+Dla $\dot x = Ax + g(t)$: szaleństwo stałych, ze szczególnym rozwiązaniem niżej.
+\[
+%	e^{p t} \left[\cos \sigma t q_j(t) - \sin \sigma t \tilde{q}_j (t)\right] \spk
+	%e^{p t} \left[\cos \sigma t \tilde r_j(t) + \sin \sigma t r_j (t)\right] \spk
+	L(0) = \bigoplus_{k=1}^p L_{\lambda_k} \spk
+	\lambda_g(t, \tau, \xi) = e^{A(t-\tau)}\xi + \int_\tau^t e^{A(t-s)} g(s) \,\textrm{d}s
+\]
+
+Mamy $\dot x = Ax$ \prawo{6.4} z analityczną macierzą $A$ na $(\alpha, \omega)$.
+Dla $\alpha < \tau < \omega$ można rozwinąć ją przez $A(t) = \sum_{k=0}^\infty A_k(t - \tau)^k$, wtedy promieniem zbieżności jest co najmniej $\min (\tau - \alpha, \omega -\tau)$, czyli $\rho(t)$. 
+Dla każdej poczwary $(\tau, \xi) \in (\alpha, \omega) \times \R^N$, rozwiązanie $\lambda(\cdot, \tau, \xi) \colon (\alpha, \omega)\to \R^N$ jest analityczne, postaci $\lambda(t, \tau, \xi) = \sum_{k=0}^\infty a_k(t - \tau)^k$, $a_0 = \xi$ (promień zbieżności $\ge \rho(t)$).
+Patrzymy na $(t - \sigma) \dot x = Ax$ na przedziale $(\alpha, \omega)$, który zawiera $\sigma$, \wcht{słabo singularne miejsce}.
+Jeżeli $A(\sigma)$ ma dwie wartości własne $r_1 \ge r_2$, to układ ma dwa lnz rozwiązania: $\varphi_1$ oraz $\varphi_2$, gdzie $\gamma$ nie jest zerem co najwyżej dla $r_1 - r_2 \in \Z$.
+Promienie zbieżności to co najmniej $\rho(\sigma)$.
+\emph{Metoda Frobeniusa}.
+% A dla równania $\ddot u + a_1(t) \dot u + a_0 u(t) = 0$, gdzie $a_1(t) = p(t) / (t-\sigma)$, $a_0(t) = q(t) / (t-\sigma)^2$ i analitycznych $p, q$?
+% Podstawienie $x_1 = u$, $x_2 = (t-\sigma) \dot u$ prowadzi do khm i \wcht{równania indeksu} (!). \hfill \emph{Frobenius}
+%	A(t) = \begin{bmatrix} 0 & 1 \\ -q(t) & 1-p(t) \end{bmatrix} \spk
+%	r(r-1) + p(\sigma) r + q(\sigma) = 0
+\[
+	\varphi_1 (t) = (t-\sigma)^{r_1} \sum_{k=0}^\infty b_k (t-\sigma)^k \spk
+	\varphi_2 (t) = (t-\sigma)^{r_2} \sum_{k=0}^\infty c_k (t-\sigma)^k + \gamma \varphi_1(t) \ln(t-  \sigma)
+\]

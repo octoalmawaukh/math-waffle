@@ -1,0 +1,23 @@
+%(\wcht{Trajektorie to krzywe rozwiązań}) 
+Dla \prawo{5.1} dwuwymiarowego układu autonomicznego $\dot x = f(x,y)$, $\dot y = g(x,y)$ z prawą stroną Lipschitza na $D \subseteq_o \R^2$ i $(\xi, \eta) \in D$ mamy:
+jeśli $f(x,y) \neq 0$ na $D$, to trajektoria $O(\xi, \eta)$ pokrywa się z maksymalną krzywą rozwiązania $L(\xi, \eta)$ dla AWP $y'(x) = (g/f)(x,y)$, $y(\xi) = \eta$ [dla $g(x,y)$ analogicznie, wziąć odwrotności].
+Układ jest \wcht{hamiltonowski}, gdy istnieje $\mathscr C^1$-funkcja Hamiltona, $H \colon D \to \R$, że $\partial_x H(x,y) = -g(x,y)$ i $\partial_y H(x,y) = f(x,y)$ na $D$; stała wzdłuż trajektorii.
+\emph{Polowanie na trajektorie} (autonomicznego układu):
+sprawdź, czy jest hamiltonowski (na każdym prostokącie $\partial_xf(x,y) + \partial_yg(x,y) \equiv 0$); $H_0$ jest funkcją Hamiltona; trajektorie leżą na poziomicy $N(\xi, \eta)$ dla $(\xi, \eta) \in D$.
+\wcht{Pierwsza całka} to $\mathscr C^1$-funkcja $F \colon D \to \R$, że $[\partial_xF \cdot f + \partial_yF \cdot g](x,y) \equiv 0$ dla $(x,y) \in D$.
+Pierwsza całka też jest stała wzdłuż trajektorii.
+Jeśli $m \colon D \to \R$ jest czynnikiem całkującym dla $f(x,y) [\textrm{d}y/\textrm{d}x] - g(x,y) = 0$, zaś $S \colon D \to \R$ pierwotną dla $m(x,y) [f(x,y)  (\textrm{d}y/\textrm{d}x) - g(x,y)] = 0$, to $S(x,y)$ jest pierwszą całką dla układu.
+\[
+	H_0(x,y) = \int_{y_0}^y f(x,v) \,\textrm{d}v - \int_{x_0}^x g(w,y_0) \,\textrm{d}w \spk
+	N(\xi, \eta) = \left\{(x,y) \in \R^2 : H(x,y) = H(\xi, \eta)\right\}
+\]
+
+Dany jest \prawo{5.2} autonomiczny, płaski układ $\dot x= f(x,y)$, $\dot y = g(x,y)$ z $f, g \colon \R^2 \setminus\{(0,0)\} \to\R$ Lipschitza.
+Do tego mamy, dla $(r, \theta) \in (0,\infty) \times \R$, określony nowy układ $\dot r = p(r, \theta)$, $\dot \theta = q(r, \theta)$.
+Jeśli $(\mu_1, \mu_2) \colon I \to \R^2$ jest rozwiązaniem nowego, to starego są funkcje $\mu_1 \cos \mu_2$ oraz $\mu_1 \sin \mu_2$.
+\emph{Poczwary przenoszą się między układami w przyjemny i przewidywalny sposób.}
+Klasyfikacja \prawo{5.3} równań $\dot z = Az$, $A \in M_{2 \times 2} (\R)$: dwie wartości własne, jedna; jedna klatka Jordana, zespolone. Wuchta obrazków.
+\[
+	p(r, \theta) = f(r \cos \theta, r \sin \theta) \cdot \cos \theta + g(r \cos \theta, r \sin \theta) \cdot \sin \theta \spk
+	r q(r,\theta) = g(r \cos \theta, r \sin \theta) \cdot \cos \theta - f(r \cos \theta, r \sin \theta) \cdot \sin \theta
+\]

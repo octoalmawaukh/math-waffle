@@ -1,0 +1,29 @@
+Jeśli \prawo{PSL} $f(t) \colon [0, \infty)\to \R$ jest przedziałami ciągła i spełnia $|f(t)| \le Me^{ct}$, to dla $s > c$ ma \wcht{transformatę Laplace'a}.
+Różne funkcje mają różne transformaty (\wcht{tw. Lercha}).
+%AWP $a y'' + by' + cy = f(t)$, $y(0) = y_0$ i $y'(0) = y_0'$ upraszcza się przez nałożenie transformaty na obie strony, uporządkowanie i użycie odwrotnej.
+Fakt: $\mathcal L\{(f*g)(t)\} = \dots = \mathcal L\{f(t)\} \mathcal L\{g(t)\}$. 
+\wcht{Całka Bromwicha}: khm-4, przy czym pionowy kontur $\gamma$ nie dotyka osobliwości $F(s)$.
+Dalej, $\mathcal L\{e^{at}f(t)\} (s) = F(s-a)$ oraz $\mathcal L\{-t f(t)\}(s) = F'(s)$.
+\[
+	\mathcal L\{f(t)\} = \int_0^\infty \frac{f(t)}{e^{st}} \,\textrm{d}t \spk
+	\mathcal L\left\{\int_0^t f(\tau) g(t-\tau) \textrm{d}\tau\right\} \spk
+	\mathcal L[f^{(n)}(t)] = s^n \mathcal L[f(t)] - \sum_{k=0}^{n-1} s^kf^{(n-k-1)}(0) \spk
+	f(t) = \int_{\gamma-i \infty}^{\gamma + i \infty} \frac{e^{st} F(s)}{2\pi i}\,\textrm{d}s
+\]
+
+Tablice transformat Laplace'a:
+\begin{align*}
+\exp(at) & \mapsto 1/(s-a) &
+t^{n} & \mapsto {n!}/{s^{n+1}} \\
+%\sqrt{t} & \mapsto \sqrt{\pi/4s^3} \\
+\sin at & \mapsto {a} / (s^2+a^2) &
+\cos at & \mapsto {s} / (s^2+a^2) \\
+\sinh at & \mapsto a/ (s^2-a^2) &
+\cosh at & \mapsto s / (s^2-a^2) \\ 
+t \sin at & \mapsto {2as}/(s^2+a^2)^2 &
+t \cos at & \mapsto (s^2-a^2)/(s^2+a^2)^2 \\
+e^{at} [\sin bt] & \mapsto {b}/{[(s-a)^2 + b^2]} &
+e^{at} [\cos bt] & \mapsto {(s-a)}/{[(s-a)^2 + b^2]} \\
+e^{at} [\sinh  bt] & \mapsto {b}/[(s-a)^2 - b^2] &
+e^{at} [\cosh bt] & \mapsto {(s-a)}/[(s-a)^2 - b^2]
+\end{align*}
