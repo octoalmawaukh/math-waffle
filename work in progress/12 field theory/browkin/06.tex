@@ -1,0 +1,29 @@
+% Jeśli \prawo{6.1.1} $\Phi$ to rodzina norm w ciele $\mathfrak K$, to zakładamy, że każda z nich jest archimedesowa lub dyskretna, zaś żadna nie jest trywialna.
+% Jest \wcht{prawie skończona}, gdy dla $a \in \mathfrak K^*$ skończenie wiele $\varphi \in \Phi$ spełnia $\varphi(a) \neq 1$.
+% Prawie skończona \prawo{6.1.2} rodzina $\Phi$ w ciele $L$ spełnia \wcht{wzór iloczynowy}, gdy dla $a \in \mathfrak K^*$ jest $\prod_{\varphi \in \Phi} \varphi(a) = 1$.
+% Wtedy $\Phi^\alpha :=\{\varphi^\alpha : \varphi \in \Phi\}$ też go spełnia dla $\alpha > 0$.
+% Bez straty ogólności: archimedesowe spełniają nierówność trójkąta.
+% Rodzina $\Phi$ wszystkich kanonicznych norm w $\Q$ (lub kanonicznych względem ciała $\mathfrak K$ w ciele $\mathfrak K(x)$) jest prawie skończona i spełnia wzór iloczynowy.
+% Jeśli $\Phi$ to rodzina jakichś nietrywialnych norm, parami nierównoważnych, w $\Q$ (alternatywnie: w $\mathfrak K(x)$, trywialnych na $\mathfrak K$), która spełnia wzór iloczynowy, to dla pewnej $\alpha > a$, $\Phi^a$ jest rodziną wszystkich kanonicznych norm w $\Q$ (wszystkich norm w $\mathfrak K(x)$ kanonicznych względem $\mathfrak K$).
+% Jeśli $\Phi$ to prawie skończona rodzina norm w $\mathfrak K$ i spełnia wzór iloczynowy, zaś $L$ to skończone rozszerzenie $\mathfrak K$, zaś $\Phi'$ to rodzina norm w ciele $L$ (rozszerzeń tych z $\Phi$), to każda $\varphi' \in \Phi'$ ma $n \in \N$, że $\{\varphi'^{n}\}$ (każde $n$ inne!) spełniają wzór iloczynowy.
+
+Tu \prawo{6.2.1} $\Phi$ to prawie skończona rodzina norm w $\mathfrak K$ spełniająca wzór iloczynowy.
+\wcht{Adel}: element $\prod_\varphi \mathfrak K_\varphi$ (produktu uzupełnień), gdy tylko dla skończenie wielu $\varphi \in \Phi$ jest $\varphi(a_\varphi) > 1$.
+Tworzą pierścień ($A_{\mathfrak K}$), bo $\Phi$ nie zawiera $\infty$-wielu norm Archimedesa.
+Jego elementy odwracalne to \wcht{idele}; tworzą grupę $J_{\mathfrak K}$ z mnożeniem (idele główne, ,,$a_\varphi = a$'', tworzą podgrupę izo- z $\mathfrak K^*$).
+\wcht{Grupa klas ideli}: $J_{\mathfrak K} / \mathfrak K^*$.
+Kostka wyznaczona przez idel $a = (a_\varphi) \in J_{\mathfrak K}$: $T(a) := \{(b_\varphi) \in A_{\mathfrak K} : \forall_\varphi \varphi(b_\varphi) \le \varphi(a_\varphi) \}$.
+Adele główne należące do $T(a)$ tworzą zbiór $L(a)$.
+
+Tu \prawo{6.2.2} $S$ to skończony zbiór norm z $\Phi$.
+Elementy $\prod_{\varphi \in \Phi \setminus S} \phi(\mathfrak K^*_\varphi)$, których tylko skończenie wiele współrzędnych to nie jedynki, to \wcht{$S$-dywizory ciała}, tworzą grupę $I_{\mathfrak K, S}$ (z mnożeniem).
+Funkcja $\lambda_S \colon J_{\mathfrak K} \to I_{\mathfrak K, S}$ jest homo-.
+Domyślnie $S$ to zbiór norm archimedesowych.
+Elementy $\lambda_S(\mathfrak K^*)$ to \wcht{dywizory główne}, tworzą grupę $P_{\mathfrak K, S}$.
+\wcht{Grupa klas dywizorów}: $\textrm{Cl}_{\mathfrak K, S} = I_{\mathfrak K, S} / P_{\mathfrak K, S}$.
+\wcht{Grupa $S$-jedności}, $U_{\mathfrak K, S}$: jądro obcięcia $\lambda_S$ do $\mathfrak K^*$.
+
+Idel \prawo{6.2.3} $a$ jest \wcht{dzielnikiem} idela $b$, gdy $b \in T(a)$.
+Idele są stowarzyszone ($a \mid b$, $b \mid a$) $\Lra$ odpowiada im jeden dywizor.
+Każde dwa idele mają NWD, czyli idel $c$ dzielący $a$ i $b$, że $d \mid a$, $d \mid b$ pociąga $d \mid c$, analogicznie NWW.
+\wcht{Idel zer} elementu $\alpha \in \mathfrak K^*$: $a_\varphi = 1$ ($\varphi(\alpha) \ge 1$) lub $\alpha$ (jeśli nie).
