@@ -1,0 +1,31 @@
+Tu $t \in T \subseteq \N_0$.
+Rodzina \prawo{11.1} z-losowych $X_t$ jest \wcht{adaptowana} do \wcht{filtracji} (niemalejąca rodzina $\sigma$-ciau $\mathcal F_t \subseteq \mathcal F$): $X_t$ są $\mathcal F_t$-mierzalne.
+\wcht{Naturalna}: $\mathcal F_t = \sigma (X_s : s \le t)$.
+\wcht{Moment stopu} (względem filtracji): z-losowa $\tau \colon \Omega \to T \cup \{+\infty\}$, że $\{\tau \le t\} \in \mathcal F_t$ (wystarczy: ,,$\tau = t$'').
+Jeśli $\tau_i$ ($i = 1,2$) są momentami stopu, to $\tau_1 \wedge \tau_2 = \min (\tau_1, \tau_2)$ ($\vee$: $\max$) też.
+Jeśli ,,ciąg $X_t$ jest adaptowany do $\mathcal F_t$'', to chwila pierwszej wizyty w $B \in \mathfrak B(\R)$ jest momentem stopu: $\tau_B (\omega) = \inf \{t \in T : X_t (\omega) \in B\}$.
+Khm: $\mathcal F_\tau$ (klasa tych $A \in \mathcal F$, że $A \cap \{\tau \le t\} \in \mathcal F_t$ dla wszystkich $t$) jest $\sigma$-ciauem; $\tau$ jest $\mathcal F_\tau$-mierzalna; jeśli $\tau \equiv t$, to $\mathcal F_\tau = \mathcal F_t$; $\tau_1 \le \tau_2$ pociąga $\mathcal F_{\tau_1} \subseteq \mathcal F_{\tau_2}$.
+\wcht{Tożsamość Walda}: jeśli $X_i$ są iid, $\expected |X_1| < \infty$, $\tau$ to moment stopu względem filtracji $(\mathcal F_i)_1^\infty$ (gdzie $\mathcal F_n = \sigma (X_1, \ldots, X_n)$) oraz $\expected \tau < \infty$, to $\expected S_\tau = \expected \tau \cdot \expected X_1$ (\emph{przyjmujemy: $S_n = X_1 + \ldots + X_n$; $S_N(\omega) := S_{N(\omega)}(\omega)$}).
+
+\wcht{Martyngał}: \prawo{11.2} rodzina $(X_t, \mathcal F_t)_{t \in T}$ dla całkowalnych z-losowych $X_t$, gdy $s \le t$ pociąga $\expected (X_t \mid \mathcal F_s) = X_s$ (\wcht{nad-}: $\le$ zamiast $=$, wtedy $(-X_t, \mathcal F_t)$ jest \wcht{pod-}).
+\wcht{Transformata martyngałowa} (dla $T = \N$): jeśli $V_n$ są \wcht{prognozowalne} ($V_n$ jest $\mathcal F_{n-1}$-mierzalna) i ograniczone, to martyngałem jest $(V_0X_0  + \sum_{k=1}^n V_n (X_n - X_{n-1}), \mathcal F_n)_{n=0}^\infty$. 
+Mocne \wcht{tw. Dooba}: jeśli ciąg $(X_n, \mathcal F_n)_{n=0}^\infty$ jest martyngałem, $\tau_1$, $\tau_2$ skończonymi p.n. momentami stopu, że $\expected |X_{\tau_i}| < \infty$, $\liminf_{n} \expected (|X_n| [\tau_i > n]) = 0$; to $\expected (X_{\tau_2} \mid \mathcal F _{\tau_1}) = X_{\tau_1}$ na zbiorze $\{\tau_2 \ge \tau_1\}$ $\pstwo$-p.n.
+Dla [pod]martyngału $(X_n, \mathcal F_n)_{n=1}^\infty$ ze stałą $C$, że $\expected (|X_{n+1} - X_n| \mid \mathcal F_n) \le C$ p.n. oraz momentu stopu $\tau$ z $\expected \tau < \infty$ mamy $\expected |X_\tau| < \infty$ i $\expected X_\tau = \expected X_1$ [$\ge$].
+
+Dla nadmartyngału $(X_n, \mathcal F_n)_{n=0}^\infty$ z $\sup_n \expected X_n^- < \infty$, ciąg $X_n$ zbiega p.n. do całkowalnej.
+Dla \prawo{11.4} podmartyngału $(X_k, \mathcal F_k)_{k=1}^n$ i $r > 0$, khm-1.
+[Pod]martyngał \prawo{11.5} $(X_n, \mathcal F_n)$ \prawo{11.5} jednostajnie całkowalny $\Ra$ istnieje całkowalna $X$, granica $X_n$ p.n. i w $L^1$, że $X_1, X_2 \dots, X$ jest [pod]martyngałem.
+Dane: całkowalna $X$ na $(\Omega, \mathcal F, \pstwo)$ i ciąg $\sigma$-ciau $\mathcal F_n \subseteq \mathcal F$.
+Gdy $\mathcal F_n$ wstępuje: $\mathcal F_0 := \sigma (\mathcal F_1, \ldots)$ (zstępuje: $\mathcal F_0 := \bigcap_i F_i$).
+$\expected (X \mid \mathcal F_n) \to \expected (X \mid \mathcal F_0)$ p.n. i w $L^1$.
+\hfill Khm-1: $r \pstwo \left(\max_{k \le n} X_k \ge r\right) \le \int_* X_n \, \textrm{d} \pstwo \le \expected X_n^+ \le \expected |X_n|$ dla $* = \{\max_{k\le n} X_k \ge r\}$.
+
+\wcht{Tw. Radona-Nikodyma-Lebesgue'a}: \prawo{11.6} jeśli $\mu, \nu$ są skończonymi miarami na $(\Omega, \mathcal F)$, to istnieje mierzalna funkcja $g \colon \Omega \to \R_+$ i zbiór $S \in \mathcal F$, że $\mu (S) = 0$ i $\nu (A) = \nu (A \cap S) + \int_A g \, \D \mu$ dla $A \in \mathcal F$; $g$ jest wyznaczona z dokładnością do $\mu$-zerowych, zaś $S$: miary $(\mu+\nu)$-zerowej.
+
+\wcht{Nierówność Dooba}: \prawo{11.4Z} jeśli $(X_k)_{k=1}^n$ to martyngał, zaś $p > 1$, to khm-1.
+\wcht{Nierówność Azumy-Hoeffdinga}: jeśli $X_n$ jest martyngałem, $X_0 = 0$ i istnieją stałe $c_n$, że $\pstwo (|X_n - X_{n-1}| \le c_n) = 1$, to dla $\beta > 0$ zachodzi: $\expected [\exp \beta X_n] \le A_1$, $\pstwo (X_n > \beta) \le A_2$ i $P(|X_n| > \beta) \le 2A_2$.
+\[
+	\expected \sup_{k\le n} |X_k|^p \le \frac{p^p \cdot \expected |X_n|^p}{(p-1)^p} \spk
+	A_1 = \exp \left[ \frac{\beta^2}{2} \sum_{i=1}^n c_i^2\right] \spk
+	A_2 = \exp \left[ \frac{-\lambda^2 / 2}{\sum_{i=1}^n c_i^2} \right]
+\]

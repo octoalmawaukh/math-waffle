@@ -1,0 +1,9 @@
+\wcht{Nieskończenie podzielny} rozkład dla $X$: dla każdego $n$ istnieją iid $X_1, \ldots, X_n$, że $X$ ma rozkład $\sum_{i \le n} X_i$; wtedy charfunkcja $\varphi$ nie ma zer.
+Dla skończonej miary $\mu$, khm-1 jest charfunkcją beznadziejnej, $\infty$-podzielnej o szaleństwie $\mu(\R)$.
+Tylko takie są ,,prawem granicznym'' dla $S_n = \sum_{i \le r_n} X_{n, i}$, o beznadziejnych składnikach, że $\lim_n \max_{k \le r_n} \expected [X_{n,k}^2] = 0$, zaś $\sup_{n \ge 1} \sum_{k \le r_n} \expected [X^2_{n,k}] < \infty$.
+\wcht{Tw. Lévy'ego-Chinczyna}: $X$ jest $\infty$-podzielna $\Lra$ jej charfunkcja spełnia khm-2.
+Przykłady: Poissona, złożony Poissona, ujemny dwumianowy, Gamma, $t$-Studenta, ale nie (!) jednostajny i dwumianowy.
+\[
+	\varphi (t) = \exp \left[\int_\R \frac{\exp \textrm{i}tx - 1 - \textrm{i}tx}{x^2} \, \D\mu\right] \spk
+	\log \varphi(t) = \textrm{i} ct - \frac{\sigma^2 t^2}{2} + \int \left[ \frac{\exp \textrm{i}tx-1 -\textrm{i}tx}{1 + x^2} \right] \,\D \mu
+\]

@@ -1,0 +1,13 @@
+\wcht{Schemat serii}: \prawo{10.1} ,,tablica'' z-losowych $(X_{n, k_n})$, że $k_n \to \infty$ i $X_{n, 1}, \dots, X_{n, k_n}$ są nz; dla wygody $k_n = n$.
+\wcht{Znane CTG}: dla iid $X_n$ o wariancji $\sigma^2$ kładziemy $X_{n, k} = X_k / \sigma n^{1/2}$; wtedy ,,$\expected X_{n, k} = 0$, $\sum_{k=1}^n \variance X_{n, k} = 1$ i nic nie dominuje''. 
+\wcht{Warunek Lapunowa}: dla każdych $n, k \in \N$ istnieje $\delta > 0$, że $\expected |X_{n, k}|^{2+\delta} < \infty$ i khm-1 dla $s_n^2 = \sum_{k=1}^n \variance X_{n, k}$, pociąga \wcht{warunek Lindeberga}: dla każdego $r > 0$ khm-2.
+Zakładamy, że schemat jest \wcht{znormalizowany}: zamiast $X_{n, k}$ jest $(X_{n, k} - \expected X_{n, k}) / s_n$.
+\wcht{Tw. Berry'ego-Esseena}: jeśli z-losowe $X_n$ są iid i $\expected |X_1|^3 < \infty$, $S_n = X_1 + \ldots + X_n$, to khm-3 ($f(t) = \pstwo ((S_n - \expected S_n) / (\variance S_n)^{1/2} < t) - \Phi(t)$, $(2\pi)^{-1/2} \le C < 4/5$).
+\[
+	\frac{1}{s_n^{2+\delta}} \sum_{k=1}^n \expected |X_{n, k} - \expected X_{n, k}|^{2+\delta} \to 0 \spk
+	\frac{1}{s_n^2} \sum_{k=1}^n \expected ((X_{n, k} - \expected X_{n, k})^2 [\{|X_{n,k} - \expected X_{n,k}| > r s_n]) \to 0 \spk
+	\sup_{t \in \R} \left| f(t) \right| \le \frac{C}{\sqrt{n}} \cdot \expected \left|\frac{X_1 - \expected X_1}{[\variance X_1]^{1/2}}\right|^3
+\]
+
+\wcht{Tw. Fellera}: \prawo{10.2} gdy z-losowe $X_{n, k}$ tworzą znormalizowany schemat serii i $\sum_{k=1}^n X_{n, k} \to \mathcal N(0, 1)$ wg rozkładu oraz $\max_{k \le n} \variance X_{n, k} \to 0$, to spełniony jest warunek Lindeberga.
+Znormalizowany schemat serii jest Lindeberga $\Ra \sum_{k=1}^n X_{n, k} \to \mathcal N(0, 1)$ wg rozkładu.

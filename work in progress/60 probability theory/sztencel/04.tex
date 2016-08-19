@@ -1,0 +1,22 @@
+Zdarzenia \prawo{4.X} $A_1, \ldots, A_n$ \wcht{niezależne}: dla $m \le n$, $\pstwo \left(\bigcap_{k=1}^m A_{i_k}\right) = \prod_{k=1}^m \pstwo (A_{i_k}) \Lra$ zdarzenia $A_1^{k_1}, \ldots, A_n^{k_n}$ ($k_n \in \{0,1\}$) są nz $\Lra \sigma$-ciaua $\sigma (A_i)$ są \wcht{niezależne} ($\{\mathcal F_i \subseteq \mathcal F\}_{i=1}^n$ są nz, gdy każdy wybór $A_j \in \mathcal F_j$ daje zdarzenia nz).
+\wcht{Zadanie Banacha}: otwieramy losowo jedno z dwóch pudełek z zapałkami; jakie jest p-stwo, że drugie ma $r$ zapałek, gdy pierwsze jest puste? $(2n-k \mbox{ nad } n)/2^{2n - k}$.
+\wcht{Podział stawki}: graczom $A$/$B$ brakuje $a$/$b$ wygranych (A wygrywa z p-stwem $p$), z jakim p-stwem A się uda?
+Jeśli $\sum_{n=1}^\infty \pstwo (A_n) < \infty$, to $\pstwo (\limsup A_n) = 0$.
+Jeśli [$A_i$ są nz $\vee$ $\pstwo (A_i \cap A_j) \le \pstwo (A_i) \pstwo (A_j) \vee$ khm-2] i $\sum_n \pstwo (A_n) = \infty$, to $\pstwo (\limsup A_n) = 1$ lub ogólniej $\ldots \ge 1 : L$ (\wcht{lemat Borela-Cantelliego}, \datum{1909}). 
+%&{\color{Red} $\sum_i \pstwo (A_i) = \infty \Ra$ khm-3.}
+Do tego mamy \wcht{lemat Kochena-Stone'a}: jeżeli $L < \infty$, to nieskończenie wiele spośród $A_n$ zachodzi z dodatnim p-stwem.
+\[
+ 	p^a \sum_{n=0}^{b-1} {n+a-1 \choose a-1} \cdot (1-p)^n \spk
+ 	\liminf_{n\to\infty} \frac {\sum_{i=1}^n \sum_{j=1}^n \pstwo (A_i \cap A_j)}{[\sum_{j=1}^n \pstwo (A_j)]^2} = L
+ %	\color{Red} \pstwo(\limsup A_n) \ge 2 - \liminf_{n\to \infty}\frac{\sum_{i=1}^n \sum_{j=1}^n \pstwo(A_i)\pstwo(A_j)}{[\sum_{j=1}^n \pstwo(A_j)]^2}
+\]
+
+\wcht{Kopuła} wymiaru $d$: łączna dystrybuanta $[0,1]^d \to [0,1]$ o jednostajnych rozkładach brzegowych.
+\wcht{Tw. Sklara} (\datum{1959}): łączna dystrybuanta wektora $\pstwo(X_1 \le x_1, \ldots, X_d \le x_d)$ jest jakąś kopułą od dystrybuant brzegowych $F_i(x) = \pstwo (X_i \le x)$.
+\wcht{Ograniczenia Frecheta, Hoeffdinga}: gdy $u_i \in [0,1]$ (dla $1 \le i \le d$), zachodzi khm-1 ($C$: kopuła).
+Kopuła \wcht{Archimedesa}: da się przedstawić jako khm-2, gdzie $\psi \colon [0,1] \times \Theta \to [0, \infty)$ jest ciągła, ściśle malejąca, wypukła z $\psi(1; \theta) = 0$ (\wcht{generująca}), $\psi^{[-1]}(t; \theta)$ to pseudoodwrotność: $0$ dla $\psi(0; \theta) \le t$.
+Przykłady: niezależna ($uv$), Ali-Mikhail-Haq ($uv[1-\theta(1-u)(1-v)]^{-1}$ dla $\theta \in [-1, 1)$), Clayton ($[\max \{u^{-\theta} + v^{-\theta} - 1, 0\}]^{- 1 / \theta}$ dla $\theta \ge -1$, nie $0$), jest jeszcze Franka, Gumbela ($\exp [-((-\log u)^\theta + (-\log v)^\theta)^{1/\theta}]$, $\theta \ge 1$) i Joe (dla $\theta \ge 1$: $1 - [(1 - u)^\theta + (1-v)^\theta - (1-u)^\theta(1-v)^\theta]^{1 / \theta}$).
+\[
+	\max \left\{1 - d + \sum_{i=1}^d u_i, 0 \right\} \le C(u_1, \ldots, u_d) \le \min \{u_1, \ldots, u_d\} \spk
+    C(u_1,\dots,u_d;\theta) = \psi^{[-1]}\left(\sum_{k=1}^d \psi(u_1;\theta); \theta\right)
+\]

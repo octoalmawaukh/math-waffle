@@ -1,0 +1,62 @@
+W \prawo{6.2} tym rozdziale żyjemy w $(\Omega, \mathcal M, \pstwo)$, wszystkie $\sigma$-ciaua zawierają się w $M$.
+Mamy \wcht{warunkowa wartość oczekiwaną} (khm-1) dla $\pstwo_A(B)$ równego $\pstwo (B \mid A)$ i $X$ o skończonej nadziei.
+Jeżeli $\pstwo(A) > 0$, to khm-2.
+Jeżeli $\{A_i\}$ to przeliczalne rozbicie $\Omega$ i $\pstwo(A_i) > 0$, zaś z-losowa $X$ jest caukowalna, to khm-3.
+Jeśli $\Omega = \bigcup_i B_i$, $\pstwo(B_i) > 0$ i $\mathcal G = \sigma(B_i : i \in I)$, to $\expected (X \mid \mathcal G)(\omega) = \sum_{i \in I} \expected (X \mid B_i) [\omega \in B_i]$. 
+Tak zefiniowana z-losowa jest $\mathcal G$-mierzalna; dla $B \in \mathcal G$ mamy khm-4.
+\[
+	\expected (X \mid A) := \int_\Omega X \,\D \pstwo_A = \int_A \frac{X}{\pstwo(A)} \,\D \pstwo \spk
+	\expected X = \sum_{i=0}^\infty \expected (X \mid A_i) \cdot \pstwo (A_i) \spk
+	\int_B X \,\D\pstwo = \int_B \expected (X \mid \mathcal G) \,\D\pstwo
+\]
+
+\wcht{Warunkowa wartość oczekiwana} \prawo{6.3} całkowalnej z-losowej $X$ pod warunkiem $\sigma$-ciaua $\mathcal F \subseteq \mathcal M$ to $\mathcal F$-mierzalna z-losowa $\expected (X \mid \mathcal F)$, że dla $A \in \mathcal F$ całki z ,,$X \, \D \pstwo$'', ,,$\expected (X \mid \mathcal F) \, \D \pstwo$'' nad $A$ są równe.
+Zawsze istnieje, jednoznacznie z dokładnością do zdarzeń o p-stwie zero.
+\wcht{Wielkie twierdzenie}: z-losowe $X, X_i$ mają skończoną nadzieję, $\mathcal G \subseteq \mathcal F \subseteq \mathcal M$ to $\sigma$-ciaua.
+\wcht{Nierówność Jensena}: dla wypukłej $\varphi \colon \R \to \R$, z-losowych $X$, $\varphi(X)$ z $L^1(\Omega, \mathcal M, \pstwo)$ i $\sigma$-ciaua $\mathcal F \subseteq \mathcal M$ mamy $\varphi (\expected(X \mid \mathcal F)) \le \expected (\varphi(X) \mid \mathcal F)$ p.n.
+Jeżeli z-losowa $X$ spełnia $\expected |X| < \infty$, zaś $Y$ ma wartości w $\R^n$, to istnieje borelowska $h \colon \R^n \to \R$, że $\expected (X \mid Y) = h(Y)$.
+Warwaroczem z-losowej $X$ pod warunkiem $\{Y = y\}$ nazywamy $h(y)$.
+
+\wcht{4.A}: dla $\mathcal F$-mierzalnej $X$: $\expected (X\mid \mathcal F) = X$ p.n.
+\wcht{4.B}: dla $X \ge 0$: $\expected (X \mid \mathcal F) \ge 0$ p.n.
+\wcht{4.C}: $|\expected(X \mid \mathcal F)| \le \expected (|X| \mid \mathcal F)$ p.n.
+\wcht{4.D}: $\expected (\alpha X_1 + \beta X_2 \mid \mathcal F)$ jest równe $\alpha \cdot \expected (X_1 \mid \mathcal F) + \beta \cdot \expected (X_2 \mid \mathcal F)$ p.n.
+\wcht{4.E}: $X_n \uparrow X$ implikuje $\expected (X_n \mid \mathcal F) \uparrow \expected(X \mid \mathcal F)$ p.n. 
+\wcht{4.G}: $\expected X = \expected( \expected (X \mid \mathcal F))$ p.n.
+\wcht{4.F}: $\expected (X \mid \mathcal G)$, $\expected (\expected (X \mid  \mathcal F) \mid  \mathcal G)$ oraz $\expected (\expected (X \mid  \mathcal G) \mid \mathcal F)$ są równe sobie p.n.
+\wcht{4.H}: dla niezależnych $\mathcal F$ i $\sigma(X)$: $\expected(X \mid \mathcal F) = \expected X$ p.n.
+\wcht{4.I}: dla ograniczonej oraz $\mathcal F$-mierzalnej z-losowej $Y$, $\expected (XY \mid \mathcal F) = Y \expected (X \mid \mathcal F)$.
+
+\wcht{Warunkowy Fatou}: dla $X_n \ge 0$ mamy $\expected (\liminf X_n \mid \mathcal F) \le \liminf \expected (X_n \mid \mathcal F)$.
+\wcht{Levi}: gdy $|X_n (\omega)| \le Y (\omega)$, $\expected Y < \infty$ oraz $X_n \to X$ p.n., to $\lim_n \expected (X_n \mid \mathcal F) = \expected (X \mid \mathcal F)$ p.n.
+\wcht{Wariancja}: $\variance (X \mid \mathcal F) := \expected ((X - \expected (X \mid \mathcal F))^2 \mid \mathcal F)$, gdy $\expected X^2 < \infty$, wtedy $\variance X = \expected \variance (X \mid \mathcal F) + \variance \expected (X \mid \mathcal F)$.
+\wcht{Fubini}: $\sigma$-ciauo $\mathcal F \subseteq \mathcal M$, p. mierzalna $(E, \Sigma, \mu)$, $X \in L^1 (E \times \Omega, \Sigma \times \mathcal F, \mu \times \pstwo)$.
+Wtedy khm-1, khm-2.
+\wcht{Niezależność} $\sigma$-ciau $\mathcal F_1, \ldots, \mathcal F_n; \mathcal G \subseteq M$: $\pstwo (\bigcap_{i=1}^n A_i \mid \mathcal G) = \prod_{i=1}^n \pstwo (A_i \mid \mathcal G)$ dla każdego $A_i \in \mathcal F_i$.
+$\mathcal F, \mathcal H$ są wnz względem $\mathcal G$ $\Lra$ dla każdego $H \in \mathcal H$, $\pstwo (H \mid \mathcal F \vee \mathcal G) = \pstwo (H \mid \mathcal G)$ p.n.
+\[
+	\expected \left | \int_E \expected (X_s \mid \mathcal F) \mu(\D s) \right| < \infty \spk
+	\expected \left[\left. \int_E X_s \mu(\D s) \right\mid \mathcal F \right] = \int_E \expected(X_S \mid \mathcal F) \mu (\D s)
+\]
+
+\wcht{P-stwo warunkowe} \prawo{6.4} $A \in \mathcal M$ pod warunkiem $Y = y$: $\pstwo(A \mid Y = y) := \expected (1_A \mid Y= y)$. 
+Gdy $(X,Y)$ ma ciągły rozkład o gęstości $g$, to khm-1 i khm-2 dla tych borelowskich $\varphi$, że $\expected |\varphi(x)| < \infty$ (gdy mianownik się zeruje, kładziemy $0$ po prawej).
+\wcht{Uogólniony Bayes} $\mathcal G \subseteq \mathcal F$: $\sigma$-ciało, $B \in \mathcal G$, $A \in \mathcal F$, $\pstwo(A) > 0$ i ,,$\pstwo(A\mid \mathcal G) = \expected(\mathbb I_A \mid \mathcal G)$ dają khm-3.
+\wcht{Abstrakcyjny}: $P, Q$ miarami probabilistycznymi na $(\Omega, \mathcal F)$, że gęstość $\D Q / \D P = Z >0$ istnieje, $\mathcal G \subseteq \mathcal F$, $X$: z-losowa $Q$-caukowalna; wtedy: $\expected_Q X = \expected_P XZ$ i khm-4 jest równe $\expected_Q (X \mid \mathcal G)$.
+\[
+	\pstwo (X\in B \mid Y) = \frac{\int_B g(x, Y) \, \D x}{\int_\R g(x,Y) \, \D x} \spk
+	\expected (\varphi(x) \mid Y) = \frac{\int_\R \varphi(x) g(x, Y) \, \D x}{\int_\R g(x,Y) \, \D x} \spk
+	\pstwo (B \mid A) = \frac{\int_B \pstwo (A \mid \mathcal G) \, \D \pstwo}{\int_\Omega \pstwo(A \mid \mathcal G) \, \D \pstwo} \spk
+	\frac{\expected_P(XZ \mid \mathcal G)}{\expected_P (Z \mathcal G)}
+ \]
+
+\wcht{P-stwo} $B$ \prawo{6.5} pod warunkiem $\sigma$-ciaua $\mathcal F$: $\mathcal F$-mierzalna z-losowa $\pstwo (B \mid \mathcal F) := \expected (1_B \mid \mathcal F)$ o wartościach w $[0,1]$.
+Khm-1 ($A \in \mathcal F$); jeśli $B_n$ są rozłączne parami, to khm-2.
+\wcht{Regularny rozkład warunkowy} względem $\mathcal F$: funkcja $\pstwo_{\mathcal F} \colon \mathcal M \times \Omega \to [0,1]$, że $\pstwo_{\mathcal F} (B, \cdot)$ jest wersją $\expected(1_B, \mathcal F)$, zaś $\pstwo_{\mathcal F}(\cdot, \omega)$ to rozkłady p-stwa na $\mathcal M$.
+Dla całkowalnej z-losowej $X$: khm-3. 
+,,Regrowar'' nie musi istnieć, lecz istnieje on dla z-losowej $X$ pod warunkiem $\sigma$-ciaua $\mathcal F$ (funkcja $\pstwo_{X \mid \mathcal F}$ na $\mathfrak B(\R) \times \Omega$, że $\pstwo_{X \mid \mathcal F}(B, \omega) = \pstwo (X \in B \mid \mathcal F)(\omega)$, zaś $\pstwo_{X \mid \mathcal F}(\cdot, \omega)$ to rozkłady p-stwa na $\mathfrak B(\R)$).
+\[
+	\pstwo (A \cap B) = \int_A \pstwo (B \mid \mathcal F) \, \D \pstwo \spk
+	\pstwo \left(\left. \bigcup_{n=1}^\infty B_n \right \mid \mathcal F \right) = \sum_{n=1}^\infty \pstwo (B_n \mid \mathcal F) \textrm{ p.n.} \spk
+	\expected (X \mid \mathcal F)(\omega) = \int_{\Omega} X (\tilde{\omega}) \pstwo_{\mathcal F} (\D{} \tilde{\omega}, \omega) \textrm{ p.n.}
+\]

@@ -1,0 +1,48 @@
+Z-losowa $X_n$ generuje \prawo{7.2} $\sigma$-ciauo $\mathcal F_n \subseteq \mathcal F$, zasób wiedzy o $(\Omega, \mathcal F, \pstwo )$ w chwili $n$; $\sigma$-ciało \wcht{ogonowe/resztowe} to $\mathcal F_\infty = \bigcap_{\downarrow} \mathcal F_{n, \infty}$, gdzie $\mathcal F_{n, \infty}$ to wiedza o przyszłości ($\sigma(\mathcal F_n, \mathcal F_{n+1}, \dots)$).
+\wcht{Prawo 0-1 Kołmogorowa}: jeśli $\sigma$-ciała $\mathcal F_n$ są nz, to dla $A \in \mathcal F_{\infty}$ jest $\pstwo (A) \in \{0,1\}$; zatem: z-losowe $X_n$ są nz $\Ra$ $\sum_{n=1}^\infty X_n$ zbiega z p-stwem $0$ lub $1$.
+\wcht{Tw. Hewitta-Savage'a}: [$X_1, \ldots$ są iid, $B \in \mathfrak B(\R^\infty)$, $A = \{(X_1, \ldots) \in B\}$ jest \wcht{permutowalne}: jeśli bijekcja $\pi \colon \N \to \N$ permutuje skończenie wiele wyrazów, to $\pi(A) := \{(X_{\pi(1)}, X_{\pi(2)}, \ldots) \in B\} = A$] pociąga $\pstwo (A) \in \{0, 1\}$.
+
+\wcht{Nierówność Levy'ego-Ottavianiego}: \prawo{7.3} gdy z-losowe $X_i$ są nz i $\varepsilon > 0$, to khm-1; $X_i$ symetryczne: khm-2.
+\wcht{Tw. o dwóch szeregach}: $X_i$ są nz, $\sum_{i=1}^\infty \expected X_i$ i $\sum_{i=1}^\infty \variance X_i$ są zbieżne $\Ra$ $\sum_{i=1}^\infty X_i$ też, ale p.n.
+\wcht{Tw. Kołmogorowa o trzech}: dla pewnego $c > 0$, $(*)$ są zbieżne $\Ra$ $\sum_i X_i$ zbiega p.n. $\Lra$ $\sum_i X_i$ zbiega wg p-stwa (\wcht{Levy}) $\Ra$ dla każdego $c > 0$\ldots{} 
+\wcht{Nierówność Kołmogorowa}: jeśli $X_1, \dots, X_n$ są nz, $\expected X_i = 0$, $\expected X_i^2 < \infty$ i $\varepsilon > 0$, to $p_n = \pstwo (\max_{k \le n} |S_k| \ge \varepsilon) \le \expected (S_n/\varepsilon)^2$; $P(|X_i| \le C) = 1$ i $\expected S_n^2 > 0$ dają $p_n \ge 1 - (C + \varepsilon)^2 / \expected S_n^2$.
+\hfill $X^{(c)} = X [|X| \le c]$. $S_k = X_1 + \dots + X_k$.
+\[
+	\pstwo (\max_{i \le n} |S_i| > \varepsilon) \le 3 \max_{i \le n} \pstwo (|S_i| > \varepsilon/3) \spk
+	\pstwo (\max_{i \le n} |S_i| > \varepsilon) \le 2 \pstwo (|S_n| > \varepsilon)
+	\hfill (*)
+	\sum_{i=1}^\infty \expected X_i^{(c)} \spk
+	\sum_{i=1}^\infty \variance X_i^{(c)} \spk
+	\sum_{i=1}^\infty \pstwo (|S_i|> c)
+\]
+
+Tu $S_n$ \prawo{7.4} zlicza sukcesy w schemacie Bernoulliego ($n$ prób, p-stwo sukcesu $p$).
+\wcht{PWL, Bernoulli}: $\lim_{n \to \infty} \pstwo (|S_n/n - p| \le \varepsilon) = 1$. 
+\wcht{Nierówność Bernsteina}: $\pstwo (|S_n/n - p| > \varepsilon) \le 2 \exp (-2n \varepsilon^2)$. 
+\wcht{MPWL Bernoulliego}: $S_n/n \to p$ p.n., ogólnie: \wcht{MPWL} dla $X_n$ oznacza, że $(T_n - \expected T_n)/n \to 0$ p.n.; zaś \wcht{SPWL}, że wg p-stwa (np. gdy $(\variance T_n)/n^2 \to 0$, $X_n$ są parami nieskorelowane i mają ograniczony drugi moment).
+\wcht{Tw. Kołmogorowa}: $X_i$ to nz z-losowe, $\variance X_n < \infty$, dodatni ciąg $b_n$ rozbiega monotonicznie do $\infty$, że $\sum_{n=1}^\infty \variance (X_n/b_n) < \infty$: MPWL.
+\wcht{MPWL Kołmogorowa}: $X_i$ są iid, $\expected |X_1| <\infty$.
+\emph{Dla zwiększenia czytelności $T_n = X_1 + \dots + X_n$.}
+
+\wcht{Tw. Bernsteina}: jeśli $\variance X_n \le C < \infty$ i $\rho(X_i, X_j) \to 0$ (współczynnik korelacji) dla $|i - j| \to \infty$, to $X_n$ spełnia SPWL.
+\wcht{Tw. Chinczyna}: jeśli parami nz z-losowe $X_n$ mają jeden rozkład i $|\expected X_1| < \infty$, to dla $X_n$ zachodzi SPWL.
+\wcht{Tw. Marcinkiewicza}: jeśli $X_n$ są iid i $\expected |X_1|^p <\infty$ dla pewnego $p \in (0,2)$, to $\pstwo (\lim_n (T_n-nu) / n^{1/p} = 0) = 1$, gdzie $u = \expected X_1 \cdot [p \ge 1]$.
+\wcht{Tw. Etemadiego}: jeżeli parami nz z-losowe $X_n$ mają jeden rozkład i $\expected |X_1| < \infty$, to $T_n/n \to \expected X_1$ p.n.
+
+\wcht{Tw. Poissona}: \prawo{7.5} jeżeli $n \to \infty$, $p_n \to 0$, i $n p_n \to \lambda > 0$, to khm-1.
+Jeżeli iid z-losowe $X_1, \ldots$ mają rozkład $\pstwo (X_i = 1) = p$ i $1 - p = \pstwo (X_i = 0)$, $\lambda = np$ i $T_n = X_1 + \dots + X_n$, zaś $B \in \mathfrak B(\R)$, to mamy mocne uogólnienie, khm-2.
+\[
+	{n \choose k} \cdot p_n^k (1-p_n)^{n-k} \stackrel{n \to \infty}{\to} \frac{\lambda^k}{k!} e^{-\lambda} \spk
+	\left|\pstwo (T_n \in B) - \sum_{k = 0}^\infty \frac{\lambda^k}{k!} \cdot \frac{[k \in B]}{\exp \lambda} \right| \le \frac{\lambda^2}{n} 
+\]
+
+Przyjmijmy $B(k,n,p) = C_k^n p^k q^{n-k}$, $h = (npq)^{-1/2}$, $\delta_k = k - np$ oraz $x_k= \delta_k h$.
+\wcht{Tw. de Moivre'a-Laplace'a}: \prawo{7.6} gdy $h |x_k| \max(p,q) \le .5$, to khm-1, przy czym $|R(n,k)| \le {3|x_k|h}/{4} + |x_k|^3h/3 + 1/3n$ (\wcht{lokalne}).
+Kiedy $h \max(|x_a|, |x_b|) \max(p,q) \le .5$ i khm-2, to mamy \wcht{integralne}: $\pstwo (a \le S_n \le b) = [\Phi(x_{b + 1/2}) - \Phi(X_{a - 1/2})] \exp D(n,a,b)$ .
+\wcht{Nierówność Bernsteina}: jeśli $X_1, \dots, X_n$ są iid, $|X_i| \le K$, $\expected X_i = 0$, $\expected X_i^2 = \sigma^2$ oraz $S_n = X_1 + \dots + X_n$, to khm-3.
+\wcht{Trzy sigmy dla schematu Bernoulliego}: $\pstwo (np - 3/h < S_n < np + 3/h) \ge 0.997$ gdy $n > 9 \max (q/p, p/q)$.
+\[
+	B(k,n,p) = \frac{\exp(R(n,k) - x^2_k/2)}{\sqrt{2\pi n p q}} \spk
+	|D(n,a,b)| \le \max_{k\in\{a,b\}} \left[\frac{5 |x_k| h}{4} + \frac{|x_k|^3 h}{3} \right] + \frac{1}{3n} + \frac{h^2}{8} \spk
+	\frac{\pstwo (|S_n| > t \sigma \sqrt{n})}{2} \le \exp \frac{-t^2/2}{1 + Kt / [3\sigma \sqrt{n}]}
+\]

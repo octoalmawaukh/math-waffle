@@ -1,0 +1,90 @@
+\wcht{Zmienna losowa} \prawo{5.1} to $\mathcal F$-$\mathfrak B$-mierzalne $\Omega \to \R^n$, generuje $\sigma$-ciauo na $\Omega$, $\mathcal F_X = \{X^{-1}(B) : B \in \mathfrak B\}$, najmniejsze z którym jest mierzalna.
+\wcht{Rozkład p-stwa}: na $\R^n$ (unormowana miara na $\mathfrak B(\R^n)$) lub z-losowej $X$ (rozkład na $\mathfrak B(\R^n)$ przez $\mu_X (B) = \pstwo(X \in B)$).
+\wcht{Gęstość} rozkładu $\mu$ na $\R^n$: Le-całkowalna $f \colon \R^n \to \R$, że $\mu(A)$ to całka z $f(x)$ nad $A$ (jest nieujemna i wyznaczona z dokładnością do Le-zerowych); takie rozkłady są \wcht{ciągłe}.
+Rozkład \wcht{dyskretny}: istnieje $S \simeq \Z$, że $\mu(S) = 1$.
+\wcht{Dystrybuanta}: $F_X(t_1, \dots, t_n) = \pstwo (X_1 \le t_1, \dots, X_n \le t_n)$ -- ,,cdf''.
+
+Funkcja $F$ jest ,,cdf'' \prawo{5.2} na \prawo{5.3} $\R$ \prawo{5.4} $\Lra$ jest niemalejąca, prawo-ciągła i $\lim_{t \to +\infty} F(t) = 1$ ($0$ dla $-\infty$).
+Dla $\R^n$ podobnie:  $t \to \pm \infty$ zamieniamy na $\inf_i x_i \to \pm \infty$, niemalejąca dla każdego argumentu i dokładamy khm-1 dla $x_k \le y_k$ i $e_i \in \{0,1\}$.
+Rozkłady o równych ,,cdf'' są równe (na $\mathfrak B$).
+Całkując gęstość można nie odtworzyć ,,cdf'' (!).
+Jeśli pochodna ,,cdf'' $F$ istnieje p.w. i $\int_\R F' = 1$, to $F'$ jest gęstością tego rozkładu.
+\[
+	\sum_{e_1=0}^1 \sum_{e_2=0}^1 \cdots \sum_{e_n = 0}^1 \left[\prod_{i=1}^n (-1)^{e_i}\right] F (\mbox{,,} e_ix_i + (1-e_i)y_i\mbox{''}) \ge 0 \spk
+	g(y) = \sum_{k=1}^n f(h_k(y)) \cdot {|h_k'(y)|} \cdot [y \in \varphi(\operatorname{int} I_k)]
+\]
+
+Jeśli \prawo{5.5} z-losowa $a < X < b$ ma gęstość $f$, zaś pochodna $\mathscr C^1$-funkcji $\varphi \colon (a,b) \to \R$ nie znika, to $Y = \varphi(X)$ ma gęstość $g(y) = f(h(y)) |h'(y)|$ dla $y$ w obrazie $\varphi$ (i zero poza nimi).
+Przydatne uogólnienie: jeśli $X (\Omega) \subseteq I = \bigcup_{k=1}^n [a_k, b_k]$ ($I_k$ mają rozłączne wnętrza!), zaś $\varphi \colon I \to \R$ jest $\mathscr C^1$ na $\operatorname{int} I_k$ (i $\varphi'$ nie znika tamże), to stosować można prawy wzór nad tym paragrafem. \hfill $h$: odwrotna do $\varphi$ ($h_k$: na $\operatorname{int} I_k$).
+
+\wcht{Nadzieja} \prawo{5.6} $\expected X$: khm-1 dla bezwzględnie całkowalnej $X \colon \Omega \to \R$.
+Jeśli $\varphi \colon \R^n \to \R$ jest borelowska, to khm-2 (2' dla ciągłych rozkładów).
+Jeśli $X \ge 0$, to $\expected X = \int_0^\infty \pstwo (X > t) \,\D t$.
+\wcht{Wariancja}: $\variance X = \expected [X^2] - [\expected X]^2$.
+\wcht{Moment absolutny}: $\expected |X - a|^r$, zwykły: $\expected (X-a)^r$, centralny: $a = \expected X$.
+\wcht{Skośność}: $\alpha_3$, \wcht{kurtoza}: $\alpha_4$.
+\wcht{Macierz kowariancji}: $Q_X = [c_{ij}]$, gdzie $c_{ij} = \operatorname{cov} (X_i, X_j) = \expected [X_iX_j] - \expected X_i \expected X_j$, nieujemnie określona.
+\[
+	\expected X = \int_\Omega X \,\D\pstwo \spk
+	\expected [\varphi(X)] = \int_{\R^n} \varphi(x) \mu_X (\D x) = \int_{\R^n} \varphi(x) g(x) \, \D x \spk
+	\alpha_3 = \frac{\expected [X - \expected X]^3}{(\variance X)^{3/2}} \spk
+	\alpha_4 = \frac{\expected [X - \expected X]^4}{(\variance X)^2} - 3
+\]
+
+{\raggedright
+\wcht{Schwarz}: \prawo{5.7} $(\expected |XY|)^2 \le \expected X^2 \expected Y^2$.
+\wcht{Jensen}: $g(\expected X) \le \expected [g(X)]$. 
+\wcht{Hölder}: $\expected |XY| \le (\expected |X|^p)^{1/p} (\expected |Y|^q)^{1/q}$.
+\wcht{Czebyszew}: $\pstwo(X \ge \varepsilon) \le (\expected X) / \varepsilon$.
+\wcht{Minkowski}: $(\expected |X+Y|^p)^{1/p} \le (\expected |X|^p)^{1/p}$ $+ (\expected |Y|^p)^{1/p}$.  
+\wcht{Markow}: $\pstwo(|X| \ge \varepsilon) \le {\expected (|X|^p)}/{\varepsilon^p}$.
+\wcht{Czebyszew-Bienaymé}: khm-1.
+\wcht{Czebyszew} wykładniczy: khm-2-3, gdzie $\esssup X = \inf \{t \in \R : F_X(t) = 1\}$.
+Założenia: $\varepsilon > 0$, $p,q \ge 1$.
+\wcht{1}: $\expected X^2, \expected Y^2 < \infty$. 
+\wcht{2}: $\expected |g(X)|, \expected |X| < \infty$, $g$ wypukła.
+\wcht{3}: $\frac{1}{p} + \frac{1}{1} = 1$ i $\expected |X|^p, \expected |Y|^q < \infty$. 
+\wcht{5}: $X \ge 0 $.
+\wcht{4, 6, 7}: ---. 
+\wcht{8}: $\expected [\exp(rX)] < \infty$ i $r > \lambda > 0$. 
+\wcht{9}: $g \colon \R \to \R_+$ borelowska i niemalejąca.}
+\[
+	\pstwo(|X - \expected X| \ge \varepsilon) \le {\variance X}/{\varepsilon^2} \spk
+	\pstwo(X \ge \varepsilon) \le \expected [\exp (\lambda X - \lambda \varepsilon)] \spk
+	[\expected g(X) - g(a)] : {\esssup g(X)} \le \pstwo(X \ge a) \le \expected [{g(X)}/{g(a)}]
+\]
+
+Z-losowe \prawo{5.8} $X_j \in \R$ są \wcht{niezależne}* $\Lra$ generuję nz $\sigma$-ciaua $\Lra F(t) = \prod_{i=1}^n F_{X_i}(t_i)$.
+Dla ciągłych: gęstość jest produktem gęstości.
+Z-losowe są nz $\Lra$ skończone podzbiory są.
+Zbiory zdarzeń $\Xi_i$ ($i \in I$) są nz: dla skończonych $J \subseteq I$ oraz $A_j \in \Xi_j$ ($j \in J$) jest $\prod_{j} \pstwo(A_j) = \pstwo (\bigcap_{j}A_j)$.
+Rodzina $\pi$-układów $\{\Xi_i : i \in I\}$ jest nz $\Lra \sigma$-ciaua $\{\sigma(\Xi_i) : i \in I\}$ są.
+,,Funkcje borelowskie od nz zmiennych są nz''.
+$\expected [\prod_{i=1}^n X_i] = \prod_{i=1}^n \expected X_i$ i $\variance [\sum_{i=1}^n X_i] = \sum_{i=1}^n \variance X_i$, o ile $X_1, \dots, X_n$ są nz.
+Rozkład sumy nz z-losowych: splot rozkładów składników.
+\hfill *: $X_j$ na jednej przestrzeni!
+
+\wcht{Symetryczna nierówność Bernsteina}: $U_n$ ciągiem Bernoulliego, $S_n = U_1 + \dots + U_n$: $\pstwo (S_n/\sqrt{n} > r) \le e^{-r^2/2}$.
+Nierówność \wcht{Hardy'ego-Littlewooda} ($\liminf_n \ge -1$).
+\wcht{Hoeffdinga}: $X_1, \dots, X_n$ ograniczone, nz, $\pstwo (X_i \in [a_i, b_i]) =  1$: $\pstwo(|S_n - \expected S_n| \ge \varepsilon) \le \exp(-2\varepsilon^2 / \sum_i (b_i-a_i)^2)$.
+\wcht{Tw. Sheppa}: nz $X, Y$ mają jeden rozkład i średnią zero $\Ra \expected |X+Y| \ge \expected |X-Y|$.
+\wcht{Tw. Bennetta}: jeśli $X_1, \dots, X_n$ są nz z-losowymi o średniej zero, całkowalnymi z kwadratem i $X_i \le b \ge 0$ ($b$: jakieś) p.n., to dla każdego $\varepsilon > 0$ jest coś [$h(u) = (1+u)\ln(1+u) - u$ i $\sigma^2 = (\sum_i \variance X_i)/n$].
+\[
+	\limsup_n \frac{S_n}{\sqrt{2n \log n}} \le 1 \text{ (p.n.)} \spk
+	\pstwo \left(\sum_{i=1}^n \frac{X_i}{n} > \varepsilon \right) \le \exp \left(\frac{-n\varepsilon^2}{2(\sigma^2 + \varepsilon/3)} \right) \spk
+	\pstwo \left(\sum_{i=1}^n {X_i} > \varepsilon \right) \le \exp \left[-n \sigma^2 h \left(\frac{t}{n \sigma^2}\right) \right]
+\]
+
+Zbieżność \prawo{5.9} $X_n$ do $X$: \wcht{prawie na pewno} [$\pstwo(\{\omega: \lim X_n(\omega) = X(\omega)\}) = 1$] $\Lra$ khm-1, khm-2
+$\Ra$ według \wcht{p-stwa} [$\lim_n \pstwo (|X_n-X| > \varepsilon) = 0$ dla każdego $\varepsilon > 0$] $\Leftarrow$ \wcht{według $p$-tego momentu} ($0 < p < \infty$, $\expected |X|^p, \expected |X_n|^p < \infty$, $\lim_n \expected |X_n-X|^p = 0$).
+Jeżeli $\esssup_{n} X_n \le K$, to $\Leftarrow$ staje się $\Lra$.
+\wcht{Tw. Riesza}: ciąg zbieżny wg p-stwa do $X$ ma podciąg zbieżny tam p.n.
+Zbieżność wg p-stwa do $X$ $\Lra$ każdy podciąg ma podciąg zbieżny p.n do $X$ $\Lra$ khm-3, khm-4.
+Jeśli $X_n \to X$, $Y_n \to Y$ (wg p-stwa albo p.n.), to $X_n Y_n \to XY$ i $aX_n + bY_n \to aX + bY$.
+Jeśli $\pstwo (X \neq 0) = 1$, to $[X_n \neq 0]/X_n \to 1/X$.
+\wcht{Tw. Pratta}: [$X_n \le Y_n \le Z_n$ p.n. zbiegają do $X,Y,Z$ (wg $\pstwo$) i ,,$\expected X_n, \expected Z_n \to \expected X, \expected Z < \infty$''] $\Ra$  $\expected Y_n \to \expected Y <\infty$.
+\[
+ 	(\forall \varepsilon > 0) \lim_{N \to \infty} \pstwo \left(\bigcap_{n=N}^\infty \{|X_n - X| \le \varepsilon\} \right) = 1 \spk
+ 	(\forall \varepsilon > 0) \lim_{N \to \infty} \pstwo \left(\bigcup_{n=N}^\infty \{|X_n - X| > \varepsilon\} \right) = 0 \spk
+ 	({\forall} / {\exists} p > 0) \, \expected \frac{|X_n - X|^p}{1 + |X_n - X|^p} \to 0
+ \]

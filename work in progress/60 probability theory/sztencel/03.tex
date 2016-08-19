@@ -1,0 +1,10 @@
+\wcht{Schemat Polya}: \prawo{3.X} p-stwo wyciągnięcia $k$ czarnych w $n$ losach z urny (początkowo: $b$ białych, $c$ czarnych, za każdym razem zwracamy nie $1$, tylko $d + 1$) to $(-c/d \mbox{ nad } k)(-b/d \mbox{ nad } n-k)/(-(c + b)/d \mbox{ nad } n)$.
+\wcht{P-stwo} zajścia $A$ \wcht{pod warunkiem} $B$: $\pstwo (A \mid B)$.
+\wcht{P-stwo całkowite}: jeśli $\{B_i\}_1^n$ jest \wcht{rozbiciem} $\Omega$ (rozłączna unia $B_i$ to $\Omega$) i $\pstwo (B_i) > 0$, to $\pstwo (A) = \sum_{k=1}^n \pstwo (A \mid B_k) \pstwo (B_k)$; po wyrafinowaniu: khm-2 ($H_i$ to rozbicie $\Omega$, $\pstwo(H_i) > 0$).
+\wcht{Wzór Bayesa}: $\{H_i\}_1^\infty$ to rozbicie $\Omega$, $\pstwo (H_i), \pstwo (A) > 0$ pociąga khm-3.
+\hfill $* = \{k : \pstwo (B\cap H_i) > 0\}$
+\[
+	\pstwo(A \mid B) = \frac{\pstwo (A \cap B)}{\pstwo (B)} \spk
+	\pstwo(A \mid B) = \sum_* \pstwo (A \mid B \cap H_k) \pstwo (H_k \mid B) \spk
+	\pstwo(H_j \mid A) = \frac{\pstwo (A \mid H_j) \pstwo (H_j)}{\sum_{i=1}^\infty \pstwo (A\mid H_i) \pstwo(H_i)} 
+\]

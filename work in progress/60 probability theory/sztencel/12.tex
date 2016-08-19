@@ -1,0 +1,47 @@
+\wcht{Łańcuch Markowa}: ciąg \prawo{12.1} z-losowych $X_n \colon \Omega \to S$ (przeliczalna \wcht{przestrzeń stanów}) spełniający khm-1.
+\wcht{Macierz stochastyczna}: $(p_{ij})$, gdy $p_{ij}\ge 0$ to p-stwo przejścia z $i \in S$ do $j \in S$ oraz $\sum_j p_{ij} = 1$.
+Rozkład \wcht{początkowy}: rozkład $X_0$.
+Łańcuch \wcht{jednorodny}: istnieje jedna macierz przejścia ,,dla każdego kroku''.
+Dla każdego rozkładu p-stwa na $S$ i macierzy przejścia istnieje zgodny z nimi łańcuch Markowa.
+\[
+	\textrm{\wcht{własność Markowa}: } \pstwo (X_n = s_n \mid X_{n-1} = s_{n-1}, \dots, X_0 = s_0) = \pstwo (X_n = s_n \mid X_{n-1} = s_{n-1})
+\]
+
+Podstawowe własności jednorodnego łańcucha Markowa (przy założeniu dodatnich p-stw warunków) dla $m, n \in \N$ i $s, i, j \in S$:
+\begin{enumx}
+	\item $\pstwo (X_1 = s_1, \ldots, X_n = s_n \mid X_0 = s_0) = \pstwo (X_{m+1} = s_1, \ldots, X_{n+m} = s_n \mid X_m = s_0)$.
+	\item $\pstwo (X_{n+m} = s_1 \mid X_m = s_0) = \pstwo (X_n = s_1 \mid X_0 = s_0)$
+	\item $\pstwo (X_1 = i_1, \ldots, X_m = i_m, X_{m+1} = j_1, \ldots, X_{m+n} = j_n \mid X_0 = i_0) = \pstwo (\{X_t = i_t\}_{t=1}^m \mid X_0 = i_0) \cdot \pstwo (\{X_t = j_t\}_{t=1}^n \mid X_0 = i_m)$
+	\item jeśli $A \in \sigma (X_n, X_{n+1}, \ldots)$, to $\pstwo (A \mid X_0, \ldots, X_n) = \pstwo (A \mid X_n)$
+\end{enumx}
+
+Stan \prawo{12.2} $s_k$ jest \wcht{osiągalny} z $s_j$ ($s_j \to s_k$): $p_{jk}(n) > 0$ dla jakiegoś $n$.
+\wcht{Nieistotny}: nieosiągalny z takiego, który osiąga.
+\wcht{Pochłaniający}: singleton \wcht{zamknięty} (zbiór, z którego nie da się wydostać).
+Łańcuch \wcht{nieprzywiedlny}: wszystkie stany wzajemnie osiągalne.
+
+Skrót \prawo{12.3} na $s_j$ to $j$; $F_{kj} = \pstwo (\bigcup_{n=1}^\infty \{X_n = j\} \mid X_0 = k)$ to p-stwo dojścia kiedyś z $k$ do $j$.
+Stan $j$ jest \wcht{powracający}: $\pstwo (N_j = \infty \mid X_0 = j) = 1 \Lra$ $F_{jj} = 1 \Lra P_j = \infty$; \wcht{chwilowy}: $\pstwo(N_j < \infty \mid X_0 = j) = 1 \Lra F_{jj} < 1 \Lra P_j = \infty$ ($N_j = \sum_{n=1}^\infty [X_n = j]$, $P_j = \sum_{n=1}^\infty p_{jj}(n) = \expected (N_j \mid X_0 = j)$ to średni czas przebywania w stanie $j$).
+W nieprzywiedlnym łańcuchu wszystkie stany są tego samego typu.
+
+\wcht{Średni czas powrotu} do stanu $k$: $\mu_k = \expected T_{kk} = \sum_{n=1}^\infty n f_{kk}(n)$, gdzie $T_{ij} := \inf \{n \ge 1 : X_n = j\}$, gdy $X_0 = i$.
+Funkcja $f_{kk}(n)$ to p-stwo, że wrócimy do $k$ po raz pierwszy po $n$ krokach.
+
+W \prawo{12.4} nieprzywiedlnym łańcuchu Markowa wszystkie stany mają jeden \wcht{okres} ($o(j) = \operatorname{NWD}\{n : p_{jj}(n) > 0\}$).
+Dla okresowego ($o(j) = d > 1$) łańcucha z macierzą przejścia $P$ zbiór stanów $S$ jest unią rozłączną $S_1, \ldots, S_d$, gdzie: $p_{ij} > 0$ i $i \in S_m$ pociągają $j \in S_{m+1}$.
+Zadając na $S_m$ macierz przejścia $q_{ij} = p_{ij}(d)$ dostajemy nieprzywiedlny, nieokresowy łańcuch Markowa.
+\hfill $S_m = \{j \in S : \exists_k p_{1j}(kd+m)>0\}$.
+
+Nieprzywiedlny, \prawo{12.5} nieokresowy łańcuch $X_n$ z rozkładem \wcht{stacjonarnym} $\pi$ (na $S$, dla macierzy przejścia $P$, $\pi = \pi P$) jest powracający, zaś $\pi$ jedyny: $\lim_{n} p_{ij}(n) = \pi_j = 1/\mu_j$. 
+Dla nieprzywiedlnego, nieokresowego łańcucha o skończenie wielu stanach rozkład stacjonarny istnieje i jest zadany tym ($\uparrow$) wzorem.
+Istnieją $c > 0$ i $0 < \gamma < 1$, że $|p_{ij}(n) - \pi_j| \le c \gamma^n$.
+,,\wcht{Mocna własność Markowa}'': jeśli $\tau$ to moment stopu względem ciągu $\sigma$-ciał $\mathcal F_n = \sigma (X_0, \ldots, X_n)$, to na zbiorze $\{\tau < \infty\}$ mamy $\pstwo(\{(X_\tau, X_{\tau + 1}, \ldots) \in A \} \mid \mathcal F_\tau ) = \pstwo_{X_\tau} (\{(X_0, \ldots, X_1, \ldots) \in A\})$.
+Jeśli $i$ jest powracający, to $(\tau_n)_{n=1}^\infty$ są iid, gdzie $\tau_n = \gamma_n - \gamma_{n-1}$, $\gamma_0 = 0$ i $\gamma_m = \inf \{n > \gamma_{m-1} : X_n = i\}$.
+
+Jeżeli $X_n$ jest powracający, to $N_j(n)/n \to 1/\mu_j$ ($\pstwo_i$-p.n.) i $\frac{1}{n} \expected (N_j(n) \mid X_0 = 1) \to 1/\mu_j$, gdzie $N_j(n) = \sum_{m=1}^n [X_m = j]$.
+Jeśli łańcuch $X_n$ jest nieprzywiedlny, nieokresowy i z rozkładem stacjonarnym $\pi$, to średni czas przebywania w zbiorze $A$ spełnia khm-1.
+Nieprzywiedlny, okresowy łańcuch $X_n$ o okresie $d$ z rozkładem stacjonarnym $\pi$, $i \in S_l$, $j \in S_{l+m}$ spełnia khm-2.
+\[
+	\lim_{n \to \infty} \nu_A(n) = \lim_{n \to \infty} \sum_{k=0}^n \frac{[X_k \in A]}{n+1} = \sum_{i \in A} \pi_i \textrm{ p.n.} \spk
+	\lim_{n \to \infty} p_{ij} (nd+m) = d \pi_j > 0
+\]

@@ -1,0 +1,35 @@
+\wcht{Charfunkcja} $\varphi_X \colon \R \to \C$ \prawo{9.1} z-losowej $X \colon \Omega \to \R$: $t \mapsto \expected [\exp (itX)]$ (jedno-ciągła, $|\varphi_X| \le 1$).
+Charfunkcja jest rzeczywista $\Lra X$, $-X$ mają jeden rozkład.
+\wcht{Tw. Bochnera}: $\varphi$ jest charfunkcją $\Lra$ ciągła, \wcht{dodatnio określona} ($\R \to \C$, gdy dla $(t_i, z_i) \in \R \times \C$ jest $\sum_{k,l}^{\le n} \varphi(t_k-t_l) z_k \overline{z_l} \ge 0$) i $\varphi(0) = 1$
+Jeżeli $\expected |X|^n < \infty$, to $n$-ta pochodna $\varphi_X$ istnieje, jest jedno-ciągła i $0 \mapsto i^n \expected X^n$.
+Jeśli $X, Y$ są nz, to $\varphi_{X + Y} = \varphi_X \varphi_Y$.
+Jeśli $\nu, \mu$ (rozkłady p-stwa na $(\R, \mathfrak B (\R))$) mają równe charfunkcje, to są równe.
+NWSR: $\varphi(s) = 1$ dla pewnego $s \neq 0$; $\varphi$ ma okres $s$; $\mu$ jest skupiony na $\frac{2 \pi}{s} \Z$.
+Jedna z trzech możliwości: $|\varphi| < 1$ dla $t \neq 0$ albo $|\varphi(s) = 1|$ i $|\varphi(t)| < 1$ dla $0 < t < s$ (wtedy $|\varphi|$ ma okres $s$ i $\mu$ jest skupiony na b + $\frac{2\pi}s\Z$) albo $|\varphi| = 1$ i $\mu$ jest skupiony w $b$ ($\mu(t) = \exp(itb)$).
+Jeśli $2k$-ta pochodna $\varphi_X$ w zerze istnieje, to $2k$-ty momement też.
+\wcht{Tw. Riemanna oraz Lebesgue'a}: $\lim_{|t| \to \infty} \varphi_X(t) = 0$ dla $X$ o ciągłym rozkładzie.
+Rozkład p-stwa $\mu$, charfunkcja $\varphi$, $u > 0$: $\mu \left(\left[-2/u, 2u \right] \right) \ge 1 - \int_{-u}^u (1 - \varphi(s))/u \, \D s$.
+
+\wcht{Tw. Levy'ego-Cramera}: \prawo{9.2} [$\mu_n$: rozkłady p-stwa na $(\R, \mathfrak B(\R))$ z charfunkcjami $\varphi_n \to \varphi$ punktowo, $\varphi$ ciągła w $0$] $\Ra \varphi$ to charfunkcja słabej granicy $\mu_n$, zaś ciąg $\mu_n$ jest jędrny.
+\wcht{Problem Haara}: dla jakich $0 < \alpha < 1$ z-losowa $\sum_{n=1}^\infty \alpha^n U_n$ ma ciągły rozkład ($U_n$ to ciągły Bernoulliego)?
+Jeżeli dla pewnego $a>0$ jest $\expected \exp(aX^2) < \infty$, to funkcja $\varphi_X$ jest całkowita; gdy jeszcze $\varphi_X \neq 0$, to $X$ ma rozkład normalny.
+\wcht{Tw. Cramera}: jeśli suma nz składników ma normalny rozkład, to składniki też.
+Z-losowa $X$ jest gaussowska $\Lra X_1 - X_2, X_1 + X_2$ są nz ($X_i$: nz kopie $X$).
+Jest to przydatne w $\infty$-wymiarowych p. Banacha i na grupach.
+\wcht{PWL Chinczyna}: jeśli $X, X_1, X_2, \dots$ są iid i $\expected X = 0$, to $(\sum_{k=1}^n X_k)/n \to 0$ wg p-stwa.
+\wcht{CTG}: jeśli jeszcze $\variance X = 1$, to $(\sum_{k=1}^n X_k)/\sqrt{n} \to \mathcal N(0,1)$ wg rozkładu.
+\wcht{Kryterium Polya}: każda ciągła, parzysta $\varphi \colon \R \to \R_+$, wypukła na $[0, \infty)$, nierosnąca, $\varphi(0) = 1$ i dążąca do zera w plus nieskończoności jest charakterystyczną.
+
+\wcht{Tożsamość Parsevala}:  \prawo{9.3} $\varphi, \psi$ to charfunkcje rozkładów p-stwa $\mu, \nu \Ra$ khm-1.
+Khm-2 dla $u$, punktu ciągłości dystrybuanty $F$ o charfunkcji $\varphi$.
+\wcht{Tw. o odwracaniu przekształcenia Fouriera}: rozkład p-stwa $\mu$ z całkowalną charfunkcją $\varphi$ ma ograniczoną i ciągłą gęstość $f$, więc nieujemna charfunkcja $\varphi$ całkowalna $\Lra$ gęstość $f$ ograniczona.
+\wcht{Tożsamość Plancherela}: [gęstość $f$ i charfunkcja $\varphi$] $|\varphi|^2$ całkowalna $\Lra f^2$ całkowalna; wtedy całki z $2 \pi f^2(y)$ i $|\varphi(t)|^2$ nad $\R$ są sobie równe.
+ \[
+ 	\int_\R \frac{\varphi(s)}{e^{ist}} \nu(\D s) = \int_R \psi(x-t) \mu (\D x) \spk
+ 	F(u) = \lim_{a \to \infty} \int_{-\infty}^u \left[\frac{1}{2\pi} \int_\R \frac{\varphi(s) \, \D s}{\exp (ist + s^2/2a^2)} \right] \, \D t \spk
+ 	f(x) = \frac{1}{2\pi} \int_\R \frac{\varphi(s)}{\textrm{e}^{\textrm{i}sx}} \, \D s 
+ \]
+
+\wcht{Charfunkcja} wektora $X$: $\varphi_X \colon \R^n \to \C$, $t \mapsto \expected \exp (i \langle t \mid X \rangle)$; jeżeli $t = (t_1, \ldots, t_n)$ i $X = (X_1, \ldots X_n)$, to $\varphi_{X}(t) = \prod_{k=1}^n \varphi_{X_k}(t_k) \Lra X$ ma nz współrzędne.
+\wcht{Tw. Kaca}: ograniczone $X, Y$ spełniające $\expected [X^k Y^l] = [\expected X]^k [\expected Y]^l$ dla wszystkich $k, l \ge 0$ są nz.
+\wcht{Tw. Cramera-Wolda} w $\R^n$: $X_k \to X$ wg rozkładu $\Lra \langle t, X_n \rangle \to \langle t, X\rangle$ (dla każdego $t$) wg rozkładu.

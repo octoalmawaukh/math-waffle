@@ -1,0 +1,29 @@
+Tu \prawo{8.1} $E$: ośrodkowa, metryczna, zupełna.
+\wcht{Jędrna} rodzina $(\mu_t)$ rozkładów p-stwa na $(E, \mathfrak B(E))$: każdemu $\varepsilon > 0$ odpowiada zwarty $K \subseteq E$, że $\mu_t(K) > 1 - \varepsilon$.
+Ciąg $\mu_n$ zbiega \wcht{słabo} do rozkładu $\mu$, gdy dla ciągłych, ograniczonych $f \colon E \to \R$ mamy khm-1.
+Jeśli $X_n \sim \mu_n$ i $X \sim \mu$, to $X_n$ zbiega do $X$ \wcht{wg rozkładu}.
+\wcht{Tw. Scheffégo}: $\mu$ miarą $\sigma$-skończoną, $f_n, f \ge 0$, miary $\nu_n (A)$ są probabilistyczne, $f_n \to f$ $\mu$-p.n. $\Ra$ khm-3.
+\[
+	\lim_{n \to \infty} \int_E \! f \, \D \mu_n = \int_E \! f \, \D \mu \spk
+	\nu_n(A) = \int_A f_n \, \D \mu \spk
+	\sup_A \left|\nu(A) - \nu_n(A)\right| \le \int_\Omega |f-f_n| \, \D \mu \to 0
+\]
+
+NWSR: \prawo{8.2} $\mu_n$ zbiega słabo do $\mu$; jeśli $f \colon E \to \R$ jest jedno-ciągła i ograniczona, to khm-1; khm-2 dla $F \subseteq^a E$; khm-3 dla $G \subseteq_o E$; khm-4 dla $\mu (\partial A) = 0$ (tu $\mu$ to rozkłady p-stwa na $(E, \mathfrak B(E))$); każdy podciąg ma podciąg słabo zbieżny do $\mu$.
+Jeżeli całki z khm-5 są sobie równe dla ciągłych, ograniczonych $f$ i rozkładów p-stwa $\mu$, $\nu$, to $\mu (A) = \nu (A)$ dla $A \in \mathfrak B(E)$, więc ,,słaba granica'' jest jednoznaczna.
+\[
+	\int_E f \, \D \mu_n \to \int_E f \, \D \mu \spk
+	\limsup_{n \to \infty} \mu_n (F) \le \mu (F) \spk
+	\liminf_{n \to \infty} \mu_n (G) \ge \mu (G) \spk
+	\mu_n(A) \to \mu(A)
+	\spk \int_E f \, \D \mu = \int_E f \, \D \nu
+\]
+
+Rozkłady \prawo{8.3} p-stwa $\mu_n$ na $(\R, \mathfrak B(\R))$ zbiegają słabo do $\mu \Lra$ ich dystrybuanty zbiegają do $F(t)$ dla każdego punktu ciągłości tej ostatniej.
+\wcht{Tw. Helleya o wyborze}: ciąg dystrybuant ma podciąg słabo zbieżny do dystrybuanty \wcht{ułomnej}.
+\wcht{Tw. Prochorowa}: rodzina rozkładów p-stwa na $(\R, \mathfrak B(\R))$ jest jędrna $\Lra$ każdy ciąg jej elementów ma słabo zbieżny podciąg.
+\wcht{Tw. Diniego}: punktowo zbieżny ciąg dystrybuant $F_n$ do ciągłej $F$ zbiega jednostajnie.
+\wcht{Tw. Skorochoda}: dla rozkładów p-stwa $\mu, \mu_1, \mu_2, \dots$ na $(\R, \mathfrak B(\R))$, że $\mu_n \to \mu$ słabo, istnieją z-losowe $X, X_1, X_2, \dots$ na $(0,1)$, że $X_n(\omega) \to X(\omega)$ dla dowolnego $\omega \in (0,1)$.
+\wcht{Metryka Levy'ego}: zbiór miar ,,p-ych'' na $(\R, \mathfrak B(\R))$ z $d$ jest ośrodkową, zupełną p. metryczną.
+Słaba zbieżność dystrybuant $F_n \to F$ $\Lra$ $d(F_n, F) \to 0$.
+$d(F, G) = \inf \{\varepsilon \ge 0: \forall_x (G(x-\varepsilon) - \varepsilon \le F(x) \le G(x+\varepsilon) + \varepsilon)\}$
