@@ -1,0 +1,29 @@
+\wcht{Algebra zespolona}: \prawo{10.1} $\C$-liniowa przestrzeń z porządnym mnożeniem: łącznym, rozdzielnym, $\alpha(xy)= (\alpha x)y = x(\alpha y)$.
+\wcht{Algebra Banacha}: dodatkowo $\mathscr B$ z normą taką, że $\|xy\| \le \|x\|\|y\|$ i $\|e\| = 1$ (neutralny).
+Na każdej $\C$-algebrze, $\mathscr B$ z jednostkowym $e \neq 0$ i ciągłym z dwóch stron mnożeniem można zadać normę, która indukuje wyjściową topologię, zaś $A$ zamienia w algebrę Banacha.
+Tu: \prawo{10.2} $\mathscr B$-algebra $A$, $x\in  A$, $\|x\| <1$, wtedy: $e-x$ odwraca się, $\|(e-x)^{-1} - e-x\|\le \|x\|^2 / (1-\|x\|)$; $|\phi(x)| < 1$ dla każdego $\C$-homo- $\phi$ na $A$.
+\wcht{Tw. Gleasona-Kahane-Żelazka}: [$\phi$:  funkcjonał na $\mathscr B$-algebrze $A$, że $\phi(e) = 1$ i $\phi(x) \neq 0$ dla odwracalnych $x \in A$] $\Ra$ [$\phi(xy) = \phi(x)\phi(y)$].
+\hfill $\mathscr B$-algebra: algebra Banacha!
+
+Dla \prawo{10.3} algebry Banacha $A$, $(A^* \subseteq_o A) \to (A^* \subseteq_o A)$, $x \mapsto x^{-1}$, to homeo- ,,na''.
+\wcht{Zbiór rezolwenty}: dopełnienie \wcht{widma} $\sigma(x)$ (zbioru $\lambda \in \C$, że $\lambda e-x$ się nie odwraca, niepusty i zwarty).
+\wcht{Promień spektralny}: $\rho(x) = \sup\{ |\lambda| : \lambda \in \sigma(x)\}$, granica $\|x^n\|^{1/n}$.
+\wcht{Tw. Gelfanda-Mazura}: jeśli $A = A^* \cup \{0\}$, to $A$ oraz $\C$ są izometrycznie izo-.
+Jeśli dla algebry Banacha $A$ istnieje $M < \infty$, że $\|x \| \cdot \|y\| \le M\|xy\|$, to $A$ jest izometrycznie izo- z $\C$.
+Jeśli $A$ to domknięta podalgebra algebry Banacha $B$ i $e_B \in A$, $x \in A$, to $\sigma_A(x)$ jest sumą $\sigma_B(x)$ i rodziny ograniczonych składowych jego dopełnienia.
+
+Dla \prawo{10.4} $f \colon Q \to A$ (ciągłej ze zwartej, $\mathcal T_2$ z Bo-miarą $\mu$ w $A$, algebrę Banacha) całka istnieje (bo $A$ jest przestrzenią Banacha), zaś dla każdego $x \in A$ mamy khm-1, khm-2.
+Niech $R(\lambda) = P(\lambda) + \sum_{m,k} c_{m,k} (\lambda - \alpha_m)^{-k}$ będzie wymierną z biegunami w $\alpha_n$ (skończenie wiele składników, $P$: wielomian).
+Gdy $x \in A$ i $\sigma(x)$ nie zawiera żadnego bieguna $R$, to $R(x) := P(x) + \sum_{m,k} c_{m,k} (x - \alpha_m e)^{-k}$.
+Jeśli $U \subseteq_o \C$ zawiera $\sigma(x)$, $R$ jest holo- na $U$ i $\Gamma$ otacza $\sigma(x)$ w $U$, to khm-3.
+\wcht{Tw. o odwzorowaniu spektralnym}: jeśli liniowy operator $T$ jest ograniczony na zespolonej p. Banacha $X$, $\sigma(T) \subseteq U \subseteq_o \C$ i $f$ jest analityczna na $U$, to holofunkcyjny rachunek jest w stanie zdefiniować $f(T)$, że $f(\sigma(T)) = \sigma(f(T))$, a dla widma punktowego tylko $f(\sigma_p(T)) \subseteq \sigma_p(f(T))$, z równością np. gdy $f$ nie jest stała na żadnej składowej spójności $U$.  % w wersji ze stacka.
+\[
+	x \int_Q f \,\D \mu = \int_Q x f(p) \,\D \mu(p) \spk
+	\left(\int_Q f \,\D \mu \right) x = \int_Q f(p)x \,\D \mu(p) \spk
+	R(x) = \frac{1}{2\pi i} \int_\Gamma R(\lambda) (\lambda e - x)^{-1} \,\textrm{d}\lambda
+\]
+
+Niech \prawo{10.5} $G = A^*$ \prawo{10.6} dla algebry Banacha $A$, niech $G_1$ będzie składową spójności $e$ w $G$: jest otwarta, normalna, generowana przez $\exp A$.
+Jeżeli $A$ jest przemienna, to $G_1 = \exp A$, zaś $G/G_1$ jest beztorsyjna.
+%\wcht{Podprzestrzeń niezmiennicza} \prawo{10.6} operatora $T \in \mathcal B(X)$: $M \subseteq X$, że $T(M) \subseteq M$.
+\wcht{Tw. Łomonosowa}: w $\C$-przestrzeni Banacha wymiaru $\infty$, wszystkie $S \in \mathcal B(X)$ komutujące ze zwartym $T \in \mathcal B(X) \setminus \{0\}$ mają podprzestrzenie niezmiennicze: $M \subseteq^a X$ (nietrywialną) że $S(M) \subseteq M$.

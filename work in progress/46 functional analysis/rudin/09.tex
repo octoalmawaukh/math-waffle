@@ -1,0 +1,16 @@
+Jeśli \prawo{9.1} $\varphi \in L^\infty(\R^n)$, $Y$ to podprzestrzeń $L^1(\R^n)$ i $u* \varphi = 0$ dla $u \in Y$, to $Z(Y) = \bigcap_{u \in Y} \{s \in \R^n :  \widehat u (s) = 0\}$ zawiera nośnik dystrybucji temperowanej $\widehat \varphi$.
+\wcht{Tw. Wienera}: jeśli $Y$ to domknięta i odporna na translacje podprzestrzeń w $L^1(\R^n)$, zaś $Z(Y)$ jest pusty, to $Y = L^1(\R^n)$.
+\wcht{Tauberowskie tw. Wienera-Pitta}: niech $\varphi \in L^\infty(\R^n)$, $K \in L^1(\R^n)$, $\widehat{K}(t) \neq 0$ (dla $t \in \R^n$) i khm-1, wtedy khm-2.
+Jeśli $\varphi$ \wcht{oscyluje wolno} (każdy $\varepsilon > 0$ ma $A < \infty$, $\delta > 0$, że $|x|, |y| >A$, $|x-y| < \delta$ pociągają $|\varphi(x) - \varphi(y)| < \varepsilon$) dodatkowo, to $\lim_{|x| \to \infty} \varphi(x) = a$.
+\[
+	\lim_{|x| \to \infty} (K  * \varphi)(x) = a \widehat{K}(0) \implies [\forall u \in L^1(\R^n) ] [\lim_{|x| \to \infty} (u  * \varphi)(x) = a \widehat{u}(0)].
+\]
+
+Niech \prawo{9.3} $\mu$ będzie Bo-miarą probabilistyczną, $f$ daną funkcją, zaś $\varphi$: ograniczoną funkcją borelowską.
+Jakie są rozwiązania $\varphi  - \varphi * \mu = f$?
+Jeśli nośnik $\mu$ nie zawiera się w $a \R$ i $f = 0$, to $\varphi$ jest p.w. stała.
+Miara $\mu$ jest sumą absolutnie ciągłej $\mu_a$ i singularnej $\mu_s$.
+\wcht{Tw. Karlina}: jeżeli $\mu_a \neq 0$, całka z $|x|$ względem $\mu$ jest skończona, zaś z $x$: niezerowa ($M$); $f \in L^1(\R)$ dąży do zera przy $x \to \pm \infty$, wreszcie $\varphi$ spełnia $\varphi - \varphi * \mu = f$, to granice $\varphi$ w $\pm \infty$ istnieją: khm-1.
+\[
+	\varphi(\infty) - \varphi(- \infty) = \frac 1 M \int_{\R} f(y)  \,\D y.
+\]

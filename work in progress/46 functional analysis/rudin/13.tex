@@ -1,0 +1,51 @@
+\wcht{Operator} \prawo{13.1} na $H$ (p. Hilberta): liniowe $T \colon (D(T) \le H) \to H$.
+\wcht{Uwaga!}
+Operator \wcht{domknięty} ma domknięty wykres w $H^2$.
+Jeśli $S, T, ST$ są \wcht{gęsto określone} (ich dziedziny są gęste) w $H$, to $T^*S^* \subseteq (ST)^*$, jeśli jeszcze $S \in \mathcal B(H)$, to mamy równość.
+Operator \wcht{symetryczny}: $(Tx,y) = (x,Ty)$.
+\wcht{Samosprzężony}: $T = T^*$.
+Jeśli $x, y \in A$ ($\mathscr B$-algebra), to $xy-yx$ nie jest neutralny (co smuci mechanikę kwantową).
+
+Jeśli \prawo{13.2} $V \colon H \times H \to H \times H$ zadany jest przez $\{a, b\} \mapsto \{b, -a\}$, to dla gęsto określonego operatora $T$ na $H$ mamy $\mathcal G(T^*) = [V \mathcal G(T)]^\perp$, gdzie $\mathcal G$ to ,,wykres''.
+$T$ gęsto określony $\Ra$ $T^*$ domknięty.
+Jeśli $T$ jest gęsto określony i domknięty, to $H^2 = V\mathcal G(T) \oplus \mathcal G(T^*)$ i $T=T^{**}$.
+Maksymalnie samosprzężone operatory (symetryczne, które nie mają właściwego rozszerzenia symetrycznego) to między innymi samosprzężone.
+
+%Każdy  samosprzężony $T \in \mathcal B(H)$ tworzy unitarny $U = (T-iI)(T+iI)^{-1}$; każdy unitarny $U$, że w widmie nie ma $1$, można tak uzyskać.
+$T$ \prawo{13.3} symetryczny w $H$ ma $U = (T-iI)(T+iI)^{-1}$, \wcht{transformatę Cayleya}.
+%Lemat: jeśli $U$ jest operatorem w $H$ oraz izometrią ($\|Ux \| = \|x\|$ dla $x \in \mathcal D(U)$), to: $(Ux, Uy) = (x,y)$ dla $x, y \in \mathcal D(U)$; jeśli $\mathcal R(D-I)$ jest gęsty w $H$, to $I-U$ jest ,,1-1''; $\mathcal D(U)$, $\mathcal R(U)$, $\mathcal G(U)$: domknięta jest żadna lub wszystkie.
+Wtedy $U$ jest domknięty $\Lra$ $T$ też; $\im I-U = \mathcal D(T)$, $I-U$ jest ,,1-1'' i $T$ można odtworzyć: $T = i(I+U) (I-U)^{-1}$; $U$ jest unitarny $\Lra$ $T$ samosprzężony.
+%Jeśli  $U_1$, $U_2$ to transformaty Cayleya operatorów $T_1$, $T_2$, to $T_1 \subseteq T_2 \Lra U_1 \subseteq U_2$.
+,,$T_1 \subseteq T_2 \Lra U_1 \subseteq U_2$''.
+Rozważmy domknięty, gęsto określony operator $T$ w $H$ z transformatą Cayleya $U$. 
+Wtedy $U$ jest izometrią z $\im T + i I$ na $\im T - iI$.
+Wymiary ich ortodopełnień to \wcht{indeksy defektu}
+Fakt: $T$ jest samosprzężony $\Lra$ oba indeksy zerami; $T$ maksymalnie symetryczny $\Lra$ któryś indeks jest zerem; $T$ ma rozszerzenie samosprzężone $\Lra$ ma równe indeksy.
+
+Niech \prawo{13.4} $\mathfrak M$ będzie $\sigma$-algebrą w $\Omega$, $H$ Hilberta.
+Jeśli $E$ jest rozkładem jedynki na $\Omega$, to każdej mierzalnej $f \colon \Omega \to \C$ odpowiada gęsto określony operator $\Psi(f)$ w $H$ z dziedziną $\mathcal D(\Psi(f)) = \mathcal D_f$, wyznaczony przez khm-1 ($y \in H$), który spełnia khm-2; tw. o mnożeniu zachodzi tak: jeśli $f, g$ są mierzalne, to $\Psi(f)\Psi(g) \subseteq \Psi(fg)$ oraz $\mathcal D(\Psi(f)\Psi(g)) = \mathcal D_g \cap \mathcal D_{fg}$; dla każdej mierzalnej $u \colon \Omega \to \C$, $\Psi(u)^* = \Psi(\overline{u})$ oraz $\Psi(u)\Psi(u)^*$ $=$ $\Psi(|u|^2)$ $=$ $\Psi(u)^*\Psi(u)$.
+Dodatek: $\mathcal D_f = H$ dokładnie wtedy, gdy $f \in L^\infty(E)$.
+
+\wcht{Widmo}: dopełnienie \wcht{rezolwenty} (dla liniowego $T$ w $H$, zbiór tych $\lambda \in \C$, że $T - \lambda I$ jest ,,1-1'' z $\mathcal D(T)$ na $H$, którego odwrotność należy do $\mathcal B(H)$.), oznaczenie: $\sigma$.
+Niech $f \colon \Omega \to \C$ będzie mierzalna, $\omega_\alpha = f^{-1}(\alpha)$.
+Jeśli $\alpha$ leży w istotnym obrazie $f$ i $E(\omega_\alpha) \neq 0$, to $\Psi(f) - \alpha I$ nie jest ,,1-1''; jeśli jednak $E(\omega_\alpha) = 0$, to jest ,,1-1'' ($\mathcal D_f$ na gęstą podprzestrzeń właściwą $H$) i istnieją $x_n \in H$ o normie jeden, że $\Psi(f)x_n - \alpha x_n$ dąży do $0$; wreszcie: $\sigma(\Psi(f))$ to istotny obraz $f$.
+\wcht{Zasada zmiany miary}: jeśli $\varphi \colon \Omega \to \Omega'$ jest mierzalne (z $\sigma$-ciałami $\mathfrak M$, $\mathfrak M'$), zaś $E \colon \mathfrak M \to \mathcal B(H)$ jest rozkładem jedynki, to: $E'(\omega') = E(\phi^{-1}(\omega'))$ też jest rozkładem jedynki i khm dla każdej $\mathfrak M'$-mierzalnej $f \colon \Omega' \o \C$, jeśli któraś z całek istnieje.
+\[
+	(\Psi(f)x, y) = \int_\Omega f \,\textrm{d}E_{x,y} \spk
+	\left\| \Psi(f)x\right\|^2 = \int_\Omega |f|^2 \,\textrm{d}|E_{x,x}| \spk
+	\int_{\Omega'} f \,\textrm{d}E_{x,y}' = \int_\Omega (f \circ \phi) \,\textrm{d}E_{x,y}	
+\]
+
+Liniowy (niekoniecznie ograniczony) operator $T$ w $H$ \prawo{13.5} jest \wcht{normalny}: domknięty, gęsto określony, $TT^* = T^*T$.
+Każdy samosprzężony $A$ w $H$ ma dokładnie jeden rozkład jedynki $E$ na borelowskich w $\R$, że khm-1.
+Dalej, $(Ax, x) \ge 0$ dla każdego $x \in \mathcal D(A)$ $\Lra$ $\sigma(A) \subseteq [0, \infty)$, wtedy istnieje dokładnie jeden samosprzężony $B \ge 0$, że $A = B^2$.
+Blablabla.
+\[
+	(Ax, y) = \int_\R t \,\textrm{d} E_{x, y}(t)
+\]
+
+Niech $X$ \prawo{13.6} będzie $\mathscr B$, każdemu $t \ge 0$ przypisujemy operator $Q(t) \in \mathcal B(X)$, że $Q(0) = I$, $Q(s+t) = Q(s)Q(t)$ oraz $\lim_{t \to 0} \|Q(t) x - x\| = 0$ dla każdego $x \in X$.
+Piszemy nowe operatory, $A_\varepsilon x = (1/ \varepsilon) [Q(\varepsilon)x - x]$, $Ax = \lim_{\varepsilon \to 0} A_\varepsilon x$ (to \wcht{infinitezymalny generator półgrupy} $\{Q(t)\}$).
+Istnieją dwie stałe $C, \gamma$, że $\|Q(t)\| \le C \exp \gamma t$; $t \mapsto Q(t)x$ jest ciągłe; spełnione jest równanie $Q'(t) x = AQ(t)x = Q(t)Ax$.
+Dla każdego $x$ z $X$ jest $Q(t)x = \lim_{\varepsilon \to 0} (\exp (tA_\varepsilon)) x$, gdzie zbieżność oznacza jednostajną na każdym zwartym $K \subseteq [0, \infty)$.
+\wcht{Tw. Hille'a-Yosidy}: $A$, określony gęsto operator w $X$ ($\mathscr B$) jest infinitezymalnym generatorem półgrupy $\Lra$ istnieją $C, \gamma$, że $\|(\lambda I - A)^{-m}\| \le C(\lambda -  \gamma)^{-m}$ dla wszystkich $\lambda > \gamma$ oraz naturalnych $m$ (około \datum{1948}).

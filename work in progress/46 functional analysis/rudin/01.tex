@@ -1,0 +1,43 @@
+\wcht{Unormowana}: liniowa $X$ \prawo{1.1} z normą $\|\cdot \|  \colon  X \to \R_+$, że $\|x+y\| \le \|x\|+\|y\|$, $\|\alpha x\| = |\alpha| \|x\|$ i $\|x\| = 0 \Lra x = 0$.
+\wcht{P. Banacha}, $\mathscr B$: unormowana, zupełna z 
+metryką od normy.
+Zbiór \wcht{zrównoważony}: $\alpha A \subseteq A \subseteq X$ dla $|\alpha| < 1$.
+\wcht{Topologia liniowa}: punkty są domknięte, operacje p. liniowej w $X$ są ciągłe.
+\wcht{UWAGA}. Zbiór $E \subseteq X$ jest \wcht{ograniczony}, gdy każde otoczenie zera $V$ ma liczbę $s$, że $t > s$ pociąga $E \subseteq tV$.
+Typy wektopów:
+\wcht{lokalnie wypukły} (istnieje baza otoczeń $\mathcal B$ dla $0$ z wypukłych -- translacje i mnożenia przez skalary to homeo- $X$), 
+\wcht{lokalnie ograniczony} (ograniczone otoczenie zera istnieje), 
+\wcht{Heinego-Borela} (ograniczony, domknięty $\Ra$ zwarty) -- z lokalną ograniczonością pociąga $\dim X < \infty \Lra$
+\wcht{lokalnie zwarty} ($0$ ma prezwarte otoczenie),
+\wcht{F-przestrzeń} (niezmienniczo metryzowalna), 
+\wcht{Frécheta} (lokalnie wypukła i F). 
+Lokalnie (ograniczona i wypukła) $\Lra$ normowalna (topologia od normy).
+
+Wektopy są $\mathcal T_2$.
+\wcht{Funkcjonał}: \prawo{1.3} liniowe $X \to \mathbb K$.
+Liniowe $\Lambda \colon X \to Y$ (między wektopami) ciągłe w $0$ jest ciągłe oraz ,,jednostajnie ciągłe'' (każde otoczenie zera $W$ w $Y$ ma otoczenie zera $V$ w $X$, że ,,$y-x \in V$ pociąga $\Lambda (y-x) \in W$'').
+Dla funkcjonału $\Lambda \not\equiv 0$ na $X$: $\Lambda$ ciągły $\Lra$ ma domknięte jądro $\Lra$ $\mathcal N(\Lambda)$ nie jest gęsty w $X$ $\Lra$ $\Lambda$ jest ograniczony na pewnym otoczeniu zera w $X$.
+
+Każdy \prawo{1.4} izo- $\C^n$ na $Y$, podprzestrzeń wymiaru $n$ w $\C$-przestrzeni $X$, jest homeo-, zaś $Y$: domknięta.
+Każdy \prawo{1.5} wektop $X$ z przeliczalną bazą otoczeń ma niezmienniczą metrykę $d$ zgodną z topologią $X$, że kule wokół zera są zbalansowane.
+Jeśli $X$ jest lokalnie wypukły, to istnieje $d$, żeby kule (wszystkie otwarte!) były wypukłe.
+Podprzestrzeń wektopa, która jest F-, jest domknięta.
+
+Fakt: \prawo{1.6} $d$-ograniczony $E\subseteq X$ to nie to samo, co [ograniczony $\Lra$ jeśli $x_n \in E$ i $\alpha_n \to 0$ (skalary), to $\alpha_n x_n \to 0$].
+Odwzorowanie \wcht{ograniczone}: obrazy ograniczonych takie są.
+Dla liniowego $\Lambda \colon X \to Y$ między wektopami jest: $\Lambda$ ciągła $\Ra$ ograniczona $\Ra$ jeśli $x_n \to 0$, to $\{\Lambda x_n\}$ jest ograniczony; dla metryzowalnej $X$: $\Ra$ jeśli $x_n \to 0$, to $\Lambda x_n \to 0$ $\Ra$ $\Lambda$ ciągła.
+
+Każda \prawo{1.7} \wcht{półnorma} ($p \colon X \to \R$, że $p(x+y) \le p(x) + p(y)$, $p(ax) = |\alpha| p(x)$) na $X$ to \wcht{funkcjonał Minkowskiego} ($\mu_A = \inf\{t > 0 : x/t \in A\}$ dla \wcht{pochłaniającego} $A$: $\bigcup_{t > 0} tA = X$) dla $A = p^{-1} [0, 1)$, wypukłego, zbalansowanego i pochłaniającego. 
+Każdej półnormie $p$ z \wcht{rozdzielającej} (żaden $x \in X$ nie ma zerowej półnormy) rodziny półnorm na liniowej $X$ i $n > 0$ przypiszmy $\{x: np(x) < 1\}$, zbiory te tworzą podbazę wypukłej, zbalansowanej bazy dla lokalnie wypukłego wektopa $X$ ($p$ są ciągłe).
+Wektop normowalny $\Lra$ istnieje wypukłe, ograniczone otoczenie zera.
+
+Jeżeli \prawo{1.8} $N \le (X, \tau)$ jest domknięta, zaś $\tau_N$ to topologia ilroazowa, to: $\tau_N$ jest liniowa; ilorazowe $X \mapsto X/N$ jest liniowe i ciągłe, zaś $X/N$ po $X$ dziedziczy: lokalną wypukłość, lokalną ograniczoność, metryzowalność, normowalność, bycie ,,F-'', Frecheta, $\mathscr B$.
+Norma ilorazowa: $\|\pi(x)\|$ to $\inf \{\|x-z : z \in N\}$.
+Jeżeli $X$ to wektop, $N \le X$ jest domknięta, zaś $F \le X$ skończonego wymiaru, to $N + F$ jest domknięta.
+
+Niepusty \prawo{1.9} $U \subseteq_o \R^n$ jest unią $\aleph_0$ zwartych $K_n$, że $K_n \subseteq \interior K_{n+1}$.
+$C(U)$ to ciągłe $U \to \C$ z topologią od norm: $p_n(f) = \sup \{|f(x)| : x \in K_n\}$.
+Jest nienormowalna i ma podprzestrzeń $H(U)$ (Frecheta), składającą się z holomorfów.
+Przestrzeń $C^\infty(U)$ to te $f$, że $D^\alpha f \in C(U)$ dla każdego $\alpha$, przy czym $D^\alpha = (\partial/\partial x_1)^{\alpha_1} \cdot \ldots \cdot (\partial / \partial x_n)^{\alpha_n}$ z $|\alpha| = \sum_i \alpha_i$.
+Jest Frecheta z topologią od półnorm: $\max \{|D^\alpha f(x)| : x \in K_N, |\alpha| \le N\}$.
+Są jeszcze przestrzenie $L^p$ z teorii miary i klasyczne $\mathcal D_K$ (od Schwartza): złożone z $f \in C^\infty (\R^n)$, o nośniku zawartym w $K$.

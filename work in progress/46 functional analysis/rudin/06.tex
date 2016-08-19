@@ -1,0 +1,49 @@
+%%% 6.1 to wstęp
+
+Przestrzeń \prawo{6.2} \wcht{funkcji próbnych} na $U \subseteq_o \R^n$: suma $\mathcal D_K$ po $K \subseteq^k U$.
+Dla $\phi \in \mathcal D(U)$ mamy normy $\|\phi\|_N = \max \{|D^\alpha \phi(x)| : x \in U, |\alpha| \le N\}$.
+Na $\mathcal D(U)$ mamy topologię $\tau$: rodzinę sum $\phi + W$, gdzie $\phi \in \mathcal D(U)$, zaś $W \subseteq \mathcal D(U)$ jest zbalansowany, wypukły i $\mathcal D_K \cap W = \tau_K$ to topologia Frecheta na $\mathcal D_K$ dla $K \subseteq U$.
+Wtedy $\mathcal D(U)$ to lokalnie wypukły, zupełny wektop Heinego-Borela.
+Dla liniowego $\Lambda$ z $\mathcal D(U)$ w lokalnie wypukły $Y$ NWSR: $\Lambda$ ciągłe, ograniczone, $\phi_i \to 0$ w $\mathcal D(U)$ $\Ra$ $\Lambda \phi_i \to 0$ w $Y$, obcięcia do $\mathcal D_K$ są ciągłe.
+Różniczkowania $D^\alpha \colon \mathcal D(U) \to \mathcal D(U)$ są ciągłe.
+P. \wcht{dystrybucji}: $\mathcal D'(U)$, $\tau$-ciągłe funkcjonały $\Lambda$ na $\mathcal D(U)$ $\Lra$ każdy $K \subseteq^k U$ ma $n \ge 0$, $C < \infty$, że $\phi \in \mathcal D_K \Ra |\Lambda \phi| \le C \|\phi\|_n$.
+
+Jeśli \prawo{6.3} $f \colon \Omega \to \C$ jest lokalnie całkowalna, to $\Lambda_f$ wg khm-1 należy do $\mathcal D'(U)$; $\Lambda_f \leftrightsquigarrow f$.
+Różniczkowanie: $(D^\alpha \Lambda)(\phi) = (-1)^{|\alpha|} \Lambda (D^\alpha \phi)$, o ile $\Lambda \in \mathcal D'(U)$.
+Czy $D^\alpha \Lambda_f = \Lambda_g$ ($g = D^\alpha f$)?
+Nie zawsze, nawet jeżeli ma to sens.
+Jeżeli $\Lambda_i \in \mathcal D'(U)$ i $\Lambda \phi = \lim_i \Lambda_i \phi \in \C$ istnieje dla każdego $\phi \in \mathcal D(U)$, to $\Lambda \in \mathcal D'(U)$ i $D^\alpha \Lambda_i \to D^\alpha \Lambda$ w $\mathcal D'(U)$.
+Gdy $\Lambda_i \to \Lambda$ w $\mathcal D'(U)$ i $g_i \to g$ w $C^\infty(U)$, to $g_i\Lambda_i \to g\Lambda$ w $\mathcal D'(U)$.
+\[
+	\Lambda_f (\phi) = \int_U \phi(x) f(x) \,\textrm{d}x
+\]
+
+Każdej \prawo{6.4} rodzinie $\Gamma$ otwartych podzbiorów $\R^n$ sumujących się do $U$ odpowiada jakiś ciąg $\{\psi_i\} \subseteq \mathcal D(U)$ taki, że $\psi_i \ge 0$, $\sum_i \psi_i(x) \equiv 0$, zaś każdy $K \subseteq^k U$ ma liczbę $m$ i otwarty zbiór $W \supseteq K$, że $\sum_{i \le m} \psi(x) = 1$ na $W$; $\psi$ to \wcht{lokalnie skończony rozkład jedności}.
+Jeśli otwarte pokrycie $\Gamma$ dla $\Omega \subseteq_o \R^n$ jest takie, że każdy $\omega \in \Gamma$ ma dystrybucję $\Lambda_\omega \in \mathcal D'(U)$, że $\Lambda_{\omega_1} = \Lambda_{\omega_2}$ w $\omega_1 \cap \omega_2$ (gdy jest to niepuste), to dokładnie jedna $\Lambda \in \mathcal D'(U)$ spełnia: $\Lambda = \Lambda_\omega$ w $\omega$.
+
+\wcht{Nośnik $\Lambda \in \mathcal D'(U)$}: \prawo{6.5} dopełnienie unii $\omega \subseteq_o U$, gdzie \wcht{$\Lambda$ znika} ($\Lambda \phi = 0$ dla każdego $\phi \in \mathcal D(\omega)$), $S_\Lambda$: $\Lambda$ znika na nim!
+Jeżeli $\varphi \in \mathscr C^\infty (U)$ i $\varphi = 1$ w pewnym otwartym $V \supseteq S_\Lambda$, to $\varphi(\Lambda) = \Lambda$.
+Jeżeli $S_\Lambda \subseteq^k U$, to istnieje $C < \infty$ i $N \in \N_0$, że $|\Lambda \phi| = C \|\phi\|_N$ dla każdego $\phi \in \mathcal D(U)$.
+Taki funkcjonał rozszerza się jednoznacznie do ciągłego na $\mathscr C^\infty (U)$.
+Jeżeli $\Lambda \in \mathcal D'(U)$ rzędu $N$ ma nośnik $\{p\}$, to $\Lambda = \sum_{|\alpha| \le N} c_\alpha \D^\alpha \delta_p$, gdzie $\delta_p$ to funkcjonał: $\delta_p(\varphi) = \varphi(p)$.
+Nośnik takich dystrybucji jest jednopunktowy (chyba że $c_\alpha \equiv 0$).
+
+Jeżeli \prawo{6.6} $K \subseteq^k U$, to każda $\Lambda \in \mathcal D'(U)$ jest postaci khm-1 dla pewnej ciągłej $f$ w $U$ i wielowskaźnika $\alpha$, o ile $\phi \in \mathcal D_K$.
+Jeśli dodatkowo $\Lambda$ ma nośnik $K$ i rząd $N$, zaś $K \subseteq^k V \subseteq_o U \subseteq_o \R^n$, to istnieje skończenie wiele funkcji $f_\beta$ w $\Omega$ z nośnikami w $V$, że $\Lambda = \sum_\beta D^\beta f_\beta$.
+Każda $\Lambda \in \mathcal D'(U)$ ma takie ciągłe $g_\alpha$ w $U$, że każdy zwarty $K \subseteq U$ przecina nośniki tylko skończenie wielu $g_\alpha$ i $\Lambda = \sum_\alpha D^\alpha g_\alpha$.
+Jeśli rząd $\Lambda$ jest skończony, to tylko skończenie wiele z nich musi być różne od zera.
+\[
+	\Lambda \phi = (-1)^{|\alpha|} \int_U (D^\alpha \phi)(x) \,\textrm{d} x
+\]
+
+Do końca \prawo{6.7} rozdziału skrótem na $\mathcal D(\R^n)$, $\mathcal D'(\R^n)$ są $\mathcal D$, $\mathcal D'$.
+Dla funkcji $u$ w $\R^n$ i $x \in \R^n$ określamy $(\tau_x u) (y) = u(y-x)$, $\check u (y) = u(-y)$.
+%\wcht{Splot} funkcji $\R^n \to \C$: funkcja $(u * v) (x) = \int_{\R^n} u(y) v(x-y) \,\textrm{d}y$
+Definicję \wcht{splotu} dla funkcji $\R^n \to \C$ adaptujemy do dystrybucji: $(u* \phi)(x) = u(\tau_x \check \phi)$ dla $u \in \mathcal D'$, $\phi \in \mathcal D$, $x \in \R^n$.
+Przesunięcie dystrybucji $u \in \mathcal D'$: $(\tau_xu)(\phi) = u(\tau_{-x} \phi)$ ($\phi \in \mathcal D$, $x \in \R^n$).
+Niech $u \in \mathcal D'$; $\psi$, $\phi \in \mathcal D$.
+Wtedy $\tau_x(u * \phi) = (\tau_x u) * \phi = u * (\tau_x\phi)$, $u * \phi \in \mathscr C^\infty$, a do tego $D^\alpha(u * \phi) = (D^\alpha u) * \phi = u * (D^\alpha \phi)$ dla wszystkich wielowskaźników $\alpha$.
+Splatanie jest łączne, to znaczy $u * (\phi * \psi) = (u * \phi) * \psi$.
+Przez \wcht{aproksymatywną jedynkę} na $\R^n$ rozumie się ciąg funkcji $h_j$ postaci $h_j(x) = j^n h(jx)$, gdzie $h \in \mathcal D$ jest nieujemna i unormowana: całka z $h$ nad $\R^n$ to $1$.
+Jeżeli $\phi \in \mathcal D$ i $u \in \mathcal D'$, to $\lim_j \phi * h_j = \phi$ w $\mathcal D$, zaś $\lim_j u * h_j = u$ w $\mathcal D'$.
+\emph{Niektóre dystrybucje dobrze się rozszerzają.} % strony 188 - 191

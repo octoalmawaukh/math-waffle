@@ -1,0 +1,55 @@
+\wcht{Znormalizowana $\R^n$-Le-miara} \prawo{7.1} $m_n$ jest określona przez $\textrm{d}m_n(x) = (2\pi)^{-n/2}\,\textrm{d}x$.
+Dla $t \in \R^n$, \wcht{charakter} to funkcja $x \mapsto \exp i \langle t \mid x \rangle$ ($e_t$).
+Jest homo-, gdyż $e_t(x+y) = e_t(x)e_t(y)$.
+\wcht{Transformata Fouriera} funkcji $u \in L^1(\R^n)$: khm-1.
+Dla uproszczenia formalizmu, $D_\alpha = i^{-|\alpha|} D^\alpha$.
+Wtedy $D_\alpha e_t = t^\alpha e_t$
+Jeśli $u, w\in L^1(\R^n)$, $x \in \R^n$, to $(\tau_x u)^\wedge = e_{-x} \widehat{u}$, $(e_x u)^\wedge = \tau_x \widehat u$, $(u * w)^\wedge = \widehat{u} \cdot \widehat{w}$.
+Wreszcie: dla $\lambda > 0$ i $v = u(x/\lambda)$, $\widehat{v}(t) = \lambda^n \cdot \widehat{u}(\lambda t)$.
+\wcht{Funkcje szybko malejące}: te $g \in \mathscr C^\infty (\R^n)$, że $\sup_{|\alpha| \le N} \sup_{x \in \R^n} (1+|x|^2)^N |(D_\alpha g)(x)| < \infty$.
+Tworzą liniową p. Frecheta, $\mathcal S_n \supseteq \mathcal D(\R^n)$
+Jeśli $P$ jest wielomianem, $h \in \mathcal S_n$ i $\alpha$ to wielowskaźnik, to $g \mapsto Pg$, $g \mapsto hg$, $g \mapsto D_\alpha g$ są ciągłe i liniowe ($\mathcal S_n \to \mathcal S_n$).
+Prawdziwe są khm-2, khm-3.
+Transformata funkcji z $L^1(\R^n)$ jest ciągła i znika w nieskończoności ($\|\widehat g\|_\infty \le \|g\|_1$).
+\wcht{Tw. o odwracaniu}: jeżeli $g \in \mathcal S_n$, to khm-4.
+Transformacja Fouriera jest to liniowy homeo- $\mathcal S_n$ w siebie o okresie cztery.
+Jeżeli zarówno $u$ jak i $\widehat u$ należą do $L^1(\R^n)$, to khm-5 p.w.
+Przestrzeń $\mathcal S_n$ jest zamknięta na splot: $u$, $v \in \mathcal S_n$ pociągają $f * g \in \mathcal S_n$, do tego $\widehat{uv} = \widehat u * \widehat v$.
+\wcht{Tw. Plancherela}: dokładnie jedna izometria liniowa $\Psi \colon L^2(\R^n) \to L^2(\R^n)$ (,,na'') spełnia $\Psi u = \widehat u$ dla $u \in \mathcal S_n$ (transformacja Fouriera-Plancherela).
+Khm-6: wzór Parsevala.
+\[
+	\widehat u(t) = \int_{\R^n} f e_{-t} \,\D m_n \spk
+	\widehat{P(D)f} = P \widehat f \spk
+	\widehat{Pf} = P(-D) \widehat f \spk
+	g(x) = \int_{\R^n} \widehat g e_x \,\D m_n \spk
+	u(x) = \int_{\R^n} \widehat u e_x \,\D m_n \spk
+	\int_{\R^n} f \overline g -\widehat f \cdot \overline {\widehat g} \,\D m_n = 0
+\]
+
+Identyczność \prawo{7.2} $i \colon \mathcal D(\R^n) \to \mathcal S_n$ jest ciągła, zaś $\mathcal D(\R^n)$ w $\mathcal S_n$ jest gęsta.
+Jeżeli $L$ to ciągły funkcjonał na $\mathcal S_n$, to $u_L = L \circ i$ należy do $\mathcal D'(\R^n)$.
+Skoro różne $L$ nie mogą rozszerzyć się do jednego $u$, to $L \mapsto L \circ i$ daje liniowy izo- $\mathcal S_n'$ z \wcht{p. dystrybucji temperowanych}.
+Dla wielowskaźnika $\alpha$, wielomianu $P$, $g\in \mathcal S_n$ i temperowanej dystrybucji $u$, $D^\alpha u$, $Pu$ i $gu$ są też temperowane.
+Dla $u \in \mathcal S_n'$ określmy $\widehat u (\varphi) = u(\widehat \varphi)$, transformatę Fouriera.
+Dalej, $(u * \varphi)(x) = u(\tau_x \check \varphi)$.
+Jeżeli $\varphi \in \mathcal S_n$, zaś $u$ jest temperowana, to $u * \varphi \in \mathscr C^\infty(\R^n)$ oraz $D^\alpha(u * \varphi) = (D^\alpha u) * \varphi = u * (D^\alpha \varphi)$.
+Dystrybucja $u * \varphi$ jest temperowana.
+Mamy $\widehat{u * \varphi} = \widehat \varphi \cdot \widehat u$ oraz $\widehat u * \widehat \varphi = \widehat {\varphi u}$.
+Dla $\psi \in \mathcal S_n$, $u * \varphi * \psi$ ma sens (łączność).
+
+\wcht{Holomorf} \prawo{7.3} $f \colon (\Omega \subseteq_o \C^n) \to \C$: ciągła, holomorf ,,po każdej zmiennej''.
+Entiére w $\C^n$ funkcja, która znika na $\R^n$, to $f \equiv 0$.
+Jeśli $\phi \in \mathcal D(\R^n)$ ma nośnik zawarty w $B_r$ i khm-1, to $f$ jest entiére i $|f(z)| \le \gamma_N (1+|z|)^{-N} \exp(r |\Im z|)$ dla pewnych $\gamma_N < \infty$.
+Odwrotnie: entiére, która spełnia ten warunek ,,bierze się'' z $\phi \in \mathcal D(\R^n)$ z nośnikiem w $B_r$ i khm-1.
+Gdy $u \in \mathcal D'(\R^n)$ ma zwarty nośnik w $B_r$ oraz rząd $N$, to $f(z) = u(e_{-z})$ jest entiére, której obcięcie do $\R^n$ jest transformatą Fouriera dla $u$.
+Istnieje przy tym stała $\gamma < \infty$, że $|f(z)| \le \gamma(1+|z|)^N \exp (r |\Im z|)$.
+Na odwrót: jak wyżej.
+Były to \wcht{twierdzenia Paleya-Wienera}.
+Oznaczenia: $e_z \colon t \mapsto \exp (i \langle z \mid t \rangle)$; $B_r = \{x \in \R^n : |x| \le r\}$.
+\[
+	f(z) = \int_{\R^n} \phi(t) \exp(-i \,\langle z \mid t \rangle) \,\D m_n(t) \spk
+	\int_{K \subseteq^k U} |f|^2 \,\textrm{d}m_n < \infty
+\]
+
+Mierzalna \prawo{7.4} $f \colon (U \subseteq_o \R^n) \to \C$ należy \wcht{lokalnie} do $L^2$ w $U$: khm-2 (wyżej).
+\wcht{Lemat Sobolewa}: jeśli $n, p, r \in \Z$, $n > 0$, $p \ge 0$ i $2r > 2p + n$, zaś $f \colon (U \subseteq \R^n) \to$ ? ma pochodne dystrybucyjne $D_i^kf$ w $L^2$ w $U$ dla $1 \le i \le n$, $0 \le k \le r$, to istnieje $f_0 \in \mathscr C^{(p)}(U)$, że $f_0 = f$ dla p.w. $x \in U$.

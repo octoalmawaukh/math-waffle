@@ -1,0 +1,68 @@
+\wcht{P. dualna} \prawo{3.1} do wektopa $X$: liniowy zbiór ciągłych funkcjonałów na $X$.
+Funkcjonały $f \colon (M \le X) \to \R$, że $f \le p$ ($p \colon X \to \R$ spełnia $p(tx) = tp(x)$ oraz $p(x+y) \le p(x) + p(y)$ dla $t \ge 0$) przedłuża się do $\Lambda \colon X \to \R$, że $-p(-x) \le \Lambda x \le p(x)$ (tu $X$ jest $\R$-liniowa).
+Weźmy niepuste, rozłączne, wypukłe $A, B \subseteq X$ z wektopa.
+Jeśli $A \subseteq_o X$, to istnieją $\Lambda \in X^*$ oraz $\gamma \in \R$, że $\Re \Lambda x < \gamma \le \Re \Lambda y$ dla $x \in A$, $y \in B$.
+Jeśli $A \subseteq^k X$, $B \subseteq^a X$, zaś $X$ lokalnie wypukła, to istnieją $\Lambda \in X^*$, $\gamma_1, \gamma_2 \in \R$, że $\Re \Lambda x < \gamma_1 < \gamma_2 < \Re \Lambda y$.
+Dual do lokalnie wypukłej rozdziela jej punkty.
+Gdy $M \le X$ (w lokalnie wypukłej) i $x_0 \in X \setminus \cl M$, to istnieje $\Lambda \in X^*$, że $\Lambda x_0 = 1$, ale $\Lambda [M] = 0$.
+Wtedy ciągłe funkcjonały na $M$ przedłużają się do $X$.
+Każdy $x_0 \in X \setminus B$ ma $\Lambda \in X^*$, że $|\Lambda B | \le 1$, ale $\Lambda x_0 > 1$ (wypukły, zbalansowany $B \subseteq^a X$ lokalnie wypukły).
+(\wcht{twierdzenia Hanha-Banacha})
+
+Zwarta \prawo{3.2} topologia $\mathcal T_2$ jest ,,sztywna'': osłabienie zabija $\mathcal T_2$, wzmocnienie: zwartość.
+P. liniowa $X$ z topologią od funkcjonałów liniowych $X'$ rozdzielających punkty $X$ staje się loklanie wypukłym wektopem z dualem $X'$.
+\wcht{Słaba topologia} na $X$: od przekształceń z $X^*$, o ile rozdzielają punkty $X$; $X_w$.
+Każdy słabo otwarty jest pierwotnie otwarty.
+Domknięcie i słabe domknięcie wypukłego $E$ w lokalnie wypukłej $X$ pokrywają się.
+Każdy ciąg $x_n \in X$ (metryzowalny, lokalnie wypukły wektop) słabo zbieżny do $x$ ma ciąg $y_n$ pierwotnie zbieżny do $x$, przy czym każdy $y_n$ to wypukła kombinacja skończenie wielu $x_n$.
+Niech wektop $X$ ma dual $X^*$.
+Każdy $x \in X$ zadaje funkcjonał na $X^*$: $\Lambda \to \Lambda x$.
+Wracamy do faktu z pierwszej linijki z $X^*$ zamiast $X$ oraz $X$ zamiast $X'$.
+Topologię od $X$ na $X^*$ nazywamy \wcht{słabą* topologią}.
+
+\wcht{Tw. Banacha-Alaoglu}: \prawo{3.3} zbiór \wcht{polarny} $K = \{\Lambda \in X^* : (\forall x \in V) (|\Lambda x| \le 1)\}$ jest słabo* zwarty dla otoczenia zera $V$ w wektopie $X$.
+Jeśli $X$ jest ośrodkowy, zaś $K \subseteq X^*$ słabo* zwarty, to $K$ jest słabo* metryzowalny, choć sam $X^*$ nie musi.
+Zbiór polarny otoczenia $V$ zera w ośrodkowym wektopie $X$ jest ciągowo zwarty w słabej* topologii.
+W lokalnie wypukłej $X$, słabo ograniczony $\Lra$ pierwotnie ograniczony.
+\wcht{Powłoka wypukła}: $\operatorname{co}$, przekrój wypukłych nadzbiorów.
+Całkowicie ograniczony w metrycznej: zawarty w skończonej unii dowolnie małych kul; w wektopie: gdy każde otoczenie zera $V$ w $X$ ma skończony $F \subseteq X$, że $E \subseteq F + V$.
+Definicje pokrywają się dla niezmienniczych metryk zgodnych z topologią $X$.
+Powłoka unii zwartych i wypukłych $\{A_i\}_{i=1}^n$ jest zwarta.
+W lokalnie wypukłej powłoka całkowicie ograniczonego też jest taka.
+Jeżeli $X$ jest Frécheta, to domknięcie powłoki zwartego jest zwarte.
+Jeżeli $X^*$ rozdziela punkty wektopa $X$, zaś niepuste $A, B \subseteq^k X$ są wypukłe, to istnieje $\Lambda \in X^*$, że $\sup_{x \in A} \Re\, \Lambda x < \inf_{y \in B} \Re\, \Lambda y$.
+Niepusty $S \subseteq K \subseteq X$ (liniowa) jest \wcht{ekstremalny} dla $K$: żaden punkt $S$ nie jest we wnętrzu odcinka o końcach z $K$, chyba że końce są w $S$.
+Punkty ekstremalne: jednopunktowe zbiory, zbiór wszystkich to $E(K)$.
+\wcht{Tw. Kreina-Milmana}: jeśli punkty wektopa $X$ są rozdzielane przez $X^*$, zaś $K \subseteq^k X$ niepusty i wypukły, to $K = \cl \operatorname{co} E(K)$
+\wcht{Tw. Milmana}: jeśli $K\subseteq^k X$ (lokalnie wypukła) jest taki, że $\operatorname{co} (K)$ jest prezwarty, to każdy punkt ekstremalny $\operatorname{cl} \operatorname{co} (K)$ należy do $K$.
+
+Dla \prawo{3.4} funkcji $f \colon Q \to X$ ($Q$ mierzalna z miarą $\mu$; $X$ wektop, którego punkty rozdziela $X^*$) kładziemy $(\Lambda f)(q) = \Lambda(f(q))$.
+Załóżmy, że $f$ jest taka, że skalarne $\Lambda f$ są zawsze całkowalne.
+\wcht{Całką} z $f$ nad $Q$ jest taki $y$, że khm-1 dla wszystkich $\Lambda \in X^*$ (gdy istnieje).
+Zawsze tak jest, gdy $\mu$ to Bo-miara probabilistyczna, $Q$ jest $\mathcal T_2$ i zwarta, $f$ ciągła, zaś $\operatorname{co} f(Q)$ prezwarty.
+Jeżeli $X^*$ rozdziela punkty wektopa $X$, $Q$ to zwarty podzbiór $X$, który ma prezwartą powłokę wypukłą, to: $y \in H$ (domknięcie powłoki) $\Lra$ istnieje regularna Bo-miara $\mu$ na $Q$, że khm-2.
+Prezwartość powłoki wynika ze zwartości $Q$, gdy $X$ jest Frécheta.
+Khm-3, gdy $f \colon Q \to X$ jest ciągła, $\mu$ to dodatnia Bo-miara na $\mathcal T_2$ i zwartej $Q$, zaś $X$ jest $\mathscr B$.
+\[
+	\Lambda y = \int_Q (\Lambda f) \,\textrm d \mu \spk
+	y = \int_Q x \,\D \mu(x) \spk
+	\left\| \int_Q f \,\D\mu \right\| \le \int_Q \|f\| \,\D\mu
+\]
+
+Tutaj \prawo{3.5} $X$ to $\C$-wektop.
+\wcht{Mocny holomorf}: $f \colon (\Omega \subseteq_o \C) \to X$, gdy granice $[f(w) - f(z)]{/}(w-z)$ dla $w \to z$ istnieją $\Ra$ \wcht{słaby holomorf}: $\Lambda f$ to zwykły holo- dla wszystkich $\Lambda \in X^*$.
+Dla $X$: Frechéta, słabe holomorfy to mocno ciągłe, mocne holomorfy; prawdziwe są dla nich: wzór i tw. Cauchy'ego.
+Słaby holomorf z $\C$ w $X$, którego punkty rozdziela $X^*$, ze słabo ograniczonym obrazem jest stały.
+
+Przestrzeń $l^\infty$ ograniczonych funkcji $\N \to \R$ wyposażona jest w operator translacji $\tau \colon l^\infty \to l^\infty$, $(\tau x)(n) = x(n+1)$.
+Istnieje funkcjonał liniowy $\Lambda$ na $l^\infty$, \wcht{granica Banacha}, że $\Lambda \tau x = \Lambda x$ oraz $\liminf_n x(n) \le \Lambda x \le \limsup_n x(n)$.
+Dla $0 < p < \infty$ mamy też $l^p$, przestrzeń funkcji $\N \to \C$ lub $\N \to \R$, że $\sum_{n \ge 1} |x(n)|^p < \infty$.
+Dla $1 \le p < \infty$ funkcja khm-1 (a dla $p = \infty$, $x \mapsto \sup_n x(n)$, przestrzenie $l^p$ stają się $\mathscr B$.
+Dodatkowo, gdy $1/p + 1/q = 1$, to $(l^p)^* = l^q$, tj. istnieje odpowiedniość $\Lambda \leftrightarrow y$: $\Lambda x = \sum_n x(n) y(n)$.
+W $l^p$ są ciągi słabo, ale nie mocno zbieżne, jeżeli tylko $1 < p < \infty$.
+W $l^1$ słaba zbieżność pociąga mocną (normową).
+Jeżeli $0 < p < 1$, to na $l^p$ jest metryka: $d(x, y) = \sum_n |x(n) - y(n)|^p$.
+Z tą metryką $l^p$ jest lokalnie ograniczona, ,,F-'', ale nie lokalnie wypukła, choć jej punkty są rozdzielane przez dual $(l^p)^*$.
+Dual $X^*$, który rozdziela punkty wektopa $X$ jest metryzowalny w słabej* topoloii $\Lra$ $X$ ma co najwyżej przeliczalną bazę Hamela.
+Dla $0 < p < 1$ w $l^p$ jest zwarty zbiór, który ma nieograniczoną powłokę wypukłą, chociaż $(l^p)^*$ rozdziela punkty $l^p$.
+\hfill khm-1: $\|x\|_p := \left[ \sum_{n = 1}^\infty |x(n)|^p \right]^{\ldots}$, $\ldots = 1/p$.

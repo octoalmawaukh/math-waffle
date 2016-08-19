@@ -1,0 +1,83 @@
+\wcht{P. unitarna}: \prawo{12.1} zespolona, z iloczynem skalarnym (zamiana kolejności argumentów wymusza sprzężenie).
+\wcht{P. Hilberta}: unitarna, z zupełną metryką (norma od iloczynu).
+\wcht{Nierówność Cauchy'ego-Schwarza}: $|\langle x \mid y \rangle| \le \|x\| \|y\|$.
+Każdy niepusty, wypukły $E \subseteq^a H$ ma dokładnie jeden $x$ o minimalnej normie.
+Każdy $M \le^a H$ ma \wcht{dopełnienie ortogonalne}: $H = M \oplus M^\perp$, więc $M^{\perp \perp} = M$.
+Istnieje antyliniowa izometria $H \to H^*$, $y \mapsto (x \mapsto \langle x \mid y \rangle)$.
+Dla parami prostopadłych $x_n$ NWSR: $\sum_n \|x_n\|^2 < \infty$, silna zbieżność ($\sum_n x_n$ zbiega w topologii od normy)  i zbieżność słaba (szereg $\sum_n \langle x_n \mid y \rangle$ zbiega dla każdego $y \in H$).
+
+Nadal $\mathcal B(H)$ jest algebrą ograniczonych, liniowych $T$ na $H \neq 0$ (Hilberta) z normą operatorową.
+Jeśli $\langle Tx \mid x \rangle \equiv 0$, to $T = 0$, ale tylko nad $\C$ (w $\R^2$ są obroty!).
+Jeśli $f \colon H \times H \to \C$ jest półtoraliniowy i ,,ograniczony'' ($M = \sup\{|f(x,y)| : \|x\|, \|y\| = 1\} < \infty$), to istnieje dokładnie jeden $S \in \mathcal B(H)$, że $f(x,y) = \langle x \mid Sy \rangle$.
+Wtedy $\|S\| = M$.
+Każdy $T \in \mathcal B(H)$ ma \wcht{sprzężenie} $T^* \in \mathcal B(H)$, że $\langle Tx \mid y \rangle = \langle x \mid T^*y \rangle$ i $\|T^*\| = \|T\|$.
+Okazuje się, że $\mathcal B(H)$ jest $C^*$-algebrą z inwolucją $T \mapsto T^*$ (to sprzężenie jest hilbertowskie, a nie banachowskie przez antyliniowość).
+Zachodzą przy tym zależności: $\ker T^* = (\im T)^\perp$, $\ker T = (\im T^*)^\perp$.
+Rodzaje operatorów: \wcht{unitarny} $TT^* = I = T^*T$, \wcht{hermitowski} $T^* = T$ (oba pociągają normalność, $TT^* = T^*T$ lub równoważnie $\|Tx\| = \|T^*x\|$ dla każdego $x \in H$), \wcht{rzut} $TT = T$.
+Własności normalnych: $\ker T = \ker T^*$, gęsty obraz $\Lra$ bycie ,,1-1'', odwracalność $\Lra$ istnieje $\delta > 0$, że $\|T x\| \ge \delta \|x\|$.
+Różne wartości własne odpowiadają wzajemnie prostopadłym podprzestrzeniom własnym.
+NWSR: unitarny; ,,na'' i $\langle Ux \mid Uy \rangle = \langle x \mid y \rangle$; ,,na'' i $\|Ux\| = \|x\|$.
+\emph{Unitarne to automorfizmy p. Hilberta}.
+Dla rzutów NWSR: normalny, hermitowski, $\im P = (\ker P)^\perp$, $\langle Px \mid x \rangle = \|Px\|^2$.
+Samosprzężone rzuty mają prostopadłe obrazy $\Lra$ $PQ = 0$.
+
+\wcht{Tw. Fuglede'a-Putnama-Rosenbluma}: \prawo{12.3} jeśli $M, N, T \in \mathcal B(H)$, $M,N$ są normalne i $MT = TN$, to $M^*T = TN^*$.
+
+Tu: \prawo{12.4} $\mathfrak M$ to $\sigma$-algebra w $\Omega$, $H$ Hilberta. 
+\wcht{Miara spektralna}: $E \colon \mathfrak M \to \mathcal B(H)$, że $E(\varnothing) = 0$, $E(\Omega) = I$, każdy $E(\omega)$ to samosprzężony rzut, mamy $E(\omega \cap \omega') = E(\omega) E(\omega')$, a jeśli $\omega \cap \omega = \varnothing$, to $E(\omega \cup \omega') = E(\omega) + E(\omega')$; dodatkowo $E_{x,y}(\omega) = \langle E(\omega) x \mid y\rangle$ jest miarą zespoloną na $\mathfrak M$ dla $x, y \in H$.
+Zazwyczaj jest tylko skończenie addytywna, ale $\omega \mapsto E(\omega) x$ jest przeliczalnie addytywną miarą.
+
+Topologia $\C$ ma przeliczalną bazę dysków $D_i$.
+Niech $f \colon \Omega \to \C$ będzie $\mathfrak M$-mierzalna, $V$ unią tych $D_i$, że $E(f^{-1}(D_i)) = 0$.
+Jest to największy otwarty podzbiór $\C$ o własności: $E(f^{-1}[V]) = 0$.
+Istotnie ograniczona $f$: ograniczony \wcht{istotny obraz} (dopełnienie $V$).
+Niech $B$ będzie algebrą ograniczonych $\mathfrak M$-mierzalnych $\Omega \to \C$ z normą $\|f\| = \sup\{|f(p)| : p \in \Omega\}$.
+Algebra Banacha $B$ podzielona przez domknięty ideał ,,tych $f \in B$, że $\|f\|_\infty = 0$'' jest nową algebrą Banacha, tak zwaną przestrzenią $L^\infty(E)$.
+
+Istnieje izometryczny *-izomorfizm $\Psi$ algebry Banacha $L^\infty(E)$ na domkniętą podalgebrę $A$ algebry $\mathcal B(H)$ (związany wzorem khm-1, co uzasadnia jakoś sensownosć khm-2).
+Co więcej, khm-3, zaś operator $Q \in \mathcal B(H)$ komutuje ze wszystkimi $E(\omega)$ $\Lra$ ze wszystkimi $\Psi(f)$.
+Tutaj podalgebra normalna to taka, która zawiera $T^*$ dla każdego $T \in A$ (co do khm-3, $x \in H$, $f \in L^\infty(E)$).
+\[
+	\langle \Psi(f) x \mid y \rangle = \int_\Omega f \, \D E_{x,y} \spk
+	\Psi(f) = \int_\Omega f \, \D E \spk
+	\|\Psi(f)x\|^2 = \int_\Omega |f|^2 \, \D E_{x,x} 
+\]
+
+Jeżeli \prawo{12.5} $A$ to domknięta, normalna podalgebra $\mathcal B(H)$ zawierająca identyczność, zaś $\Delta$ to jej p. ideałów maksymalnych, to dokładnie jedna miara spektralna $E$ na podzbiorach borelowskich spełnia khm-1 ($T \in A$, daszek to transformata Gelfanda). 
+Odwrotność transformacji Gelfanda przedłuża się do izometrycznego *-izo- $\Phi$ algebry $L^\infty(E)$ na podalgebrę $A \subseteq B \le^a \mathcal B(H)$ zgodnie z khm-2.
+Precyzyjniej: $\Phi$ jest liniowy oraz multiplikatywny, spełnia $\phi \overline u = (\phi u)^*$, $\|\Phi u\| = \|u\|_\infty$ dla $u \in L^\infty(E)$.
+Każdy normalny $T \in \mathcal B(H)$ ma dokładnie jedną miarę spektralną $E$ na podzbiorach borelowskich $\sigma(T)$ (\wcht{rozkład spektralny}), że $T$ to całka z $\lambda \,\D E(\lambda)$ nad $\sigma(T)$.
+\[
+	T = \int_\Delta \widehat T \,\D E \spk
+	\Phi f = \int_\Delta f \,\D E 
+\]
+
+Jeżeli \prawo{12.6} $T \in \mathcal B(H)$ jest normalny z rozkładem spektralnym $E$, $f \in C(\sigma(T))$ i $\omega_0 = f^{-1}(0)$, to $\ker f(T) = \im E(\omega_0)$.
+Jeżeli $E_0 = E(\{\lambda_0\})$ oraz $\lambda_0 \in \sigma(T)$, to: $\ker T - \lambda_0 I = \im E_0$, $\lambda_0$ jest w-wartością $T$ $\Lra$ $E_0 \neq 0$ i każdy punkt izolowany $\sigma(T)$ to w-wartość $T$.
+Co więcej, jeśli $\sigma(T)$ jest przeliczalna (,,$\{\lambda_i\}$''), to każdy $x \in H$ rozwija się jednoznacznie jako $\sum_i x_i$, gdzie $Tx _i  = \lambda_i x_i$ i $i \neq j$ pociąga $x_i \perp x_j$.
+Dla normalnych $T \in \mathcal B(H)$: zwartość $\Lra$ brak niezerowych punktów skupienia dla $\sigma(T)$ oraz $\lambda \neq 0$ pociąga $\dim \ker T - \lambda I < \infty$ $\Ra$ istnieje w-wartość $\lambda$, że $|\lambda| = \|T\|$ oraz $f(T)$ jest zwarty, jeśli $f \in C(\sigma(T))$ i $f(0) = 0$, ale nie, gdy $f \in C(\sigma(T))$, $f(0) \neq 0$, $\dim H = \infty$.
+
+\wcht{Operator dodatni}: \prawo{12.7} $T \in \mathcal B(H)$, gdy $\langle Tx \mid x \rangle \ge 0$, równoważnie $T=T^*$ i $\sigma(T) \subseteq [0, \infty)$.
+Takie operatory można pierwiastkować, tylko jeden pierwiastek jest dodatni (i odwracalny dokładnie tak, jak $T$).
+Odwracalny $T$ ma jednoznaczy \wcht{rozkład biegunowy} $UP$ (unitarny, pozytywny).
+Normalny ma taki rozkład, przy którym $U$, $P$, $T$ parami komutują.
+Jeśli $T \in \mathcal B(H)$ jest odwracalny, $M = TNT^{-1}, N \in \mathcal B(H)$ normalne i $T = UP$ to rozkład biegunowy, to $M = UNU^{-1}$.
+
+Odwracalne \prawo{12.8} operatory z $\mathcal B(H)$ to dokładnie produkty dwóch eksponent ($\exp(S)$ dla $S \in \mathcal B(H)$); grupa wszystkich jest spójna.
+Czy dwóch eksponent produkt też nią jest? 
+Tak, gdy $\dim H < \infty$, ewentualnie w $\mathscr B$-algebrze skończonego wymiaru, ale nie zawsze.
+Jeżeli ograniczony $D \subseteq_o \C$ nie ma zera w domknięciu, zaś $\Omega = \{\alpha \in \C : \alpha^2 \in D\}$ jest spójny, to $H$, p. holomorfów $f$ na $D$, że khm-1 z iloczynem skalarnym khm-2 jest Hilberta.
+Operator $M \in \mathcal B(H)$, dla $z \in D$, $f \in H$: $(Mf)(z)$ $=$ $z f(z)$, jest odwracalny i nie ma pierwiastków kwadratowych, więc nie jest eksponentą.
+\[
+	\int_D |f|^2 \,\textrm{d}m_2 < \infty \spk
+	\langle f \mid g \rangle = \int_D f \overline{g} \,\D m_2
+\]
+
+Jeśli \prawo{12.9} $A$ jest $C^*$-algebrą i $z \in A$, to istnieje funkcjonał dodatni $F$ na $A$, że $F(e) = 1$ i $F(zz^*) = \|z\|^2$.
+Jeśli $z \neq 0$, to istnieje p. Hilberta $H_z$ i homo- $T_z$ algebry $A$ w $\mathcal B(H_z)$ żę $T_z(e) = I$, $T_z(x^*) = T_z(x)^*$ oraz $\|T_z(x) \| \le \|x\|$ dla $x \in A$, $\|T_z(z)\| = \|z\|$.
+Istnieje izometryczny *-izo- $A$ na domkniętą podalgebrę $\mathcal B(H)$, gdzie $H$ to dobrze wybrana p. Hilberta (,,suma prosta'' $H_z$).
+
+Dla \prawo{12.10} $(\Omega, \mathcal A, \mu)$.
+\wcht{Ergodyczne tw. von Neumanna}: jeśli $\psi \colon \Omega \to \Omega$ jest ,,1-1'' i trzyma miarę, zaś $f \in L^2(\mu)$, to $A_nf$, $(f + \dots + f \circ \psi^{n-1})/n$, zbiega do $g \in L^2(\mu)$.
+Do tego $g \circ \psi = g$, więc jeśli $\psi$ jest \wcht{ergodyczna} ($\psi(E) = E \in \mathcal A$, wtedy i tylko wtedy gdy $\mu(E)$ to $0, 1$), to $g = \int_\Omega f \,\textrm{d}\mu$ jest stała.
+Jeśli $U \in \mathcal B(H)$ jest unitarny  i $x\in H$, to $A_n x = (x + Ux + \dots + U^{n-1}x)/n$ zbiega do $y \in H$ w topologii normowej na $H$.

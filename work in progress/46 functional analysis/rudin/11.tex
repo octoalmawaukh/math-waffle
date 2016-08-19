@@ -1,0 +1,32 @@
+Domknięcie \prawo{11.1} ideału $J$ w przemiennej $\mathscr B$-algebrze $A$ jest ideałem; niech $\Delta$ będzie zbiorem wszystkich zespolonych homo- $A$.
+Maksymalne ideały w $A$ to dokładnie jądra $h \in \Delta$; $x \in A$ jest odwracalny $\Lra$ nie leży w żadnym właściwym ideale.
+\wcht{Lemat Wienera}: jeśli $f$ jest funkcją na $\R^n$ bez miejsc zerowych, $f(x) = \sum_* a_m e^{im\cdot x}$, $\sum_* |a_m| <\infty$ (sumy po $m \in \Z^n$), to $1/f(x)$ jest ,,też tej postaci''.
+
+Tu $A$ jest \prawo{11.2} przemienna.
+\wcht{Topologia Gelfanda} na $\Delta$: najsłabsza, przy której wszystkie $\widehat x(h) = h(x)$ (dla $h \in \Delta$, $x \in A$) są ciągłe.
+Algebra $A$ \wcht{półprosta}: trywialny \wcht{radykał} (przekrój ideałów maksymalnych).
+Fakt: ,,przestrzeń ideałów maksymalnych'' $\Delta$ jest zwarta i $\mathcal T_2$.
+\wcht{Transformacja} $x \mapsto \widehat x$ ma jądro, radykał $A$.
+Dla $x \in A$ obrazem $\widehat x$ jest widmo $\sigma(x)$.
+Każdy izo- między półprostymi $\mathscr B$-algebrami przemiennymi jest homeo-.
+Sama transformacja Gelfanda jest izo- ($\|x\| = \|\widehat x\|_\infty$) $\Lra$ $\|x^2\|= \|x\|^2$.
+
+\wcht{Inwolucja}: \prawo{11.3} $x \mapsto x^*$ (z zespolonej algebry $A$ w siebie), jeśli $(x+y)^* = x^* + y^*$, $(ux)^*  =\overline{u}x^*$, $(xy)^* = y^*x^*$ i $x^{**} = x$ ($u \in \C$).
+\wcht{Hermitowski}: $x = x^*$.
+Jeśli $\mathscr B$-algebra jest przemienna i półprosta, to inwolucje na $A$ są ciągłe.
+\wcht{$C^*$-algebra}: $\mathscr B$-algebra z inwolucją, że $\|xx^*\| = \|x\|^2$.
+\wcht{Tw. Gelfanda-Najmarka}: jeśli $A$ jest przemienną $C^*$-algebrą z p. ideałów maksymalnych $\Delta$, to transformacja Gelfanda jest izometrycznym izo- $A$ na $C(\Delta)$ i $h(x^*)$ jest sprzężeniem $h(x)$.
+Jeśli $A$ jest $\mathscr B$-algebrą z inwolucją, $x = x^* \in A$ i $\sigma(x)$ nie zawiera rzeczywistych $\lambda \le 0$, to istnieje $y \in A$, że $y = y^*$ i $y^2 = x$. % nie dopisuj przemienności!
+
+Jeśli \prawo{11.4} $A$ jest $\mathscr B$-algebrą i $xy=yx$, to $\sigma(x+y) \subseteq \sigma(x) + \sigma(y)$ oraz $\sigma(xy) \subseteq \sigma(x) \sigma(y)$.
+W algebrze $A$ z inwolucją, $x$ jest \wcht{normalny}: $xx^*$ to $x^*x$; $B \subseteq A$ jest normalny: komutuje i $x \in S \Ra x^* \in S$.
+Jeśli $B$ jest maksymalny, to także domkniętą przemienną podalgebrą i $\sigma_B(x) = \sigma_A(x)$ dla $x \in B$.
+W $\mathscr B$-algebrze z inwolucją $x \ge 0$ oznacza $x = x^*$ i $\sigma(x) \subseteq [0, \infty)$.
+Własności $C^*$ algebry $A$: hermitowskie elementy mają rzeczywiste widma, jeśli $x \in A$ jest normalny, to $\rho(x) = \|x\|$, $\rho(y y^*) = \|y\|^2$, $u,v \ge 0$ $\Ra$ $u+v \ge 0$, $yy^* \ge 0$ i $e+yy^*$ odwraca się w $A$ ($u, v, y \in A$).
+
+\wcht{Funkcjonał dodatni}: \prawo{11.5} $F$ na $\mathscr B$-algebrze $A$ z inwolucją, że $F(x x^*) \ge 0$.
+Wtedy $F(x*)$ jest sprzężeniem $F(x)$, $|F(xy^*)|^2 \le F(xx^*) F(yy^*)$,  $|F(x)|^2 \le F(e) F(xx^*) \le F(e)^2 \rho(xx^*)$, $|F(x)| \le F(e) \rho(x)$ dla normalnych $x \in A$, $F$ jest ograniczonym funkcjonałem.
+Mamy  $\|F\| = F(e)$ dla przemiennych $A$; jeśli inwolucja spełnia $\|x^*\| \le \beta \|x\|$, to $\|F\| \le \beta^{1/2} F(e)$.
+Jeśli $A$ jest przemienną $\mathscr B$-algebrą z p. ideałów maksymalnych $\Delta$ i z inwolucją, która jest ,,symetryczna'' ($u(x^*)$ to sprzężenie ${u(x)}$ dla $u \in \Delta$), zaś $K$ zbiorem wszystkich dodatnich funkcjonałów $F$ na $A$, że $F(e) \le 1$; $M$ zbiorem dodatnich regularnych Bo-miar $\mu$ na $\Delta$, że $\mu(\Delta) \le 1$, to wzór khm-1 ustala bijekcję między wypukłymi $K, M$, która ,,trzyma'' punkty ekstremalne; zatem multiplikatywne funkcjonały liniowe na $A$ to dokładnie punkty ekstremalne $K$.
+Jeśli $F \in K$, to NWSR: $F$ ekstremalny w $K$; $F(xy) = F(x)F(y)$; $F(xx^*) = F(x)F(x^*)$ dla $x, y \in A$.
+\hfill Khm: $F(x) = \int_\Delta \widehat{x} \,\textrm{d}\mu \spk (x \in A)$

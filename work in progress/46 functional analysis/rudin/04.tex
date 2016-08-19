@@ -1,0 +1,35 @@
+$\mathcal B(X, Y)$: \prawo{4.1} przestrzeń ograniczonych, liniowych $X \to Y$ (wektopy) z normą $\|\Lambda\| = \sup\{\|\Lambda x\| : x \in X, \|x\| \le 1\}$.
+Jest $\mathscr B$, gdy $Y$ jest $\mathscr B$.
+Ważny skrót: $\langle x, x^* \rangle := x^*(x)$.
+Dla kuli $B_{\le 1}$ w $X$ z normą i $x^* \in X^*$, $\|x^*\| = \sup \{|\langle x, x^* \rangle| : x \in B\}$ zamienia $X^*$ w $\mathscr B$.
+Jeśli $B^*_{\le 1}$ to kula w $X^*$, zaś $x \in X$, to $\|x\| = \sup\{|\langle x, x^*\rangle| : x^* \in B^*\}$, więc $x^* \mapsto \langle x, x^*\rangle$ jest ograniczonym funkcjonałem na $X^*$ o normie $\|x\|$.
+Sama kula $B^*_{\le 1}$ jest słabo* zwarta.
+Ustalmy podprzestrzenie: $M$ w $X$ ($\mathscr B$), $N$ w $X^*$, wtedy $M^\perp = \{x^* \in X^* : (\forall x \in M) (\langle x, x^* \rangle = 0)\}$, ${}^\perp N = \{x \in X : (\forall x^* \in N) (\langle x, x^* \rangle = 0)\}$ to \wcht{anihilatory}.
+${}^\perp(M^\perp)$ to normowe domknięcie $M$ w $X$, $({}^\perp N)^\perp$: słabe* domknięcie $N$ w $X^*$.
+Jeśli $M$ to domknięta podprzestrzeń $X$ ($\mathscr B$), to każdy $m^* \in M^*$ rozszerza się do $x^* \in X^*$.
+$m^* \mapsto x^* + M^\perp$ to izometryczny izomorfizm $M^* \to X^*/M^\perp$; zaś $y^* \mapsto y^* \pi$ to izometryczny izomorfizm $(X/M)^* \to M^\perp$, przy czym $\pi \colon X \to X/M$ jest ilorazowym.
+
+Dla \prawo{4.2} unormowanych $X, Y$, każdemu $T \in \mathcal B(X,Y)$ odpowiada dokładnie jeden $T^* \in \mathcal B(Y^*, X^*)$, że $\langle Tx , y^*\rangle = \langle x, T^*y^*\rangle$.
+Spełnia  $\|T^*\| = \|T\|$.
+Jeśli $X, Y$ są $\mathscr B$, to $\ker T^* = (\im T)^\perp$ i $\ker T = {}^\perp (\im T^*)$, zatem $\ker T^*$ jest słabo* domknięte; $\im T \subseteq Y$ jest gęsta $\Lra$ $T^*$ wzajemnie jednoznaczne, $T$ wzajemnie jednoznaczne $\Lra$ $\im T^*$ słabo gęsta.
+\wcht{Trzy tw. o domkniętym obrazie}: jeśli $U, V \subseteq X, Y$ ($\mathscr B$) to $B_{< 1}$ kule i $\delta > 0$, to $\|T^*y^*\| \ge \delta \|y^*\|$ $\Ra$ $\operatorname{cl}T(U) \supset \delta V$ $\Ra$ $T(U) \supset \delta V$ $\Ra$ $T(X) = Y$.
+Ostatni warunek pociąga pierwszy dla pewnego $\delta$.
+NWSR: $T$ ,,na''; $T^*$ to bijekcja; $\im T^*$ jest normowo domknięty.
+Inne NWSR: $\im T$ domknięty w $Y$, $\im T^*$ słabo* w $X^*$; normowo domknięty w $X^*$.
+
+Liniowe \prawo{4.3} $X \to Y$ (obie są $\mathscr B$) jest \wcht{zwarte}, jeśli obraz kuli $B_{< 1}$ jest prezwarty, pociąga ograniczoność.
+Uwaga: $\mathcal B(X)$ jest nie tylko p. Banacha, ale także algebrą.
+\wcht{Widmo} $\sigma(T)$ dla $T \in \mathcal B(X)$: zbiór skalarów $\lambda$, że $T - \lambda I$ nie jest \wcht{odwracalny} (,,$ST = I = TS$''), równoważnie: $\im T - \lambda I \neq X$ $\Lra$ $T - \lambda I$ nie jest bijekcją ($\lambda$ to \wcht{wartość własna}).
+Operator $T \in \mathcal B(X, Y)$ o obrazie skończonego wymiaru jest zwarty.
+Obraz zwartego operatora, jest skończonego wymiaru, gdy jest też domknięty.
+Operatory zwarte tworzą normowo domkniętą podprzestrzeń $\mathcal B(X, Y)$.
+Jeśli $T \in \mathcal B(X)$ jest zwarty i $\lambda \neq 0$, to $\dim \mathcal N(T - \lambda I) < \infty$.
+Jeśli $\dim X = \infty$, a $T \in \mathcal B(X)$ jest zwarty, to $0 \in \sigma(T)$.
+Jeśli $S,T \in \mathcal B(X)$ i $T$ jest zwarty, to $ST$, $TS$ też.
+Ograniczony $T \colon X \to Y$ jest zwarty $\Lra$ $T^*$ jest zwarty.
+Jeśli $\lambda \neq 0$, zaś $T \in \mathcal B(X)$ jest zwarty, to $T - \lambda I$ ma domknięty obraz.
+Każdy $\lambda \in \sigma(T)$ jest wartością własną $T$ i $T^*$.
+Zbiór $\sigma(T)$ jest zwarty, co najwyżej przeliczalny i tylko $0$ może być jego punktem skupienia.
+Co więcej, liczby: $\dim \ker (T - \lambda I)$, $\dim X / \im (T - \lambda I)$, $\dim \ker (T^* - \lambda I)$, $\dim X^* / \im (T - \lambda I)$ są równe i skończone.
+% Gdy $E$ jest zbiorem w-wartości $\lambda$ dla $T \in \mathcal B(X)$, że $|\lambda| >r > 0$, to dla $\lambda \in E$ jest $\mathcal R(T - \lambda I) \neq X$.
+% Dodatkowo $E$ jest skończony.
