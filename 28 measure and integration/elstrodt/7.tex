@@ -1,0 +1,58 @@
+\wcht{Miara znakowana}: \prawo{7.1} funkcja $\nu \colon \mathcal A \to \overline \R$, gdy $\nu(\varnothing) = 0$, $\nu$ nie przyjmuje jednocześnie $\pm \infty$, khm-1.
+Jeśli $\mu \colon \mathcal A \to \overline \R$ jest miarą, zaś $f \colon X \to \overline \R$ jest quasicałkowalna, to khm-2 $\nu \colon \mathcal A \to \overline \R$ jest \wcht{znakowaną miarą} o gęstości $f$ względem $\mu$ ($\nu = f \odot \mu$).
+Dla każdej miary znakowanej istnieje \wcht{rozkład Hahna} (\datum{1921}) $X = P \sqcup N$ na zbiór dodatni (jeśli $A \subseteq P$, to $\nu(A) \ge 0$) i ujemny (anologicznie), jest jednoznaczny z dokładnością do $\nu$-zerowych.
+Mamy miary szaleństwa $\nu^+(A) = \nu(A \cap P)$, $\nu^-(A) = - \nu(A \cap N)$ oraz $|\nu| = \nu^+ + \nu^-$.
+Khm-3.
+Dwie miary znakowane $\nu, \rho$ są \wcht{singularne} do siebie, gdy $X = A \sqcup B$ (mierzalne), że $A$ jest $\nu$-zerowy, zaś $B$: $\rho$-zerowy.
+\wcht{Rozkład Jordana}: $\nu = \nu^+ - \nu^-$ na singularne; jest on ,,minimalny'': jeśli $\nu = \rho - \sigma$ (i choć jedna jest skończona), to $\nu^+ \le \rho$, $\nu^- \le \sigma$.
+\[
+	\nu \left(\coprod_{n=1}^\infty A_n \right) = \sum_{n=1}^\infty \nu(A_n) \spk
+	\nu(A) = \int_A f \,\D \mu
+\]
+
+Zbiór $M$ skończonych miar znakowanych na $\mathcal A$ jest p. wektorową nad $\R$.
+Relacja $\nu \le \rho \Lra \nu(A) \le \rho(A)$ dla każdego $A$ zadaje porządek ($M$ jest przestrzenią Riesza!).
+Funkcja $\|\nu\| = |\nu|(X)$ jest normą, a $(M, \|\cdot\|)$ porządkowo zupełną p. Banacha.
+
+
+Gdy \prawo{7.2} $\mu, \nu$ to znakowane (lub zespolone) miary na $\mathcal A$, to $\nu$ jest $\mu$-\wcht{absolutnie ciągła}, gdy $\mu$-zerowe są $\nu$-zerowe, $\nu << \mu$.
+Wystarcza istnienie (quasicałkowalnej) gęstości dla $\nu$ względem $\mu$.
+\wcht{Tw. Radona-Nikodyma}: jeśli $\mu$ jest $\sigma$-skończoną miarą, zaś $\nu << \mu$ znakowaną miarą na $\mathcal A$, to $\nu$ ma gęstość względem $\mu$ (istnieje półcałkowalna $f \colon X \to \Rr$, że $\nu = f \odot \mu$, $\mu$-p.w. jednoznacznie);
+Jeśli $\nu$ jest miarą, to można założyć $f \ge 0$.
+\wcht{Tw. o rozkładzie Lebesgue'a}: jeśli $\mu$ jest $\sigma$-skończoną miarą, zaś $\nu$ znakowaną $\sigma$-skończoną miarą, to $\nu = \rho + \sigma$ rozkłada się jednoznacznie na znakowane $\rho, \sigma$ (są $\sigma$-skończone), że $\rho << \mu$, $\sigma \perp \mu$ i $\rho$ ma półcałkowalną gęstość $f \colon X \to \R$ względem $\mu$ [$\rho, \sigma$ są skończone $\Lra$ $\nu$ jest].
+
+Jeśli \prawo{7.3} $(V, \|\cdot\|)$ jest Banacha nad $\mathbb K$, to $V'$, zbiór liniowych, ciągłych $\varphi \colon V \to \mathbb K$, to \wcht{dual}.
+Z normą $\|\varphi\| = \sup\{|\varphi(x)| : x \in V, \|x \| \le 1\}$, też jest Banacha.
+Niech $1/p + 1/q = 1$.
+Jeśli $p = 1$, zaś $\mu$ to $\sigma$-skończona miara (ewentualnie $1 < p < \infty$, $\mu$ dowolna), to $\varphi \colon L^q \to (L^p)'$, $\varphi(g) = \varphi_g$ jest izo- normowym: $\varphi_g(f) = \int_X fg \,\textrm{d}\mu$.
+Więcej analizy funkcjonalnej zna Rudin.
+
+%Mamy \prawo{7.4} $\eta, \lambda, \beta$ (zew-Le-, Le- i Le-Bo- miary).
+\wcht{Tw. pokryciowe Vitaliego} \prawo{7.4} (\datum{1908}): jeśli $A \subseteq \R$ ma skończoną zew-Le-miarę, zaś $\mathcal F$ to \wcht{pokrycie Vitaliego} [rodzina przedziałów, że każdy $x \in A$ można przykryć dowolnie krótkim $I \in \mathcal F$], to dla każdego $\varepsilon > 0$ istnieją rozłączne $I_1, \dots, I_n \in \mathcal F$, że $\eta(A \setminus \bigsqcup_{k=1}^n I_k) < \varepsilon$.
+%Mamy prawe i lewe (górne) \wcht{liczby ablatywne} w $x \in I \subseteq \R$ (przedział, funkcja $I \to \R$); dolne dla $\liminf$ miast $\limsup$.
+\wcht{Tw. Lebesgue'a} (\datum{1904}): monotonicznie rosnąca $f \colon [a,b] \to \R$ jest $\lambda$-p.w. różniczkowalna.
+Kładąc $f' = 0$ w nieróżniczkowalnościach, $f' \in \mathfrak L^1$ i całka z niej nie przekracza $f(b) - f(a)$.
+Zatem ograniczona wariacja pociąga $\lambda$-p.w. różniczkowalność.
+Inny wniosek (Fubini, \datum{1915}): jeśli $(f_n)$ jest ciągiem monotonicnie rosnących (malejących) funkcji na $[a,b]$, to szereg $F(x) = \sum_{n=1}^\infty f_n(x)$ zbiega i można różniczkować wyraz po wyrazie $\lambda$-p.w.
+%\[
+%	\mathfrak D^+ f(x) = \limsup_{h \to 0^+} \frac{f(x+h) - f(x)}{h} \spk
+%	\mathfrak D^- f(x) = \limsup_{h \to 0^+} \frac{f(x) - f(x-h)}{h} \spk
+%\]
+
+\wcht{Tw. o gęstości} (Lebesgue, \datum{1904}): $\lambda$-p.w. punkty $A \subseteq \R$ są \wcht{punktami gęstości} (khm-1), tzn. $\eta (A \setminus D(A)) = 0$.
+Jeśli $A \in \mathfrak L^1$, to $D(A) \in \mathfrak L^1$ i $\lambda(A \triangle D(A)) = 0$.
+Funkcja $F \colon [a,b] \to \mathbb K$ \wcht{absolutnie ciągła} (Vitali, \datum{1905}): każdy $\varepsilon > 0$ ma $\delta > 0$, że khm-2 dla $a \le \alpha_1 < \beta_1 \le \ldots \le \alpha_n < \beta_n \le b$, takich że $\sum_k \beta_k - \alpha_k < \delta$, pociąga ciągłość i ograniczoną wariację.
+\wcht{Tw. Vitaliego} (\datum{1905}): absolutnie ciągła o $\lambda$-p.w. pochodnej zero jest stała.
+\wcht{Hauptsatz} (Lebesgue, Vitali \datum{1904/1905}): jeśli $f \colon [a,b] \to \overline {\mathbb K}$ jest Le-całkowalna, to khm-3 ($a \le x \le b$) jest absolutnie ciągła i $F' = f$ $\lambda$-p.w.
+Gdy położymy $F'(x) = 0$ tam, gdzie nie ma $F'$, to całka z $F'(t)$ nad $[a,x]$ jest równa $F(x) - F(a)$.
+Całki nieoznaczone to dokładnie absolutnie ciągłe.
+\wcht{Mieszanka Lebesgue'a} (\datum{1904}): prawo-ciągła funkcja rosnąca $ \colon \R \to \R$ rozkłada się na $F_a + F_s + F_d$ (też rosnące, prawo-ciągłe), że $F_a$ jest absolutnie ciągła, $\mu_a = F' \odot \beta << \beta$; $F_s$ jest singularna, $\mu_s \bot \beta$, $F'_s = 0$ $\beta$-p.w., zaś $F_d$ to funkcja skoku, $F_d' = 0$ $\beta$-p.w. i khm-4 wyżej dla $E \in \mathfrak B^1$.
+Miara $\mu_a + \mu_s$ jest bezatomowa, $\mu_d$ czysto atomowa.
+Jeśli $F_a(0) = F_s(0) = 0$, to wszystko jest jednoznaczne.
+\wcht{Funkcja absolutnie ciągła} $I \to \R$: taka obcięta do $[a,b] \subseteq I$.
+\wcht{Singularna}: ciągła, rosnąca, $\beta$-p.w. zerowa pochodna.
+\[
+	\lim_{h \to 0^+} \frac{\eta(A \cap [x-h, x+h])}{2h} = 1 \spk
+	\sum_{k=1}^n |F(\beta_k) - F(\alpha_k)| < \varepsilon \spk
+	F(x) := \int_a^x f(t) \,\textrm{d}t \spk
+\]

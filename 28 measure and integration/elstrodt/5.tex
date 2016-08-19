@@ -1,0 +1,13 @@
+Istnieje \prawo{5.1} miara $\rho$ na $X \times Y$ z $\sigma$-ciauem $\mathcal A \otimes \mathcal B = \sigma(\{A \times B : A \in \mathcal A, B \in \mathcal B\})$, że $\rho(A \times B) = \mu(A) \nu(B)$.
+Jeśli $\mu, \nu$ są $\sigma$-skończone, to $\rho$ też i jest jednoznaczna: \wcht{miara produktowa} $M \mapsto \int_X \nu(M_x) \,\textrm{d}\mu(x) = \int_Y \mu(M^y) \,\textrm{d}\nu(y)$, gdzie $M_a \subseteq Y$, $M^b \subseteq X$ to cięcia.
+$\mathfrak L^p \otimes \mathfrak L^q \subsetneq \mathfrak L^{p+q}$, ale $\mathfrak B^p \otimes \mathfrak B^q = \mathfrak B^{p+q}$.
+Sierpiński: istnieje $A \subseteq [0,1]^2$, $A \not \in \mathfrak L^2$, którego każde cięcie ma co najwyżej jeden punkt.
+Dla $\sigma$-skończonych miar $\mu, \nu$ i $M, N \in \mathcal A \otimes \mathcal B$, że $\nu (M_x) = \nu(N_x)$ dla p.w. $x \in X$, mamy $(\mu \otimes \nu)(M) = (\mu \otimes \nu)(N)$ (\wcht{reguła Cavalieriego}).
+Przez indukcję mamy wyższe miary produktowe.
+Z \wcht{tw. pokryciowego} Vitaliego (jeśli $U \subseteq_o \R^p$ ma skończoną $\lambda^p$-miarę i $\delta >0$, to istnieje ciąg rozłącznych kul domkniętych $K_n \subseteq U$ średnicy $< \delta$, że $\lambda^p(U \setminus \bigcup_{n=1}^\infty K_n) = 0$) wynika, że stała z tw. Hausdorffa (3.2) to $[\pi^{1/2}/2]^p / \Gamma(1+p/2)$.
+
+\wcht{Tw. Fubiniego} \prawo{5.2} (\datum{1907}): dla $\sigma$-skończonych miar $\mu, \nu$ i mierzalnej $f \colon X \times Y \to [0, \infty]$ mamy khm-1.
+Pułapka Fichtenholza: istnieje funkcja $f \colon [0,1]^2 \to \R$, która nie jest $\lambda^2$-całkowalna, chociaż jej iterowane całki po osiokątach o mierzalnych bokach istnieją.
+\[
+	\int_{X \times Y} f \,\textrm{d} (\mu \otimes \nu) = \int_X \int_Y f(x,y) \,\textrm{d} \nu(y) \,\textrm{d} \mu(x) = \int_Y \int_X f(x,y) \,\textrm{d} \mu(x) \,\textrm{d} \nu(y).
+\]

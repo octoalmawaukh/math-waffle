@@ -1,0 +1,33 @@
+\wcht{Problem 1}: \prawo{1.1} czy istnieje ,,zawartość'': addytywna, suw-odporna $m \colon \mathfrak P (\R^p) \to [0, \infty]$, że $m([0,1]^p) = 1$?
+Nie (dla $p \ge 3$: Hausdorff, \datum{1914}) lub tak (dla $p < 3$: Banach, \datum{1914}, ale nie jest jednoznaczna).
+\wcht{Problem 2}: czy istnieje ,,miara'', $\sigma$-addytywna zawartość?
+Nie (Vitali, \datum{1905}).
+Jeżeli $p \ge 1$, zaś $A, B \subseteq \R^p$ mają niepuste wnętrza, to istnieje przeliczalnie wiele $C_k \subseteq \R^p$ i przesunięć $\beta_k \colon \R^p \to \R^p$, że $A = \coprod C_k$ i $B = \coprod \beta_k(C_k)$.
+Dla $p \ge 3$ i ograniczonych $A,B$ wystarczy skończenie wiele $C_k$.
+Khm: $\limsup A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k$, $\liminf A_n = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k$.
+
+\wcht{Ciauo}: \prawo{1.3} \wcht{ring} (podpierścień $(\mathfrak P(X), \triangle, \cap)$) zawierający $X$.
+Zbiór $R \subseteq \mathfrak P(X)$ jest ringiem $\Lra$ zawiera $\varnothing$ i jest zamknięty na ($\cap$, $\triangle$), ($\triangle$, $\cup$) ew. ($\cup$, $\setminus$), $\sigma$-ringiem: na różnice i przeliczalne sumy, ($\sigma$-)ciauem: dopełnienia i (przeliczalne) sumy oraz zawiera $X$.
+
+Przekrój \prawo{1.4} ringów (ciau, $\sigma$-ciau) nad $X$ zawierających ustalony zbiór jest ringiem (\ldots).
+\wcht{Borelowskie} $\sigma$-ciauo $\mathfrak B$: generowane przez otwarte zbiory w $X$.
+Jeśli $X$ jest $\mathcal T_2$, przeliczalną unią zwartych, to zamiast otwartych można wziąć zwarte.
+Rodzina \wcht{d}-stabilna (\wcht{v}-): jest zamkniętna na skończone krojenie (unie).
+Każda z: $\mathfrak O^p$ (otwarte), $\mathfrak C^p$ (domknięte), $\mathfrak K^p$ (zwarte), $\mathfrak I^p$ ($\Q^p$-osiościany) jest d-stabilnym generatorem $\mathfrak B^p(\R^p)$.
+Dla $f \colon X \to Y$ i $\mathcal A \subseteq \mathfrak P(Y)$ mamy $\sigma(f^{-1}[\mathcal A]) = f^{-1} [\sigma(\mathcal A)]$.
+Uwaga do 2.7: $\mathfrak F^p$ zawiera rozłączne sumy elementów $\mathfrak I^p$.
+
+\wcht{Półring} \prawo{1.5} nad $X$ to d-stabilny $\mathcal H \subseteq \mathfrak P(X)$ zawierający $\varnothing$, że różnica każdych $A, B \in \mathcal H$ jest rozłączną unią pewnych $C_1, \ldots, C_n \in \mathcal H$ (\datum{1950}, Neumann).
+Jeśli $\mathcal H, \mathcal K$ to półringi nad $X$, $Y$, to $\mathcal H * \mathcal K := \{A \times B : A \in \mathcal H, B \in \mathcal K\}$ jest półringiem nad $X \times Y$, zatem $\mathfrak I^p$, $\mathfrak I^p_\Q$ są półringami nad $\R^p$.
+Hahn (\datum{1932}): półring $\mathcal H$ nad $X$ generuje pierścień $\mathcal R := \{\coprod_{k=1}^n A_k : A_k \in \mathcal H\}$. % (patrz: $\mathfrak I^p$ i $\mathfrak F^p$).
+
+\wcht{Klasa monotoniczna}: \prawo{1.6} $\mathcal M \subseteq \mathfrak P(X)$ zamknięty na granice monotonicznych ciągów.
+Monotoniczny ring $\Ra$ $\sigma$-ring $\Ra$ mono-klasa.
+Niechaj rodzina $\mathcal E \subseteq \mathfrak P(X)$ generuje mono-klasę $\mathcal M$, ring $\mathcal R$, $\sigma$-ring $\mathcal S$, ciauo $\mathcal A$ i $\sigma$-ciauo $\mathcal B$.
+Wtedy $\mathcal E \subseteq \mathcal M, \mathcal R \subseteq \mathcal S \subseteq \mathcal B \supseteq \mathcal A \supseteq \mathcal R$.
+Zbiór zamknięty na dopełnianie i rozłączne unie to \wcht{$\lambda$-układ} $\mathcal D \subseteq \mathfrak P(X)$ (\wcht{Dynkina}, \datum{1959}).
+Rodzina $\mathcal D \subseteq \mathfrak P(X)$ jest mono-klasą zawierającą $X$, zamkniętą na ,,odejmowanie nadzbiorów'' $\Lra$ jest $\lambda$-układem.
+Układ Dynkina jest $\sigma$-ciauem $\Lra$ d-stabilny.
+Jeśli $\mathcal E$ generuje $\lambda$-układ $\mathcal D$, to $\mathcal M \subseteq \mathcal D \subseteq \mathcal B$.
+Dla d-stabilnych $\mathcal E$, $\mathcal D = \mathcal B$; ale $\lambda$-układ z otwartych kul w ośrodkowej, $\infty$-wymiarowej p. Hilberta nie wyczerpuje borelowskich. %Keleti, Preiss
+%$\mathcal M = \mathcal S \Lra \mathcal R \subseteq \mathcal M$

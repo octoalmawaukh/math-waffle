@@ -1,0 +1,48 @@
+\wcht{P. mierzalna}: \prawo{3.1} $(X, \mathcal A)$.
+Funkcja \wcht{$\mathcal A$-$\mathcal B$-mierzalna}: $f \colon (X, \mathcal A) \to (Y, \mathcal B)$, gdy $f^{-1}(\mathcal B) \subseteq \mathcal A$ (wystarczy inkluzja dla generatorów), \wcht{rzeczywista}: Le-Bo mierzalna $\R \to \R$.
+Ciągła $\Ra$ borelowska, choć obraz borelowskiego nie musi taki być (analityczne zbiory Suslina)!
+Jeśli $\mu$ jest miarą na $\mathcal A$, zaś $f \colon (X, \mathcal A) \to (Y, \mathcal B)$ jest mierzalna, to $B \mapsto \mu (f^{-1}(B))$ jest \wcht{miarą przeszczepioną} na $\mathcal B$ (może nie być $\sigma$-skończona, gdy $\mu$ jest).
+
+Le-miara \prawo{3.2} i Le-Bo-miara (obcięcie Le- do borelowskich) są niezmiennicze na izometrie (jedynymi unormowanymi).
+Afiniczna bijekcja jest $\mathfrak B^p$-$\mathfrak B^p$- i $\mathfrak L^p$-$\mathfrak L^p$-mierzalna.
+Miara przeszczepiona różni co najwyżej (multiplikatywną) stałą.
+
+Miara $\lambda^p$ ma dużą wadę: mierzy niewiele zbiorów.
+\wcht{Ośrodkowa} p. miarowa: z ciągiem mierzalnych $C_n$, że mierzalnym $A$ i $\varepsilon > 0 $ odpowiada pewne $n$, dla którego $\mu(A \triangle C_n) < \varepsilon$.
+\wcht{Ciężar}: najmniejszy kardynał mierzący moc zbioru indeksującego $C$.
+Kakutani (\datum{1944}): przedłużenie $\lambda$ ciężaru $\exp \mathfrak c$.
+Później: to samo, suw-odporne (ciężaru $\mathfrak c$) i izo-odporne (znowu ciężaru $\exp \mathfrak c$).
+Sierpiński (\datum{1936}): czy maksymalne izo-odporne przedłużenie $\lambda^p$ do miary istnieje?
+Ciesielski, Pelc (\datum{1985}): nie.
+Istnieje suw-odporna miara na $\mathfrak B^1$, która nie jest izo-odporna!
+
+\wcht{Tw. Hausdorffa} (\datum{1919}): dla zew-Hf-miary $h_p$ w $\R^p$ i zew-Le-miary $\eta^p$ istnieje $\kappa_p > 0$, że $\eta^p = \kappa_p h_p$.
+
+Czy na ringu $\mathfrak L^p_b$ ($b$: ograniczone) istnieje unormowana zawartość $\mu$ niezmiennicza na izometrie, (analogicznie: sfera $S^{p-1} \subseteq \R^p$ i obroty), która nie jest Le-miarą (Ruziewicz)?
+Tak dla $\R, \R^2, S^1$ (Banach), nie dla $p \ge 3$ na $S^{p-1}$ (Margulis dla $p \ge 5$ w \datum{1980}, Drinfeld dla $p = 3, 4$ w \datum{1984} teorią Jacqueta-Langlanda automorficznych form na $\textrm{GL}_2$); nie dla $p \ge 3$ i $\R^p$ (Margulis, \datum{1982}).
+
+\wcht{Tw. Vitaliego} \prawo{3.3} (\datum{1905}): selektory rodziny $\R^p/\Q^p$ nie są Le-mierzalne.
+Może źle dobrano dziedzinę $\lambda^p$?
+Jeśli $\mu \colon A \to \R_\infty$ jest niezmienniczą na $G$-przesunięcia ($G \le \R^p$: przeliczalny i gęsty) miarą nad $\R^p$, gdzie $\mathfrak L^p \subseteq \mathcal A$, która obcięta do $\mathfrak L^p$ jest $\lambda^p$, to żaden selektor $\R^p/G$ nie jest mierzalny (i nie ma mierzalnego podzbioru dodatniej miary).
+Każdy $A \subseteq \R^p$, że $\eta^p(A) > 0$ zawiera nie-Le-mierzalny podzbiór.
+Solovay, \datum{1970}: jeśli istnieje nieosiągalny kardynał, to wszystkie podzbiory $\R^p$ są mierzalne.
+Baza Hamela $B$ dla $\Q$-liniowej $\R$ nie może być borelowska.
+Jeśli jest Le-mierzalna, to miary zero.
+Istnieje $B \subseteq \R$ (zbiór Bernsteina), że dla niestałych rosnących $F \colon \R \to \R$, $B$ nie jest ,,$\mu_F$''-mierzalny.
+
+%\emph{Uwaga}. $f \colon \R \to \R^2$, $x \mapsto (x,0)$ jest $\mathfrak B^1$-$\mathfrak B^2$-, ale nie $\mathfrak L^1$-$\mathfrak L^2$-mierzalna.
+
+Jeśli \prawo{3.4} $f_i$ są numeryczne ($X \to \R_\infty$) i mierzalne, to ich $\sup$, $\inf$, $\liminf$, $\limsup$, liniowe kombinacje, produkty (dwóch czynników) też.
+Funkcja $X \to (\R^p, \mathfrak B^p)$ jest mierzalna $\Lra$ składowe są.
+Niech $f^+ = \max(f,0)$, $f^- = \max (-f, 0)$.
+Numeryczna $f$ mierzalna $\Lra$ $f^+$, $f^-$ też.
+Mierzalna $\Lra$ punktowa granica \wcht{schodkowych}, o skończenie wielu wartościach (mierzalne ograniczone: granice jednostajne).
+Rodzina $\mathfrak B$ ma minimalny generator, przedziały $2$-adyczne.
+Monotoniczna $\R \to \R \Ra$ borelowska.
+
+\wcht{Początkowe $\sigma$-ciauo} \prawo{3.5} na $X$ względem rodziny $f_i \colon X \to (Y_i, \mathcal B_i)$: najmniejsze, z którym $f_i$ jeszcze są mierzalne, $\mathcal A = \sigma(\bigcup_i f_i^{-1} (\mathcal B_i))$.
+Jeśli $X = \prod_i Y_i$, zaś $f_i$ to rzut na $i$-tą oś, to $\mathcal A =: \bigotimes_i \mathcal B_i$ jest produktowym $\sigma$-ciauem.
+Generator $\sigma$-ciaua początkowego to $\bigcup_i f_i^{-1} (\mathcal E_i)$, gdzie każdy z $\mathcal E_i$ generuje $Y_i$.
+Jeśli p. topologiczna $(X, \tau)$ jest produktem $(X_i, \tau_i)$, to $\mathfrak B(X) \supseteq \bigotimes_i \mathfrak B (X_i)$ (przy $\aleph_0$ wielu 1-przeliczalnych czynnikach lub $X$: Lindelöfa mamy nawet $=$).
+Równości nie ma dla $X$ klasy $\mathcal T_2$ mocy większej niż $\mathfrak c$ i $X_1 = X_2 = X$.
+Poza tym, $\mathfrak B^p = \mathfrak B^1 \otimes \ldots \otimes \mathfrak B^1$.

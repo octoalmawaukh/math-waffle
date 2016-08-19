@@ -1,0 +1,74 @@
+\wcht{Zawartość} \prawo{2.1} (na półringu): $\mu \colon \mathcal H \to \R_\infty := \R \cup\{\pm \infty\}$, gdy $\mu(\varnothing) = 0$, $\mu \ge 0$ i $\mu(\coprod_{k \le n} A_k) = \sum_{k \le n} \mu(A_k)$.
+Dla ringów wystarczy test $n = 2$.
+Jest podaddytywna na ringach: $\mu(\bigcup_{k \le n} A_k ) \le \sum_{k \le n} \mu(A_k)$ i monotoniczna na półringach: $A \subseteq B$ pociąga $\mu(A) \le \mu(B)$.
+\wcht{Przedmiara} jest $\sigma$-addytywną ($\infty$ zamiast $n$) zawartością.
+\wcht{Miara}: przedmiara na $\sigma$-ciele.
+Zawartość $\mu$ przedłuża się jednoznacznie z półringu na ring wzorem $\nu(\coprod_{k \le n} A_k) = \sum_{k \le n} \mu(A_k)$, przedmiara $\nu$ musi pochodzić od przedmiary $\mu$.
+Własności zawartości $\mu$ na ringu: $B \subseteq A$, $\mu(B) \neq \infty$ pociąga $\mu(A \setminus B) = \mu(A) - \mu(B)$.
+Dalej, $\mu(A) + \mu(B) = \mu(A \cup B) + \mu (A \cap B)$, $\mu(\bigcup_{k \ge 1} A_k) \le \sum_{k \ge 1} \mu(A_k)$.
+Zbiór \wcht{$\mu$-zerowy}: o zawartości $0$.
+Dla zawartości $\mu$ na ringu: $\mu$ prämiarą $\Lra$ $A_n \uparrow A$ pociąga $\mu(A_n) \uparrow \mu(A)$ $\Ra$ $\mu(A_1) \neq \infty$, $A_n \downarrow A$ pociąga $\mu(A_n) \downarrow \mu(A)$ 
+$\Lra$ to samo dla $A = \varnothing$.
+(,,Ciągłość z dołu'' $\Ra$ ,,ciągłość z góry'').
+Jeśli $\mu$ jest skończona, to wszystkie warunki są równoważne, a $\cap$, $\cup$, $\setminus$ i $\triangle$ stają się odwzorowaniami ciągłymi $\mathcal R \times \mathcal R \to \mathcal R$ przy topologii od półmetryki $\delta(A, B) = \mu (A \triangle B)$.
+Jeśli $\mu \colon \mathfrak P(X) \to \{0, 1\}$ jest zawartością, to $\mu^{-1}(1)$ jest ultrafiltrem.
+Funkcja $\mu$ jest miarą $\Lra$ jeśli $\mu(A_1) = \mu(A_2) = \ldots = 1$, to $\bigcap_{n \ge 1} A_n \neq \varnothing$.
+
+$\mathcal I = \{(a,b] : a \le b\}$.
+Dla \prawo{2.2} rosnącej $F \colon \R \to \R$, $\mu_F\,(a,b] = F(b) - F(a)$ jest skończoną zawartością (\wcht{Stieltjesa}); $\mu_F = \mu_G \Lra F - G$ stała.
+Jeśli $\mu \colon \mathcal I \to \R$ jest skończoną zawartością, to $\mu = \mu_F$ ($F(x) = \mu\,(0,x]$ dla $x \ge 0$, $-\mu\,(x,0]$ dla $x < 0$).
+Prawo-ciągła $F \Lra \mu_F$ to przedmiara (\wcht{Lebesgue'a-Stieltjesa}).
+Prawo-ciągła rosnąca $F \colon \R \to \R$ jest sumą prawo-ciągłej rosnącej \wcht{funkcji skoku} $G$ oraz ciągłej rosnącej $H$, rozkład jest jednoznaczny z dokładnością do stałej: $G(x) = \alpha + \sum_{y \in A \cap (0, x]} p(y)$ dla $x \ge 0$, $\alpha - \sum_{y \in A \cap [x, 0)} p(y)$ dla $x < 0$, gdzie $p \colon A \to \R_+$ jest funkcją z przeliczalnego zbioru, która spełnia $\sum_{y \in A \cap [-n, n]} p(y) < \infty$, $n \in \N$.
+
+Najważniejsza \prawo{2.3} zawartość na $\mathfrak I^p$ to Le-przedmiara $\lambda^p \colon (a,b] \mapsto \prod_{j=1}^p (b_j - a_j)$.
+Istnieje bijekcja między skończonymi zawartościami na $\mathfrak I^p$ i klasami ,,rosnących'' funkcji $F \colon \R^p \to \R$, jednak przytoczenie stosownych definicji spowodowałoby zbyt wiele zamętu.
+
+\wcht{Zew-miara} \prawo{2.4} (Carathéodory, \datum{1914}): monotoniczna funkcja $\eta \colon \mathfrak P(X) \to \R_\infty$, że $\eta(\varnothing) = 0$ i $\eta(\bigcup_{n \ge 1} A_n) \le \sum_{n \ge 1} \eta(A_n)$.
+Rodzina wszystkich \wcht{$\eta$-mierzalnych} (tych $A \subseteq X$, że $\eta (Q) \ge \eta(Q \cap A) + \eta(Q \setminus A)$ niezależnie od $Q \subseteq X$) jest $\sigma$-ciauem, do którego obcięta $\eta$ staje się miarą.
+Jeśli $\mu$ jest zawartością na półringu $\mathcal H$, to $\eta(A) = \inf \{\sum_{n \ge 1} \mu(A_n) : A \subseteq \bigcup_{n \ge 1} A_n, A_n \in \mathcal H\}$ jest zew-miarą; wszystko z $\mathcal H$ jest $\eta$-mierzalne.
+Gdy zaczynamy od przedmiary $\mu$, dostajemy jej przedłużenie ($\eta$), w przeciwnym razie $\eta(A) < \mu(A)$ dla pewnego $A \in \mathcal H$.
+Aplikacja tego faktu do Le-przedmiary $\lambda^p \colon \mathfrak I^p \to \R$ i zew-Le-miary $\eta^p \colon \mathfrak P(\R^p) \to \R_\infty$ daje $\sigma$-ciauo $\mathfrak L^p$ ($\eta^p$-mierzalnych), \wcht{Le-mierzalnych}.
+Mamy $\mathfrak B \subsetneq \mathfrak L \subsetneq \mathfrak P(\R^p)$, od teraz będziemy pisać ,,$\lambda^p \colon \mathfrak L^p \to \R_\infty$, chociaż jest to śliskie.
+Obcięcie $\lambda^p$ do $\mathfrak B^p$ to Le-Bo-miara.
+Podobnie z Le-St-przedmiarą.
+
+Zawartość \prawo{2.5} $\mu$ nad $X$ jest \wcht{$\sigma$-skończona}: istnieją $E_n$, że $\mu(E_n) < \infty$ i $\bigcup_{n \ge 1} E_n = X$ ($\bigcup$ można zastąpić $\coprod$).
+Dwie miary nad $X$ zgodne na d-stabilnym generatorze $\mathcal E$ ich dziedziny, z którego można wybrać ciąg $E_n$, że $\bigcup_n E_n = X$ i $\mu(E_n) = \nu(E_n) < \infty$, są sobie równe.
+Półringi są d-stabilne, więc $\sigma$-skończone przedmiary mają jednoznaczne przedłużenia do miar (Hopf, \datum{1937}).
+Jeśli miary $\mu, \nu$ na $\sigma(\mathcal H)$ ($\mathcal H$ jest półringiem) spełniają $\mu(A) \le \nu(A)$ dla $A \in \mathcal H$ i obcięcie $\nu$ do $\mathcal H$ jest $\sigma$-skończone, to $\mu \le \nu$.
+Miara $\lambda^2$ obcięta do ($\mathfrak B \times \{\R\}$) $\mathfrak B^2$ (nie!) jest $\sigma$-skończona.
+
+\wcht{P. zupełna}: \prawo{2.6} $(X, \mathcal A, \mu)$, gdy podzbiory $\mu$-zerowych są mierzalne.
+\wcht{Uzupełnienie}: $\mathcal A' = \{A \cup N : A \in \mathcal A, N \mbox{ $\mu$-zerowy}\}$, $\mu'(A \cup N) = \mu(A)$,  przedłużenie jest minimalne (na $\mathcal A'$ nie ma innych zawartości!).
+%Obcięcie zew-miary $\eta$ (dla $\sigma$-skończonej przedmiary $\mu$ na $\mathcal H$) jest uzupełnieniem obcięcia $\eta$ do $\sigma(\mathcal H)$.
+Przedmiara $\mu$ ($\sigma$-skończona) ma dokładnie jedno przedłużenie do miary na $\mathcal A_\eta$, $\eta$ to zew-$\mu$-miara.
+Przykład: Le-(St-)przedmiara albo Le-Bo-miara.
+% (Le-miara uzupełnia Le-Bo-miary).
+\wcht{Atom}: zbiór $A$, że $\mu(A) >0$ oraz $B \subseteq A$ pociąga $\mu(B)\mu(A \setminus B) = 0$.
+Miara \wcht{czysto atomowa}: $\sigma$-skończona, istnieje ciąg atomów $A_n$, że dopełnienie $\bigcup_{n \ge 1} A_n$ jest $\mu$-zerowe.
+Każda $\sigma$-skończona $\mu$ (miara) ma ciąg atomów $A_n$, że $\nu(A) := \mu(A \setminus \coprod_n A_n)$ jest bezatomowa, $\rho(A) = \sum_{n \ge 1} \mu(A \cap A_n)$ czysto atomowa i $\mu = \nu + \rho$, jednoznacznie.
+%Podzbiór atomu nie musi być mierzalny!
+
+\wcht{Tw. przybliżające}: \prawo{2.7} $A \subseteq \R^p$ jest Le-mierzalny $\Lra$ istnieją $U \subseteq_o \R^p$ ($F_\delta$), $F \subseteq^a \R^p$ ($G_\delta$), $F \subset A \subset U$, że $\lambda^p(U \setminus F) < \varepsilon$.
+\wcht{Tw. Steinhausa} (\datum{1920}): $A - A$ zawiera otoczenie zera dla $A \in \mathfrak L^p$ dodatniej miary.
+$\lambda^p(A)$ to $\inf\{\lambda^p(U)\}$, $\sup\{\lambda^p(F)\}$, $\sup\{\lambda^p(K)\}$ (,,otwarte, domknięte, zwarte'').
+Jeśli $A \subseteq \R^p$ jest wypukły, to $\partial A$ Le-zerowy, zaś $A$ Le-mierzalny (niekoniecznie Bo-mierzalny).
+Ograniczony, wypukły $A \subseteq \R^p$ jest Jo-mierzalny (definicja: ograniczony, $\sup\{\lambda^p(M) : M \in \mathfrak F^p, M \subset A\} = \inf\{\lambda^p(N) : N \in \mathfrak F^p, N \supset A\}$).
+
+Zew-miara \prawo{2.9.1} $\eta \colon \mathfrak P(X) \to \R_\infty$ jest \wcht{metryczną zew-miarą}, gdy $\varnothing \neq A, B \subseteq X$ z $d(A, B) > 0$ pociąga $\eta(A \cup B) = \eta(A) + \eta(B)$.
+Przykładowo, jeśli funkcja $\rho \colon (\mathcal C \subseteq \mathfrak P(X)) \to [0, \infty]$ spełnia $\rho(\varnothing) = 0$, to $\sup_{\delta > 0} \eta_\delta$ jest metro-miarą: $\eta_\delta(A) = \inf\{\sum_{n \ge 1} \rho(A_n) : d(A_n) \le \delta, A \subseteq \bigcup_{n \ge 1} A_n\}$. 
+Funkcja $\eta_\delta$ jest tylko zew-miarą.
+Zew-miara $\eta \colon \mathfrak P(X) \to \R_\infty$ spełnia $\mathfrak B(X) \subseteq \mathcal A_\eta \Lra \eta$ jest metro-miarą.
+Dla $X = \R$, $d(x,y) = |x-y|$ oraz $\mathcal C$ złożonego z ograniczonych podzbiorów $\R$, $\rho = d$, $\eta_\delta$ to zew-Le-miara.
+
+Ta \prawo{2.9.2} sama konstrukcja dla dowolnej metrycznej $X$, ustalonego $\alpha > 0$ i $\rho(A) = d(A)^\alpha$ daje zew-miary $h_{\alpha, \delta}$ i \wcht{zew-Hf-miarę} $h_\alpha = \sup_{\delta > 0} h_{\alpha, \delta}$, przy czym wzięcie $\alpha = 0$ to dokładnie miara licząca: $h_{\alpha, \delta} (A) = \inf \{\sum_{n \ge 1} \rho(A_n) : A \subseteq \bigcup_n A_n, d(A_n) \le \delta\}$.
+Suw-odporna.
+
+{\color{Red} Jeżeli $h_\alpha(A) < \infty$ i $\beta > \alpha$ dla $A \subseteq X$, to $h_\beta(A) = 0$, więc istnieje $\delta \ge 0$, że $h_\alpha(A) = 0$ dla $a > \delta$ i ($\infty$ dla $a < \delta$); \wcht{wymiar Hausdorffa}.
+Dla $A \subseteq \R^p$, $\delta \le p$ (jeśli $\operatorname{int} A \neq \varnothing$, to $\delta = p$).
+Dla ,,1-1'' krzywej prostowalnej, $\delta = 1$.}
+
+Krzywa \wcht{prostowalna} \prawo{2.9.3}: skończonej \wcht{długości}, $L(\gamma) := \sup\{\sum_{k \le n} \|\gamma(t_k) - \gamma(t_{k-1})\| : a = t_0 < t_1 < \ldots < t_n = b\}$.
+Dla prostych (injekcje), długość to zew-Hf-miara wymiaru $\alpha = 1$.
+Ślad prostowalnej jest $\lambda^p$-zerowy (Jordan), ale istnieją ciągłe $[a,b] \to \R^2$ o obrazie dodatniej miary (krzywa Peano).
+Hahn, Mazurkiewicz: $M \subseteq \R^p$ jest ciągłym obrazem odcinka $\Lra$ $M$ jest zwarty, spójny i lokalnie spójny.

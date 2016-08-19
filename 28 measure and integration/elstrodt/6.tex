@@ -1,0 +1,33 @@
+Iloraz \prawo{6.2} zbioru mierzalnych $f \colon X \to \R$, że $N_p(f) < \infty$ przez $\{f = 0 \textrm{ $\mu$-p.w.}\}$ to $L^p$, zupełna p. liniowa (\wcht{tw. Riesza-Fischera}, \datum{1907}), zaś dla $p \ge 1$: nawet Banacha.
+Funkcja $N_p$ jest normą dla $p \ge 1$, dla $p <1$, jej $p$-ta potęga wyznacza metrykę.
+Dla $0 < p < q \le \infty$ i $\mu (X) < \infty$, $\mathcal L^q \subset \mathcal L^p$, a zbieżność w $\mathcal L^q$ pociąga zbieżność w $\mathcal L^p$ (do tej samej granicy, ,,$N(f - f_n) \to 0$'')
+\[
+	N_p(f) = \left(\int_X |f|^p \,\textrm{d}\mu\right)^{1/p} \spk
+	N_\infty(f) := \inf \{\alpha \in [0, \infty] : |f| \le \alpha \textrm{ $\mu$-p.w.}\} = \operatorname{ess} \sup_{x \in X} |f(x)|
+\]
+
+Dla \prawo{6.3} każdego $\varepsilon > 0$: $\mu (\bigcup_{k=1}^\infty \{|f_{n+k} - f| \ge \varepsilon \}) \to 0 \Ra f_n$ zbiega $\mu$-p.w. do $f$ $\Lra$ khm-1 dla każdego $\varepsilon > 0 \Ra$ khm-2 dla każdego $\varepsilon$ (funkcje $f, f_n \colon X \to \R$ i zbiór $A$ mierzalne, $\mu(A) < \infty$).
+\wcht{Tw. Jegorowa} (\datum{1911}): jeśli $\mu(X) < \infty$ i ciąg mierzalnych $f_n \colon X \to \R$ zbiega $\mu$-p.w. do $f$, także mierzalnej, to zbiega \wcht{prawie jednostajnie} (każdy $\delta > 0$ ma zbiór $A$, że $\mu(A) < \delta$ i $f_n$ jedno-zbiega na $X \setminus A$).
+\[
+	\mu \left( \bigcap_{n=1}^\infty \bigcup_{k=1}^\infty \{|f_{n+k} - f| \ge \varepsilon\}\right) = 0 \spk
+	\lim_{n \to \infty} \mu \left(A \cap \bigcup_{k=1}^\infty \{|f_{n+k}-f| \ge \varepsilon\}\right) = 0
+\]
+
+Zbieżności: \prawo{6.4}
+1:~jednostajnie,
+2:~prawie jednostajnie, 
+3:~p.w. jednostajnie (w $\mathcal L^\infty$), 
+4:~w $\mathcal L^p$, 
+5:~wg miary ($\varepsilon > 0$ pociąga $\mu\{|f_n - f| \ge \varepsilon\} \to 0$), 
+6:~lokalnie wg miary (wg miary na każdym zbiorze $A$, że $\mu(A) < \infty$), 
+7:~punktowo
+8:~$\mu$-p.w.
+Mamy: $4 \Ra 5 \Ra 6 \Leftarrow 8 \Leftarrow 7 \Leftarrow 1 \Ra 3 \Ra 2 \Ra 5, 8$, a gdy $\mu(X) < \infty$, to także $3 \Ra 4$, $6 \Ra 5$ i $8 \Ra 2$.
+$4 \Ra 5$ (Riesz, \datum{1907}), ,,$5 \Ra 6 \Ra 5$'' (Lebesgue), ,,$2 \Ra 8 \Ra 2$'' (Jegorow).
+Jest tego więcej, np. zbieżność $f_n \in \mathcal L^p$ (o wspólnej majorancie $g$) do $f$ wg $8$ pociąga $4$.
+$5 \Lra$ każdy podciąg ma podciąg $2$ (dla $\sigma$-skończonej $\mu$: $6, 2$).
+
+\wcht{Tw. Pratta} \prawo{6.5} (\datum{1960}): niech $f_n \in \mathcal L^1_\R (\mu)$ zbiega lokalnie wg miary do mierzalnej $f \colon X \to \R$, że $\{f \neq 0\}$ ma $\sigma$-skończoną miarę.
+Gdy istnieją $g_n, g, h_n, h \in \mathcal L^1_\R(\mu)$, że $g_n \to g$ i $h_n \to h$ lokalnie wg miary, $g_n \le f_n \le h_n$ $\mu$-p.w. oraz $\int_X g_n - g \,\textrm{d} \mu, \int_X h_n - h \,\textrm{d} \mu$ dążą do zera, to $f \in \mathcal L^1_\R(\mu)$ i $\lim_n \int_X f_n \,\textrm{d} \mu = \int_X f \,\textrm{d} \mu$.
+Jeśli $0 < p < \infty$ i $f_n, f \in \mathcal L^p$, to $\|f_n - f\|_p \to 0 \Lra f_n \to f$ lokalnie wg miary i $\|f_n\|_p \to \|f\|_p$ (Riesz, \datum{1928}) $\Lra$ $f_n$ zbiega słabo do $f$ i $\|f_n\|_p \to \|f\|_p$ (Radon, \datum{1960}).
+\wcht{Tw. Vitaliego} (\datum{1907}): dla $0 < p < \infty$, $f_n \to f$ w $\mathcal L^p \Lra f_n \to f$ lokalnie wg miary, zaś każdym $\varepsilon > 0$ odpowiada $X \setminus E$ z $\mu(X \setminus E) < \infty$ i $\delta > 0$, że $\mu(A) < \delta$ pociąga $\int_E |f_n|^p \,\textrm{d}\mu < \varepsilon$, $\int_A |f_n|^p \,\textrm{d}\mu < \varepsilon$ (zbieżność równomierna).

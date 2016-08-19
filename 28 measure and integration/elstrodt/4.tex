@@ -1,0 +1,44 @@
+Dla \prawo{4.1} $\alpha_k \ge 0$ \prawo{4.2} mamy liniową i monotoniczną $\mu$-całkę (khm-1) z funkcji schodkowej.
+Definicja przedłuża się na mierzalne $f \ge 0$ przez khm-2, gdzie schodkowe $f_n$ dążą do $f$ od dołu.
+Całka z $f \ge 0$ to zero $\Lra \{f > 0\}$ jest $\mu$-zerowy.
+\wcht{Tw. o monotonicznej zbieżności}: dla rosnącego ciągu mierzalnych numerycznych $f_n \ge 0$ mamy khm-2 (Levi, \datum{1906}).  
+Wniosek: $\int_X \sum_{n } f_n \,\textrm{d} \mu = \sum_{n} \int_X f_n\,\textrm{d}\mu$ dla mierzalnych numerycznych $f_n \ge 0$.
+\wcht{Miara z gęstością}: $f \odot \mu$ dla mierzalnej numerycznej $f \ge 0$, całka z $f$ nad $A$ względem $\mu$.
+Jest ciągła: $\mu(A) = 0$ pociąga $(f \odot \mu)(A) = 0$.
+Dla każdych mierzalnych, numerycznych $f, g \ge 0$ mamy jeszcze khm-3.
+Pułapka: istnieje bijekcja $r \colon \N \to \Q$, że $f = \sum_n \chi(r(n), r(n) + 1 : n^3)$ ma skończoną całkę nad $\R$ (z $\lambda$ obciętą do $\mathfrak B$), $\lambda \{f = \infty\} = 0$, ale całka z $f^2$ nad przedziałami jest nieskończona!
+Istnieje zatem $\sigma$-skończona miara $\nu$ na $\mathfrak B$, że $\nu(\{a\}) = 0$, ale $\nu [a,b] = \infty$ dla $a < b$. % Elstrodt, 128
+\[
+	\int_X \sum_{k=1}^n \alpha_k \chi_{A(k)} \,\textrm{d}\mu := \sum_{k=1}^n \alpha_k \mu(A_k) \spk
+	\int_X \lim_{n \to \infty} f_n \,\textrm{d}\mu = \lim_{n \to \infty} \int_X f_n \,\textrm{d}\mu \spk
+	%A \mapsto \int_X f \cdot \chi_A \,\D\mu \spk
+	\int_X f \,\textrm{d} (g \odot \mu) = \int_X fg \,\textrm{d} \mu
+	\hfill  \Bigl|\int_X f \,\textrm{d}\mu \Bigr| \le \int_X |f| \,\textrm{d}\mu
+\]
+
+Funkcja \prawo{4.3} $f \colon X \to \R_\infty$ jest \wcht{$\mu$-całkowalna}: jest mierzalna, całki z $f^+$, $f^-$ są skończone, ich różnica to dokładnie całka z $f$.
+\wcht{Quasicałkowalna}: przynajmniej jedna z nich jest skońzona.
+Całkowalność $f \Lra$ istnienie całkowalnej majoranty $g \ge |f| \Ra$ khm-4 wyżej.
+Przestrzenie $\mathcal C^\infty_c(\R^p)$ oraz $\mathcal C_c(\R^p)$ leżą gęsto w $\mathcal L^1(\R^p, \mathfrak L^p, \lambda^p)$.
+Odwzorowanie $\mathcal L^1 \to \R$, $f \mapsto \int_X f\,\textrm{d}\mu$, jest ciągłą formą liniową.
+
+\wcht{Prawie wszędzie} \prawo{4.4} na $X$: poza pewnym $\mu$-zerowym $N \subseteq X$.
+Jeśli $f, g \colon X \to \R_\infty$ są quasicałkowalne i $f \le g$ p.w., to nierówność zachodzi też dla całek.
+Jeśli $f,g$ są mierzalne, $f \le g$ p.w. i $f$ jest całkowalna, to $g$ jest quasicałkowalna.
+Jeśli całkowalne $f, g \colon X \to \R_\infty$ są takie, że całki z $f$ są niewiększe od całek z $g$ nad każdym mierzalnym zbiorem, to $f \le g$ p.w. (dla $\sigma$-skończonej $\mu$ wystarczą quasicałkowalne).
+
+\wcht{Lemat Fatou} \prawo{4.5} (\datum{1906}): dla ciągu mierzalnych, numerycznych $f_n \ge 0$ mamy khm-1.
+\wcht{Tw. o zbieżności zmajoryzowanej}: jeśli mierzalne funkcje $f, f_n \colon X \to \R_\infty$ spełniają $\lim_n f_n = f$ $\mu$-p.w. i $|f_n| \le g$ $\mu$-p.w. ($g$: całkowalna), to $f$, $f_n$ są całkowalne i khm-2+3 (Lebesgue, \datum{1910}).
+Pochodna różniczkowalnej $f \colon [a,b] \to \R$ jest Le-całkowalna ($f(b) - f(a)$), ale niekoniecznie Ri-całkowalna.
+\[
+	\int_X \liminf_{n \to \infty} f_n \,\textrm{d}\mu \le \liminf_{n \to \infty}\int_X f_n\textrm{d}\mu \spk
+	\lim_{n \to \infty} \int_X f_n \,\textrm{d}\mu = \int_X f \,\textrm{d}\mu \spk
+	\lim_{n \to \infty} \int_X |f_n-f| \,\textrm{d}\mu = 0
+\]
+
+Ograniczona \prawo{4.6} $f \colon ([a, b] \subseteq \R^p) \to \R$ jest Ri-całkowalna $\Lra$ nieciągłości tworzą $\lambda^p$-zerowy zbiór $\Ra$ Ri-całka jest równa Le-całce.
+\wcht{Tw. Younga} (\datum{1914}): $f, g \colon [a, b] \to \R$ ($f$ ograniczona, $g$ rosnąca i prawo-ciągła), nieciągłości $f$ są zbiorem $\lambda_g$-zerowym $\Lra$ Ri-St-całka $f(x) \,\textrm{d} g(x)$ nad $[a,b]$ istnieje.
+Ri-całkowalna nad zwartymi przedziałami $f \colon I \to \mathbb R$ jest Le-całkowalna $\Lra$ $|f|$ jest Ri-całkowalna (wartości całek się pokrywają), patrz: $\sin x / x$.
+($f \colon [a,b] \to [c,d]$, $g \colon [c,d] \to \R$): jeśli $g$ jest ciągła, zaś $f$ Ri-całkowalna, to $g \circ f$ jest Ri-całkowalna, ale niekoniecznie, gdy $g$ jest tylko Ri-całkowalna.
+Jeśli $g \circ f$ jest Ri-całkowalna dla każdej ciągłej ($\mathcal C^\infty$) $f$, to $g$ jest ciągła.
+Ri-całkowalność nie pociąga Bo-mierzalności!
