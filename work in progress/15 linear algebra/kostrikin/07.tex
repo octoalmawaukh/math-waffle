@@ -1,0 +1,36 @@
+\wcht{P. liniowa} $V$ \prawo{2 / 11} nad ciałem $\K$: abelowa grupa $(V, +)$ ma ,,mnożenie przez skalar'': $\K \times V \to V$ (unitarne, łączne, rozdzielne).
+\wcht{Powłoka liniowa}: zbiór wszystkich \wcht{kombinacji liniowych} (skończonych $\sum_i \lambda_i x_i$).
+\wcht{Liniowa niezależność}: \prawo{2 / 12} tylko trywialna kombinacja jest zerem. 
+\wcht{Wymiar}: moc \wcht{bazy} (układu lnz wektorów rozpinającego przestrzeń), jedyny niezmiennik izo- (liniowej bijekcji).
+\wcht{Tw. Steinitza o wymianie}: każdy lnz układ można dopełnić do bazy.
+\wcht{Suma prosta}: $U_1 \oplus U_2$, algebraiczna (najmniejsza zawierająca $U_1$, $U_2$), gdy $U_1 \cap U_2 = \{0\}$.
+Wzór Grassmanna: $\dim (U+W) + \dim (U \cap W) = \dim U + \dim W$ (tylko dla skończonych!).
+Dla $\dim < \infty$: $\dim V / U = \dim V - \dim U$.
+Podprzestrzeni w $\mathbb F_p^n$ nad $\mathbb F_p$ wymiaru $k$ jest $\prod_{i = 0}^{k-1} (q^n - q^i) : (q^k - q^i)$ (ponownie, Grassmann).
+
+\wcht{Formy liniowa} \prawo{2 / 13} (liniowe $V \to \mathfrak K$) tworzą liniową p. \wcht{dualną} $\mathcal L(V, \mathbb K)$.
+Jeśli $V$ ma bazę $(e_1, \dots, e_n)$, to $V^*$ ma dualną: $e^i(e_j) = [i=j]$.
+Jeśli $\dim V <\infty$, to istnieje kanoniczny izo- $\varepsilon \colon V \to V^{**}$, $[\varepsilon(x)](f) = f(x)$, wtedy $V$ jest \wcht{refleksywna}.
+\emph{Kryterium lnz}. s %Jeśli $(f_1, \dots, f_n)$ jest bazą $V^*$, to rząd $a_1, \dots, a_k \in V$ to najwyższy stopień niezerowego wyznacznika postaci $\det f_i(a_j)$
+
+\wcht{Forma dwuliniowa}: \prawo{2 / 14} $f(x,y) = X_t F Y =  \sum_{i,j} f_{ij} x_iy_j$.
+Rząd dwuliniowej (jej macierzy) jest niezmiennikiem.
+Jeśli $\chara \K \neq 2$, to $\mathcal L_2(V, \K)$ jest równe $\mathcal L_2^+(V, \K) \oplus \mathcal L_2^-(V, \K)$ (symetryczne / anty-).
+\wcht{Forma kwadratowa} na $V$ nad $\K$: funkcja $q \colon V \to \K$, że $q(-v) = q(v)$, że $f \colon V \times V \to \K$ zadana przez $f(x,y) = \frac 12 [q(x+y)-q(x)-q(y)]$ należy do $\mathcal L_2^+(V, \K)$.
+Forma $f$ powstaje przez polaryzację $q$ (jest jej formą biegunową), która jest jednoznaczna: $q(x) = f(x, x)$.
+Postać \wcht{kanoniczna}: w kanonicznej bazie $F$ jest diagonalna ($q \colon x \mapsto X_t F X$).
+Dwuliniowa, symetryczna $\Ra$ ma bazę kanoniczną ($(x,y) \mapsto \sum_i f_{ii} x_i y_i$).
+Każda kwadforma na rzeczywistej p. liniowej ma postać normalną ($q(x) = x_1^2+\dots+x_s^2 - x_{s+1}^2- \dots - x_r^2$).
+\wcht{Prawo bezwładności kwadform}: liczby $r, s$ zależą tylko od formy $q$.
+\wcht{Dodatnia określoność}: $q(x) > 0$ dla $x \neq 0$ $\Lra$ $F$ postaci $A \cdot A_t$.
+\wcht{Jacobiego metoda}: kwadforma $q$ z macierzą o niezerowych minorach głównych ma bazę, gdzie zmienia się w khm-1.
+\wcht{Kryterium Sylvestera}: kwadforma $q$ na $V$ ($\dim_\R V = n$) jest dodatnio określona $\Lra$ główne minory $\Delta_i$ są dodatnie.
+Z niezdegenerowaną antysymformą $f$ na $V$ (skończonego wymiaru), $V$ staje się sumą prostą $m$ parami skośnie ortogonalnych płaszczyzn hiperbolicznych ($W$ wymiaru $2$, że $f \mid W \neq 0$)
+\[
+	q(x) = \sum_{k=1}^n \frac{\Delta_{k-1}}{\Delta_k} (x_k')^2
+\]
+
+\wcht{Pfaffian}: wielomian, którego kwadrat to wyznacznik antysymetrycznej $A$.
+Jeśli wymiar $A$ jest nieparzysty, to $\pf A = 0$.
+Jeśli macierze $A$ i $B$ są wymiarów $2n \times 2n$, to: 
+$\pf A_t = (-1)^n \pf A$, $\pf \lambda A = \lambda^n \pf A$, wreszcie $\pf (BAB_t)=\det B \cdot \pf A$.

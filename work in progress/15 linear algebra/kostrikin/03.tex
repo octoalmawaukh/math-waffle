@@ -1,0 +1,22 @@
+\wcht{Wyznacznik}: \prawo{1/3X} ,,zorientowana objętość''.
+Antysymetryczne, unormowane $n$-liniowe $\omega: \R^{n \times n} \to \R$.
+Wyznacznik macierzy bez wiersza i kolumny, $M_{ij}$: \wcht{minor}.
+\wcht{Macierz dołączona}: $a_{ij} \rightsquigarrow A_{ji}$, fakt: $A \cdot A^\vee = \det A \cdot E$ (\wcht{dopełnienie algebraiczne}: $A_{ij} = (-1)^{i+j} M_{ij}$).
+Zachodzi wzór: $\det A = \sum_{{?} = 1}^n a_{ij}A_{ij}$, suma po $i$ lub $j$.
+\wcht{Wzory Cramera}: jeśli układ $n$ równań liniowych $n$ zmiennych $Ax = B$ spełnia $\det A \neq 0$, to ma jedno rozwiązanie: $x_k = (\det A_k) / (\det A)$, gdzie $A_k$ to $A$ z $B$ zamiast $k$-tej kolumny.
+\wcht{Cauchy-Binet} dla $A$ ($n \times m$) i $B$ ($m \times n$).
+\[
+	\det(AB) = \sum \det A_* \det B^* \spk
+ 	\mbox{suma po podzbiorach } [m] \mbox{ mocy } n \spk
+ 	(AB)^\vee = B^\vee A^\vee \spk
+ 	(\lambda A)^\vee = \lambda^{n-1} A^\vee \spk
+ 	(A^\vee)^\vee = (\det A)^{n-2} A
+\]
+Odwracalność $\Lra$ nieosobliwość.
+Macierz Cauchy'ego: $a_{ij} = 1/(x_i - y_j)$; Hilberta: $a_{ij} = 1/(i+j-1)$, Vandermonde'a: $V_{ij} = x_i^{j-1}$.
+\[
+	\det C={{\prod_{i=2}^n \prod_{j=1}^{i-1} (x_i-x_j)(y_j-y_i)}\over {\prod_{i=1}^n \prod_{j=1}^n (x_i-y_j)}} \spk
+ 	\det H = \frac{\prod_{i=1}^{n-1}i!^4}{\prod_{i=1}^{2n-1}i!} = 
+ 	\prod_{k=1}^{n-1} \frac{1}{(2k+1)C_k^{2k}C_k^{2k} } \spk 
+	\det V = \prod_{i < j} (x_j-x_i)
+\]

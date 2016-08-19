@@ -1,0 +1,30 @@
+\wcht{Przekształcenie liniowe}: \prawo{2 / 21} addytywne i jednorodne między przestrzeniami nad jednym ciałem.
+\wcht{Jądro}: przeciwobraz zera.
+\wcht{Tw. o rzędzie}: 
+$\dim \ker f + \dim \text{im } f = \dim V$.
+\wcht{Rząd}: wymiar obrazu.
+\wcht{Operator liniowy}: \prawo{2 / 22} element $\mathcal L(V,V)$, jego \wcht{defekt}: wymiar jądra.
+Pierścień liniowy, gdzie $\lambda (ab) = (\lambda a) b = a (\lambda b)$ to \wcht{algebra}, np. $\operatorname{End} V$.
+Każdy operator liniowy $\mathcal A$ ma wielomian minimalny $\mu(t)$, którego stopień to wymiar algebry $\mathfrak K[\mathcal A]$. %; jest odwracalny $\Lra$ $\mu(0) \neq 0$.
+W dodatku z $f(\mathcal A) = \mathcal O$ wynika $\mu \mid f$.
+\wcht{Ślad}: $\operatorname{tr} \mathcal A = \operatorname{tr} A = \sum_{i=1}^n a_{ii}$.
+Frobenius: $\rank \mathcal B \mathcal A + \rank \mathcal A \mathcal C \le \rank A + \rank \mathcal B \mathcal A \mathcal C$
+
+Idempotenty \prawo{2 / 23} to dokładnie projekcje.
+Jeśli $\mathcal P_1, \dots, \mathcal P_m \colon V \to V$ są liniowymi operatorami, że $\sum_{i=1}^m \mathcal P_i = \mathcal E$, $\mathcal P_i^2 = \mathcal P_i$ i 
+złożenie różnych jest zerem, to $V = \bigoplus_{i=1}^m \im \mathcal P_i$.
+$V$ jest sumą prostą nietrywialnych $V_1, V_2$ (\wcht{$\mathcal A$-niezmienniczych}: $\mathcal A V_i \subseteq V_i$) $\Lra$ macierz $\mathcal A$ ma w pewnej bazie postać \wcht{blokowo-diagonalną}.
+\wcht{Podprzestrzeń, wektor, wartość własna}: $V_\lambda = \{v \in V: \mathcal A v = \lambda v\}$. 
+Podobne macierze mają te same \wcht{wielomiany charakterystyczne} ($\det(tE-A) = \chi_A(t)$).
+Krotność geometryczna ($\dim V_\lambda$) nie prekracza algebraicznej (krotności pierwiastka $\chi$). 
+\wcht{Operator sprzężony}: $\mathcal A* f = (x \mapsto f(\mathcal Ax))$.
+Jeśli $\mathcal A$ ma w pewnej bazie macierz $A$, to macierzą dla $A^*$ w dualnej jest ${}^tA$.
+
+Macierz \prawo{2 / 24} operatora liniowego sprowadza się do trójkątnej.
+\wcht{Tw. Hamiltona-Cayleya}: operatory zerują swe wielomiany charakterystyczne.
+Kwadratowa $A$ nad algebraicznie domkniętym $\mathbb K$ sprowadza się do PKJ (diagonalizacja zespolonej $n \times n$ $\Lra$ brak wielokrotnych pierwiastków $\mu_A$), postać kwadratowa Jordana: klatki Jordana wzdłuż przekątnej, poza tym zera.
+\[
+	J_m(\lambda) =\begin{bmatrix} \lambda & 1 & \; & \; \\ \; & \lambda & \ddots & \; \\ \; & \; & \ddots & 1 \\ \; & \; & \; & \lambda \end{bmatrix} \spk
+	f(J_m(\lambda)) = \begin{bmatrix} f(\lambda) & a_{12} & \dots & a_{1m} \\ \; & f(\lambda) & a_{23} & \dots \\ \; & \; & \ddots & \dots \\ \; & \; & \; & f(\lambda) \end{bmatrix} : a_{ij} = \frac{f^{(j-i)}(\lambda)}{(j-i)!} 
+	% \spk V(\lambda) = \{v \in V: (A - \lambda E)^n v = 0\}
+\]

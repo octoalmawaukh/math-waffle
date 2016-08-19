@@ -1,0 +1,43 @@
+\wcht{P. euklidesowa}: \prawo{2 / 31} $\R$-liniowa $V$ z symetryczną dwuliniową $\langle x,y\rangle$, że kwadratowa $x \mapsto \langle x,x\rangle$ jest dodatnio określona. 
+\wcht{Nierówność Schwarza}: $|\langle x,y\rangle| \le \|x\| \cdot \|y\|$.
+Baza \wcht{ortogonalna}: $i \neq j$ pociąga $\langle e_i, e_j \rangle = 0$, normalna: $\|e_i\| = 1$.
+\wcht{Dopełnienie ortogonalne}: $U^\perp$, wektory prostopadłe do wszystkich z $U$.
+\wcht{Ortogonalizacja Grama-Schmidta}: dla każdych lnz $e_1, \dots, e_m$ istnieją $e_1', \dots, e_m'$ (lnz i ortonormalne), że $\langle e_1, \dots, e_k \rangle$ równe jest $\langle e_1', \dots, e_k'\rangle$ dla $k \le m$: $e_{k+1}' = e_{k+1} - \sum_{i=1}^k \langle e_{k+1}, e_i'\rangle e_i'$, znormalizować.
+Jeśli $\dim (L \le V) < \infty$, to $V = L \oplus L ^\perp$ i $L^{\perp\perp} = L$.
+Jednego wymiaru, euklidesowe $\Ra$ izo- (zachowanie iloczynu skalarnego).
+$O(n)$: macierze ortogonalne, $A^tA = E$.
+
+\wcht{P. symplektyczna}: skończonego wymiaru, ze skośnym iloczynem skalarnym, niezdegenerowanym i antysymetrycznym.
+\wcht{Symplektyczna} grupa: te liniowe $\mathcal A \colon V \to V$, które zachowują formę, tzn. $[\mathcal Ax \mid \mathcal Ay] = [x \mid y]$.
+\wcht{Półtoraforma}: \prawo{2 / 32} prawie dwuliniowa $f \colon V^2 \to \C$ (wyciąganie skalarów na drugiej współrzędnej wymaga sprzęgania).
+\wcht{P. unitarna}: $\C$-liniowa $V$ z dodatnio określoną formą \wcht{hermitowską} (zamiana argumentów też sprzęga).
+%Nierówność Schwarza: $|\langle x, y\rangle| \le \|x\| \cdot \|y\|$, trójkąta: $\|x\pm y\| \le \|x\| + \|y\|$.
+Tu $e_k$ bazą ortonormalną unitarnej (euklidesowej) $V$, wtedy: $x = \sum_i \langle x, e_i \rangle e_i$, $\langle x, y\rangle = \sum_i \langle x, e_i \rangle \langle e_i, y\rangle$ [Parseval] oraz $\|x\|^2 = \sum_i |\langle x, e_i\rangle|^2$.
+\wcht{Sprzężoną} do liniowej formy $u$ na zespolonej $V$ jest półliniowa $\overline u \colon V \to \C$ (sprzężenie złożone z $u$).
+
+Każda liniowa na unitarnej jest postaci $f(x) = \langle x,a \rangle$ ,,dla jedynego $a$'', ale ,,$f \leftrightarrow a$ nieliniowo''.
+Półliniowe są postaci $\langle a, x \rangle$ i ,,$f \leftrightarrow a$ liniowo''.
+Jeśli $e_i$, $e_i'$ są ortonormalnymi bazami w unitarnej, że $e_j' = \sum_i a_{ij} e_i$ ($A = (a_{ij})$), to $A^*A = AA^* = E$ (\wcht{unitarność}), gdzie $A^* = A^\dagger$ to sprzężenie transponowanej.
+\[
+	\textrm{Hermite: }  f(y,x) = \overline{f(x,y)} \spk
+	SO(n) = O(n) \cap SL_n(\R) \subset SU(n) = U(n) \cap SL_n(\C)
+\]
+
+Forma \prawo{233} $\theta$-liniowa: $\theta = 2$ dla p. $\R$-liniowych, $3/2$ dla $\C$-liniowych.
+Dla $\mathfrak K = \C$, każdy unitarny jest diagonalizowalny.
+Liniowe izometrie w p. z iloczynem skalarnym to dokładnie operatory unitarne ($\mathcal A^* \mathcal A = \mathcal A \mathcal A^* = \mathcal E$).
+\emph{Operatory normalne}: $\mathcal A \colon V \to V$ (unitarna), że $\mathcal A^* \mathcal A = \mathcal A \mathcal A^*$, równoważnie: diagonalizowalny w pewnej ortonormalnej bazie.
+Każdy operator normalny $\mathcal A$ na $n$-wymiarowej unitarnej $V$ ma zespolone $\lambda_1, \dots, \lambda_m$, $m \le n$ i parami ortogonalne niezerowe projekcje $\mathcal P_1, \dots, \mathcal P_m$, które sumują się do $\mathcal E$; $\sum_j \lambda_j \mathcal P_j = \mathcal A$ jest rozkładem spektralnym (,,jednoznacznie'') i istnieją magiczne wielomiany.	
+Hermitowskie (lub unitarne) operatory $\mathcal A$, $\mathcal B$ komutują $\Lra$ ich macierze są diagonalne we wspólnej ortonormalnej bazie.
+\emph{Operatory dodatnio określone}.  % II33 8
+\emph{Rozkład biegunowy}.  % II33 9
+
+Niech \prawo{234} $V$ będzie p. $\R$-liniową.
+Liniowy operator $\mathcal I \colon V \to V$ wprowadza w $V$ \wcht{strukturę zespoloną}, jeśli $\mathcal I^2 = - \mathcal E$.
+Jest tak, bo w $V$ mamy p. $\C$-liniową: $(\alpha + i \beta) v = \alpha v  + \beta \mathcal I v$; oznaczamy ją przez $\widetilde{V}$.
+Jeśli $\dim V < \infty$, to $2 \mid \dim V$ i $\mathcal I$ gdzieś ma ładną postać.
+\wcht{Urzeczywistnienie}: p. $\C$-liniowa z ,,zapomnianym'' mnożeniem przez $i$.
+Dla operatora $\C$-liniowego $\mathcal A \colon U \to U$: $\R$-liniowy $\mathcal A_\R \colon U_\R \to U_\R$, który działa jak $\mathcal A$; wtedy $\det \mathcal A_\R = |\det \mathcal A|^2$.
+Podalgebra operatorów urzeczywistnionych składa się dokładnie z przemiennych z $\mathcal I$.
+\wcht{Kompleksyfikacja}: $V^\C$, $V \widetilde{\oplus} V$, $V \otimes_\R \C$: jeśli na $V \oplus V$ określimy operator $\mathcal I \colon (u,v) \mapsto (-v,u)$, to wprowadza on \wcht{kanoniczną} strukturę zespoloną.
+\emph{Operatory też!}

@@ -1,0 +1,46 @@
+\wcht{Tensor}: \prawo{2 / 61} $p+q$-liniowe $f \colon V^p \times (V^*)^q \to \mathfrak K$ (,,$p$-ko-$q$-kontra'').
+Zbiór $\mathbb T_p^q(V)$ wszystkich to p. liniowa.
+Iloczyn tensorowy form wieloliniowych $f \colon V_1 \times \dots \times V_r \to \mathfrak K$ oraz $g \colon W_1 \times \dots \times W_s \to \mathfrak K$ to ,,iloczyn $f(v_1, \dots)$ i $g(w_1, \dots)$'', jest łączny.
+\wcht{Iloczyn tensorowy} tensorów $f$ ($p,q$ na $V$) i $g$ ($r,s$ tamże) to tensor $f \otimes g$ typu $(p+r, q+s)$ zdefiniowany analogicznie.
+Po wybraniu bazy $e_i$ w $V$ ($\dim V = n$) i dualnej $e^i$ w $V^*$, tensor sam ma współrzędne, które można zmieniać (6-1-4).
+Wymiar $\mathbb T_p^q(V)$ to $n^{p+q}$, przestrzeń ta ma bazę: $e^{i_1} \otimes \dots \otimes e^{i_p} \otimes e_{j_1} \otimes \dots \otimes e_{j_q}$.
+Można jeszcze ,,tensorować'' przestrzenie (jak?) i operatory liniowe $\mathcal A \colon V \to V$, $\mathcal B \colon W \to W$: $A \otimes B \colon V \otimes W \to V \otimes W$, że $(\mathcal A \otimes \mathcal B) (v\otimes w) = \mathcal A v \otimes \mathcal B w$.
+Jeśli $\dim V = n$, $\dim W = n$, to istnieje $T$ wymiaru $nm$ i liniowe $\tau \colon V \times W \to T$, że $T = \langle \im \tau \rangle$ (to jest 6-1-5).
+
+
+\wcht{Kontrakcja} \prawo{262} zmienia typ $(p,q)$ na $(p-1, q-1)$.
+Dla $\pi \in S_p$, $f_\pi(T)(x_1, \dots, x_p) = T(x_{\pi(1)}, \dots, x_{\pi(p)})$.
+Tensor typu $(p,0)$ (lub $(q,0)$) jest \wcht{symetryczny}: $f_\pi(T) = T$ dla każdej $\pi \in S_p$.
+Ich podprzestrzeń to $\mathbb T_p^+(V)$ [$\mathbb T_+^q(V)$].
+\wcht{Symetryzacja}: liniowe $S \colon (1/p!) \sum_{\pi} f_\pi \colon \mathbb T_p^0(V) \to \mathbb T_p^0(V)$.
+Spełnia $S^2 = S$ i jest na $\mathbb T_p^+$.
+Tensor \wcht{antysymetryczny}: analogicznie, ale $f_\pi(T) = \varepsilon_\pi T$ (znak).
+\wcht{Antysymetryzacja}: $(1/p!) \sum_\pi \varepsilon_\pi f_\pi$, jest ,,na'' $\bigwedge^p V^*$ (zbiór $p$-kowektorów); $\bigwedge^p V$ to zbiór $p$-wektorów.
+Zewnętrzna suma prosta $\bigotimes V^*$, $\mathfrak K \oplus \mathbb T_1^0(V) \oplus \mathbb T_2^0(V) \oplus \dots$ ma naturalną strukturę p. liniowej i algebry nad $\mathfrak K$, \wcht{algebra tensorowa kowariantna}.
+Analogicznie kontra-: $\bigotimes V$ to $\mathfrak K \oplus \mathbb T_0^1 (V) \oplus \mathbb T_0^2(V) \oplus \dots$.
+\[
+	\overline{T} = \sum_{k} f(e_k, e^k) \spk
+	f \colon V \times V^* \to \mathfrak K \spk
+	(x,u) \mapsto T(x_1, \dots, x_r = x, \dots, x_p, u^1, \dots, u^s = u, \dots, u^q)
+\]
+
+\wcht{Iloczyn zewnętrzny} \prawo{263} w $\bigwedge V$: niech $Q \in \bigwedge^q V$, $R \in \bigwedge^r V$.
+$Q \wedge R = A(Q \otimes R)$, gdzie $A$: operator antysymetryzacji.
+Odwzorowanie $\wedge \colon \bigwedge^q V \times \bigwedge^r V \to \bigwedge^{q+r} V$ jest dwuliniowe (co wymusza resztę definicji).
+\wcht{Algebra Grassmana}: $\bigwedge V$, jest łączna.
+Dla $Q \in \mathbb T_0^q (V)$ i $R \in \mathbb T_0^r(V)$ są sobie równe: $A(A(Q) \otimes R)$, $A(Q \otimes A(R))$, $A(Q \otimes R)$.
+Jeśli $(e_i)_{i=1}^n$ to baza $V$, to $p$-wektory $e_{i_1} \wedge\dots\wedge e_{i_p}$ są bazą $\bigwedge^p$ ($1 \le i_1 < \dots < i_p \le n$).
+Wniosek: $\dim V = n$ pociąga $\dim \bigwedge^p V = C^n_p$ i $\dim \bigwedge V =2^n$.
+Mówimy, że zewnętrzna algebra jest antyprzemienną z gradacją, bo $Q \in \bigwedge^p V$, $R \in \bigwedge^r V$ pociągają $Q \wedge R = (-1)^{qr} R \wedge Q$.
+Wektory $x_1, \dots, x_p$ w $V$ są lnz ($V <\infty$) $\Lra$ $x_1 \wedge \dots \wedge x_p \neq 0$.
+Jeśli $(e_i)_{i=1}^n$ jest bazą $V$, zaś $x_j = \sum_{k=1}^n x_j^ie_i$ to układ $p$ wektorów z $V$, to wielkie khm.
+\[
+	x_1 \wedge \dots \wedge x_p = \sum_{i \le 1 < \dots}^{\dots < i_p \le n} \Delta_{i_1, \dots, i_p} (x_1, \dots, x_p) e_{i_1} \wedge \dots \wedge e_{i_p} \spk
+	\Delta_{\dots} = \det (x_j^{i_k})
+\]
+
+\wcht{Anihilator} $p$-wektora $P \in \bigwedge^p V \setminus \{0\}$: $\{x \in V : P \wedge x = 0\}$, $p$-wektor prosty: $P = a_1 \wedge \dots \wedge a_p$ dla $a_i \in V$.
+Jeśli $P \in \bigwedge^pV \setminus\{0\}$ i $(e_i)_{i=1}^r$ jest bazą jego anihilatora, to $r \le p$ i istnieje $(p-r)$-wektor $Q$, że $P= e_1 \wedge \dots \wedge e_r \wedge Q$.
+Niech $U = \ann P$, $W = \ann Q$ ($P$: $p$-wektor prosty, $Q$: $q$-wektor prosty), wtedy: $U \supset W$ $\Lra$ $P = Q \wedge R$ dla pewnego $(p-q)$-wektora $R$; $U \cap Q = \{0\}$ $\Lra$ $P \wedge Q \neq 0$, wtedy $U \oplus W = \ann (P \wedge Q)$.
+Niezerowy $(n-1)$-wektor $P$ w przestrzeni wymiaru $n$ jest prosty.
+Biwektor $P = \sum_{1 \le i < j \le n} P^{ij} e_i \wedge e_j$ jest prosty $\Lra$ $P \wedge P = 0$.
