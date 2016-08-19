@@ -1,0 +1,120 @@
+Topologia \prawo{2.1} \wcht{indukowana} na $M \subseteq X$: otwarte są $M \cap U$, gdy $U \subseteq_o X$.
+Jeżeli $g \circ f$ ($f \colon X \to Y$, $g \colon Y \to Z$) jest domknięte/otwarte, to obcięcie $g$ do $f(X)$ też.
+Zanurzenie \wcht{homeomorficzne} ($f \colon X \to Y$): złożenie homeo- i zanurzenia ($X$ \wcht{zanurzalna} w $Y$).
+Bycie $\mathcal T_i$ dla $i \le 3.5$ i $i = 6$ jest dziedziczne, podobnie $\mathcal T_4$ na podzbiory domknięte (i $F_\sigma$).
+Dla $\mathcal T_1$ NWSR: $X$ jest $\mathcal T_5$, wszystkie $M \subseteq_o X$ są $\mathcal T_4$, \wcht{rozgraniczone} $A, B$ ($A \cap \text{cl } B$, $B \cap \text{cl } A$ są puste) oddzielają się otwartymi.
+\wcht{Tw. Tietzego-Urysohna} (\datum{1925}): ciągła $f \colon (M \subseteq^a X) \to \R$ (lub $[0,1]$) przedłuża się na $X$ (jeśli ta jest $\mathcal T_4$).
+Ciągła z gęstego $A \subseteq X$ w $\mathcal T_2$ przedłuża się na $X$ co najwyżej w jeden sposób.
+\emph{Brakuje zadań do 2.1}.
+
+\wcht{Lemat Jonesa} (\datum{1965}): jeśli w $X$ istnieją: dyskretny $D_0 \subseteq^a X$ i gęsty $D_1$, że $|D_0| \ge \exp(|D_1|)$, to $X$ nie jest $\mathcal T_4$.
+Zakładając aksjomat Martina i negację hipotezy continuum, istnieją ośrodkowe 1-przeliczalne $\mathcal T_4$ z nieprzeliczalnym dyskretnym podzbiorem domkniętym.
+Ośrodkowa $\mathcal T_4$ nie ma dyskretnego podzbioru domkniętego mocy continuum.
+
+Tutaj: $X$ z pokryciem $A_s$ i \wcht{zgodne} ($f_{1} = f_{2}$ obcięte do $A_1 \cap A_2$) ciągłe $f_s \colon A_s \to Y$ .
+Jeżeli $A_s$ są otwarte lub $\{A_s\}$ jest lokalnie skończonym pokryciem domkniętymi, to \wcht{kombinacja} ($\bigtriangledown f_s(x) = f_s(x)$ gdy $x \in A_s$) jest ciągła.
+Ciągła kombinacja z otwartych (albo domkniętych) $f_s$ sama taka jest.
+Przeliczalna rodzina dyskretna $\{F_i \subseteq^a X\}$ w $\mathcal T_4$ ma rodzinę $\{U_i \subseteq_o X\}$, że $F_i \subseteq U_i$, zaś $U_i$ mają parami rozłączne domknięcia.
+
+\wcht{Suma} \prawo{2.2} (Tietze, \datum{1923}): $X = \coprod_s X_s$ z topologią: $U \subseteq_o X \Lra U \cap X_s \subseteq_o X_s$; suma $\oplus$ jest łączna.
+Zanurzenie $X_s$ w sumę: $i_s \colon X_s \to \bigoplus_s X_s$.
+Wszyskie $f \circ i_s$ ciągłe $\Lra$ $f \colon \bigoplus_s X_s \to Y$ ciągłe.
+\wcht{Własność addytywna} ($\mathfrak m$-): jeśli każdy z ($\le \mathfrak m$) składników $\{X_s\}_{s\in S}$ ma własność, to ich suma też.
+Aksjomaty oddzielania, bycie ,,dyskretnym'' lub ,,charakteru $\le \mathfrak m$'' są addytywne, ,,ciężaru $\le \mathfrak m$'' i ,,gęstości $\le \mathfrak m$'' są $\mathfrak m$-addytywne.
+Jeżeli $A_i = (i, i+1)$, to $B = (\oplus_{i=1}^\infty A_i) \oplus \mathfrak D(\aleph_0)$ oraz $[0,1) \oplus B$ nie są homeo-, ale istnieją ciągłe bijekcje w dwie strony (Kuratowski, \datum{1921}).
+\textbf{\color{Red}2.2.C}.
+
+\wcht{Produkt}: \prawo{2.3} $\prod_s X_s$ z topologią od rzutów na osie.
+Bazę stanowią produkty $W_s \subseteq_o X_s$, gdzie $W_s = X_s$ prawie zawsze.
+$\cl \prod_s A_s = \prod_s \cl A_s$ dla $A_s \subseteq X_s$.
+Funkcja $f \colon Y \to \prod_s X_s$ jest ciągła $\Lra$ złożenia z rzutami są.
+Rzutowania są otwarte, niekoniecznie domknięte.
+\wcht{Produkt funkcji} $f_s \colon X_s \to Y_s$: jest z $\prod_s X_s$ w $\prod_s Y_s$.
+\wcht{Przekątna} $\triangle$: $X \to \prod_s Y_s$, gdy mamy $f_s \colon X_s \to Y_s$.
+Jeśli $X_s$ są $\mathcal T_i$ dla $i \le 3.5$, to ich produkt też, gdy zaś produkt jest niepusty, $\mathcal T_i$ ($i \le 6$), to czynniki również.
+Ciężar produktu $\mathfrak m$ czynników ciężaru $\le \mathfrak m$ jest ciężaru $\le \mathfrak m$.
+Zatem $\aleph_0$-multiplikatywne są 1- i 2-przeliczalność.
+\wcht{Tw. Hewitta-Marczewskiego-Pondiczery'ego} (\datum{1944}): gęstość produktu $\le 2^{\mathfrak m}$ czynników gęstości $\le \mathfrak m$ jest $\le \mathfrak m$.
+A więc ośrodkowość jest $\mathfrak c$-multiplikatywna.
+Jeśli $d(X_s) \le \mathfrak m$, to rodzina parami rozłącznych $A_i \subseteq_o \prod_s X_s$ jest mocy $\le \mathfrak m$.
+
+Rodzina ciągłych $\mathcal F = \{f_s \colon X \to Y_s\}$ \wcht{oddziela punkty}, jeśli każde $x \neq y \in X$ mają $s$, takie że $f_s(x) \neq f_s(y)$; \wcht{oddziela punkty od zbiorów domkniętych}, gdy $x \in X$ i $A \subseteq^a X$ mają $s$, że $f_s(x) \not \in \cl f_s(A)$.
+Jeśli $\mathcal F$ oddziela punkty, to przekątna $f_s$ jest ,,1-1''; jeśli oddziela punkty od zbiorów domkniętych, to jest homeo-.
+Zatem przekątna $\Delta$ iloczynu $X^{\mathfrak m}$ i $X$ są homeo-.
+\wcht{Przestrzeń uniwersalna}: zanurza w sobie wszystkie z własnością $W$ i sama ją ma.
+\wcht{Kostka Tichonowa}: $[0,1]^{\mathfrak m}$, uniwersalna dla $\mathcal T_{3.5}$ ciężaru $\mathfrak m$.
+\wcht{Cantora}: $\{0,1\}^{\mathfrak m}$, jest charakteru $\mathfrak m$.
+\wcht{Aleksandrowa}: $\{0,1\}^{\mathfrak m}$ (z otwartym tylko $\{0\}$!), uniwersalna dla $\mathcal T_0$ ciężaru $\mathfrak m$.
+
+Produkt funkcji domknięty $\Ra$ czynniki domknięte.
+Produkt otwarty $\Lra$ czynniki otwarte, prawie wszystkie ,,na''.
+Przekątna funkcji w $\mathcal T_3$ z czegoś (skończenie wielu!) jest domknięta.
+Otwarta przekątna $\Ra$ otwarte funkcje.
+Pospisil (\datum{1937}): produkt więcej niż $\aleph_0$ niejednopunktowych nie jest $\mathcal T_5$.
+Stone (\datum{1948}): $\N^{\aleph_1}$ nie jest $\mathcal T_4$.
+Ciężar $\prod_s X_s$, gdy $w(X_s) > 1$ i $|S| = \infty$, to $|S| + \sup_s w(X_s)$. 
+Pondiczery, Marczewski (\datum{1947}): jeśli $|S| > \mathfrak c$ i $|X_s| > 1$, to produkt $X_s$ (o czynnikach $\mathcal T_2$!) nie jest ośrodkowy.
+ 
+Na $X$ mamy ,,równoważność'' $\sim$.
+\wcht{Topologia ilorazowa} \prawo{2.4} na $X$: najbogatsza, że \wcht{naturalna} $q \colon X \to X /{\sim}$, $q(x) = [x]$ jest ciągła (Baer/Levi, \datum{1932}).
+Wtedy $F \subseteq^a X / {\sim} \Lra q^{-1}[F] \subseteq^a X$, zaś $f \colon X / {\sim} \to Y$ jest ciągłe $\Lra$ $fq$ jest ciągłe.
+Dla ciągłego $f$ z $X$ na $Y$ NWSR:
+$f$ jest \wcht{ilorazowe} (złożenie naturalnego ilorazowego i homeo-);
+$f^{-1}[U] \subseteq_o X \Lra U \subseteq_o Y$;
+analogiczne z $\subseteq^a$ miast $\subseteq_o$;
+$f_{\sim} \colon X / {\sim_f} \to Y$ (dzielimy $X$ przez włókna $f$) jest homeo-.
+Jeżeli złożenie $g \circ f$ ciągłych jest ilorazowe, to $g$ jest ilorazowe; złożenie ilorazowych jest takie.
+Domknięta lub otwarta surjekcja jest ilorazowa.
+Dla relacji równoważności $\sim$ w $X$ NWSR: naturalne $q \colon X \to X / {\sim}$ jest domknięte [otwarte]; 
+dla $A \subseteq^a X$ [$\subseteq_o$] unia klas abstrakcji $\sim$ krojących $A$ jest domknięta [otwarta] w $X$;
+dla $A \subseteq_o X$ [$\subseteq^a$] unia klas abstrakcji $\sim$ zawartych w $A$ jest otwarta [domknięta].
+Dalej, $\sim$ na $X$ jest \wcht{domykająca/otwierająca}: naturalne $q$ jest ,,takie''; odpowiadają \wcht{rozkładom pół-$\downarrow$/$\uparrow$-ciągłym}.	
+\wcht{Zrost} rozłącznych $X, Y$ przy $f \colon (M \subseteq^a X) \to Y$: $X \cup_f Y := (X \oplus Y) / \sim$ (rozkład sumy na singletony z $X \setminus M$ oraz $f^{-1}(y) \cup \{y\}$ dla $y \in Y$); Borsuk (\datum{1935}) dla metrycznych zwartych.
+
+Dane są rozłączne $X_s$, $Y_s$ oraz ciągłe $f_s \colon (M_s \subseteq^a X_s) \to Y_s$.
+Zrost $\bigoplus_s X_s$ z $\bigoplus_s Y_s$ przez $\bigoplus_s f_s$ jest homeo- z $\bigoplus_s (X_s \cup_{fs} Y_s)$.
+Twierdzenie to dla $\times$ zamiast $\cup$ jest fałszywe nawet dla $|S| = 2$.
+\wcht{Dziedzicznie ilorazowe}: $f \colon X \to Y$, że wszystkie $f^{-1}[B] \to B$ są ilorazowe (Mc Dougle, \datum{1958}).
+Można je składać i sumować.
+Ilorazowe na p. Frécheta, w której każdy ciąg ma góra jedną granicę, jest dziedzicznie ilorazowe.
+Archangielski (\datum{1963}): obraz p. ciągowej [Frécheta] przez [dziedzicznie] ilorazowe jest taki.
+P. ciągowe to obrazy raz-przeliczalnych przez ilorazowe.
+
+\wcht{System odwrotny} \prawo{2.5} (Lefschetz, \datum{1942}): rodzina $S = \{X_\sigma, \pi_\delta^\sigma, \Sigma\}$ ($\Sigma$ skierowany przez $\le$; gdy $\delta \le \sigma$, to $\pi_\delta^\sigma$ ciągłym $X_\sigma \to X_\delta$; dla $\tau \le \delta \le \sigma$ jest $\pi_\tau^\delta \pi_\delta^\sigma = \pi_\tau^\sigma$ i $\pi_\sigma^\sigma$ identycznością).
+\wcht{Ciąg odwrotny}: $\Sigma = \N$.
+\wcht{Nić}: $\{x_\delta\} \in \prod_\sigma X_\sigma$, gdy dla $\delta \le \sigma$ jest $\pi_\delta^\sigma(x_\sigma) = x_\delta$.
+\wcht{Granica systemu odwrotnego}, $X = \underline{\lim} S$: (podprzestrzeń produktu) ze wszystkich nici.
+,,Gso'' przestrzeni $\mathcal T_i$ jest $\mathcal T_i$ dla $i \le 3.5$.
+\wcht{Rzutowanie}  granicy ,,gso'' na $X_\sigma$: obcięcie rzutowania $p_\sigma \colon \prod_\sigma X_\sigma \to X_\sigma$.
+Fakt: bazą $X$ jest rodzina $\mathcal B$ zbiorów postaci $\pi_\sigma^{-1}(U_\sigma)$ ($\sigma$ po dowolnym $\Sigma' \subseteq \Sigma$ współkońcowym z nim), $U_\sigma \subset X_\sigma$ otwarte (jeśli $X_\sigma$ mają bazy $\mathcal B_\sigma$, to można: $U_\sigma \in \mathcal B_\sigma$).
+Dla skończenie multiplikatywnej, dziedzicznej na domknięte podprzestrzenie własności $W$: $X$ jest homeo z domkniętą podprzestrzenią produktu $\mathcal T_2$ przestrzeni z $W \Lra X$ jest ,,gso'' $\mathcal T_2$-przestrzeni z $W$.
+\emph{Przekształcenia}.
+
+\wcht{Topologia zbieżności jednostajnej} \prawo{2.6} w $\mathcal C(X, \R)$: $x \in \cl A \Lra x = \lim_n f_n$ (jednostajnie!), $f_n \in A$ jest zawsze bogatsza od \wcht{topologii zbieżności punktowej}: z bazą złożoną z $\bigcap_{i=1}^k \{f \in \mathcal C(X, Y) : f(A_i) \subseteq B_i\}$ dla skończonych $A$ i otwartych $B$ (czyli: podprzestrzeni w $\prod_{x \in X}$).
+Jeżeli $Y$ jest $\mathcal T_i$, $i \le 3.5$, to $\mathcal C(X, Y)$ z punkozbielogią też.
+Funkcje $g \colon Y \to T$, $h \colon X \to Z$ zadają $\Phi_g \colon \mathcal C(X, Y) \to \mathcal C(X,T)$ oraz $\Psi_h \colon \mathcal C(Z, Y) \to \mathcal C(X, Y)$ przez $\Phi_g(f) = g \circ f$ oraz $\Psi_h(f) = f \circ h$.
+Obie są ciągłe (z punkozbielogią), $\Psi_h$ jest ciągła też dla ciągłego $h$ z jednozbielogią, ale dla homeo- $g \colon \R \to \R$, $\Phi_g$ nie musi być ciągłe.
+Widać stąd, że wyżej wymienione topologie są złe i niekoniecznie pasują do topologii $\R$.
+Z jakimi topologiami na $\mathcal C(Y, Z)$, $\mathcal C(X, Y)$, $\mathcal C(X,Z)$, składanie $X \to Y \to Z$ jest ciągłe? Prawie nigdy!
+
+\wcht{Ewaluacja} $\Omega \colon \mathcal C(X, Y) \times Y \to X$ zadana jest wzorem $\Omega(f,x) = f(x)$.
+Istnieje bijekcja $Y^{Z \times X} \to (Y^X)^Z$, \wcht{funkcja wykładnicza}: dla $f \in Y^{Z \times  X}$, $\{[\Lambda(f)](z)\}(x) = f(z,x)$.
+Topologia w $Y^X$ jest \wcht{udana z dołu} [z \wcht{góry}]: dla każdej $Z$ i $f \in Y^{Z \times X}$, $\Lambda(f)$ należy do $(Y^X)^Z$ [dla $g \in (Y^X)^Z$, $\Lambda^{-1}(g)$ należy do $Y^{Z \times X}$ $\Lra$ ewaluacja na $Y^X$ jest ciągła].
+Uboższa [bogatsza] od udanej z dołu [góry] taka jest; ,,z góry'' są bogatsze od ,,z dołu''; co najwyżej jedna jest zatem udana.
+Fox (\datum{1945}): w $\R^\Q$ nie ma udanej topologii.
+
+Każda $Y$ ($\mathcal T_0$) zanurza się w pewną potęgę $X$ $\Lra$ topologia $Y$ pochodzi od rodziny przekształceń w $X$ (Szanin, \datum{1944}).
+Nie istnieje taka $X$ ($\mathcal T_1$), że każda $\mathcal T_1$ zanurza się w potęgę $X$.
+Dla kardynalnej funkcji $f$, przez $hf$ rozumie się kres $f(M)$, gdzie $M$ to podprzestrzeń $X$.
+Mamy: $hw = w$, $h\chi = \chi$ i $h \tau = \tau$; $he = hc$ i $\tau \le hd$, ale istnieje $X$, dla której $hd(X) > d(X), \tau(X)$.
+Jeżeli $A \subseteq X$ jest gęsta, to $c(A) = c(X)$ i może być $d(A) > d(X)$.
+Istnieje $\mathcal T_2$, dla której $hd > hc = \aleph_0$ (Sierpiński, \datum{1921}).
+Istnieje $\mathcal T_{3.5}$, dla której $hd > hc = \aleph_0$ (Todorcevic, \datum{1986}). 
+Co ciekawe, zwykła teoria mnogości nie zna $\mathcal T_3$, dla której $hd > hc = \aleph_0$.
+Jest ona związana z \wcht{p. Suslina}: liniowym zbioczupem, dla którego $d > c = \aleph_0$.
+Jech, Tennenbaum (\datum{1967}): istnienie tej przestrzeni jest niezależne od ZFC.
+Kurepa (\datum{1950}): $c(X^2) > \aleph_0$.-
+
+\wcht{Liczba Szanina}: najmniejsza $\mathfrak m \ge \aleph_0$, że $\mathfrak m^+$ jest \wcht{kalibrem} ($\mathfrak m > \aleph_0$,  każda rodzina mocy $\mathfrak m$ (niepustych, otwartych) ma podrodzinę mocy $\mathfrak m$ o niepustym przekroju: Szanin, \datum{1948}).
+Zachodzi: $c \le s \le d$.
+Istnieją $\mathcal T_{3.5}$, że $s > c$ lub $d > s$.

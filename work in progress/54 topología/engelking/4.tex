@@ -1,0 +1,57 @@
+{\color{gray}
+\wcht{Metryka}: \prawo{4.1} $d \colon X^2 \to \R_+$, że $d(x, y) = 0 \Lra x = y$ i $d(x,y) \le d(x,z) + d(y,z)$.
+\wcht{Metryzowalna}: homeo- z metryczną $\Ra$ raz-przeliczalna i $\mathcal T_6$.
+Kule zadają topologię.
+\wcht{Średnica} zbioru: kres górny wzajemnych odległości.
+Odległość od zbioru jest ciągła.
+W metryzowalnej, domknięte są funknięte, zatem $G_\delta$.
+Dla metryzowalnej NWSR: ma ciężar, ciężar sieciowy, gęstość, liczbę Lindelöfa $\le \mathfrak m$, każda podprzestrzeń [domknięta albo nie], ewentualnie rodzina parami rozłącznych niepustych, otwartych ma moc $\le \mathfrak m$.
+Dla metryzowalnej NWSR: przeliczalnie, ciągowo lub zwarta (Gross, \datum{1914}), więc: zwarta $\Ra$ ośrodkowa.
+Dla metryzowalnej NWSR: dwa-przeliczalna, Lindelöfa, ośrodkowa.
+Domknięciem kuli otwartej na ogół nie jest domknięta!
+Henriksen, Isbell (\datum{1958}): narost $rX \setminus r(X)$ jest Lindelöfa (dla $X$: metrycznej).
+}
+
+Suma \prawo{4.2} metryzowalnych taka jest.
+W produkcie $\prod_{i=1}^\infty X_i$ topologia Tichonowa pochodzi od metryki $d(x,y) = \sum_{i=1}^\infty d_i(x_i, y_i) \cdot 2^{-i}$, przy czym w $X_i$ jest metryka $d_i \le 1$.
+,,Gco'' metryzowalnych jest taka.
+Zwarta jest metryzowalna $\Lra$ dwa-przeliczalna.
+Dwa-przeliczalna jest $\mathcal T_3$ $\Lra$ metryzowalna.
+Kostka Hilberta $I^{\aleph_0}$ jest uniwersalna dla metryzowalnych (ośrodkowych albo zwartych).
+%\wcht{Przestrzeń Baire'a}: $\mathfrak B(\mathfrak m)$, przeliczalny produkt dyskretnych mocy $\mathfrak m \ge \aleph_0$.
+Jeśli każda ciągła funkcja $X \to Y$ jest ograniczona, to metryka supremum zadaje na $\mathcal C$ udaną z góry topologię, która jest bogatsza od zwarotwalogii (Jackson, \datum{1952}).
+Dla zwartej $X$, obie są równie bogate (oraz nie zależą od $d$: Arens \datum{1946}).
+Vaughan (\datum{1937}): metryczną $X$ można zmetryzować tak, żeby $A \subseteq$ był zwarty $\Lra$ był domknięta, ograniczona dokładnie dla ośrodkowych i lokalnie zwartych $X$.
+Sznejder (\datum{1945}): zwarta $X$ jest metryzowalna $\Lra$ przekątna $\Delta$ jest $G_\delta$ w $X \times X$.
+Arens (\datum{1946}): jeśli $X$ jest hemizwarta, zaś $Y$ metryzowalna, to $\mathcal C(X,Y)$ ze zwarotwologią jest metryzowalna.
+Ponomariow (\datum{1960}): dla $\mathcal T_0$, raz-przeliczalność $\Lra$ obraz metryzowalnej przez otwarte.
+
+Metryczna \prawo{4.3} \wcht{całkowicie ograniczona}: istnieje skończony \wcht{$\varepsilon$-gęsty} $A$ (każdy $x \in X$ ma $a \in A$, że $d(a,x) < \varepsilon$) dla każdego $\varepsilon > 0$.
+Niepuste $X_i$ z $d_i \le 1$ są całkowicie ograniczone (zupełne) $\Lra$ ich produkt też.
+Metryzowalna metryzuje się całkowicie ograniczenie $\Lra$ jest ośrodkowa, dla topologicznej: dwa-przeliczalna i $\mathcal T_3$.
+\wcht{Tw. Cantora}: metryczna jest \wcht{zupełna} (ciągi Cauchy'ego mają granice) $\Lra$ przekrój zstępujący dowolnie małych i domkniętych jest niepusty.
+Każda metryczna zanurza się izometrycznie w zupełną.
+Ciągłe, ograniczone $X \to Y$ (zupełna) z metryką supremum tworzą zupełną.
+\wcht{Tw. Ławrentiewa} (\datum{1924}): każdy homeo-- $(A \subseteq X) \to (C \subseteq Y)$ przedłuża się do $B \to D$ ($B, D$: $G_\delta$), gdy $X, Y$ są zupełnie metryzowalne.
+Metryzowalna jest zupełnie $\Lra$ w sensie Cecha.
+Każda metryka w zwartej jest zupełna, więc ograniczona.
+% Każdą metryczną można uzupełnić.
+% W każde pokrycie otwarte metrycznej zwartej można wpisać pokrycie $K(x, \varepsilon)$ dla pewnego $\varepsilon$ (\wcht{współczynnik Lebesgue'a}).
+
+Rodzina \prawo{4.4} \wcht{$\sigma$-lokalnie skończona ($\sigma$-dyskretna)}: suma $\aleph_0$ wielu rodzin lokalnie skończonych (dyskretnych).
+\wcht{Tw. Stone'a}: w pokrycie otwarte metryzowalnej wpisuje się otwarte, lokalnie skończone i $\sigma$-dyskretne (\datum{1948}).
+Metryzowalna $\Lra$ $\mathcal T_3$ z $\sigma$-lokalnie skończoną bazą (\wcht{tw. Nagaty-Smirnowa}, \datum{1950}) $\Lra$ $\mathcal T_3$ z $\sigma$-dyskretną bazą (\wcht{tw. Binga}).
+Iloczyn $\aleph_0$ jeży $\mathfrak J(\mathfrak m)$ jest uniwersalny dla metryzowalnych ciężaru $\mathfrak m \ge \aleph_0$ (Kowalsky, \datum{1957}).
+Bycie metryzowalną jest niezmiennikiem doskonałych lub otwarniętych (Balachandran \datum{1955}), ale nie: otwartych bądź też domkniętych.
+\wcht{Lemat Wajnsztejna} (\datum{1947}): dla domkniętej surjekcji $f \colon X \to Y$ ($X$ metryzowalna), brzeg włókna ($y \in Y$ przeliczalnego charakteru) jest zwarty.
+\wcht{Tw. Hanai-Mority-Stone'a}: $Y$ metryzowalna $\Lra$ raz-przeliczalna $\Lra$ brzeg każdego włókna zwarty (\datum{1956}, $f$ jak wyżej).
+
+Dla każdej metryzowalnej $X$ ciężaru $\le \mathfrak c$ istnieje ciągła bijekcja na metryczną, ośrodkową.
+\wcht{Tw. Łaszniewa} (\datum{1965}): jeśli istnieje domknięta surjekcja z metryzowalnej $X$ na $Y$, to $Y = \bigcup_{i \ge 0} Y_i$, gdzie włókna z $Y_0$ są zwarte, zaś $Y_i$ ($i \ge 1$) są domknięte, dyskretne.
+
+Katetov (\datum{1948}): zwarta $X$ metryzowalna $\Lra$ $X \times X \times X$ jest $\mathcal T_5$.
+Nyikos (\datum{1977}): istnieje zwarta niemetryzowalna $X$, że $X \times X$ jest $\mathcal T_5$ (ponieważ założył coś teoriomnogościowego).
+Chaber (\datum{1976}): Katetovowi wystarczy przeliczalna zwartość.
+Michael (\datum{1953}):  produkt metryzowalnej oraz doskonałej jest doskonały.
+Morita (\datum{1963}): to samo dla $\mathcal T_6$ zamiast doskonałości.
+Bourbaki (\datum{1958}): produkt metryzowalnej z przeliczalnie zwartą $\mathcal T_4$ jest $\mathcal T_4$ (wystarczy, że pierwszy czynnik będzie parazwary i raz-przeliczalny).

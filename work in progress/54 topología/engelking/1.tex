@@ -1,0 +1,131 @@
+\wcht{P. topologiczna}: \prawo{1.1} zbiór \prawo{1.2} $X$ z rodziną (\wcht{otwartych}) ${\varnothing, X} \subseteq \mathcal O \subseteq \mathfrak P(X)$ zamkniętą na skończone przekroje i unie; dopełnienia zbiorów z $\mathcal O$ są \wcht{domknięte}.
+\wcht{Otoczenie}. % $x$: otwarty $U \ni x$.
+\wcht{Baza}: rodzina $\mathcal B \subseteq \mathcal O$, że każdy otwarty jest unią jej elementów.
+\wcht{Podbaza}: rodzina $\mathcal B \subseteq \mathcal O$, gdy skończone przekroje jej elementów tworzą bazę.
+\wcht{Baza w punkcie}: rodzina otoczeń $\mathcal B$ dla $x$, że gdy $x \in V \subseteq_o X$, to istnieje $(U \subseteq V) \in \mathcal B(x)$.
+\wcht{Wnętrze}: unia otwartych podzbiorów.
+\wcht{Domknięcie}: przekrój domkniętych 
+nadzbiorów.
+\wcht{Ciężar} $w$: najmniejsza z mocy bazy.
+\wcht{Charakter} $\chi$: kres górny charakterów w punkcie (najmniejsza z mocy baz w tym punkcie).
+\wcht{Raz/dwa-przeliczalność}: $\chi$/$w \le \aleph_0$.
+%\wcht{Pełny układ otoczeń}: rodzina $\{\mathcal B(x)\}_x$.
+\wcht{Lokalna skończoność} $\{A_s \subseteq X\}$ (Aleksandrow, \datum{1924}): każdy $x \in X$ ma otoczenie krojące skończenie wiele $A_s$; wtedy $\operatorname{cl} \bigcup A_k = \bigcup \operatorname{cl} A_k$ (\wcht{lokalna dyskretność}: krojenie jednego $A_s$). 
+\wcht{Kuratowski} (\datum{1922}): przez dopełnienia i domknięcia można dostać czternaście zbiorów: $(0,1)\cup(1,2)\cup\{3\}\cup([4,5]\cap\Q)$ w $\R$.
+\[
+	\cl A \cup B = \cl A \cup \cl B \spk
+	\interior A \cap B = \interior A \cap \interior B \spk
+	\cl A = A \cup \operatorname{bd } A\spk
+	\interior A = A \setminus \operatorname{bd } A \spk
+	\operatorname{bd } A = \operatorname{bd } (X \setminus A) \spk
+	\interior A = X \setminus \cl (X \setminus A) 
+\]
+
+\wcht{Brzeg}: \prawo{1.3} domknięcie bez wnętrza, \wcht{pochodna} $A^d$: zbiór \wcht{punktów skupienia} ($x \in \cl (A\setminus \{x\})$). 
+Punkt \wcht{izolowany}: $\{x\}$ otwarty $\Lra$ $x \in A\setminus A^d$.
+Zbiór \wcht{gęsty}: $\cl A = X$, \wcht{brzegowy}: $\interior A = \varnothing$, \wcht{nigdziegęsty}: $\cl A$ brzegowy, \wcht{w sobie gęstym}: $A \subseteq A^d$.
+Gęste kroją otwarte.
+\wcht{Gęstość}: najmniejsza moc gęstego, nie przekracza ciężaru.
+\wcht{P. ośrodkowa} (Frechet, \datum{1906}): $d \le \aleph_0$.
+Zbiór \wcht{borelowski}: z $\sigma$-ciała otwartych; zbiór $G_\delta$: dopełnienie $F_\sigma$ (przeliczalna unia domkniętych).
+Jeśli rodzina $\{A_s\}$ jest lokalnie skończona, to $\operatorname{bd } \bigcup_s A_s \subseteq \bigcup_s \operatorname{bd } A_s$.
+
+Funkcja \prawo{1.4} \wcht{ciągła} (Frechet, \datum{1910}): przeciwobraz otwartego otwarty; $f(\cl A) \subseteq \cl f(a)$; $\cl f^{-1}(B) \subseteq f^{-1}(\cl B)$. % \Lra f^{-1}(\interior B) \subseteq \interior f^{-1}(B)$
+Nie zwiększa gęstości, zaś przeciwobraz $F_\sigma$, $G_\delta$ lub borelowskiego też taki jest.
+\wcht{Topologia od rodziny przekształceń} (Bourbaki, \datum{1951}): najuboższa na $X$, że $f_s \colon X \to Y_s$ są ciągłe; ma bazę postaci $\bigcap_{i=1}^k f_{s_i}^{-1}(V_i)$, $V_i \subseteq_o Y_{s_i}$.
+Funkcja ciągła może być \wcht{otwarta} (Aronsztajn, \datum{1931}) / \wcht{domknięta} (Aleksandrow, \datum{1927}): obraz takiego jest taki; tylko domknięte mogą podnosić ciężary i charaktery.
+\wcht{Własność topologiczna} to niezmiennik \wcht{homeomorfizmu} ($\leftrightarrows$-ciągłej bijekcji).
+Dla bijekcji: homeo-- $\Lra$ domknięta $\Lra$ otwarta $\Lra$ [$f(A)$ domknięty/otwarty $\Lra$ $A$ też], to samo dla $A$, $f^{-1}(A)$.
+Przeciwniezmiennik to własność, która przenosi się z obrazu na przestrzeń argumentów; niezmiennik zaś z przestrzeni na obraz.
+
+\wcht{Aksjomaty oddzielania} \prawo{1.5} (punkty i zbiory domknięte).
+$\mathcal T_2$ inaczej: każdy punkt przecięciem domknięć swych otoczeń.
+Dla ciągłych $f, g$ w $\mathcal T_2$ jest $\{x : f(x) = g(x)\} \subseteq^a X$.
+\wcht{Lemat Urysohna} (\datum{1925}): w $\mathcal T_4$ rozłączne, domknięte są \wcht{funkcyjnie oddzielalne} (istnieje ciągła $f \colon X \to I$, że $f[A] = 0$, $f[B] = 1$); w $\mathcal T_4$ funknięte (-warte) to dokładnie domknięte $G_\delta$ (otwarte $F_\sigma$).
+Skończona unia i przeliczalny przekrój \wcht{funkniętych} (przedobraz zera przez ciągłą $X \to I$; ma funkwarte dopełnienie) jest funknięty.
+Otwarnięte są funknięte ($\Ra$ domknięte) i -warte ($\Ra$ otwarte).
+Fakt: $\mathcal T_1$ jest $\mathcal T_{3.5}$ $\Lra$ funkwarte podzbiory są bazą.
+(Dwa-przeliczalna lub przeliczalna) $\mathcal T_3$ jest $\mathcal T_4$.
+Dwa-przeliczalna $\mathcal T_4$ jest $\mathcal T_6$.
+
+\wcht{Pokrycie} $X$: rodzina $A_s$, których unia to $X$.
+Rodzina $\{A_s \subseteq X\}_{s \in S}$ \wcht{punktowo skończona (przeliczalna)}: dla $x \in X$ zbiór $\{s \in S : x \in A_s\}$ jest skończony (przeliczalny).
+\wcht{Tw. Lefschetza} (\datum{1942}): jeśli $X$ jest $\mathcal T_4$, to każde punktowo skończone otwarte pokrycie $\{U_s\}$ ma pokrycie otwarte $\{V_s\}$, że $\cl V_s \subseteq U_s$.
+Dla $\mathcal T_1$: $\mathcal T_6 \Lra U \subseteq_o X$ są funkwarte $\Lra$ $F \subseteq^a X$ są funknięte $\Lra$ rozłączne $A, B \subseteq^a X$ mają $f \colon X \to I$, że $A = f^{-1}(0)$, $B = f^{-1}(1)$ (\wcht{tw. Wedenisowa, \datum{1940}}).
+Aksjomaty $\mathcal T_1, \mathcal T_4, \mathcal T_6$ są niezmiennikami domkniętych; żaden nie jest dla: \wcht{\color{Red}ciągłych} lub otwartych.
+
+Chaber (\datum{1972}): $\mathcal T_3$, $\mathcal T_{3.5}$ to niezmiennik otwarniętych.
+$\mathcal T_1$-topologia $X$ wprowadza się przez rodzinę przekształceń $X \to \R$ $\Lra$ $X$ jest $\mathcal T_{3.5}$.
+\wcht{Retrakcja}: ciągła $f \colon X \to X$, że $f \circ f = f$. Retrakt (obraz) $\mathcal T_2$ jest domknięty.
+Każda ciągła $g \colon X \to \R$ ograniczona na włóknach otwarniętej surjekcji $f \colon X \to Y$ zadaje ciągłe $g_*, g^* \colon Y \to \R$: $g^*(y) = \sup F$, $g_*(y) = \inf F$, $F = \{g(x) : x \in f^{-1}(y)\}$. (Ponomariow, Frolik \datum{1961}).
+\begin{itemx}
+\item [0] \wcht{Kołmogorow}: jeśli $x_1 \neq x_2$, to istnieje otwarty $U$ zawierający tylko jeden z nich. $|X| \le |\mathfrak P [w(X)]|$.
+\item [1] \wcht{Frechet}: jeśli $x_1 \neq x_2$, to istnieje otwarty $U$ zawierający tylko $x_1$; $\{x\}$ domknięty. \hfill Riesz, \datum{1907}
+\item [2] \wcht{Hausdorff}: ,,$x_1 \neq x_2$ mają $U_1 \cap U_2 = $''; $|X| \le |\mathfrak P \mathfrak P [d(X)]|$ (Pospisil \datum{1937}) oraz $|X| \le [d(X)]^{\chi(X)}$. \hfill Hausdorff, \datum{1914}
+\item [2.5] \wcht{Urysohn}: dla $x \neq y$ istnieją otoczenia $U_x, U_y$ o rozłącznych domknięciach. \hfill Urysohn, \datum{1925}
+\item [3] \wcht{regularność}: $\mathcal T_1$ i domknięty zbiór z punktem poza nim są rozdzielalne przez otwarte zbiory. $w(X) \le \mathfrak P[d(X)]$. \hfill Vietoris, \datum{1921}
+\item [3.5] \wcht{regularność całkowita / Tichonow}: $\mathcal T_1$; $F \subseteq^a X$ i $x \not \in F$ są funkcyjnie oddzielalne. \hfill Urysohn, \datum{1925}
+\item [4] \wcht{normalność}: $\mathcal T_1$ i rozłączne domknięte są rozdzielalne przez otwarte zbiory. \hfill Tietze, \datum{1923}
+\item [5] \wcht{normalność dziedziczna}: wszystkie podprzestrzenie są $\mathcal T_4$.
+\item [6] \wcht{normalność doskonała}: $\mathcal T_4$, domknięte zbiory są typu $G_\delta$. \hfill Cech, \datum{1932}
+\end{itemx}
+
+\wcht{Ciąg uogólniony} \prawo{1.6} (Moore/Smith, \datum{1922}): $\Sigma$ (\wcht{zbiór skierowany}: $\le$ jest zwrotna, przechodnia, każde $x, y \in \Sigma$ mają $z \in \Sigma$, że $x, y \le z$) $\to X$, $S = \{x_\sigma : \sigma \in \Sigma\}$.
+\wcht{Punkt skupienia} $x$: każde $U_x$ i $\sigma_0 \in \Sigma$ mają $\sigma \ge \sigma_0$, że $x_\sigma \in U_x$.
+\wcht{Granica} $x$: każde $U_x$ ma $\sigma_0 \in \Sigma$, że $[\sigma \ge \sigma_0 \Ra x_\sigma \in U_x]$.
+Zbiór granic to $\lim S$.
+$S' = \{x_{\sigma'} : \sigma' \in \Sigma'\}$ jest \wcht{subtelniejszy} od $S$, gdy istnieje $\varphi \colon \Sigma' \to \Sigma$, że każdy $\sigma_0 \in \Sigma$ ma $\sigma_0' \in \Sigma'$, że $\sigma' \ge \sigma_0'$ pociąga $\varphi(\sigma') \ge \sigma_0$ oraz dla każdego $\sigma' \in \Sigma'$ jest $x_{\varphi(\sigma')} = x_{\sigma'}$.
+Punkt skupienia w $S'$ (granica w $S$) jest nim też w $S$ ($S'$).
+Istnieje ciąg uogólniony w $A$ zbieżny do $x \Lra x \in \cl A$.
+Funkcja $f \colon X \to Y$ jest ciągła $\Lra f (\lim_\sigma x_\sigma) \subseteq \lim_\sigma f(x_\sigma)$.
+Uogólnione ciągi mają co najwyżej jedną granicę $\Lra$ przestrzeń jest $\mathcal T_2$.
+
+Rodzina zbiorów $\mathcal R$: d-stabilna.
+\wcht{Filtr} (Riesz, \datum{1908}): d-stabilny $\mathcal F \subseteq \mathcal R \setminus \{\varnothing\}$ zamknięty na nadzbiory.
+\wcht{Ultra-}: maksymalny.
+Każdy \wcht{punkt skupienia} ($x$, że $(\forall A \in \mathcal F)(x \in \cl A$) jest też \wcht{granicą} filtru (każde $U_x$ należy do $\mathcal F$).
+Filtry i ciągi uogólnione odpowiadają sobie: niech $S$ będzie ciągiem uogólnionym, wtedy $\mathcal F$ składa się z tych $A \subseteq X$, które mają $\sigma_0 \in \Sigma$, że $\sigma \ge \sigma_0 \Ra x_\sigma \in A$ (zgodność granic, subtelności).
+
+1-przeliczalna $\Ra$ \wcht{Frecheta}: każdy $x \in \cl A$ jest granicą pewnych $x_i \in A \Ra$ \wcht{ciągowa} (Franklin, \datum{1965}): $A \subseteq X$ jest domknięty $\Lra$ zawiera granice zbieżnych ciągów swoich elementów.
+Funkcja $f$ z ciągowej jest ciągła $\Lra f(\lim_n x_n) \subseteq \lim_n f(x_n)$.
+Jeżeli nie istnieje ciąg z więcej niż jedną granicą, to przestrzeń jest $\mathcal T_1$, dodatkowa 1-przeliczalność daje $\mathcal T_2$.
+
+W \prawo{1.7.1} każdym liniowo uporządkowanym $X$ rodzina przedziałów $(a,b)$, $(\leftarrow, b)$, $(a, \rightarrow)$ jest bazą, $\mathcal T_1$.
+Mansfield (\datum{1957}): jeśli rodzina $\{F_s \subseteq^a X\}$ jest dyskretna, to istnieją parami rozłączne $U_s \subseteq_o X$, że $F_s \subseteq U_s$.
+Birkhoff (\datum{1947}): liniowo uporządkowana jest $\mathcal T_4$.
+Meyer (\datum{1969}): ciągowa oraz liniowo uporządkowana jest 1-przeliczalna.
+\emph{Zbiory borelowskie 1 i położone normalnie 1.}
+% Zbiory borelowskie 1
+% Zbiory położone normalnie 1
+
+Przestrzeń \prawo{1.7.4} $\mathcal T_2$ jest \wcht{semiregularna} (Stone \datum{1937}), jeśli dziedziny otwarte są bazą.
+Regularna jest semiregularn-a, ale istnieją $\mathcal T_1$ przestrzenie z bazą z otwartych dziedzin, które nie są $\mathcal T_2$.
+Ani semiregularność, ani $\mathcal T_{2.5}$ (żadna z nich nie pociąga drugiej własności) nie zachowują się przy domkniętych przekształceniach o skończonych włóknach.
+
+Unia \prawo{1.7.5} i domknięcie zbioru w sobie gęstego są w sobie gęste.
+Każda przestrzeń jest sumą dwóch rozłącznych: \wcht{doskonałego} (domkniętego, w sobie gęstego) i \wcht{rozproszonego} (bez niepustych w sobie gęstych podzbiorów). 
+Zbiór \wcht{punktów kondensacji} dla $A \subseteq X$, $A^0 \subseteq A^d$: tych $x \in X$, że wszystkie $U_x \cap A$ są nieprzeliczalne; jest domknięty i spełnia $(A \cup B)^0 = A^0 \cup B^0$; 2-przeliczalność pociąga  $|A \setminus A^0| \le \aleph$ i $A^{00} = A^0$.
+A zatem każda 2-przeliczalna jest sumą dwóch rozłącznych: doskonałego i przeliczalnego (\wcht{tw. Cantora-Bendixsona}, \datum{1883} dla $X = \R$).
+
+\wcht{Funkcja kardynalna}: \prawo{1.7.6} przypisuje homeo- przestrzeniom tę samą l. kardynalną.
+Tutaj $\mathfrak m \ge \aleph_0$.
+\wcht{Liczba Suslina}: najmniejsza $\mathfrak m$, że rodziny parami rozłącznych, niepustych, otwartych są mocy $\le \mathfrak m$, $c(X)$.
+\wcht{Dziedziczna liczba Suslina}: najmniejsza $\mathfrak m$, że zbiory z punktów izolowanych ($A = A \setminus A^d$) są mocy $\le \mathfrak m$, $hc(X)$.
+\wcht{Rozległość}: najmniejsza $\mathfrak m$, że domknięte zbiory z punktów izolowanych są mocy $\le \mathfrak m$, $e(X)$.
+\wcht{Ciasność} (Archangielski/Ponomariow \datum{1968}) $x$, $\tau(x, X)$: najmniejsza $\mathfrak m$, że $x \in \cl C$ pociąga istnienie $C_0 \subseteq C$, że $x \in  \cl C_0$ i $|C_0| \le \mathfrak m$.
+\wcht{Ciasność} $X$: kres $\tau(x,X)$; nie przekracza $\chi$.
+%\wcht{Własność Suslina}: $c(X) = \aleph_0$.
+$w \ge d, hc, e \spk d, hc \ge c \spk hc \ge e$: więcej nierówności nie ma.
+
+Funkcja \prawo{1.7.7} $f \colon X \to \R$ jest \wcht{półciągła z dołu} (z góry), gdy dla $x \in X$ i $r \in \R$, że $f(x) > r$ istnieje $U_x$, że $f[U_x] > r$ $\Lra$ wszystkie $\{x : f(x) \le r\}$ są domknięte (z góry: odwrócić nierówności).
+Półciągłość z góry i dołu $\Lra$ ciągłość.
+Jeśli $f_s$ są półciągłe z dołu (góry), a zbiory $\{f_s(x) : s \in S\}$ ograniczone z góry (dołu), to $\sup_s f_s$ ($\inf_s f_s$) jest półciągła z dołu (góry) (Baire, \datum{1899} dla $X = \R$).
+\wcht{Tw. Forta} (\datum{1955}): każda półciągła funkcja $X \to \R$ obcięta do pewnego $G \subseteq X$, który jest  przekrojem przeliczalnie wielu (otwartych i gęstych), jest ciągła.
+Z dołu: khm-1.
+Przestrzeń $\mathcal T_1$ jest $\mathcal T_{3.5}$ $\Lra$ każda półciągła z dołu (góry) $f \colon X \to \R$ mająca ciągłą $g \colon X \to \R$, że $g \le f$ ($\ge$) jest supremum pewnych ciągłych (infimum) (\datum{1948}, Bourbaki).
+Przestrzeń $\mathcal T_1$ jest $\mathcal T_4$ $\Lra$ jeśli $f$ jest półciągła z góry, a $g$ z dołu i $f \le g$, to istnieje ciągła $h$, że $f \le h \le g$ (Tong \datum{1952}, wcześniej Katetov \datum{1951}, Dieudonné dla parazwartych \datum{1944}, Hahn dla metrycznych \datum{1917}).
+Tong (\datum{1952}), Hahn (\datum{1917} dla metrycznych), Baire (\datum{1904} dla $\R$): przestrzeń $\mathcal T_1$ jest $\mathcal T_6$ $\Lra$ każda półciągła z dołu (góry) jest granicą $f_n \colon X \to \R$, że $f_n \le f_{n+1}$ ($\ge$).
+Michael (\datum{1956}): przestrzeń $\mathcal T_1$ jest $\mathcal T_6$ $\Lra$ dla każdej pary $f, g \colon X \to \R$ (pierwsza półciągła z góry, druga z dołu), że $f \le g$ istnieje ciągła $h$, że $f \le h \le g$ i $f < h < g$ gdy $f < g$.
+\[
+	G = \bigcap_{r \in \Q} (\{x : f(x) > r\} \cup (X \setminus \cl \{x : f(x) > r\})) 
+\]

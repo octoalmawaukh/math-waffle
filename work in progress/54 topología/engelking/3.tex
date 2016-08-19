@@ -1,0 +1,158 @@
+\wcht{Pokrycie} \prawo{3.1} $\{A_s\}_{s\in S}$ wpisane w $\{B_t\}_{t \in T}$: $(\forall s)(\exists t)(A_s \subseteq B_t)$; $\{A_s\}$ jego podpokryciem: $S \subseteq T$, dla $s \in S$ jest $A_s = B_s$.
+\wcht{P. zwarta}: $\mathcal T_2$, otwarte pokrycie ma skończone podpokrycie $\Ra$ $\mathcal T_4$.
+Dla $\mathcal T_2$: zwarta $\Lra$ scentrowane \wcht{rodziny domkniętych} (one i skończone przekroje są niepuste) kroją się niepusto.
+Mamy: jeśli $A \subseteq^a X$ (zwarta), to $A \subseteq^k X$; w $\mathcal T_2$: jeśli $A \subseteq^k X$, to $A \subseteq^a X$.
+Jeśli $X$ jest $\mathcal T_3$, to rozłączne $B \subseteq^a X$, $A \subseteq^k X$ mają rozłączne $U, V \subseteq^o X$, że $A \subseteq U$, $B \subseteq V$; gdy $B \subseteq^k X$, wystarczy $\mathcal T_2$.
+Jeśli $X$ jest $\mathcal T_{3.5}$, to rozłączne zbiory $A \subseteq^k X$, $B \subseteq^a X$ mają funkcję $f \colon X \to I$, że $f[A] = 0$, $f[B] = 1$.
+Dla obrazu zwartej przez ciągłą: $\mathcal T_2 \Ra$ zwarty.
+Zwarte są minimalne wśród $\mathcal T_2$-topologii.
+\wcht{Tw. Kuratowskiego}: NWSR dla $X$, $T_2$: $X$ zwarta; dla każdej $Y$ (wystarczy $T_4$) rzutowanie $X \times Y \to Y$ jest domknięte.
+\wcht{Sieć} $\mathcal N $: rodzina podzbiorów $X$, gdy każde $x \in X$ i $U_x$ (otoczenie) mają $M \in \mathcal N$, że $x \in M \subseteq U_x$.
+\wcht{Ciężar sieciowy} $\operatorname{nw}$: najmniejsza z mocy sieci, $\operatorname{d} w \le \operatorname{nw} X \le \operatorname{w} X$; dla zwartych jest $nw = w \le |X|$.
+Dla zwartej, nieskończonej: $|X| \le \exp \chi(X)$.
+Przestrzeń $\mathcal T_2$ jest zwarta $\Lra$ każde ciągi uogólnione (filtry) mają punkty skupienia.
+%Dla $\mathcal T_0$: $|X| \le \exp nw(X)$.
+
+Vietoris (\datum{1921}), Aleksandrow, Urysohn (\datum{1923}), Mrówka (\datum{1959}), Archangielski (\datum{1959}).
+\wcht{Nieprzywiedlne}: ciągłe $X$ ,,na'' $Y$, jeśli $f[A \subsetneq^a X] \neq Y$.
+Każde ciągłe $X$ ,,na'' $Y$ o zwarych włóknach można obciąć do nieprzywiedlnego na $X_0 \subseteq^a X$.
+Nieprzywiedlne, otwarte z $\mathcal T_2$ jest homeo-.
+Jeśli zbiór złożony z jednopunktowych włókien jest gęsty, to funkcja jest nieprzywiedlna.
+Przestrzeń $\mathfrak D(\mathfrak m)$ zanurza się jako domknięty podzbiór produktu $\mathfrak m$ sztuk $\mathfrak D(\aleph_0)$ (Mycielski, \datum{1968}).
+Engelking (\datum{1968}): to samo dla $\mathfrak m = \mathfrak c$.
+Juhász (\datum{1969}): dla $\mathfrak m \ge \aleph_0$, $\mathfrak D(2^{\mathfrak m})$ zanurza się jako domknięty w produkt $2^{\mathfrak m}$ sztuk przestrzeni $\mathfrak D(\mathfrak m)$.
+Jeżeli $\operatorname{nw} X_s > 1$, to $\operatorname{nw} \prod_{s \in S} = \max \{|S|, \sup_{s \in S} \operatorname{nw} X_s\}$.
+
+\wcht{Tw. o przedłużaniu} (Tajmanow \datum{1952}): ciągłe \prawo{3.2}  $(A \subseteq X) \to Y$ ($A$ gęsty, $Y$ zwarta) przedłuża się do $X$ $\Lra$ każde rozłączne $B_1, B_2 \subseteq^a Y$ mają rozłączne domknięcia przedobrazów.
+Zwarta o ciężarze $\mathfrak m \ge \aleph_0$ jest ciągłym obrazem domkniętej podprzestrzeni kostki $\mathfrak D_2^{\mathfrak m}$ (Aleksandrow \datum{1936}).
+Suma ($\oplus$) niepustych $X_s$ zwarta $\Lra$ $|S| < \infty$, $X_s$ zwarte.
+\wcht{Tw. Tichonowa}: iloczyn niepustych zwarty $\Lra$ czynniki zwarte.
+Bycie $\mathcal T_{3.5}$ $\Lra$ zanurzalność w zwartej.
+Kostka Tichonowa $I^{\mathfrak m}$ jest uniwersalna dla zwartych o ciężarze $\mathfrak m \ge \aleph_0$ (Tichonow, \datum{1930}).
+\wcht{Tw. Wallace'a}: (\datum{1960} przez Frolika i Lina, wcześniej przypadek skończony) jeśli $\prod_s (A_s \subseteq^k X_s) \subseteq W \subseteq_o \prod_s X_s$, to istnieją $U_s \subseteq_o X_s$, że $U_s \neq X_s$ dla skończenie wielu i $\prod_s A_s \subseteq \prod_s U_s \subseteq W$.
+Zwarty w $\R^n$ $\Lra$ ograniczony, domknięty.
+%\wcht{Tw. Aleksandrowa}: dla domykającej relacji \dots
+,,Gso'' niepustych zwartych też jest taka (Steenrod \datum{1936}). %\zutun{Trudne 3-2-14}.
+\wcht{Tw. Diniego} (\datum{1878}): $X$ zwarta, $f_i$ ciągłe $X \to \R$, że $f_i \le f_{i+1}$; jeśli $\lim f_i = f$, to zbieżność jest jednostajna.
+\wcht{Tw. Stone'a-Weierstraßa} (\datum{1937}/\datum{1885}): pierścień funkcji ciągłych ze zwartej $X$ w $\R$, który zawiera funkcje stałe, oddziela punkty i jest zamknięty na jednostajną zbieżność, zawiera wszystkie ciągłe. 
+Jeśli dla $\mathcal T_{3.5}$ prawdziwe jest tw. Stone'a-Weierstraßa, to jest ona zwarta (Hewitt, \datum{1947}).
+
+\wcht{Lokalna zwartość}: \prawo{3.3} każdy punkt ma prezwarte otoczenie, pociąga $\mathcal T_{3.5}$.
+Wtedy charakter punktu to najmniejsza kardynalna $\mathfrak m$, dla której istnieje rodzina mocy $\mathfrak m$ otwartych, krojących się do $\{x\}$, zaś $w = nw$.
+Jeśli $F \subseteq^a X$, $V \subseteq_o X$ i $X$ jest lokalnie zwarta, to $F \cap V$ też.
+Bycie lokalnie zwartym $\Lra$ homeo- z otwartą podprzestrzenią zwartej.
+Suma jest lokalnie zwarta $\Lra$ składniki są.
+Produkt jest niepusty, lokalnie zwarty $\Lra$ czynniki są, tylko skończenie wiele nie jest zwartych.
+Przestrzeń $\mathcal T_2$, obraz lokalnie zwartej przez otwarte, jest lokalnie zwarta. 
+Fałszywe dla domkniętych!
+\wcht{Tw. Whiteheada} (\datum{1948}): dla lokalnie zwartej $X$, ilorazowego $g \colon Y \to Z$, $f = \textrm{id}_X \times g$ jest ilorazowe.
+
+Ciągowa, $\mathcal T_2$ $\Ra$ {,,$k$''-przestrzeń} (\wcht{Kelleya}): $\mathcal T_2$, obraz lokalnie zwartej przez ilorazowe $\Lra$ $\mathcal T_2$, $A \subseteq^a X \Lra A \cap K \subseteq^a K$ dla zwartych $K$.
+Inna nazwa: zwarcie generowana.
+Ciągłe w przestrzeń Kelleya jest domknięte (otwarte, ilorazowe) $\Lra$ obcięcie $f$ do każdego przeciwobrazu $K \subseteq^k Y$ w $K$ jest domknięte (otwarte, ilorazowe).
+Obraz p. Kelleya może nie być Kelleya, nawet dla $\mathcal T_6$!
+Nie dziedziczy się na podprzestrzenie, chyba że otwarte (lub domknięte) i nie jest multiplikatywna.
+Suma jest Kelleya $\Lra$ składniki są.
+Produkt Kelleya i lokalnie zwartej jest Kelleya.
+
+\wcht{Zwarotwalogia} \prawo{3.4} (,,KO'') w $\mathcal C(X, Y)$: z bazą $\bigcap_{i=1}^k \{f : f(C_i) \subseteq U_i\}$ dla $C_i \subseteq^k X$, $U_i \subseteq_o Y$, udana z dołu.
+Złożenie $Z^Y \times Y^X \to Z^X$ jest ciągłe, jeśli wszystko jest ,,KO'', zaś $Y$ lokalnie zwarta.
+$\mathcal C(X, Y)$ dla lokalnie zwartej $X$ z ,,KO'' jest udana.
+\wcht{Eksponensa} $Y^{Z \times X} \to (Y^X)^Z$ to zanurzenie homeo-, jeśli wszędzie jest ,,KO'', zaś $X, Z$ są $\mathcal T_2$.
+Niech $\mathcal K$ będzie rodziną zwartych $K \subseteq X$.
+Jeżeli $X$ jest Kelleya, to $\mathcal C(X, Y)$ jest homeo- z ,,gso'' dla $\{\mathcal C(C, Y), \pi, \mathcal K\}$ ($\pi$: zanurzanie, bo mamy zbioczup $(\mathcal K, \subseteq)$) -- przy czym p. funkcyjne są ,,KO'' albo punkozbiologiczne.
+Jeśli $Y$ jest $\mathcal T_3$ ($3.5$), to $\mathcal C(X, Y)$ z ,,KO'' też.
+Jeśli $X, Y$ mają ciężar $\le \mathfrak m \ge \aleph_0$ i $X$ jest lokalnie zwarta, to ciężar $\mathcal C(X, Y)$ z ,,KO'' nie przekracza $\mathfrak m$.
+\wcht{Tw. Ascoliego} (\datum{1883}): jeśli $Y$ jest $\mathcal T_3$, zaś $X$: Kelleya, to $F \subseteq^a \mathcal C(X, Y)$ (ze zwarotwologią) jest zwarty $\Lra$ przekształcenia z $F$ są \wcht{równo ciągłe} (każde $x \in X$, $y \in Y$ oraz otoczenie $V_y$ mają takie otoczenia $U_x$ i $W_y$, że $f(x) \in W$ pociąga $f[U] \subseteq V$), zaś zbiory $\{f(x) : f \in F\}$ prezwarte.
+$nw(\mathcal C(X, Y))\le w(X) w(Y)$ zarówno dla punkozbielogii, jak i zwarotwalogią. 
+Dwa-przeliczalne $X, Y$ $\Ra$ dziedzicznie ośrodkowa $\mathcal C(X, Y)$.
+
+Przestrzeń \prawo{3.5} $X$ jest $\mathcal T_{3.5}$ $\Lra$ ma \wcht{uzwarcenie} (parę $(Y, r)$, gdzie $Y$ jest zwarta, $r \colon X \to Y$ to homeo-zanurzenie z $\cl (r[X]) = Y$), nawet o takim samym ciężarze.
+\wcht{Równoważne}: homeo-, $X$ zanurza się w nie tak samo.
+Wtedy: $|Y| \le \exp \exp d(X)$, $w(Y) \le \exp d(X)$.
+Wszystkie uzwarcenia żyją w kostce Tichonowa $\mathcal R(X)$ z porządkiem: $r_2 X \le r_1 X$ gdy istnieje ciągłe $f \colon r_1 X \to r_2X$, że $fr_1 = r_2$.
+\wcht{Narost}: $rX \setminus r(X)$.
+W $\mathcal R(X)$ istnieje element maksymalny, \wcht{uzwarcenie Čecha-Stone'a} $\beta X$ (\datum{1937}).
+Dla $\mathcal T_{3.5}$: lokalna zwartość $\Lra$ wszystkie (pewien) narosty domknięte.
+Lokalnie zwarta, niezwarta $X$ ma uzwarcenie z jednopunktowym narostem, najmniejszym elementem $\mathcal R(X)$ (\wcht{tw. Aleksandrowa}, \datum{1924}).
+\wcht{Tw. Levy'ego, McDowella} albo \wcht{van Douwena} (\datum{1975}): wszystkie uzwarcenia są jednakowo gęste.
+
+Każde \prawo{3.6} ciągłe $f \colon X \to Z$ ($\mathcal T_{3.5}$ $\to$ zwarta) przedłuża się do $\beta X \to Z$.
+Każde ciągłe $X \colon Z$ (w zwartą) przedłuża się do $\alpha X$ $\Ra$ uzwarcenia $\alpha X$ i Cecha-Stone'a są jednym.
+Jeśli $A \subseteq_o^a X$, to $\cl A \subseteq_o^a \beta X$.
+Każde ciągłe $X \to Y$ z uzwarceniem $\alpha X$ przedłuża się do $\beta X \to \alpha Y$.
+Uzwarcenie $\mathfrak D(\mathfrak m)$ dla $\mathfrak m \ge \aleph_0$ ma moc $\exp \exp \mathfrak m$, ciężar $\exp \mathfrak m$ i otwarniętą bazę.
+Każdy nieskończony $F \subseteq^a \beta \N$ zawiera podzbiór homeo- z $\beta \N$, więc ma moc $\exp \mathfrak c$.
+Przestrzeń $\beta \mathfrak D(\mathfrak m)$ zanurza się w kostkę Tichonowa $\exp \mathfrak m$.
+Dla raz-przeliczalnych: $X \cong Y \Lra \beta X \cong \beta Y$.
+
+\wcht{Uzwarcenie Wallmana} dla $X$ klasy $\mathcal T_1$: $wX = X \cup \mathscr F_0$ z bazą złożoną z $U \cup \{F \in \mathscr F_0 : \exists A \in F\mbox{, że } A \subseteq U\}$ dla $U \subseteq_o X$, przy czym $\mathscr F_0$ to rodzina ultrafiltrów \wcht{wolnych} (o pustym przekroju) spośród wszystkich w $D$, rodzinie domkniętych $B \subseteq X$.
+Jest quasizwarte i $X$ leży w nim gęsto.
+Jest $\mathcal T_2$ $\Lra$ $X$ jest $\mathcal T_4$ (Wallman, \datum{1938}).
+
+Przekształcenie \prawo{3.7} \wcht{doskonałe}: ciągłe i domknięte $f \colon X \to Y$ z $\mathcal T_2$ o zwartych niciach.
+Zamknięte na składanie.
+Rzutowanie $X \times Y \to Y$ ($Y$: $\mathcal T_2$, $X$ zwarta) jest doskonałe.
+Jeśli złożenie $gf$ przekształceń $f \colon X \to Y$ i $g\colon  Y \to Z$, gdzie $Y$ jest $\mathcal T_2$, jest doskonałe, to $f$ i $g$ obcięte do $f[X]$ też.
+
+Produkt $\prod_s f_s \colon \prod_s X_s \to \prod_s Y_s$ jest doskonały $\Lra$ $f_s$ są; zatem ich przekątna też jest doskonała (Frolik, Bourbaki \datum{1960}) -- ,,doskonałe wśród ciągłych są tym, co zwarte wśród topologicznych''.
+Dla ciągłego $f \colon X \to Z$ ($X$ jest $\mathcal T_2$) NWSR: $f$ doskonałe, $f \times \textrm{id}_Y$ jest domknięty (doskonały) dla każej $\mathcal T_2$-przestrzeni $Y$ (Bourbaki \datum{1961})
+Dla ciągłego $f \colon X \to Y$ (obie $\mathcal T_{3.5}$) NWSR: $f$ doskonałe; przedłużenie $F \colon \beta X \to \alpha Y$ zawsze spełnia $F_\alpha [\beta X \setminus X] \subseteq \alpha Y \setminus Y$; to samo dla pewnego $\alpha$ lub $\alpha = \beta$ (Henriksen, Isbell \datum{1958}).
+Doskonała surjekcja nie zwiększa ciężaru.
+Lokalna zwartość i bycie $\mathcal T_i$ dla $i \in [2, 6] \cap \Z$ to niezmienniki doskonałych; zwartość, lokalna zwartość i $\mathcal T_3$ to przeciwniezmienniki.
+Jeśli istnieje doskonałe $X \to Y$ na Kelleya, to $X$ jest Kelleya.
+Jeśli $Y$ ma własność $W$ dziedziczną na domknięte podprzestrzenie i domnażanie przez zwarte, to każda $X$, która jest $\mathcal T_{3.5}$ i przekształca się doskonale w $Y$, też ją ma.
+\wcht{Własność doskonała}: dla $\mathcal T_2$, przeciw- i niezmiennik doskonałych.
+
+Dwa-przeliczalna, \prawo{3.8} $\mathcal T_3$ $\Ra$ \wcht{Lindelöfa} ($\mathfrak L$): $\mathcal T_3$, przeliczalna \wcht{liczba Lindelöfa} (najmniejsza $\mathfrak m \le \operatorname{nw} X$, że z każdego pokrycia otwartego wybiera się podpokrycie mocy $\le \mathfrak m$) $\Ra$ $\mathcal T_4$.
+$\mathcal T_3$ jest $\mathfrak L$ $\Lra$ przeliczalnie scentrowane (niepusta, przekroje przeliczalnych też) rodziny $\{A_s \subseteq^a X\}$ kroją się niepusto.
+Przeliczalna unia $\mathfrak L$, która jest $\mathcal T_3$, jest $\mathfrak L$.
+W szczególności: \wcht{$\sigma$-zwarta} (przeliczalna unia zwartych, która jest $\mathcal T_2$), która jest $\mathcal T_3$ jest $\mathfrak L$.
+Suma $\bigoplus_s X_s$ niepustych $X_s$ jest $\mathfrak L$ $\Lra$ $X_s$ są $\mathfrak L$ i $|S| \le \aleph_0$.
+Klasa $\mathfrak L$-przestrzeni jest doskonała (Henriks, Isbell \datum{1958}), więc produkt $\mathfrak L$ i zwartej jest $\mathfrak L$.
+W każde pokrycie otwarte $\mathfrak L$ można wpisać otwarte, lokalnie skończone (Morita, \datum{1948}).
+Dla lokalnie zwartej $X$: $\mathfrak L$ $\Lra$ hemizwarta $\Lra$ [zwarta lub $\chi(\Omega, \omega X) = \aleph_0$] $\Lra$ $\sigma$-zwarta $\Lra$ $X$ ma pokrycie zwartymi $A_i \subseteq \interior A_{i+1}$.
+Hemizwarta jest $\sigma$-zwarta.
+Hager (\datum{1969}): przeliczalny produkt $\mathcal T_3$, $\sigma$-zwartych jest $\mathfrak L$.
+Rudin, Klee, Michael (\datum{1956} do \datum{1961}): jeśli $X, Y$ są dwa-przeliczalne, $Y$ jest $\mathcal T_3$, to $Y^X$ z punkozbielogią lub zwarotwalogią jest dziedziczną $\mathfrak L$.
+
+(Lokalnie) \prawo{3.9} zwarta $\Ra$ \wcht{zupełna w sensie Cecha} (\datum{1937}): $\mathcal T_{3.5}$, dla każdego (pewnego, $\beta$) zwartego rozszerzenia $rX$ narost $rX \setminus r(X)$ jest $F_\sigma$ w $rX$ $\Ra$ Kelleya.
+\wcht{Tw. Baire'a}: w Cech-zupełnej, przeliczalna unia nigdziegęstych jest brzegowa (przekrój gęstych i otwartych jest gęsty), przykład takiej (\datum{1899}): metryzowalna w sposób zupełny. 
+Zupełność w sensie Cecha dziedziczy się na domknięte ($G_\delta$) podprzestrzenie.
+Suma prosta jest zupełna $\Lra$ składniki zupełne.
+Przeliczalny produkt oraz granica ciągu odwrotnego zupełnych są zupełne.
+Zupełność nie jest niezmiennikiem ani domkniętych, ani owartych na $\mathcal T_{3.5}$.
+Zupełna w sensie Cecha $\Lra$ ,,gco'' lokalnie zwartych (Zenor, \datum{1970}).
+Produkt dwa-przeliczalnego Baire'a oraz Baire'a jest Baire'a (Kuratowski, Ulam \datum{1932}).
+
+\wcht{Pseudozwarta}: \prawo{3.10} $\mathcal T_{3.5}$, każda ciągła $X \to \R$ jest ograniczona.
+\wcht{Ciągowo zwarta}: $\mathcal T_2$, każdy ciąg ma podciąg zbieżny $\Ra$ \wcht{przeliczalnie zwarta}: $\mathcal T_2$, przeliczalne pokrycie otwarte ma podpokrycie skończone $\Lra$ $\mathcal T_2$, zsępujące przekroje niepustych domkniętych są niepuste $\Lra$ $\mathcal T_2$, podzbiory nieskończone (przeliczalne)  mają punkt skupienia.
+Umownie: Z1, Z2, Z3.
+Jeśli $X$ jest Z3, zaś $Y$ ciągową (np. raz-przeliczalną), to rzut $X \times Y \to Y$ jest domknięty (Fleischer, Franklin \datum{1967}).
+Suma jest Z3 $\Lra$ skończenie wiele składników, wszystkie Z3.
+Klasa Z3 jest doskonała (Henriksen i Isbell \datum{1958}).
+Produkt dwóch Z3 może nie być Z3, lecz produkt Z3 i Z3 Kelleya jest Z3 (drugi czynnik może być zwarty lub ciągowy Z3), Noble (w \datum{1969}).
+Suma jest Z2 $\Lra$ składniki są Z2, jest ich skończenie wiele.
+Przeliczalny produkt Z2 jest Z2.
+Produkt Z2 i Z3 jest Z3, Z2 i Z1 jest Z1.
+Dalej, Z3 klasy $\mathcal T_{3.5}$ jest Z1, Z1 klasy $\mathcal T_4$ jest Z3.
+Z1 (Hewitt, \datum{1948}), Z3 (Frechet, \datum{1906}).
+Dla ciągowych: Z2 $\Lra$ Z3.
+Z1 inaczej: $\mathcal T_{3.5}$, zstępujące przekroje zbiorów otwartych i niepustych są niepuste.
+
+\wcht{P. Hewitta}: \prawo{3.11} $X$ ($\mathcal T_{3.5}$), dla której nie ma $Y$ ($\mathcal T_{3.5}$) z homeo-zanurzeniem $r \colon X \to Y$, że $r[X] \neq \cl r[X] = Y$, a ciągłe $f \colon X \to \R$ mają odpowiedniki $g \colon Y \to \R$, że $gr = f$.
+Inaczej: homeo- z domkniętym podzbiorem $\prod_s \R$.
+Zwarta $\Lra$ pseudozwarta Hewitta.
+Czynniki są Hewitta $\Lra$ produkt jest.
+,,GSO'' oraz przekrój Hewitta jest Hewitta.
+P. $\mathcal T_{3.5}$ jest Hewitta $\Lra$ każdy $x_0 \in \beta X \setminus X$ ma ciągłą $h \colon \beta X \to [0,1]$, że $h(x_0) = 0$ i $h[X] > 0$ (Mrówka, \datum{1957}) $\Lra$ każdy ultrafiltr w rodzinie funkcyjnie domkniętych, który jest przeliczalnie scentrowaną rodziną, kroi się niepusto.
+Zatem Lindelöf $\Ra$ Hewitt.
+,,Dyskretna $\Ra$ Hewitta'' jest tym samym, co ,,kardynalna $\Ra$ niemierzalna'' (Mackey, Hewitt \datum{1944}).
+Bycie Hewitta nie jest niezmiennikiem ciągłych, otwartych ani doskonałych.
+Każda $X$ ($\mathcal T_{3.5}$) ma \wcht{rozszerzenie Hewitta}: taką $vX$, że mamy zanurzenie $v \colon X \to vX$, że $v[X] \neq \cl v[X] = vX$, a ciągłym $f \colon X \to \R$ odpowiadają ciągłe $g \colon vX \to \R$, że $gv = f$.
+\wcht{Pasynkow} (\datum{1965}): $X$ jest Hewitta $\Lra$ ,,GSO'' Lindelöfa. 
+
+Dla \prawo{3.12} liniowo uporządkowanych: $\chi = \psi = \tau \le c$ (Mardesic, Papic \datum{1962}), $hl \le c$ (Lutzer, Bennett \datum{1969}) i $d = hd$ (Skula, \datum{1965}).
+Oraz $w = nw$.
+Liniowo uporządkowana jest zwarta $\Lra$ każdy zbiór ma kres górny (Haar, König \datum{1911}).
+\emph{Uzwarcenie Katetova, kardynały.}
