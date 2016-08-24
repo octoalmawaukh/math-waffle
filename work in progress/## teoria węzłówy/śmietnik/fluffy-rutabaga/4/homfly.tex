@@ -1,0 +1,62 @@
+\subsection{Wielomian HOMFLY}
+Po tym, jak Jones przedstawił światu swój wielomian w 1984 roku, matematycy zaczęli szukać jego uogólnienia zależnego nie od jednej, lecz dwóch zmiennych.
+Pierwszym takim niezmiennikiem węzłów okazał się wielomian (Laurenta) HOMFLY.
+
+\begin{definicja}\label{homflydef}
+\emph{Wielomian HOMFLY} zorientowanego splotu to wielomian Laurenta zależny od $m$ i $l$, który spełnia dwa  aksjomaty: $P(\NieWezel) = 1$ oraz $l P(L_+) + l^{-1} P(L_-) + mP(L_0) = 0$ (przy oznaczeniach z twierdzenia \ref{tracheotomia}).
+\end{definicja}
+
+Pierwszym pytaniem, jakie nasuwa się przy takiej definicji, jest: czy wielomian HOMFLY można wyznaczyć w skończenie wielu krokach dla dowolnego splotu?
+Podczas wyznaczania nawiasu Kauffmana było to oczywiste, ponieważ z każdym krokiem liczba skrzyżowań ulegała zmniejszeniu.
+
+Pokażemy najpierw, że w dowolnym rzucie można odwrócić pewne skrzyżowania tak, by uzyskać diagram niewęzła.
+Wystarczy ograniczyć się do węzłów.
+
+Ustalmy diagram węzła i wybierzmy jakiś początkowy punkt na nim, różny od skrzyżowania wraz z kierunkiem, wzdłuż którego będziemy przemierzać węzeł.
+Za każdym razem, kiedy odwiedzamy nowe skrzyżowanie, zmieniamy je w razie potrzeby na takie, przez które przemieszczamy się górnym łukiem.
+Skrzyżowań już odwiedzonych nie zmieniamy wcale.
+Po powrocie do punktu wybranego na początku uzyskamy diagram niewęzła.
+
+Wyobraźmy sobie nasz węzeł w trójwymiarowej przestrzeni $\mathbb R^3$, przy czym oś $z$ skierowana jest z płaszczyzny, w której leży diagram, w naszą stronę.
+Umieśćmy początkowy punkt tak, by jego trzecią współrzędną była $z = 1$.
+Teraz, kiedy przemierzamy węzeł, zmniejszamy stopniowo tę współrzędną, aż osiągniemy wartość $0$ tuż przed punktem, z którego wyruszyliśmy.
+
+Połączmy oba punkty (początkowy oraz ten, w którym osiągamy współrzędną $z = 0$) pionowym odcinkiem.
+Zauważmy, że kiedy patrzymy na węzeł w kierunku osi $z$, nie widzimy żadnych skrzyżowań.
+Oznacza to, że dostaliśmy niewęzeł.
+
+\begin{twierdzenie}
+Wielomian HOMFLY z definicji \ref{homflydef} jest dobrze określonym niezmiennikiem zorientowanych splotów.
+\end{twierdzenie}
+
+\begin{proof}
+Niech $L$ będzie węzłem (lub splotem), którego wielomian HOMFLY próbujemy wyznaczyć.
+Ustalmy jego dowolny diagram i wybierzmy jedno ze skrzyżowań, które należy odwrócić, by uzyskać niewęzeł.
+Początkowy diagram odpowiada $L_+$ lub $L_-$, relacja kłębiasta pozwala na uzyskanie wielomianu wyjściowego splotu zależnego od wielomianu splotu z diagramem, na którym jest mniej skrzyżowań oraz splotu, który jest ,,jedno skrzyżowanie bliżej'' niewęzła.
+Powtarzając tę procedurę dojdziemy w pewnym momencie do samych trywialnych splotów.
+\end{proof}
+
+
+\begin{twierdzenie} Wielomian HOMFLY dla sum:
+\begin{enumerate}
+	\item $P(L_1 \sqcup L_2) = - (l + l^{-1}) m^{-1} P(L_1) P(L_2)$.
+	\item $P(L_1 \# L_2) = P(L_1) P(L_2)$.
+\end{enumerate}
+\end{twierdzenie}
+
+Okazuje się, że wielomian HOMFLY uogólnia jednocześnie wielomiany Jonesa i Alexandera:
+
+\begin{twierdzenie} Dla dowolnego (splotu / węzła, nie/zorientowanego?) zachodzą równości:
+\begin{itemize}
+\item $V(t) = P(l = it^{-1}, m = i(t^{-1/2} - t^{1/2}))$,
+\item $\Delta(t) = P(l = i, m = i(t^{1/2} - t^{-1/2}))$.
+\end{itemize}
+\end{twierdzenie}
+
+Zaletą wielomianu HOMFLY jest to, że zazwyczaj wykrywa chiralność\footnote{węzeł chiralny: posiadający formy różnej handedness, które nie są lustrzanie symetryczne}, ale nie odróżnia enancjomerów węzłów 09-042, 10-048, 10-071, 10-091, 10-104, oraz 10-125.
+
+Mutanty mają ten sam wielomian HOMFLY.
+Okazuje się, że istnieje nieskończenie wiele parami różnych węzłów o tym samym wielomianie (Kanenobu 1986).
+Przykłady:  (05-001, 10-132), (08-008, 10-129) (08-016, 10-156), oraz (10-025, 10-056) (Jones 1987).
+
+M. B. Thistlethwaite wyznaczył HOMFLY dla tych, które mają mniej niż 14 skrzyżowań.

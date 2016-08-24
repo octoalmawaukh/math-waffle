@@ -1,0 +1,293 @@
+\subsection{Nawias Kauffmana}
+Zaczniemy od zdefiniowania nawiasu Kauffmana.
+Przypomnijmy, wielomian Laurenta zmiennej $X$ to formalny symbol $f=a_r X^r + \ldots + a_s X^s$, gdzie $r, s, a_r, \ldots, a_s$ są całkowite i $r \le s$.
+
+Poszukujemy niezmiennika dla splotów o kilku prostych własnościach.
+Przede wszystkim żądamy, by niewęzłowi przypisany był wielomian $1$: $\langle \NieWezel \rangle = 1$.
+Po drugie chcemy móc wyznaczać nawiasy znając je dla prostszych splotów, co zapiszemy symbolicznie $\langle \PrawyKrzyz \rangle = A \langle \PrawyGladki \rangle + B \langle \LewyGladki \rangle$.
+Zależy nam wreszcie na tym, by móc dodać do splotu trywialną składową: $\langle L \cup \NieWezel \rangle = C \langle L \rangle$.
+
+Prosty rachunek pokazuje wpływ drugiego ruchu Reidemeistera na nawias:
+\[
+	\langle \begin{tikzpicture} [scale=0.025,baseline=-3]
+			\path[TEXTARC] (0,10) .. controls (10,5) and (10,-9) .. (0,-14);
+			\path[TEXTARC] (10,10) .. controls (8,9) .. (7,8);
+			\path[TEXTARC] (3,4.5) .. controls (-1,0) and (-1,-4) .. (3,-8);
+			\path[TEXTARC] (10,-14) .. controls (8,-13) .. (7,-12);
+	\end{tikzpicture} \rangle = (A^2 + ABC + B^2) \langle \LewyGladki \rangle + BA \langle \PrawyGladki \rangle\stackrel{?}{=} \langle \PrawyGladki \rangle.
+\]
+
+Aby zachodziła ostatnia równość wystarczy (chociaż wcale nie trzeba) przyjąć $B = A^{-1}$, co wymusza na nas $C = -A^2 - A^{-2}$.
+W ten sposób odkryliśmy następującą definicję.
+
+\begin{definicja}
+	\emph{Nawias Kauffmana} $\langle D \rangle$ dla diagramu splotu $D$ to wielomian Laurenta zmiennej $A$, który jest niezmienniczy ze względu na gładkie deformacje diagramu, a przy tym spełnia trzy aksjomaty:
+	\begin{enumerate}
+		\item $\langle \NieWezel \rangle=1$
+		\item $\langle D \sqcup \NieWezel \rangle = (-A^{-2} - A^2) \langle D \rangle$
+		\item $\langle \PrawyKrzyz \rangle = A \langle \PrawyGladki \rangle + A^{-1} \langle \LewyGladki  \rangle$
+	\end{enumerate}
+\end{definicja}
+
+Tutaj $\NieWezel$ oznacza standardowy diagram dla niewęzła, $D \sqcup \NieWezel$ jest diagramem, który powstaje z $D$ przez dodanie nieprzecinającej go krzywej zamkniętej, zaś trzy symbole $\PrawyKrzyz$, $\PrawyGladki$ oraz $\LewyGladki $ odnoszą się do diagramów, które są identyczne wszędzie poza małym obszarem.
+Diagramy $\PrawyGladki$ oraz $\LewyGladki$ nazywa się odpowiednio dodatnim (prawym) i ujemnym (lewym) wygładzeniem $\PrawyKrzyz$
+
+\begin{lemat}
+	Nawias Kauffmana dowolnego diagramu można wyznaczyć w skończonie wielu krokach.
+\end{lemat}
+
+\begin{proof}
+	Jeżeli diagram $D$ ma $n$ skrzyżowań, to nieustanne stosowanie aksjomatu trzeciego pozwala na zapisanie $\langle D \rangle$ jako sumy $2^n$ składników, z których każdy jest po prostu zamkniętą krzywą i ma trywialny nawias ($\langle \MalyNieWezel \rangle = 1$).
+	Nawias sumy wyznacza się korzystając z drugiego aksjomatu.
+\end{proof}
+
+Przedstawimy teraz wpływ ruchów Reidemeistera na nawias Kauffmana.
+
+\begin{lemat}
+	Pierwszy ruch Reidemeistera zmienia nawias Kauffmana zgodnie z poniższą regułą.
+	Pozosałe ruchy Reidemeistera nie zmieniają nawiasu.
+	\[
+		% pierwszy ruch Reidemeistera
+		\left\langle\begin{tikzpicture}[scale=0.05, baseline=-6]
+			\clip (-12,-12) rectangle (1,7);
+			\path[ARC] (-10,7) .. controls (-10,3) and (-10,0) .. (-6,-4);
+			\path[ARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+			\path[ARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+		\end{tikzpicture}\right\rangle
+		= -A^{-3}
+		\left\langle\ \begin{tikzpicture}[scale=0.05,baseline=-6]
+			\path[ARC] (-10,7) -- (-10,-11);
+		\end{tikzpicture}\ \right\rangle
+		\,\bullet\,
+		% drugi ruch Reidemeistera
+		\left\langle\begin{tikzpicture} [scale=0.04,baseline=-5]
+			\path[ARC](0,10) .. controls (10,5) and (10,-9) .. (0,-14);
+			\path[ARC] (10,10) .. controls (8,9) .. (7,8);
+			\path[ARC] (3,4.5) .. controls (-1,0) and (-1,-4) .. (3,-8);
+			\path[ARC] (10,-14) .. controls (8,-13) .. (7,-12);
+		\end{tikzpicture}\right\rangle
+		=
+		\left\langle\ \begin{tikzpicture} [scale=0.04, baseline=-5]
+		\path[ARC] (0,10) .. controls (3,8) and (3,0) .. (3,-2) .. controls (3,-4) and (3,-12) .. (0,-14);
+		\path[ARC] (10,10) .. controls (7,8) and (7,0) .. (7,-2) .. controls (7,-4) and (7,-12) .. (10,-14);
+		\end{tikzpicture}\ \right\rangle
+		\,\bullet\,
+		% trzeci ruch Reidemeistera
+		\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6]
+			\path[ARC] (-10,10) -- (-6.6,6);
+			\path[ARC] (-4,3) -- (10,-14);
+			\path[ARC] (10,10) -- (6.6,6);
+			\path[ARC] (4,3) -- (1.6,0);
+			\path[ARC] (-1.6,-4) -- (-10,-14);
+			\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+			\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+		\end{tikzpicture}\right\rangle
+		=
+		\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6]
+			\begin{scope}[xshift=1300,rotate=180,yshift=110]
+				\path[ARC] (-10,10) -- (-6.6,6);
+				\path[ARC] (-4,3) -- (10,-14);
+				\path[ARC] (10,10) -- (6.6,6);
+				\path[ARC] (4,3) -- (1.6,0);
+				\path[ARC] (-1.6,-4) -- (-10,-14);
+				\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+				\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+			\end{scope}
+		\end{tikzpicture}\right\rangle.
+	\]
+\end{lemat}
+
+\begin{proof}
+Pierwszy ruch Reidemeistera:
+\[
+\left\langle\begin{tikzpicture}[scale=0.05, baseline=-6]
+	\clip (-12,-12) rectangle (1,7);
+	\path[ARC] (-10,7) .. controls (-10,3) and (-10,0) .. (-6,-4);
+	\path[ARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+	\path[ARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+\end{tikzpicture}\right\rangle
+\stackrel{K3}{=}
+A\left\langle\begin{tikzpicture}[scale=0.05, baseline=-6]
+	\clip (-12,-12) rectangle (1,7);
+	\path[ARC] (-10,7) .. controls (-10,3) and (-9,-3) .. (-6,0);
+	\path[ARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+	\path[ARC] (-10,-11) .. controls (-10,-8) and (-10,-1) .. (-6,-4);
+\end{tikzpicture}\right\rangle
++A^{-1}\left\langle
+\begin{tikzpicture}[scale=0.05, baseline=-6] 
+	\clip (-12,-12) rectangle (1,7);
+	\path[ARC] (-10,7) .. controls (-10,3) and (-7,-2) .. (-9,-4);
+	\path[ARC] (-5,1) .. controls (2,8) and (2,-10) .. (-5,-5);
+	\path[ARC] (-5,1) .. controls (-6.5,-0.5) and (-6.5,-3.5) .. (-5,-5);
+	\path[ARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+\end{tikzpicture}\right\rangle
+\stackrel{K2}{=}
+A\left\langle\ 
+\begin{tikzpicture}[scale=0.05, baseline=-6]
+	\path[ARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ 
+\right\rangle
++A^{-1}(-A^{-2}-A^2)\left\langle\ 
+\begin{tikzpicture}[scale=0.05, baseline=-6] 
+	\path[ARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}
+\ \right\rangle
+=
+-A^{-3}\left\langle\ 
+\begin{tikzpicture}[scale=0.05, baseline=-6] 
+	\path[ARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ 
+\right\rangle
+\]
+Pierwsza równość wynika z $K3$, druga z $K2$, trzecia jest oczywista.
+Dla drugiego ruchu:
+\begin{align*}
+\left\langle\begin{tikzpicture} [scale=0.04,baseline=-5] 
+	\path[ARC](0,10) .. controls (10,5) and (10,-9) .. (0,-14);
+	\path[ARC] (10,10) .. controls (8,9) .. (7,8);
+	\path[ARC] (3,4.5) .. controls (-1,0) and (-1,-4) .. (3,-8);
+	\path[ARC] (10,-14) .. controls (8,-13) .. (7,-12);
+\end{tikzpicture}\right\rangle
+&\stackrel{K3}{=}
+\phantom{-}A^{\phantom{-2}}
+\left\langle\begin{tikzpicture} [scale=0.04,baseline=-5] 
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (4.5,6) and (5.5,6) .. (10,10);
+	\path[ARC] (0,-14) .. controls (4,-11) .. (6,-8) .. controls (12,0) and (-5,0) .. (3,-8);
+	\path[ARC] (10,-14) .. controls (8.5,-13) .. (7,-12);
+\end{tikzpicture}\right\rangle
++
+\phantom{A}A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04,baseline=-5]
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (10,10) .. controls (8,9) .. (7,8);
+	\path[ARC] (10,-14) .. controls (8,-13) .. (7,-12);
+	\path[ARC](10,10) .. controls (0,5) and (15,-4) .. (0,-14);	
+	\path[ARC] (0,10) .. controls (10,5) and (-3,0) .. (3,-8);
+\end{tikzpicture}\right\rangle
+\stackrel{K1}{=}
+-A^{-2}
+\left\langle\begin{tikzpicture} [scale=0.04, baseline=-5]
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (4.5,6) and (5.5,6) .. (10,10);
+	\path[ARC] (0,-14) .. controls (4.5,-10) and (5.5,-10) .. (10,-14);
+\end{tikzpicture}\right\rangle
++
+\phantom{A}
+A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04,baseline=-5] 
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (10,10) .. controls (8,9) .. (7,8);
+	\path[ARC] (10,-14) .. controls (8,-13) .. (7,-12);
+	\path[ARC](10,10) .. controls (0,5) and (15,-4) .. (0,-14);	
+	\path[ARC] (0,10) .. controls (10,5) and (-3,0) .. (3,-8);
+\end{tikzpicture}\right\rangle
+\\
+&\stackrel{K3}{=}
+-A^{-2}
+\left\langle\begin{tikzpicture} [scale=0.04, baseline=-5]
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (4.5,6) and (5.5,6) .. (10,10);
+	\path[ARC] (0,-14) .. controls (4.5,-10) and (5.5,-10) .. (10,-14);
+\end{tikzpicture}\right\rangle
++A^{-1}A
+\left\langle\begin{tikzpicture} [scale=0.04, baseline=-5] 
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (3,8) and (3,0) .. (3,-2) .. controls (3,-4) and (3,-12) .. (0,-14);
+	\path[ARC] (10,10) .. controls (7,8) and (7,0) .. (7,-2) .. controls (7,-4) and (7,-12) .. (10,-14);
+\end{tikzpicture}\right\rangle
++
+A^{-1}A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04, baseline=-5]
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (4.5,6) and (5.5,6) .. (10,10);
+	\path[ARC] (0,-14) .. controls (4.5,-10) and (5.5,-10) .. (10,-14);
+\end{tikzpicture}\right\rangle
+=%\phantom{-A^{-2}}
+\left\langle\begin{tikzpicture} [scale=0.04, baseline=-5]
+	\clip (-2,-14) rectangle (12,10);
+	\path[ARC] (0,10) .. controls (3,8) and (3,0) .. (3,-2) .. controls (3,-4) and (3,-12) .. (0,-14);
+	\path[ARC] (10,10) .. controls (7,8) and (7,0) .. (7,-2) .. controls (7,-4) and (7,-12) .. (10,-14);
+\end{tikzpicture}\right\rangle
+\end{align*}
+Dla trzeciego ruchu:
+\begin{align*}
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6] 
+	\path[ARC] (-10,10) -- (-6.6,6);
+	\path[ARC] (-4,3) -- (10,-14);
+	\path[ARC] (10,10) -- (6.6,6);
+	\path[ARC] (4,3) -- (1.6,0);
+	\path[ARC] (-1.6,-4) -- (-10,-14);
+	\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+	\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+\end{tikzpicture}\right\rangle
+&\stackrel{K3}{=}
+A
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6] 
+	\path[ARC] (-10,10) -- (-6.6,6);
+	\path[ARC] (10,10) -- (6.6,6);
+	\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+	\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+	\path[ARC] (-10,-14) .. controls (0,-3) and (0,-3) .. (10,-14);
+	\path[ARC] (-4,3) .. controls (0,-2) .. (4,3);
+\end{tikzpicture}\right\rangle
++A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6]
+	\path[ARC] (-14,-2) -- (14,-2);
+	\path[ARC] (-10,10) .. controls (-7,6) and (-4,4) .. (-4,0);
+	\path[ARC] (-10,-14) .. controls (-7,-10) and (-4,-8) .. (-4,-4);
+	\path[ARC] (10,10) .. controls (7,6) and (4,4) .. (4,0);
+	\path[ARC] (10,-14) .. controls (7,-10) and (4,-8) .. (4,-4);
+\end{tikzpicture}\right\rangle
+\stackrel{R2}{=}
+A
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6]
+	\path[ARC] (-14,-2) -- (14,-2);
+	\path[ARC] (-10,-14) .. controls (0,-3) and (0,-3) .. (10,-14);
+	\path[ARC] (-10,10) .. controls (0,-1) and (0,-1) .. (10,10);
+\end{tikzpicture}\right\rangle
++A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6] 
+	\path[ARC] (-14,-2) -- (14,-2);
+	\path[ARC] (-10,10) .. controls (-7,6) and (-4,4) .. (-4,0);
+	\path[ARC] (-10,-14) .. controls (-7,-10) and (-4,-8) .. (-4,-4);
+	\path[ARC] (10,10) .. controls (7,6) and (4,4) .. (4,0);
+	\path[ARC] (10,-14) .. controls (7,-10) and (4,-8) .. (4,-4);
+\end{tikzpicture}\right\rangle
+\\
+&\stackrel{R2}{=}
+A
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6,yscale=-1] 
+	\path[ARC] (-10,10) -- (-6.6,6);
+	\path[ARC] (10,10) -- (6.6,6);
+	\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+	\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+	\path[ARC] (-10,-14) .. controls (0,-3) and (0,-3) .. (10,-14);
+	\path[ARC] (-4,3) .. controls (0,-2) .. (4,3);
+\end{tikzpicture}\right\rangle
++A^{-1}
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6] 
+	\path[ARC] (-14,-2) -- (14,-2);
+	\path[ARC] (-10,10) .. controls (-7,6) and (-4,4) .. (-4,0);
+	\path[ARC] (-10,-14) .. controls (-7,-10) and (-4,-8) .. (-4,-4);
+	\path[ARC] (10,10) .. controls (7,6) and (4,4) .. (4,0);
+	\path[ARC] (10,-14) .. controls (7,-10) and (4,-8) .. (4,-4);
+\end{tikzpicture}\right\rangle
+\stackrel{K3}{=}
+\left\langle\begin{tikzpicture} [scale=0.04, auto, baseline=-6] 
+\begin{scope}[xshift=1300,rotate=180,yshift=110]
+	\path[ARC] (-10,10) -- (-6.6,6);
+	\path[ARC] (-4,3) -- (10,-14);
+	\path[ARC] (10,10) -- (6.6,6);
+	\path[ARC] (4,3) -- (1.6,0);
+	\path[ARC] (-1.6,-4) -- (-10,-14);
+	\path[ARC] (-14,-2) .. controls (-6, -2) and (-6,8) .. (0,8);
+	\path[ARC] (14,-2) .. controls (6, -2) and (6,8) .. (0,8);
+\end{scope}
+\end{tikzpicture}\right\rangle
+\end{align*}
+korzystaliśmy tu z własności drugiego ruchu.
+\end{proof}
+
+Okazało się, że użycie najprostszego, I ruchu Reidemeistera, ,,psuje'' nawias!
+W akcie desperacji moglibyśmy zmienić definicję, zaniechamy tego i przejdziemy do kolejnego składnika w przepisie na wielomian Jonesa.
