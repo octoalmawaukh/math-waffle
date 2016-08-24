@@ -1,0 +1,54 @@
+\subsection{Spin}
+Przypomnijmy, że znak skrzyżowania na diagramie to liczba $1$ lub $-1$:
+$\operatorname{sign}
+	\begin{tikzpicture}[scale=0.03, baseline=-3]
+	\path[TEXTARC,->] (-5,-5) -- (5,5);
+	\path[TEXTARC] (5,-5) -- (1.5,-1.5);
+	\path[TEXTARC,<-] (-5,5) -- (-1.5,1.5);
+	\end{tikzpicture}
+ = +1$,
+$\operatorname{sign} \begin{tikzpicture}[scale=0.03, baseline=-3]
+\path[TEXTARC,->] (5,-5) -- (-5,5);
+\path[TEXTARC] (-5,-5) -- (-1.5,-1.5);
+\path[TEXTARC,<-] (5,5) -- (1.5,1.5);
+\end{tikzpicture} = -1$.
+
+\begin{definicja}
+	Niech $D$ będzie diagramem zorientowanego splotu lub węzła.
+	\textbf{Spinem} $D$ jest $w(D) = \sum_c \operatorname{sign} c$, gdzie sumowanie przebiega po wszystkich skrzyżowaniach.
+\end{definicja}
+
+\begin{przyklad}
+Spinem trójlistnika w takiej wersji jest $+3$:
+\[
+	\begin{tikzpicture}[scale=0.035]
+		\clip (-16,-16) rectangle (16,17); %nie etykietuj
+		\foreach \x in {270,30, 150}
+		\path[TEXTARC,->-] (15+\x:6) .. controls (130+\x:25) and (200+\x:25) .. (225+\x:10);
+		\node[red] (C1) at (30:14) {\small $+1$};
+		\node[red] (C2) at (150:14) {\small $+1$};
+		\node[red] (C3) at (270:14) {\small $+1$};
+	\end{tikzpicture}
+\]
+\end{przyklad}
+
+\begin{lemat}
+Tylko I ruch Reidemeistera zmienia spin:
+$
+w(\begin{tikzpicture}[scale=0.025, baseline=-3]
+	\clip (-12,-12) rectangle (1,7);
+	\path[TEXTARC] (-10,7) .. controls (-10,3) and (-10,0) .. (-6,-4);
+	\path[TEXTARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+	\path[TEXTARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+\end{tikzpicture})
+=
+w(\ \begin{tikzpicture}[scale=0.025,baseline=-4]
+	\path[TEXTARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ )-1
+$, pozostałe nie mają wpływu.
+Spin nie zależy od orientacji.
+\end{lemat}
+
+\begin{proof}
+Proste ćwiczenie.
+\end{proof}

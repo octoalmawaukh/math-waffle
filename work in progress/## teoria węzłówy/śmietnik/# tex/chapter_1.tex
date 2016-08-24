@@ -1,0 +1,152 @@
+% Maciek
+\section{Wstęp, czyli trochę zakłamanej historii i intuicji}
+Pojęcie węzła wywodzi się z teorii atomu Lorda Kelvina, która głosi, że atomy powstają z wirów energii (cokolwiek miałoby to znaczyć). Takie ``wiry`` Kelvin 
+wyobrażał sobie jako okręgi w przestrzeni trójwymiarowej, lub, bardziej ogólnie, jako krzywe zamknięte w $\mathbb{R}^3$ bez samoprzecięc. Po tym, jak owa teoria się przyjęła 
+(co prawda nie na długo), zaczęto szukać języka, w którym możnaby w miarę precyzyjnie (jak na tamte matematycznie prehistoryczne czasy) ją wyrazić. Jak mniemam (autor świadomie
+używa nieco wycofanej formy ''jak mniemam'', zamiast np. ''z pewnością'', co pozwala mu nie wdawać się w dyskusję na temat historii matematyki, o której nie ma zielonego pojęcia)
+te rozważania dały początek teorii węzłów. 
+
+Praca Petera Taita, problemy, które naptokał, okazało się, że wiele z nich jest równoważnych temu, czy węzeł nie jest równoważny niewęzłowi, próba sklasyfikowania wszystkich 
+węzłów o niewielkiej liczbie przecięć.
+
+Trochę historii (najpierw Alexander, potem Reidemeister, potem jeszcze ktoś... dobra, to miał być szkielet)
+
+Intuicja, kilka wstępnych przykładów... (muszę się nauczyć tej magicznej techologii służącej do rysowania tych... węzłów)
+
+
+
+\section{Moja część...}
+
+Jest dość dużo (więcej niż trzy) definicji węzła. Każda z nich w pewnym sensie oddaję intuicję, która kryje się za potocznym rozumieniem nazwy tego pojęcia. W tym rozdziale podamy 
+jedną z nich. Powiemy też, co to znaczy, że dwa węzły są równoważne, tj. zastanowimy się, kiedy mając dane dwa węzły jesteśmy wstanie zdeformować jeden z nich (powiemy też, co to znaczy zdeformować), 
+aby otrzymać drugi. Na koniec sformułujemy i udowodnimy twierdzenie Reidemeister'a, które dostarczy nam potężnych narzędzi do rozstrzygania, kiedy dane dwa węzły są równoważne.
+
+\subsection{Sformuowanie definicji węzła}
+
+Tutaj powiem, czemu jakieśtam podejście jest złe...
+
+Trararam! Teraz podaję lepsze, od tego złego i mówię czemu jest lepsze...
+
+\begin{definicja}
+ Węzeł to łamana w $\mathbb{R}^3$ bez samoprzecięć.
+\end{definicja}
+
+\begin{definicja}
+ Wierzchołek węzła...
+\end{definicja}
+
+\begin{definicja}
+ Splot - rozłączna suma węzłów...
+\end{definicja}
+
+\subsection{Równoważność węzłów}
+% Skoro już w sposób ścisły zdefiniowaliśmy pojęcie węzła, możemy zastanowić się, jak sformalizować operację przekształcenia węzła w inny węzeł. Oczywiście możemy potraktować węzeł, 
+% jako pewien podzbiór w $\mathbb{R}^3$ i powiedzieć, że możemy określić na owym podzbiorze dowolną funkcję, ale to raczej nudne podejście. Chcielibyśmy wiedzieć, kiedy obarzem takiej
+% funkcji będzie węzeł, i ''jak bardzo'' będzie się on różnił od węzła wyjściowego. 
+Trochę gadki wstępnej dotyczącej potrzeby wprowadzenia relacji równoważności, tzn. kiedy węzły, które wyglądają trochę inaczej w istocie są tym samym węzłem.
+
+
+\begin{definicja}
+ Elementarnym przekształceniem węzła nazywamy...
+\end{definicja}
+
+\begin{definicja}
+ Mówimy, że węzły $J$ i $K$ są równoważne, gdy...
+\end{definicja}
+
+Sprawdzenie, że podana relacja jest w istocie relacją równoważności pozostawiamy czytelnikowi jako ćwiczenie (dobrze?...)
+
+Gadka-szmatka: utożsamiamy z sobą węzły równoważne, mówimy, że dwa węzły, to ten sam węzeł, gdy te dwa węzły są równoważne.
+
+\subsection{Diagramy i rzuty węzła na płaszczyznę}
+Od początku tej pracy, artykułu (? trzeba uzgodnić terminologię) z konieczności rysowaliśmy węzły (obiekty żyjące w przestrzeni trójwymiarowej) na płaszczyźnie. 
+Niestety, masowa technologia nie pozwala jeszcze na  pisanie prac w formie hologramów, nad czym wszyscy czterej autorzy mniej lub bardziej ubolewają. Głównym celem
+tego podrozdziału jest pokazanie, że jeśli dwa różne węzły są reprezentowane przez ten sam dwuwymiarowy rysunek, to są równoważne.
+
+\begin{definicja}
+ Rzutem na płaszczyznę nazywamy...
+\end{definicja}
+
+Rzuty na płaszczyznę różnych (nierównoważnych) węzłów mogą być równe. Chcemy jednak mówić o takich ``ładnych'' rzutach...
+
+\begin{definicja}
+ Rzutem regularnym nazywamy takie rzutowanie węzła, że...
+\end{definicja}
+
+Diagram to rzut + info o góra-dół.
+
+\begin{definicja}
+ Diagramem węzła nazywamy...
+\end{definicja}
+
+Trzeba wyraźnie powiedzieć, że różne węzły mogą mieć ten sam diagram (np. w diagramie nie ma info o tym, jak wysoko jeden łuczek przechodzi pod drugim). 
+Okazuje się jednak, że jeśli dwa różne węzły mają ten sam diagram, to są one równoważne. Aby to udowodnić potrzebujemy zdefiniować kilka pojęć pomocniczych...
+
+
+\begin{definicja}
+ Mówimy, że dwa węzły $(p_i)$, $(q_j)$ są od siebie odległe o mniej, niż $t$, gdy mają tyle samo wierzchołków i gdy dla każdej pary wierzchołków zachodzi $d(p_k,q_k) < t$.
+\end{definicja}
+
+\begin{twierdzenie}
+ Niech $K$ będzie węzłem o uporządkowanym zbiorze wierzchołków $(p_1, p_2, \ldots, p_n)$. Dla każdego $\epsilon > 0$ istnieje węzeł $K'$ o zbiorze wierzchołków $(q_1, q_2, \ldots, q_n)$, 
+który jest odległy od węzła $K$ o nie więcej, niż $\epsilon$, oraz jego rzut na płaszczyznę $OXY$ jest regularny. 
+\end{twierdzenie}
+
+\begin{twierdzenie}
+ Jeśli węzeł $K$ ma regularny rzut na płaszczyznę $OXY$, to istnieje taka $\delta>0$, że dla każdego węzła $K'$ odległego od $K$ o mniej, niż $\delta$ węzły $K, K'$ są równoważne,
+ oraz $K'$ również ma rzut regularny. 
+\end{twierdzenie}
+
+\begin{twierdzenie}
+ Jeśli dwa węzły $K$ oraz $J$ mają ten sam diagram, to są równoważne.
+\end{twierdzenie}
+
+Terminologia: łuki, skrzyżowania, overpass, underpass - chciałbym to sensownie przetłumaczyć, bo wygodnie by było mieć jednosłowne nazwy na te pojęcia.
+
+ćwiczenie: liczba skrzyżowań $=$ liczba łuków.
+
+\subsection{Orientacja węzła}
+ble, ble, ble... Węzeł to taki uporządkowany zbiór skończony. Jak go cyklicznie spermutujemy, albo odwrócimy kolejność jego elementów, to otrzymamy ten sam węzeł. O ile rąbnięcie
+naszego porządku cyklem wydaje się nie zaburzać porządku krawędzi naszego węzła, o tyle odwrócenie kolejności elementów, już tak...
+
+\begin{definicja}
+ Węzłem zorientowanym nazywamy...
+\end{definicja}
+
+Na zbiorze węzłów zorientowanych można położyć relację równoważności podobną do tej, którą zdefiniowaliśmy wcześniej. Musimy jeszcze żądać, żeby ciąg elementarnych operacji nie 
+zmieniał oriantacji naszego wyjściowego węzła...
+
+\begin{definicja}
+ Zorientowane węzły nazywamy równoważnymi, gdy...
+\end{definicja}
+
+Gdyby równoważność w szerszym sensie implikowała równoważność węzłów zorientowanych, powyższa definicja byłaby nudna. Tak na szczęście nie jest, istnieje przykład dwóch węzłów
+równoważnych, ale nie równoważnych w sensie orientacji.
+
+\begin{definicja}
+ Węzłem odwrotnie zorientowanym nazywamy węzeł zorientowany $(p_n, p_{n-1}, \ldots, p_1)$ powstały z węzła... i oznaczamy $K^r$.
+\end{definicja}
+
+\subsection{Ruchy Reidemeister'a}
+W tym podrozdziale przedstawimy pierwsze poważne narzędzie, które w wielu przypadkach pozwoli nam rozstrzygnąć, czy dwa węzły są równoważne, czy też nie. 
+Metody komblinatoryczne, ble, ble, ble...
+
+Wcześniej pokazaliśmy, że problem równoważności węzłów można próbować rozstrzygać posługując się diagramami tych węzłów. Sformułujemy i udowodnimy twierdzenie wiążące...
+
+\begin{definicja}
+ Dwa diagramy uważa się za równoważne, gdy wykonując skończoną liczbę przekształceń zwanych ruchami Reidemeister'a, można
+ z jednego diagramu otrzymać drugi
+\end{definicja}
+
+
+\begin{definicja}
+ Ruchy Reidemeister'a - rysunki.
+\end{definicja}
+
+Trzy ruchy wraz z ich odwrotnościami.
+
+\begin{twierdzenie}{(Reidemeister'a)}
+Dwa węzły są równoważne, wtedy i tylko wtedy, gdy ich diagramy są równoważne.
+\end{twierdzenie}
+
+Trochę pozachwycam się tym twierdzeniem i prostotą dowodu, uzasadnię, czemu przyjąłem taką definicję i wystarczy...

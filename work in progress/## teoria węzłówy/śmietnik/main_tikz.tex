@@ -1,0 +1,78 @@
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings,external}
+\tikzset{
+->-/.style={decoration={markings, mark=at position .5 with {\arrow{>}}},postaction={decorate}},
+-<-/.style={decoration={markings, mark=at position .5 with {\arrow{<}}},postaction={decorate}},
+ARC/.style ={draw=black,line join=miter,line cap=butt,miter limit=4.00,line width=0.5 mm},
+TEXTARC/.style ={draw=black,line join=miter,line cap=butt,miter limit=4.00,line width=0.3 mm},
+REGION/.style={draw=none, fill=white!#1!black},
+REGION/.default = 80,
+}
+\colorlet{darkblue}{blue!80!black}
+
+\newcommand{\PrawyKrzyz}
+	{
+	\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC] (-5,-5) -- (5,5);
+		\path[TEXTARC] (5,-5) -- (2,-2);
+		\path[TEXTARC] (-5,5) -- (-2,2);
+	\end{tikzpicture}
+	}
+\newcommand{\LewyKrzyz}
+	{
+	\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC] (5,-5) -- (-5,5);
+		\path[TEXTARC] (-5,-5) -- (-2,-2);
+		\path[TEXTARC] (5,5) -- (2,2);
+	\end{tikzpicture}
+	}
+\newcommand{\PrawyGladki}{
+	\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC] (-5,-5) .. controls (-1,-1) and (-1,1) .. (-5,5);
+		\path[TEXTARC] (5,-5) .. controls (1,-1) and (1,1) .. (5,5);
+	\end{tikzpicture}
+	}
+\newcommand{\LewyGladki}{
+	\begin{tikzpicture}[scale=0.03,baseline=-3]
+		\path[TEXTARC] (-5,-5) .. controls (-1,-1) and (1,-1) .. (5,-5);
+		\path[TEXTARC] (-5,5) .. controls (-1,1) and (1,1) .. (5,5);
+	\end{tikzpicture}
+	}
+\newcommand{\NieWezel}{
+	\begin{tikzpicture}[scale=0.03,baseline=-3]
+		\path[TEXTARC] (0,0) circle (5);
+	\end{tikzpicture}
+	}
+\newcommand{\MalyPrawyKrzyz}
+	{
+	\begin{tikzpicture}[scale=0.02, baseline=-2.5]
+		\path[TEXTARC] (-5,-5) -- (5,5);
+		\path[TEXTARC] (5,-5) -- (2,-2);
+		\path[TEXTARC] (-5,5) -- (-2,2);
+	\end{tikzpicture}
+	}
+\newcommand{\MalyLewyKrzyz}
+	{
+	\begin{tikzpicture}[scale=0.02, baseline=-2.5]
+		\path[TEXTARC] (5,-5) -- (-5,5);
+		\path[TEXTARC] (-5,-5) -- (-2,-2);
+		\path[TEXTARC] (5,5) -- (2,2);
+	\end{tikzpicture}
+	}
+\newcommand{\MalyPrawyGladki}{
+	\begin{tikzpicture}[scale=0.02, baseline=-2.5]
+		\path[TEXTARC] (-5,-5) .. controls (-1,-1) and (-1,1) .. (-5,5);
+		\path[TEXTARC] (5,-5) .. controls (1,-1) and (1,1) .. (5,5);
+	\end{tikzpicture}
+	}
+\newcommand{\MalyLewyGladki}{
+	\begin{tikzpicture}[scale=0.02,baseline=-2.5]
+		\path[TEXTARC] (-5,-5) .. controls (-1,-1) and (1,-1) .. (5,-5);
+		\path[TEXTARC] (-5,5) .. controls (-1,1) and (1,1) .. (5,5);
+	\end{tikzpicture}
+	}	
+\newcommand{\MalyNieWezel}{
+	\begin{tikzpicture}[scale=0.02,baseline=-2.5]
+		\path[TEXTARC] (0,0) circle (5);
+	\end{tikzpicture}
+	}

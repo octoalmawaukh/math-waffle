@@ -1,0 +1,76 @@
+\documentclass[a4paper, fleqn]{extarticle}
+\usepackage{geometry}
+\usepackage{Alegreya, euler}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+%\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\interdisplaylinepenalty=2500
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{comment}
+
+\input{main_cuts}
+\input{main_tikz}
+
+\newcounter{dummy}
+\numberwithin{dummy}{section}
+\newtheorem{definicja}[dummy]{Definicja}
+\newtheorem{twierdzenie}[dummy]{Twierdzenie}
+\newtheorem{lemat}[dummy]{Lemat}
+\newtheorem{wniosek}[dummy]{Wniosek}
+\newtheorem{przyklad}[dummy]{Przyklad}
+\newtheorem{hipoteza}[dummy]{Hipoteza}
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\selectlanguage{polish}
+
+\title{Teoria węzłów}
+\author{nasze nazwiska}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{1/chapter_1}
+
+\input{2/chapter_2}
+
+%\input{3/chapter_3}
+
+
+
+\input{4/chapter_4}
+
+
+
+\newpage
+
+\raggedright
+
+\section*{Starsze materiały}
+
+Co potrafimy odróżnić od siebie?
+\begin{enumerate}
+\item splot Hopfa od splotu Whiteheada \dotfill linking number, suma znaków skrzyżowań
+\item trójlistnik od odbicia \dotfill wielomian Jonesa
+\item dowolne dwa węzły pierwsze o mniej niż dziesięciu skrzyżowaniach \dotfill  wielomian Jonesa
+\end{enumerate}
+
+Adams: notacja Dowkera, Conwaya.
+
+Węzły torusowe (5.1), węzły satelitarne i hiperboliczne.
+
+Warkocze (5.4), wielomiany HOMFLY (6.3).
+
+\emph{Bachelor's unknotting}.
+
+Arf.
+
+\url{http://mathuwr.pl/teoria_wezlow/}
+
+\end{document}		

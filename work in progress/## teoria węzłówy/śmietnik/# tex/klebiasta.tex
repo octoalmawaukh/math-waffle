@@ -1,0 +1,67 @@
+\subsection{Relacja kłębiasta}
+Dotychczas wyznaczyliśmy wielomian Jonesa jedynie dla trywialnych splotów.
+Spowodowane jest to tym, że chociaż nawias Kauffmana jest przydatny przy dowodzeniu różnych własności, to zupełnie nie nadaje się do obliczeń.
+Dużo lepszym narzędziem jest następujące twierdzenie.
+
+\begin{twierdzenie}[relacja kłębiasta] \label{tracheotomia}
+	Wielomian Jonesa spełnia równość $V(\NieWezel) = 1$ oraz relację
+	\[
+		t^{-1} V(L_+) - tV(L_-) + (t^{-1/2} - t^{1/2}) V(L_0) = 0,
+	\]
+
+	gdzie $L_+$, $L_-$, $L_0$ to zorientowane sploty, kóre różnią się jedynie na małym obszarze:
+	$
+		\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC,->] (-5,-5) -- (5,5);
+		\path[TEXTARC] (5,-5) -- (1.5,-1.5);
+		\path[TEXTARC,<-] (-5,5) -- (-1.5,1.5);
+		\end{tikzpicture}
+	$, 
+	$
+		\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC,->] (5,-5) -- (-5,5);
+		\path[TEXTARC] (-5,-5) -- (-1.5,-1.5);
+		\path[TEXTARC,<-] (5,5) -- (1.5,1.5);
+		\end{tikzpicture}
+	$, 
+	$
+		\begin{tikzpicture}[scale=0.03, baseline=-3]
+		\path[TEXTARC,->] (-5,-5) .. controls (-1.5,-1.5) and (-1.5,1.5) .. (-5,5);
+		\path[TEXTARC,->] (5,-5) .. controls (1.5,-1.5) and (1.5,1.5) .. (5,5);
+		\end{tikzpicture}
+	$.
+\end{twierdzenie}
+
+\begin{proof}
+Wyraźmy wielomian Jonesa przez nawias Kauffmana i spin.
+Chcemy pokazać, że
+\[
+A^{4}(-A)^{-3w(L_+)}\langle\PrawyKrzyz\rangle
+-A^{-4}(-A)^{-3w(L_-)}\langle\LewyKrzyz\rangle
++(A^2-A^{-2})(-A)^{-3w(L_0)}\langle\PrawyGladki\rangle
+=0.
+\]
+Ale $w(L_\pm)=w(L_0)\pm 1$, zatem to jest równoważne z $-A\langle\PrawyKrzyz\rangle +A^{-1}\langle\LewyKrzyz\rangle +(A^2-A^{-2})\langle\PrawyGladki\rangle =0$.
+Z definicji nawiasu Kauffmana wnioskujemy, że
+$\langle\PrawyKrzyz\rangle = A\langle\PrawyGladki\rangle+A^{-1}\langle\LewyGladki\rangle$ i $\langle\LewyKrzyz\rangle = A\langle\LewyGladki\rangle+A^{-1}\langle\PrawyGladki\rangle$.
+Pierwsze równanie przemnóżmy przez $A$, drugie przez $A^{-1}$, a następnie dodajmy je do siebie.
+Wtedy otrzymamy $A\langle\PrawyKrzyz\rangle-A^{-1}\langle\LewyKrzyz\rangle = A^2\langle\PrawyGladki\rangle - A^{-2}\langle\PrawyGladki\rangle$.
+\end{proof}
+
+\begin{przyklad}
+	$V(
+		\begin{tikzpicture}
+		[scale=0.02, baseline=-3]
+		\clip (-15,-9) rectangle (15,9);
+		\path[TEXTARC,-<-] (1.5,-2.75) arc (-20:300:8);
+		\path[TEXTARC,-<-] (-1.5,2.75) arc (160:480:8);
+		\end{tikzpicture}) = -t^{5/2} - t ^{1/2}
+	$ (splot Hopfa),
+	$
+	V(\begin{tikzpicture}[scale=0.02,baseline=-2]
+	\clip (-19,-13) rectangle (19,17);
+	\foreach \x in {270,30, 150}
+		\path[TEXTARC,-<-] (15+\x:6) .. controls (130+\x:25) and (200+\x:25) .. (225+\x:10);
+\end{tikzpicture}) = -t^4+t^3 + t
+$ (trójlistnik).
+\end{przyklad}

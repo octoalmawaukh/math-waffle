@@ -1,0 +1,94 @@
+\subsection{Odwrotności, lustra i sumy}
+
+\begin{twierdzenie}
+Niech $L$ będzie zorientowanym splotem.
+$V(rL)=V(L)$, $V(mL)(t)=V(L)(t^{-1})$.
+\end{twierdzenie}
+
+\begin{wniosek}
+Wielomian Jonesa nie zależy od orientacji węzła (ale nie splotu!).
+\end{wniosek}
+
+\begin{proof}
+Każdy węzeł ma tylko dwie orientacje, splot może mieć ich $2^n$, gdzie $n$ to liczba składowych.
+\end{proof}
+
+\begin{wniosek}
+Trójlistnik nie jest równoważny ze swoim lustrem.
+\end{wniosek}
+
+\begin{proof}
+W zależności od orientacji wielomianem trójlistnika jest $...$ lub $...$.
+\end{proof}
+
+\begin{twierdzenie}
+Niech $L, M$ będą zorientowanymi splotami, zaś $J, K$: zorientowanymi węzłami.
+\begin{enumerate}
+\item $V(L \sqcup M) = (-t^{1/2} - t^{-1/2}) V(L) V(M)$,
+\item $V(J \# K) = V(J) V(K)$.
+\end{enumerate}
+\end{twierdzenie}
+
+\begin{proof}
+Wybierzmy diagramy $D, E$ dla (odpowiednio) $L, M$.
+Po podstawieniu $t^{1/2}=A^{-2}$ widzimy, że chcemy pokazać $(-A)^{-3w(D\sqcup E)}\langle D\sqcup E\rangle =(-A^2-A^{-2})(-A)^{-3(w(D)+w(E))}\langle D\rangle  \langle E\rangle$.
+
+Oczywiście $w(D\sqcup E)=w(D)+w(E)$, więc wystarczy udowodnić, że 
+\[
+	\langle D\sqcup E\rangle = (-A^2-A^{-2})\langle D\rangle\langle E\rangle.
+\]
+
+Oznaczmy przez $f_1(D)$, $f_2(D)$ lewą i prawą stronę ostatniego równania.
+Są to wielomiany Laurenta, które zależą tylko od $D$.
+Aksjomaty Kauffmana pozwalają na pokazanie, że obie funkcje mają następujące własności:
+$f_i(\NieWezel)=(-A^2-A^{-2})\langle E\rangle$, $f_i(D\sqcup\NieWezel)=(-A^2-A^{-2})f_i(D)$, $f_i(\PrawyKrzyz)=Af_i(\PrawyGladki) + A^{-1}f_i(\LewyGladki)$.
+To pozwala na wyznaczenie ich wartości dla dowolnego $D$, zatem $f_1 \equiv f_2$, co kończy dowód.
+\end{proof}
+
+\begin{proof}
+Narysujmy $J, K$ jako
+$\begin{tikzpicture}[scale=0.02, baseline=3]
+	\path[TEXTARC] (-40,0) rectangle (-20,20);
+	\path[TEXTARC,-<-] (-20,17) .. controls (-5,17) and (-5,3) .. (-20,3);
+	\node[darkblue] at (-30,10) {J};
+	\path[TEXTARC] (35,0) rectangle (15,20);
+	\path[TEXTARC,-<-] (15,17) .. controls (0,17) and (0,3) .. (15,3);
+	\node[darkblue] at (25,10) {K};
+\end{tikzpicture}$.
+Rozpatrzmy sploty 
+$\begin{tikzpicture}[scale=0.02, baseline=3]
+	\path[TEXTARC] (-40,0) rectangle (-20,20);
+	\node[darkblue] at (-30,10) {J};
+	\path[TEXTARC] (30,0) rectangle (10,20);
+	\path[TEXTARC] (10,3) -- (-3,9);
+	\path[TEXTARC,->-] (-7,11) -- (-20,17);
+	\path[TEXTARC] (-20,3) -- (-5,10);
+	\path[TEXTARC,->-](-5,10) -- (10,17);
+	\node[darkblue] at (20,10) {K};
+\end{tikzpicture}
+$, 
+$\begin{tikzpicture}[scale=0.02, baseline=3]
+	\path[TEXTARC] (-40,0) rectangle (-20,20);
+	\node[darkblue] at (-30,10) {J};
+	\path[TEXTARC] (30,0) rectangle (10,20);
+	\path[TEXTARC] (-20,3) -- (-7,9);
+	\path[TEXTARC,->-] (-3,11) -- (10,17);
+	\path[TEXTARC] (10,3) -- (-5,10);
+	\path[TEXTARC,->-] (-5,10) -- (-20,17);
+	\node[darkblue] at (20,10) {K};
+\end{tikzpicture}
+$, 
+$\begin{tikzpicture}[scale=0.02, baseline=3]
+	\path[TEXTARC] (-40,0) rectangle (-20,20);
+	\path[TEXTARC,-<-] (-20,17) .. controls (-5,17) and (-5,3) .. (-20,3);
+	\node[darkblue] at (-30,10) {J};
+	\path[TEXTARC] (35,0) rectangle (15,20);
+	\path[TEXTARC,-<-] (15,17) .. controls (0,17) and (0,3) .. (15,3);
+	\node[darkblue] at (25,10) {K};
+\end{tikzpicture}$.
+Relacja kłębiasta może zostać użyta do pokazania, że 
+\[
+t^{-1}V(J\#K)-tV(J\#K)+(t^{-1/2}-t^{1/2})V(J\sqcup K)=0.
+\]
+Ale $V(J\sqcup K)=(-t^{1/2}-t^{-1/2})V(J)V(K)$, co upraszcza się do $V(J\#K)=V(J)V(K)$ i kończy dowód.
+\end{proof}
