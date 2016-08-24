@@ -1,0 +1,300 @@
+\subsection{Rozpiętość i wielomian Jonesa}
+
+\begin{twierdzenie} \label{taitjones}
+Niech $L$ posiada zredukowany, spójny, alternujący diagram o $n$ skrzyżowaniach.
+Wtedy każdy diagram ma co najmniej $n$ skrzyżowaniach.
+\end{twierdzenie}
+
+To bardzo ważny rezultat, którego prawdziwość przypuszczał już P. G. Tait w XIX wieku.
+Nikt nie był w stanie podać dowodu przed pojawieniem się wielomianu Jonesa w latach osiemdziesiątych.
+Wyjaśnimy teraz użyte tu przymiotniki.
+
+\begin{definicja}
+Diagram jest alternujący, gdy podczas poruszania się wzdłuż splotu mijamy skrzyżowania na zmianę z góry oraz z dołu.
+Diagram jest \emph{zredukowany}, gdy nie zawiera usuwalnych skrzyżowań.
+Diagram jest \emph{spójny}, gdy nie można go podzielić na dwie niepuste części, które nie spotykają się na żadnym skrzyżowaniu.
+\[\begin{tikzpicture}[scale=0.1]
+	\path[ARC] (-5,-5) rectangle (5,5);
+	\path[ARC] (-5,-3) -- (-12,0);
+	\path[ARC] (-12,0)  -- (-19,3);
+	\path[ARC] (-5,3) -- (-10,1);
+	\path[ARC] (-14,-1) -- (-19,-3);
+	\path[ARC,dotted] (-19,3) -- (-23.5,5);
+	\path[ARC,dotted] (-19,-3) -- (-23.5,-5);
+\end{tikzpicture}
+\]
+\end{definicja}
+
+Przykładowo diagram $\begin{tikzpicture}
+	[scale=0.02, baseline=-3]
+	\path[TEXTARC] (0,0) circle (8);
+	\path[TEXTARC] (20,0) circle (8);
+\end{tikzpicture}$ nie jest spójny, ale $\begin{tikzpicture}
+	[scale=0.02, baseline=-3]
+	\path (1.5,-2.75) arc (-20:300:8) node (here) {};
+	\path[TEXTARC] (here) arc (300:60:8);
+	\path[TEXTARC] (-1.5,2.75) arc (160:520:8);
+	\path[TEXTARC] (1.5,-2.75) arc (-20:20:8);
+\end{tikzpicture}$ już tak.
+
+W dowodzie przywołanego wyżej twierdzenia użyjemy rozpiętości wielomianu Jonesa.
+
+\begin{definicja}
+Niech $f$ będzie wielomianem Laurenta zmiennej $X$. Wtedy $M(f)$ [$m(f)$] to najwyższa [najniższa] potęga pojawiająca się w $f$. 
+\emph{Rozpiętość} to $\operatorname{span} f = M(f) - m(f)$.
+\end{definicja}
+
+Zajmiemy się teraz nawiasem Kauffmana.
+Znajdziemy wzór, który pozwala na wyznaczenie nawiasu dowolnego splotu o $n$ skrzyżowaniach (na diagramie) przez dodanie $2^n$ wyrazów.
+Wzór ten okaże się użyteczny przy dowodzeniu późniejszych twierdzeń.
+
+\begin{definicja}
+Niech $D$ będzie diagramem splotu.
+\begin{enumerate}
+\item \emph{Stan} $D$ to funkcja $s$ ze zbioru skrzyżowań $D$ w $\{-1, +1\}$.
+\item Dla ustalonego stanu $s$ dla $D$ przez $sD$ rozumiemy diagram powstały przez wygładzenie wszystkich skrzyżowań zgodnie z ich nowym znakiem ($\pm 1$), wtedy $|s|$ to suma wartości $s$.
+\item Diagram dla $sD$ jest sumą zamkniętych krzywych, ich liczbę oznaczamy przez $|sD|$.
+\end{enumerate}
+\end{definicja}
+
+\begin{twierdzenie}[o sumowaniu stanów]
+Niech $D$ będzie diagramem splotu.
+Wtedy
+\[\langle D\rangle = \sum_s (-A^2-A^{-2})^{|sD|-1} A^{|s|},\]
+gdzie sumujemy po wszystkich stanach $s$ dla $D$.
+\end{twierdzenie}
+
+\begin{proof}
+Oznaczmy prawą stronę dowodzonej równości przez $[D]$.
+Pokażemy, że spełnia ona $[\NieWezel]=1$, $[D\sqcup\NieWezel]=(-A^{-2}-A^2) [D]$ oraz $[\PrawyKrzyz] = A [\PrawyGladki] + A^{-1}[\LewyGladki]$.
+Stąd wynika już, że $[D] = \langle D \rangle$.
+
+Niewęzeł $\NieWezel$ ma tylko jeden stan $s$ z $|s| = 0$ i $|s\NieWezel| = 1$.
+
+Zauważmy, że $D \sqcup \NieWezel$ i $D$ mają te same skrzyżowania, więc możemy utożsamiać stany $s$ dla $D$ ze stanami $u$ dla $D \sqcup \NieWezel$.
+Wtedy $|u| = |s|$ oraz $|u(D \sqcup \NieWezel)| = |sD| + 1$.
+Zatem
+\[
+	[D \sqcup \NieWezel] = \sum_u (-A^2-A^{-2})^{|u(D\sqcup\MalyNieWezel)|-1} A^{|u|} =\sum_s (-A^2-A^{-2})^{|sD|} A^{|s|} = (-A^2-A^{-2}) [D].
+\]
+
+Pozostała trzecia własność. Z definicji $A[\PrawyGladki]=\sum_u(-A^2-A^{-2})^{|u\MalyPrawyGladki|-1}A^{|u|+1}$, gdzie $u$ przebiega wszystkie stany $\PrawyGladki$.
+Ale $\PrawyGladki$ to $\PrawyKrzyz$ ze skrzyżowaniem (powiedzmy, $c$) wygładzonym dodatnio, co daje bijekcję między stanami $u$ dla $\PrawyGladki$ i $s$ dla $\PrawyKrzyz$, dla których $s(c) = + 1$.
+Wtedy $|s\PrawyKrzyz|=|u\PrawyGladki|$ i $|s|=|u|+1$ oraz
+\[
+A[\PrawyGladki] = \sum_u (-A^2-A^{-2})^{|u\,\MalyPrawyGladki|-1}A^{|u|+1} = \sum_{s(c)=1}(-A^2-A^{-2})^{|s\,\MalyPrawyKrzyz|-1}A^{|s|},
+\]
+podobne rozumowanie pokazuje, że $A^{-1}[\LewyGladki] = \sum_{s(c)=-1}(-A^2-A^{-2})^{|s\,\MalyPrawyKrzyz|-1}A^{|s|}$. 
+Teraz wystarczy dodać do siebie dwa ostatnie równania. %: $A[\PrawyGladki]+A^{-1}[\LewyGladki] = \sum_s(-A^2-A^{-2})^{|s\,\MalyPrawyKrzyz|-1}A^{|s|} = [\PrawyKrzyz]$. 
+\end{proof}
+
+Zbadamy teraz dwa najprostsze stany dowolnego diagrau.
+
+\begin{definicja}
+Stan, który przypisuje znak $+1$ [$-1$] każdemu skrzyżowaniu, nazywamy $s_+$ [$s_-$].
+\end{definicja}
+
+Niech $D$ będzie alternującym, zredukowanym diagramem spójnym.
+Wszystkie skrzyżowania mają ten sam znak.
+Wybierzmy dla niego uszachowienie.
+\[\begin{tikzpicture}[scale=0.2]
+	\path[REGION] (-5,0) rectangle (5,-5);
+	\path[REGION] (5,0) rectangle (15,5);
+	\path[REGION] (15,0) rectangle (25,-5);
+	\path[REGION] (25,0) rectangle (35,5);
+	\path[REGION] (35,0) rectangle (45,-5);
+	\node[above left, red] () at (5,0) {$+1$};
+	\node[below left, red] () at (15,0) {$+1$};
+	\node[above left, red] () at (25,0) {$+1$};
+	\node[below left, red] () at (35,0) {$+1$};
+	\path[ARC] (-5,0) -- (14,0);
+	\path[ARC] (5,5) -- (5,1);
+	\path[ARC] (5,-1) -- (5,-5);
+	\path[ARC] (15,5) -- (15,-5); 
+	\path[ARC] (16,0) -- (34,0);
+	\path[ARC] (25,5) -- (25,1); 
+	\path[ARC] (25,-1) -- (25,-5); 
+	\path[ARC] (35,5) -- (35,-5); 
+	\path[ARC] (36,0) -- (45,0);
+\end{tikzpicture}\]
+Zamieniając biały i czarny w razie potrzeby możemy założyć, że wszystkie skrzyżowania są dodatnie ($+1$).
+Takie uszachowienie nazywamy \emph{standardowym}.
+Porównajmy wygładzenie $s_+D$ z $s_-D$:
+\[\begin{tikzpicture}[scale=0.12]
+	\path[REGION] (-5,0) .. controls (6,0) and (5,0) .. (5,5)
+	-- (15,5)
+	 .. controls (15,0) and (15,0) .. (20,0)
+	.. controls (25,0) and (25,0) .. (25,5)
+	-- (35,5)
+	.. controls (35,0) and (34,0) .. (45,0)
+	-- (45,-5) --(35,-5)
+	.. controls (35,0) and (35,0) .. (30,0)
+	.. controls (25,0) and (25,0) .. (25,-5)
+	-- (15,-5)
+	.. controls (15,0) and (15,0) .. (10,0)
+	.. controls (5,0) and (5,0) .. (5,-5)
+	-- (-5,-5) -- (-5,0);
+	
+	\path[ARC] (35,5) .. controls (35,0) and (34,0) .. (45,0);
+	\path[ARC] (-5,0) .. controls (6,0) and (5,0) .. (5,5);
+	\path[ARC] (5,-5) .. controls (5,0) and (5,0) .. (10,0)
+	.. controls (15,0) and (15,0) .. (15,-5);
+	\path[ARC] (15,5) .. controls (15,0) and (15,0) .. (20,0)
+	.. controls (25,0) and (25,0) .. (25,5);
+	\path[ARC] (25,-5) .. controls (25,0) and (25,0) .. (30,0)
+	.. controls (35,0) and (35,0) .. (35,-5);
+	\path[ARC] (35,5) .. controls (35,0) and (34,0) .. (45,0);
+
+	\node () at (20,2.5) {$s_+D$};
+\end{tikzpicture} \quad
+\begin{tikzpicture}[scale=0.12]
+	\path[REGION] (-5,0) .. controls (6,0) and (5,0) .. (5,-5) -- (0,-5) -- (-5,-5) -- (-5,0);
+	\path[REGION] (5,5) .. controls (5,0) and (5,0) .. (10,0)
+	.. controls (15,0) and (15,0) .. (15,5) -- (5,5);
+	\path[REGION] (15,-5) .. controls (15,0) and (15,0) .. (20,0)
+	.. controls (25,0) and (25,0) .. (25,-5) -- (15,-5);
+	\path[REGION] (25,5) .. controls (25,0) and (25,0) .. (30,0)
+	.. controls (35,0) and (35,0) .. (35,5) -- (25,5);
+	\path[REGION] (35,-5) .. controls (35,0) and (34,0) .. (45,0) -- (45,-5) -- (35,-5);
+
+	\path[ARC] (-5,0) .. controls (6,0) and (5,0) .. (5,-5);
+	\path[ARC] (5,5) .. controls (5,0) and (5,0) .. (10,0)
+	.. controls (15,0) and (15,0) .. (15,5);
+	\path[ARC] (15,-5) .. controls (15,0) and (15,0) .. (20,0)
+	.. controls (25,0) and (25,0) .. (25,-5);
+	\path[ARC] (25,5) .. controls (25,0) and (25,0) .. (30,0)
+	.. controls (35,0) and (35,0) .. (35,5);
+	\path[ARC] (35,-5) .. controls (35,0) and (34,0) .. (45,0);
+
+	\node () at (20,2.5) {$s_-D$};
+\end{tikzpicture}\]
+
+Zamknięte krzywe tworzące $s_+D$ są brzegami białych obszarów uszachowienia, podczas gdy te tworzące $s_-D$ stanowią brzeg czarnych obszarów.
+Zauważmy, że na każdym skrzyżowaniu są cztery różne czarne i białe obszary (nie mogą się spotkać w innych miejscach), gdyż diagram był zredukowany.
+
+\begin{lemat}
+Niech $D$ będzie spójnym diagramem splotu o $n$ skrzyżowaniach.
+Wtedy $|s_+D|+|s_-D|\le n+2$, z równością dla zredukowanego i alternującego $D$.
+\end{lemat}
+
+\begin{proof}
+Skorzystamy z indukcji względem $n$.
+Łatwo widać prawdziwość lematu dla $n = 0$.
+Załóżmy, że jest on prawdziwy dla wszystkich diagramów o $n - 1$ skrzyżowaniach, następnie ustalmy diagram $D$ o $n$ skrzyżowaniach.
+
+Wybierzmy skrzyżowanie z $D$. Można je wygładzić na dwa sposoby, jeden z nich daje spójny diagram $D'$.
+Bez straty ogólności przyjmijmy, że jest to dodatnie wygładzenie.
+Wtedy zachodzi $|s_+D'| = |s_+D|$, ale $|s_-D'|=|s_-D|\pm 1$, ponieważ $s_-D'$ powstaje z $s_-D$ przez zastąpienie pewnej części
+$\PrawyGladki$ z $\LewyGladki$.
+To rozrywa jedną krzywą na dwa kawałki lub scala dwie krzywe w jedną.
+Teraz $|s_+D|+|s_-D| = |s_+D'|+|s_-D'|\pm 1 \le (n-1)+2\pm 1 \le n+2$ (pierwsza nierówność wynika z założenia indukcyjnego).
+
+Załóżmy, że $D$ jest spójny, alternujący i zredukowany.
+Musimy pokazać, że ostatnie dwie nierówności tak naprawdę są równościami.
+Pierwsza wynika z tego, że $D'$ jest spójny, alternujący i zredukowany.
+Z drugiej strony $|s_-D'|=|s_-D|-1$, ponieważ przejście od $s_-D$ do $s_-D'$ skleja dwa czarne obszary.
+To pokazuje drugą równość i kończy dowód.
+\[\begin{tikzpicture}[scale=0.17]
+	\path[REGION] (-5,0) rectangle (5,-5);
+	\path[REGION] (5,0) rectangle (15,5);
+
+	\path[ARC] (-5,0) -- (15,0);
+	\path[ARC] (5,5) -- (5,1);  
+	\path[ARC] (5,-1) -- (5,-5);
+	
+	\node[below] () at (5,-5) {$D$};
+\end{tikzpicture}
+\qquad\quad
+\begin{tikzpicture}[scale=0.17]
+	\path[REGION] (-5,0) .. controls (6,0) and (5,0) .. (5,-5) -- (0,-5) -- (-5,-5) -- (-5,0);
+	\path[REGION] (5,5) .. controls (5,0) and (5,0) .. (10,0) -- (15,0) -- (15,5) -- (5,5);
+	\path[ARC] (-5,0) .. controls (6,0) and (5,0) .. (5,-5);
+	\path[ARC] (5,5) .. controls (5,0) and (5,0) .. (10,0) -- (15,0);
+
+	\node[below] () at (5,-5) {$s_-D$};
+\end{tikzpicture}
+\qquad\quad
+\begin{tikzpicture}[scale=0.17]
+	\path[REGION] (-5,0) .. controls (6,0) and (5,0) .. (5,5)
+	-- (15,5) -- (15,0)--(10,0)
+	.. controls (5,0) and (5,0) .. (5,-5)
+	-- (-5,-5) -- (-5,0);
+
+	\path[ARC] (-5,0) .. controls (6,0) and (5,0) .. (5,5);
+	\path[ARC] (5,-5) .. controls (5,0) and (5,0) .. (10,0) -- (15,0);
+
+	\node[below] () at (5,-5) {$s_-D'$};
+\end{tikzpicture} \qedhere\]
+\end{proof}
+
+\begin{lemat}
+Niech $D$ będzie diagramem splotu o $n$ skrzyżowaniach.
+Wtedy
+\begin{enumerate}
+\item $M \langle D \rangle \le n+2|s_+D|-2$
+\item $m \langle D \rangle \ge -n-2|s_-D|+2$
+\end{enumerate}
+z równością, jeżeli $D$ jest alternujący, zredukowany i spójny.
+\end{lemat}
+
+\begin{proof}
+Udowodnimy tylko pierwszą część, druga jest do niej podobna.
+Dla stanu $s$ diagramu $D$ niech $\langle D \mid s\rangle :=(-A^{-2}-A^2)^{|sD|-1}A^{|s|}$.
+Wzór sumujący stany przybiera postać $\langle D\rangle = \sum_s \langle D \mid s\rangle$.
+
+Zauważmy, że $M\langle D|s\rangle=2|sD|+|s|-2$, a więc w szczególności $M\langle D|s_+\rangle=2|s_+D|+n-2$.
+Gdyby udało się nam pokazać, że $M\langle D|s\rangle \le M\langle D|s_+\rangle$ dla wszystkich innych stanów $s$, dowód nierówności byłby zakończony.
+Ale możemy znaleźć ciąg $s_+ = s_0$, $s_1$, \ldots, $s_r=s$, w którym $s_{i+1}$ powstaje z $s_i$ przez pojedynczą zmianę $+1$ na $-1$.
+
+Teraz $|s_{i+1}|=|s_i|-2$, podczas gdy $|s_{i+1}D|=|s_iD|\pm 1$, ponieważ $s_{i+1}D$ uzyskujemy z $s_{i}D$ przez połączenie dwóch zamkniętych krzywych lub podział jednej zamkniętej krzywej na dwie części.
+Zatem
+\[
+	M \langle D \mid s_{i+1} \rangle =
+	2|s_{i+1}D|+|s_{i+1}|-2 =
+	(2|s_iD| + |s_i| -2 ) + (\pm 2-2) \le
+	M \langle D|s_i\rangle.
+\]
+
+Teraz widać już, że $M\langle D \mid s\rangle =M\langle D \mid s_r\rangle \le\ldots\le M\langle D \mid s_0\rangle=M\langle D \mid s_+\rangle$.
+
+Pokażemy teraz, że jeśli $D$ jest zredukowany, alternujący i spójny, to nierówność zamienia się w równość.
+Będzie to wynikało z  $M\langle D|s\rangle<M\langle D| s_+\rangle$
+dla $s\neq s_+$, jeżeli tylko powołamy się na powyższy argument.
+Wystarczy ograniczyć się do tych $s$, które powstają z $s_+$ przez zmianę pojedynczego stanu $+1$ na $-1$.
+Ale to już jest oczywiste, gdyż $sD$ otrzymujemy przez sklejenie dwóch białych obszarów $s_+ D$.
+\end{proof}
+
+Możemy wreszcie zająć się rozpiętością wielomianu Jonesa.
+
+\begin{twierdzenie}
+Niech $L$ będzie zorientowanym splotem o spójnym diagramie $D$ z $n$ skrzyżowaniami.
+Wtedy $\operatorname{span}(V(L)) \le n$, z równością dla zredukowanego i alternującego $D$.
+\end{twierdzenie}
+
+\begin{proof}
+Pokażemy prawdziwość innego, równoważnego stwierdzenia: $\operatorname{span} \langle D\rangle\le 4n$ z równością dla zredukowanego i alternującego $D$.
+Dwa poprzednie lematy mówią, że
+\begin{align*}
+\operatorname{span}\langle D\rangle & = M\langle D\rangle - m\langle D\rangle \le (2|s_+D|+n-2)+(2|s_-D|+n-2) \\
+& = 2(|s_+D|+|s_- D|)+2n-4 \le 2(n+2)+2n-4 = 4n. \qedhere
+\end{align*}
+\end{proof}
+
+Jesteśmy już w stanie podać dowód twierdzenia \ref{taitjones} wspomnianego na początku sekcji.
+
+\begin{proof}
+Założenia mówią nam, że $\operatorname{span} (V(L)) = n$.
+Gdyby istniał diagram o mniejszej liczbie skrzyżowań, mielibyśmy $\operatorname{span} (V(L)) < n$, co prowadzi do sprzeczności.
+\end{proof}
+
+Wyznaczanie wielomianu Jonesa dla splotu jest uciążliwe, jednak czasami możemy oszacować jego rozpiętość korzystając z następujących nierówności:
+
+\begin{wniosek}
+Niech $L$ będzie zorientowanym splotem ze spójnym diagramem $D$ o $n$ skrzyżowaniach. Wtedy
+\[\frac{3w(D)-2|s_+D|+2-n}{4} \le m(V(L) \textrm{ oraz } M(V(L)) \le \frac{3w(D)+2|s_-D|+n-2}{4},\]
+z równością dla zredukowanego i alternującego $D$.
+\end{wniosek}
+
+\begin{proof}
+Proste ćwiczenie.
+\end{proof}

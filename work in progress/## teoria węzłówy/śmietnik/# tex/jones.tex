@@ -1,0 +1,62 @@
+\subsection{Wielomian Jonesa}
+
+\begin{definicja}
+\emph{Wielomian Jonesa} zorientowanego splotu to wielomian Laurenta $V(L)\in\Z[t^{1/2},t^{-1/2}]$ określony przez
+\[V(L)=\left[ (-A)^{-3w(D)}\langle D\rangle\right]_{t^{1/2}=A^{-2}},\]
+gdzie $D$ to dowolny diagram dla $L$.
+\end{definicja}
+
+\begin{twierdzenie}
+Wielomian Jonesa jest niezmiennikiem zorientowanych splotów.
+\end{twierdzenie}
+
+\begin{proof}
+%Skorzystamy z tego, że indeks zaczepienia jest niezmiennikiem.
+Wystarczy pokazać niezmienniczość $(-A)^{-3w(D)}\langle D\rangle$ na ruchy Reidemeistera.
+Ale
+\[
+(-A)^{-3
+w\left(\begin{tikzpicture}[scale=0.025, baseline=-3]
+	\clip (-12,-12) rectangle (1,7);
+	\path[TEXTARC] (-10,7) .. controls (-10,3) and (-10,0) .. (-6,-4);
+	\path[TEXTARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+	\path[TEXTARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+\end{tikzpicture}\right)}
+\left\langle\begin{tikzpicture}[scale=0.025, baseline=-3]
+	\clip (-12,-12) rectangle (1,7);
+	\path[TEXTARC] (-10,7) .. controls (-10,3) and (-10,0) .. (-6,-4);
+	\path[TEXTARC] (-6,0) .. controls (2,8) and (2,-10) .. (-6,-4);
+	\path[TEXTARC] (-10,-11) .. controls (-10,-8) and (-10,-5) .. (-9,-4);
+\end{tikzpicture}\right\rangle
+=
+(-A)^{-3
+w\left(\ \begin{tikzpicture}[scale=0.025,baseline=-4]
+	\path[TEXTARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ \right)+3}
+(-A)^{-3}
+\left\langle\ \begin{tikzpicture}[scale=0.025,baseline=-4]
+	\path[TEXTARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ \right\rangle =
+(-A)^{-3
+w\left(\ \begin{tikzpicture}[scale=0.025,baseline=-4]
+	\path[TEXTARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ \right)}
+\left\langle\ \begin{tikzpicture}[scale=0.025,baseline=-4]
+	\path[TEXTARC] (-10,7) -- (-10,-11);
+\end{tikzpicture}\ \right\rangle.\qedhere
+\]
+\end{proof}
+
+Wielomian Jonesa jest naprawdę potężnym narzędziem.
+Pozwala bowiem odróżnić dowolne dwa węzły pierwsze o co najwyżej dziewięciu skrzyżowaniach.
+
+\begin{hipoteza}
+Nie istnieje nietrywialny węzeł, którego wielomian Jonesa nie odróżnia od niewęzła.
+\end{hipoteza}
+
+\begin{twierdzenie}
+Wielomianem węzła $(m, n)$-torusowego jest
+\[
+	\frac {t^{(m-1)(n-1):2}}{1-t^2} \cdot (1 - t^{m+1} - t^{n+1} + t^{m+n}).
+\]
+\end{twierdzenie}
